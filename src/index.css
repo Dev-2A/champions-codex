@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* 클래스 기반 다크모드 (html.dark 일 때 dark: 변형 적용) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ── 파스텔 블루 브랜드 스케일 (시리즈 공통 아이덴티티) ── */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe6ff;
+  --color-brand-200: #bfd3ff;
+  --color-brand-300: #9cbcff;
+  --color-brand-400: #7aa2f7; /* 메인 파스텔 블루 */
+  --color-brand-500: #5b86e5;
+  --color-brand-600: #4568c8;
+  --color-brand-700: #3a54a0;
+  --color-brand-800: #2f4380;
+  --color-brand-900: #283a68;
+  --color-brand-950: #1a2442;
+
+  /* ── 블루 틴트 슬레이트 (배경/서피스/텍스트) ── */
+  --color-ink-50: #f5f7fb;
+  --color-ink-100: #e9edf6;
+  --color-ink-200: #cdd6e8;
+  --color-ink-300: #a4b2ce;
+  --color-ink-400: #6f80a3;
+  --color-ink-500: #4b5a7a;
+  --color-ink-600: #364261;
+  --color-ink-700: #283152;
+  --color-ink-800: #1c2440;
+  --color-ink-900: #141a30;
+  --color-ink-950: #0d1120;
+
+  /* ── 타이포 (Pretendard 있으면 사용, 없으면 한국어 시스템 폰트로 폴백) ── */
+  --font-sans:
+    "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo",
+    "Malgun Gothic", "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+  html:not(.dark) {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
