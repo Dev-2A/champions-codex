@@ -1,0 +1,53 @@
+{
+  "id": "m-b",
+  "name": "Regulation Set M-B",
+  "nameKo": "레귤레이션 세트 M-B",
+  "game": "Pokémon Champions",
+  "startDate": "2026-06-17",
+  "endDate": "2026-09-02",
+  "format": "doubles",
+  "rules": {
+    "levelCap": 50,
+    "teamSize": 6,
+    "bringSize": 4,
+    "speciesClause": true,
+    "itemClause": true,
+    "megaPerBattle": 1,
+    "terastal": false,
+    "dynamax": false,
+    "zMoves": false
+  },
+  "notes": "M-A와 동일 풀 + 신규 포켓몬 22종 및 신규 메가진화 추가. 이번 시즌 별도 금지 포켓몬 없음.",
+  "newMegas": ["sceptile", "blaziken", "swampert", "mawile", "staraptor"],
+  "sources": [
+    "https://victoryroad.pro/champions-regulations/",
+    "https://www.serebii.net/pokemonchampions/rankedbattle/regulationm-b.shtml",
+    "https://bulbapedia.bulbagarden.net/wiki/Regulation_Set_M-B"
+  ],
+  "legal": [
+    { "slug": "garchomp", "canMega": true },
+    { "slug": "sinistcha", "canMega": false },
+    { "slug": "whimsicott", "canMega": false },
+    { "slug": "incineroar", "canMega": false },
+    { "slug": "charizard", "canMega": true },
+    { "slug": "raichu", "canMega": true },
+    { "slug": "pelipper", "canMega": false },
+    { "slug": "sneasler", "canMega": false },
+    { "slug": "grimmsnarl", "canMega": false },
+    { "slug": "sylveon", "canMega": false },
+    { "slug": "swampert", "canMega": true },
+    { "slug": "metagross", "canMega": true },
+    { "slug": "farigiraf", "canMega": false },
+    { "slug": "gholdengo", "canMega": false },
+    { "slug": "aerodactyl", "canMega": true },
+    { "slug": "staraptor", "canMega": true },
+    { "slug": "kingambit", "canMega": false },
+    { "slug": "archaludon", "canMega": false },
+    { "slug": "blaziken", "canMega": true },
+    { "slug": "sceptile", "canMega": true },
+    { "slug": "mawile", "canMega": true },
+    { "slug": "salamence", "canMega": true },
+    { "slug": "tyranitar", "canMega": true },
+    { "slug": "gyarados", "canMega": true }
+  ]
+}

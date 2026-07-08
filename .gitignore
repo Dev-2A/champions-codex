@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# PokéAPI 원본 응답 캐시 (생성물 아님)
+.cache/
