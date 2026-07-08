@@ -1,0 +1,29 @@
+{
+  "id": "m-b",
+  "name": "Regulation Set M-B",
+  "nameKo": "레귤레이션 세트 M-B",
+  "game": "Pokémon Champions",
+  "startDate": "2026-06-17",
+  "endDate": "2026-09-02",
+  "format": "doubles",
+  "rules": {
+    "levelCap": 50,
+    "teamSize": 6,
+    "bringSize": 4,
+    "speciesClause": true,
+    "itemClause": true,
+    "megaPerBattle": 1,
+    "terastal": false,
+    "dynamax": false,
+    "zMoves": false
+  },
+  "notes": "M-A와 동일 풀 + 신규 포켓몬 22종 및 신규 메가진화 추가. 이번 시즌 별도 금지 포켓몬 없음.",
+  "newMegas": [
+    "sceptile",
+    "blaziken",
+    "swampert",
+    "mawile",
+    "staraptor"
+  ],
+  "count": 24
+}
