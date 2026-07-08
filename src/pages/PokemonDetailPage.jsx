@@ -5,6 +5,7 @@ import TypeBadge from "../components/common/TypeBadge";
 import StatBars from "../components/pokedex/StatBars";
 import DefensiveProfile from "../components/typechart/DefensiveProfile";
 import TypeTraitsPanel from "../components/typechart/TypeTraitsPanel";
+import TeamToggleButton from "../components/team/TeamToggleButton";
 
 function Section({ title, children }) {
   return (
@@ -111,6 +112,9 @@ export default function PokemonDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* 팀 편성 */}
+      <TeamToggleButton slug={slug} />
 
       {/* 종족값 */}
       <Section title="종족값">
