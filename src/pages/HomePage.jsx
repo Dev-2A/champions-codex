@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { navItems } from "../router/navItems";
+import { regulation, pokemonList } from "../data";
 
 export default function HomePage() {
   const cards = navItems.filter((i) => i.to !== "/");
@@ -7,9 +8,9 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       {/* 히어로 */}
-      <section className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 dark:border-brand-900 dark:from-ink-900 dark:to-ink-950">
+      <section className="rounded-2xl border border-brand-200 bg-linear-to-br from-brand-50 to-white p-6 dark:border-brand-900 dark:from-ink-900 dark:to-ink-950">
         <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">
-          Regulation Set M-B
+          {regulation.name}
         </p>
         <h2 className="mt-2 text-2xl font-extrabold leading-snug tracking-tight">
           포켓몬 챔피언스,
@@ -20,6 +21,20 @@ export default function HomePage() {
           게임 기초부터 타입 상성, 사용 가능 포켓몬 도감, 팀 빌딩까지 — 뉴비가
           이해하고 팀을 짜는 여정을 한 곳에서.
         </p>
+
+        {/* 데이터 레이어 연동 스탯 */}
+        <div className="mt-4 flex flex-wrap gap-2 text-xs">
+          <span className="rounded-full bg-brand-100 px-2.5 py-1 font-medium text-brand-700 dark:bg-brand-950 dark:text-brand-300">
+            현재 {pokemonList.length}종 사용 가능
+          </span>
+          <span className="rounded-full bg-ink-100 px-2.5 py-1 font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300">
+            {regulation.startDate} ~ {regulation.endDate}
+          </span>
+          <span className="rounded-full bg-ink-100 px-2.5 py-1 font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300">
+            더블 배틀 · Lv.50
+          </span>
+        </div>
+
         <div className="mt-5 flex flex-wrap gap-2">
           <Link
             to="/guide"
