@@ -4,6 +4,7 @@ import { getPokemonBySlug } from "../data";
 import { useTeamStore } from "../store/useTeamStore";
 import TeamSlot from "../components/team/TeamSlot";
 import PokemonPicker from "../components/team/PokemonPicker";
+import CoverageAnalysis from "../components/team/CoverageAnalysis";
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
@@ -12,8 +13,8 @@ export default function TeamBuilderPage() {
   const clear = useTeamStore((s) => s.clear);
   const [picking, setPicking] = useState(false);
 
-  const team = slugs.map(getPokemonBySlug);
-  const blockedDex = new Set(team.map((p) => p?.dexNum).filter(Boolean));
+  const team = slugs.map(getPokemonBySlug).filter(Boolean);
+  const blockedDex = new Set(team.map((p) => p.dexNum));
   const slots = [...team, ...Array(6 - team.length).fill(null)];
 
   const handlePick = (slug) => {
@@ -30,7 +31,8 @@ export default function TeamBuilderPage() {
             <h1 className="text-xl font-bold tracking-tight">팀 빌더</h1>
           </div>
           <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
-            6마리를 편성하세요. 같은 종족(도감번호)은 중복 편성할 수 없어요.
+            6마리를 편성하면 타입 커버리지를 자동 분석해요. 챔피언스 랭크는 더블
+            배틀(2v2)이에요.
           </p>
         </div>
         {team.length > 0 && (
@@ -77,9 +79,12 @@ export default function TeamBuilderPage() {
       )}
 
       {team.length > 0 && (
-        <div className="rounded-2xl border border-dashed border-ink-300 p-4 text-center text-xs text-ink-400 dark:border-ink-700 dark:text-ink-500">
-          🚧 타입 커버리지 분석(약점/저항 히트맵)은 Step 11에서 추가돼요.
-        </div>
+        <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+          <h2 className="mb-3 text-lg font-bold tracking-tight">
+            타입 커버리지 분석
+          </h2>
+          <CoverageAnalysis team={team} />
+        </section>
       )}
     </div>
   );
