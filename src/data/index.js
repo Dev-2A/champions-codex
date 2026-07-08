@@ -1,5 +1,6 @@
 import { ACTIVE_REGULATION } from "../config";
 import typechartData from "./generated/typechart.json";
+import typeTraitsData from "./champions/typeTraits.json";
 
 // 프리페치 생성물을 eager 로드 후 활성 레귤레이션만 선택
 const pokedexModules = import.meta.glob("./generated/pokedex.*.json", {
@@ -35,6 +36,10 @@ export const getPokemonBySlug = (slug) => bySlug.get(slug) ?? null;
 export const getPokemonById = (id) => byId.get(id) ?? null;
 
 // ── 타입 메타 ──
-export const TYPES = typechart.types; // ['normal', 'fire', ...] 18개
-export const typeMeta = typechart.meta; // { fire: { ko: '불꽃' }, ... }
+export const TYPES = typechart.types;
+export const typeMeta = typechart.meta;
 export const typeKo = (t) => typeMeta[t]?.ko ?? t;
+
+// ── 챔피언스 타입 부가 특성 (큐레이션) ──
+export const typeTraits = typeTraitsData;
+export const getTypeTraits = (t) => typeTraitsData[t] ?? null;

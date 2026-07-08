@@ -1,0 +1,24 @@
+{
+  "fire": { "immunities": ["화상"] },
+  "ice": { "immunities": ["얼음(Freeze)", "싸라기눈 데미지"] },
+  "electric": { "immunities": ["마비"] },
+  "grass": { "immunities": ["가루·포자 기술(수면가루 등)", "씨뿌리기"] },
+  "poison": {
+    "immunities": ["독·맹독"],
+    "notes": ["독압정을 밟으면 제거(흡수)", "부식 특성 상대에겐 독에 걸림"]
+  },
+  "ground": { "immunities": ["모래바람 데미지", "전기자석파(마비)"] },
+  "flying": {
+    "immunities": ["땅을 밟는 함정(압정뿌리기·독압정 등)"],
+    "notes": ["더블 배틀에선 함정 활용도가 낮음"]
+  },
+  "rock": {
+    "immunities": ["모래바람 데미지"],
+    "bonuses": ["모래바람 중 특수방어 1.5배"]
+  },
+  "ghost": { "immunities": ["교체·도주 봉쇄 기술(그림자밟기 등)"] },
+  "steel": {
+    "immunities": ["독·맹독", "모래바람 데미지"],
+    "notes": ["부식 특성 상대에겐 독에 걸림"]
+  }
+}
