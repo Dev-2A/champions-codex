@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-07-08T01:40:40.735Z",
+  "generatedAt": "2026-07-08T07:49:02.465Z",
   "regulation": "m-b",
-  "count": 24,
+  "count": 224,
   "pokemon": [
+    {
+      "id": 3,
+      "slug": "venusaur",
+      "name": {
+        "ko": "이상해꽃",
+        "en": "venusaur"
+      },
+      "genus": "씨앗포켓몬",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 82,
+        "def": 83,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "chlorophyll",
+          "ko": "엽록소",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+      "canMega": true
+    },
     {
       "id": 6,
       "slug": "charizard",
@@ -40,6 +76,193 @@
       "canMega": true
     },
     {
+      "id": 9,
+      "slug": "blastoise",
+      "name": {
+        "ko": "거북왕",
+        "en": "blastoise"
+      },
+      "genus": "껍질포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 79,
+        "atk": 83,
+        "def": 100,
+        "spa": 85,
+        "spd": 105,
+        "spe": 78
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "rain-dish",
+          "ko": "젖은접시",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+      "canMega": true
+    },
+    {
+      "id": 15,
+      "slug": "beedrill",
+      "name": {
+        "ko": "독침붕",
+        "en": "beedrill"
+      },
+      "genus": "독벌포켓몬",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 90,
+        "def": 40,
+        "spa": 45,
+        "spd": 80,
+        "spe": 75
+      },
+      "total": 395,
+      "abilities": [
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "sniper",
+          "ko": "스나이퍼",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
+      "canMega": true
+    },
+    {
+      "id": 18,
+      "slug": "pidgeot",
+      "name": {
+        "ko": "피죤투",
+        "en": "pidgeot"
+      },
+      "genus": "새포켓몬",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 83,
+        "atk": 80,
+        "def": 75,
+        "spa": 70,
+        "spd": 70,
+        "spe": 101
+      },
+      "total": 479,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "tangled-feet",
+          "ko": "갈지자걸음",
+          "hidden": false
+        },
+        {
+          "slug": "big-pecks",
+          "ko": "부풀린가슴",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png",
+      "canMega": true
+    },
+    {
+      "id": 24,
+      "slug": "arbok",
+      "name": {
+        "ko": "아보크",
+        "en": "arbok"
+      },
+      "genus": "코브라포켓몬",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 95,
+        "def": 69,
+        "spa": 65,
+        "spd": 79,
+        "spe": 80
+      },
+      "total": 448,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "shed-skin",
+          "ko": "탈피",
+          "hidden": false
+        },
+        {
+          "slug": "unnerve",
+          "ko": "긴장감",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
+      "canMega": false
+    },
+    {
+      "id": 25,
+      "slug": "pikachu",
+      "name": {
+        "ko": "피카츄",
+        "en": "pikachu"
+      },
+      "genus": "쥐포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 35,
+        "atk": 55,
+        "def": 40,
+        "spa": 50,
+        "spd": 50,
+        "spe": 90
+      },
+      "total": 320,
+      "abilities": [
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "lightning-rod",
+          "ko": "피뢰침",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "canMega": false
+    },
+    {
       "id": 26,
       "slug": "raichu",
       "name": {
@@ -73,6 +296,506 @@
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
       "canMega": true
+    },
+    {
+      "id": 36,
+      "slug": "clefable",
+      "name": {
+        "ko": "픽시",
+        "en": "clefable"
+      },
+      "genus": "요정포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 70,
+        "def": 73,
+        "spa": 95,
+        "spd": 90,
+        "spe": 60
+      },
+      "total": 483,
+      "abilities": [
+        {
+          "slug": "cute-charm",
+          "ko": "헤롱헤롱바디",
+          "hidden": false
+        },
+        {
+          "slug": "magic-guard",
+          "ko": "매직가드",
+          "hidden": false
+        },
+        {
+          "slug": "unaware",
+          "ko": "천진",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
+      "canMega": true
+    },
+    {
+      "id": 38,
+      "slug": "ninetales",
+      "name": {
+        "ko": "나인테일",
+        "en": "ninetales"
+      },
+      "genus": "여우포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 73,
+        "atk": 76,
+        "def": 75,
+        "spa": 81,
+        "spd": 100,
+        "spe": 100
+      },
+      "total": 505,
+      "abilities": [
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "drought",
+          "ko": "가뭄",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
+      "canMega": false
+    },
+    {
+      "id": 45,
+      "slug": "vileplume",
+      "name": {
+        "ko": "라플레시아",
+        "en": "vileplume"
+      },
+      "genus": "꽃포켓몬",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 80,
+        "def": 85,
+        "spa": 110,
+        "spd": 90,
+        "spe": 50
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "chlorophyll",
+          "ko": "엽록소",
+          "hidden": false
+        },
+        {
+          "slug": "effect-spore",
+          "ko": "포자",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png",
+      "canMega": false
+    },
+    {
+      "id": 59,
+      "slug": "arcanine",
+      "name": {
+        "ko": "윈디",
+        "en": "arcanine"
+      },
+      "genus": "전설포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 110,
+        "def": 80,
+        "spa": 100,
+        "spd": 80,
+        "spe": 95
+      },
+      "total": 555,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "justified",
+          "ko": "정의의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
+      "canMega": false
+    },
+    {
+      "id": 65,
+      "slug": "alakazam",
+      "name": {
+        "ko": "후딘",
+        "en": "alakazam"
+      },
+      "genus": "초능력포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": 50,
+        "def": 45,
+        "spa": 135,
+        "spd": 95,
+        "spe": 120
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "synchronize",
+          "ko": "싱크로",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "magic-guard",
+          "ko": "매직가드",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
+      "canMega": true
+    },
+    {
+      "id": 68,
+      "slug": "machamp",
+      "name": {
+        "ko": "괴력몬",
+        "en": "machamp"
+      },
+      "genus": "괴력포켓몬",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 130,
+        "def": 80,
+        "spa": 65,
+        "spd": 85,
+        "spe": 55
+      },
+      "total": 505,
+      "abilities": [
+        {
+          "slug": "guts",
+          "ko": "근성",
+          "hidden": false
+        },
+        {
+          "slug": "no-guard",
+          "ko": "노가드",
+          "hidden": false
+        },
+        {
+          "slug": "steadfast",
+          "ko": "불굴의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
+      "canMega": false
+    },
+    {
+      "id": 71,
+      "slug": "victreebel",
+      "name": {
+        "ko": "우츠보트",
+        "en": "victreebel"
+      },
+      "genus": "파리잡이포켓몬",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 105,
+        "def": 65,
+        "spa": 100,
+        "spd": 70,
+        "spe": 70
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "chlorophyll",
+          "ko": "엽록소",
+          "hidden": false
+        },
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
+      "canMega": true
+    },
+    {
+      "id": 80,
+      "slug": "slowbro",
+      "name": {
+        "ko": "야도란",
+        "en": "slowbro"
+      },
+      "genus": "기생포켓몬",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 75,
+        "def": 110,
+        "spa": 100,
+        "spd": 80,
+        "spe": 30
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "oblivious",
+          "ko": "둔감",
+          "hidden": false
+        },
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
+      "canMega": true
+    },
+    {
+      "id": 94,
+      "slug": "gengar",
+      "name": {
+        "ko": "팬텀",
+        "en": "gengar"
+      },
+      "genus": "그림자포켓몬",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 65,
+        "def": 60,
+        "spa": 130,
+        "spd": 75,
+        "spe": 110
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "cursed-body",
+          "ko": "저주받은바디",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+      "canMega": true
+    },
+    {
+      "id": 115,
+      "slug": "kangaskhan",
+      "name": {
+        "ko": "캥카",
+        "en": "kangaskhan"
+      },
+      "genus": "가족포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 105,
+        "atk": 95,
+        "def": 80,
+        "spa": 40,
+        "spd": 80,
+        "spe": 90
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "early-bird",
+          "ko": "일찍기상",
+          "hidden": false
+        },
+        {
+          "slug": "scrappy",
+          "ko": "배짱",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png",
+      "canMega": true
+    },
+    {
+      "id": 121,
+      "slug": "starmie",
+      "name": {
+        "ko": "아쿠스타",
+        "en": "starmie"
+      },
+      "genus": "수수께끼포켓몬",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 75,
+        "def": 85,
+        "spa": 100,
+        "spd": 85,
+        "spe": 115
+      },
+      "total": 520,
+      "abilities": [
+        {
+          "slug": "illuminate",
+          "ko": "발광",
+          "hidden": false
+        },
+        {
+          "slug": "natural-cure",
+          "ko": "자연회복",
+          "hidden": false
+        },
+        {
+          "slug": "analytic",
+          "ko": "애널라이즈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png",
+      "canMega": true
+    },
+    {
+      "id": 127,
+      "slug": "pinsir",
+      "name": {
+        "ko": "쁘사이저",
+        "en": "pinsir"
+      },
+      "genus": "뿔집게포켓몬",
+      "types": [
+        "bug"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 125,
+        "def": 100,
+        "spa": 55,
+        "spd": 70,
+        "spe": 85
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "hyper-cutter",
+          "ko": "괴력집게",
+          "hidden": false
+        },
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/127.png",
+      "canMega": true
+    },
+    {
+      "id": 128,
+      "slug": "tauros",
+      "name": {
+        "ko": "켄타로스",
+        "en": "tauros"
+      },
+      "genus": "성난소포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 100,
+        "def": 95,
+        "spa": 40,
+        "spd": 70,
+        "spe": 110
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/128.png",
+      "canMega": false
     },
     {
       "id": 130,
@@ -109,6 +832,146 @@
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png",
       "canMega": true
+    },
+    {
+      "id": 132,
+      "slug": "ditto",
+      "name": {
+        "ko": "메타몽",
+        "en": "ditto"
+      },
+      "genus": "변신포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 48,
+        "atk": 48,
+        "def": 48,
+        "spa": 48,
+        "spd": 48,
+        "spe": 48
+      },
+      "total": 288,
+      "abilities": [
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": false
+        },
+        {
+          "slug": "imposter",
+          "ko": "괴짜",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+      "canMega": false
+    },
+    {
+      "id": 134,
+      "slug": "vaporeon",
+      "name": {
+        "ko": "샤미드",
+        "en": "vaporeon"
+      },
+      "genus": "거품뿜기포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 130,
+        "atk": 65,
+        "def": 60,
+        "spa": 110,
+        "spd": 95,
+        "spe": 65
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "water-absorb",
+          "ko": "저수",
+          "hidden": false
+        },
+        {
+          "slug": "hydration",
+          "ko": "촉촉바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+      "canMega": false
+    },
+    {
+      "id": 135,
+      "slug": "jolteon",
+      "name": {
+        "ko": "쥬피썬더",
+        "en": "jolteon"
+      },
+      "genus": "번개포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 60,
+        "spa": 110,
+        "spd": 95,
+        "spe": 130
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "volt-absorb",
+          "ko": "축전",
+          "hidden": false
+        },
+        {
+          "slug": "quick-feet",
+          "ko": "속보",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png",
+      "canMega": false
+    },
+    {
+      "id": 136,
+      "slug": "flareon",
+      "name": {
+        "ko": "부스터",
+        "en": "flareon"
+      },
+      "genus": "불꽃포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 130,
+        "def": 60,
+        "spa": 95,
+        "spd": 110,
+        "spe": 65
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "guts",
+          "ko": "근성",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png",
+      "canMega": false
     },
     {
       "id": 142,
@@ -149,6 +1012,737 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png",
+      "canMega": true
+    },
+    {
+      "id": 143,
+      "slug": "snorlax",
+      "name": {
+        "ko": "잠만보",
+        "en": "snorlax"
+      },
+      "genus": "졸음포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 160,
+        "atk": 110,
+        "def": 65,
+        "spa": 65,
+        "spd": 110,
+        "spe": 30
+      },
+      "total": 540,
+      "abilities": [
+        {
+          "slug": "immunity",
+          "ko": "면역",
+          "hidden": false
+        },
+        {
+          "slug": "thick-fat",
+          "ko": "두꺼운지방",
+          "hidden": false
+        },
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+      "canMega": false
+    },
+    {
+      "id": 149,
+      "slug": "dragonite",
+      "name": {
+        "ko": "망나뇽",
+        "en": "dragonite"
+      },
+      "genus": "드래곤포켓몬",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "hp": 91,
+        "atk": 134,
+        "def": 95,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "multiscale",
+          "ko": "멀티스케일",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+      "canMega": true
+    },
+    {
+      "id": 154,
+      "slug": "meganium",
+      "name": {
+        "ko": "메가니움",
+        "en": "meganium"
+      },
+      "genus": "허브포켓몬",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 82,
+        "def": 100,
+        "spa": 83,
+        "spd": 100,
+        "spe": 80
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "leaf-guard",
+          "ko": "리프가드",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png",
+      "canMega": true
+    },
+    {
+      "id": 157,
+      "slug": "typhlosion",
+      "name": {
+        "ko": "블레이범",
+        "en": "typhlosion"
+      },
+      "genus": "화산포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 84,
+        "def": 78,
+        "spa": 109,
+        "spd": 85,
+        "spe": 100
+      },
+      "total": 534,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/157.png",
+      "canMega": false
+    },
+    {
+      "id": 160,
+      "slug": "feraligatr",
+      "name": {
+        "ko": "장크로다일",
+        "en": "feraligatr"
+      },
+      "genus": "큰턱포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 105,
+        "def": 100,
+        "spa": 79,
+        "spd": 83,
+        "spe": 78
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/160.png",
+      "canMega": true
+    },
+    {
+      "id": 168,
+      "slug": "ariados",
+      "name": {
+        "ko": "아리아도스",
+        "en": "ariados"
+      },
+      "genus": "롱다리포켓몬",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 90,
+        "def": 70,
+        "spa": 60,
+        "spd": 70,
+        "spe": 40
+      },
+      "total": 400,
+      "abilities": [
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "insomnia",
+          "ko": "불면",
+          "hidden": false
+        },
+        {
+          "slug": "sniper",
+          "ko": "스나이퍼",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/168.png",
+      "canMega": false
+    },
+    {
+      "id": 181,
+      "slug": "ampharos",
+      "name": {
+        "ko": "전룡",
+        "en": "ampharos"
+      },
+      "genus": "라이트포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 75,
+        "def": 85,
+        "spa": 115,
+        "spd": 90,
+        "spe": 55
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "plus",
+          "ko": "플러스",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/181.png",
+      "canMega": true
+    },
+    {
+      "id": 184,
+      "slug": "azumarill",
+      "name": {
+        "ko": "마릴리",
+        "en": "azumarill"
+      },
+      "genus": "물토끼포켓몬",
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 100,
+        "atk": 50,
+        "def": 80,
+        "spa": 60,
+        "spd": 80,
+        "spe": 50
+      },
+      "total": 420,
+      "abilities": [
+        {
+          "slug": "thick-fat",
+          "ko": "두꺼운지방",
+          "hidden": false
+        },
+        {
+          "slug": "huge-power",
+          "ko": "천하장사",
+          "hidden": false
+        },
+        {
+          "slug": "sap-sipper",
+          "ko": "초식",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/184.png",
+      "canMega": false
+    },
+    {
+      "id": 186,
+      "slug": "politoed",
+      "name": {
+        "ko": "왕구리",
+        "en": "politoed"
+      },
+      "genus": "개구리포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 75,
+        "def": 75,
+        "spa": 90,
+        "spd": 100,
+        "spe": 70
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "water-absorb",
+          "ko": "저수",
+          "hidden": false
+        },
+        {
+          "slug": "damp",
+          "ko": "습기",
+          "hidden": false
+        },
+        {
+          "slug": "drizzle",
+          "ko": "잔비",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/186.png",
+      "canMega": false
+    },
+    {
+      "id": 196,
+      "slug": "espeon",
+      "name": {
+        "ko": "에브이",
+        "en": "espeon"
+      },
+      "genus": "태양포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 60,
+        "spa": 130,
+        "spd": 95,
+        "spe": 110
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "synchronize",
+          "ko": "싱크로",
+          "hidden": false
+        },
+        {
+          "slug": "magic-bounce",
+          "ko": "매직미러",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+      "canMega": false
+    },
+    {
+      "id": 197,
+      "slug": "umbreon",
+      "name": {
+        "ko": "블래키",
+        "en": "umbreon"
+      },
+      "genus": "달빛포켓몬",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 65,
+        "def": 110,
+        "spa": 60,
+        "spd": 130,
+        "spe": 65
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "synchronize",
+          "ko": "싱크로",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png",
+      "canMega": false
+    },
+    {
+      "id": 199,
+      "slug": "slowking",
+      "name": {
+        "ko": "야도킹",
+        "en": "slowking"
+      },
+      "genus": "임금포켓몬",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 75,
+        "def": 80,
+        "spa": 100,
+        "spd": 110,
+        "spe": 30
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "oblivious",
+          "ko": "둔감",
+          "hidden": false
+        },
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png",
+      "canMega": false
+    },
+    {
+      "id": 205,
+      "slug": "forretress",
+      "name": {
+        "ko": "쏘콘",
+        "en": "forretress"
+      },
+      "genus": "도롱이벌레포켓몬",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 90,
+        "def": 140,
+        "spa": 60,
+        "spd": 60,
+        "spe": 40
+      },
+      "total": 465,
+      "abilities": [
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "overcoat",
+          "ko": "방진",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/205.png",
+      "canMega": false
+    },
+    {
+      "id": 208,
+      "slug": "steelix",
+      "name": {
+        "ko": "강철톤",
+        "en": "steelix"
+      },
+      "genus": "철뱀포켓몬",
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 85,
+        "def": 200,
+        "spa": 55,
+        "spd": 65,
+        "spe": 30
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "rock-head",
+          "ko": "돌머리",
+          "hidden": false
+        },
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/208.png",
+      "canMega": true
+    },
+    {
+      "id": 211,
+      "slug": "qwilfish",
+      "name": {
+        "ko": "침바루",
+        "en": "qwilfish"
+      },
+      "genus": "풍선포켓몬",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 95,
+        "def": 85,
+        "spa": 55,
+        "spd": 55,
+        "spe": 85
+      },
+      "total": 440,
+      "abilities": [
+        {
+          "slug": "poison-point",
+          "ko": "독가시",
+          "hidden": false
+        },
+        {
+          "slug": "swift-swim",
+          "ko": "쓱쓱",
+          "hidden": false
+        },
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/211.png",
+      "canMega": false
+    },
+    {
+      "id": 212,
+      "slug": "scizor",
+      "name": {
+        "ko": "핫삼",
+        "en": "scizor"
+      },
+      "genus": "집게포켓몬",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 130,
+        "def": 100,
+        "spa": 55,
+        "spd": 80,
+        "spe": 65
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "technician",
+          "ko": "테크니션",
+          "hidden": false
+        },
+        {
+          "slug": "light-metal",
+          "ko": "라이트메탈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png",
+      "canMega": true
+    },
+    {
+      "id": 214,
+      "slug": "heracross",
+      "name": {
+        "ko": "헤라크로스",
+        "en": "heracross"
+      },
+      "genus": "외뿔포켓몬",
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 125,
+        "def": 75,
+        "spa": 40,
+        "spd": 95,
+        "spe": 85
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "guts",
+          "ko": "근성",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/214.png",
+      "canMega": true
+    },
+    {
+      "id": 227,
+      "slug": "skarmory",
+      "name": {
+        "ko": "무장조",
+        "en": "skarmory"
+      },
+      "genus": "갑옷새포켓몬",
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 80,
+        "def": 140,
+        "spa": 40,
+        "spd": 70,
+        "spe": 70
+      },
+      "total": 465,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/227.png",
+      "canMega": true
+    },
+    {
+      "id": 229,
+      "slug": "houndoom",
+      "name": {
+        "ko": "헬가",
+        "en": "houndoom"
+      },
+      "genus": "다크포켓몬",
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 90,
+        "def": 50,
+        "spa": 110,
+        "spd": 80,
+        "spe": 95
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "early-bird",
+          "ko": "일찍기상",
+          "hidden": false
+        },
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "unnerve",
+          "ko": "긴장감",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png",
       "canMega": true
     },
     {
@@ -336,6 +1930,88 @@
       "canMega": false
     },
     {
+      "id": 282,
+      "slug": "gardevoir",
+      "name": {
+        "ko": "가디안",
+        "en": "gardevoir"
+      },
+      "genus": "포용포켓몬",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 68,
+        "atk": 65,
+        "def": 65,
+        "spa": 125,
+        "spd": 115,
+        "spe": 80
+      },
+      "total": 518,
+      "abilities": [
+        {
+          "slug": "synchronize",
+          "ko": "싱크로",
+          "hidden": false
+        },
+        {
+          "slug": "trace",
+          "ko": "트레이스",
+          "hidden": false
+        },
+        {
+          "slug": "telepathy",
+          "ko": "텔레파시",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
+      "canMega": true
+    },
+    {
+      "id": 302,
+      "slug": "sableye",
+      "name": {
+        "ko": "깜까미",
+        "en": "sableye"
+      },
+      "genus": "어둠포켓몬",
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 50,
+        "atk": 75,
+        "def": 75,
+        "spa": 65,
+        "spd": 65,
+        "spe": 50
+      },
+      "total": 380,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "stall",
+          "ko": "시간벌기",
+          "hidden": false
+        },
+        {
+          "slug": "prankster",
+          "ko": "짓궂은마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/302.png",
+      "canMega": true
+    },
+    {
       "id": 303,
       "slug": "mawile",
       "name": {
@@ -377,39 +2053,493 @@
       "canMega": true
     },
     {
-      "id": 373,
-      "slug": "salamence",
+      "id": 306,
+      "slug": "aggron",
       "name": {
-        "ko": "보만다",
-        "en": "salamence"
+        "ko": "보스로라",
+        "en": "aggron"
       },
-      "genus": "드래곤포켓몬",
+      "genus": "철갑옷포켓몬",
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 110,
+        "def": 180,
+        "spa": 60,
+        "spd": 60,
+        "spe": 50
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "rock-head",
+          "ko": "돌머리",
+          "hidden": false
+        },
+        {
+          "slug": "heavy-metal",
+          "ko": "헤비메탈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/306.png",
+      "canMega": true
+    },
+    {
+      "id": 308,
+      "slug": "medicham",
+      "name": {
+        "ko": "요가램",
+        "en": "medicham"
+      },
+      "genus": "명상포켓몬",
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 60,
+        "def": 75,
+        "spa": 60,
+        "spd": 75,
+        "spe": 80
+      },
+      "total": 410,
+      "abilities": [
+        {
+          "slug": "pure-power",
+          "ko": "순수한힘",
+          "hidden": false
+        },
+        {
+          "slug": "telepathy",
+          "ko": "텔레파시",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/308.png",
+      "canMega": true
+    },
+    {
+      "id": 310,
+      "slug": "manectric",
+      "name": {
+        "ko": "썬더볼트",
+        "en": "manectric"
+      },
+      "genus": "방전포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 75,
+        "def": 60,
+        "spa": 105,
+        "spd": 60,
+        "spe": 105
+      },
+      "total": 475,
+      "abilities": [
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "lightning-rod",
+          "ko": "피뢰침",
+          "hidden": false
+        },
+        {
+          "slug": "minus",
+          "ko": "마이너스",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/310.png",
+      "canMega": true
+    },
+    {
+      "id": 319,
+      "slug": "sharpedo",
+      "name": {
+        "ko": "샤크니아",
+        "en": "sharpedo"
+      },
+      "genus": "난폭포켓몬",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 120,
+        "def": 40,
+        "spa": 95,
+        "spd": 40,
+        "spe": 95
+      },
+      "total": 460,
+      "abilities": [
+        {
+          "slug": "rough-skin",
+          "ko": "까칠한피부",
+          "hidden": false
+        },
+        {
+          "slug": "speed-boost",
+          "ko": "가속",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/319.png",
+      "canMega": true
+    },
+    {
+      "id": 323,
+      "slug": "camerupt",
+      "name": {
+        "ko": "폭타",
+        "en": "camerupt"
+      },
+      "genus": "분화포켓몬",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 100,
+        "def": 70,
+        "spa": 105,
+        "spd": 75,
+        "spe": 40
+      },
+      "total": 460,
+      "abilities": [
+        {
+          "slug": "magma-armor",
+          "ko": "마그마의무장",
+          "hidden": false
+        },
+        {
+          "slug": "solid-rock",
+          "ko": "하드록",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/323.png",
+      "canMega": true
+    },
+    {
+      "id": 324,
+      "slug": "torkoal",
+      "name": {
+        "ko": "코터스",
+        "en": "torkoal"
+      },
+      "genus": "석탄포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 85,
+        "def": 140,
+        "spa": 85,
+        "spd": 70,
+        "spe": 20
+      },
+      "total": 470,
+      "abilities": [
+        {
+          "slug": "white-smoke",
+          "ko": "하얀연기",
+          "hidden": false
+        },
+        {
+          "slug": "drought",
+          "ko": "가뭄",
+          "hidden": false
+        },
+        {
+          "slug": "shell-armor",
+          "ko": "조가비갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/324.png",
+      "canMega": false
+    },
+    {
+      "id": 334,
+      "slug": "altaria",
+      "name": {
+        "ko": "파비코리",
+        "en": "altaria"
+      },
+      "genus": "허밍포켓몬",
       "types": [
         "dragon",
         "flying"
       ],
       "stats": {
-        "hp": 95,
-        "atk": 135,
-        "def": 80,
-        "spa": 110,
-        "spd": 80,
-        "spe": 100
+        "hp": 75,
+        "atk": 70,
+        "def": 90,
+        "spa": 70,
+        "spd": 105,
+        "spe": 80
       },
-      "total": 600,
+      "total": 490,
       "abilities": [
         {
-          "slug": "intimidate",
-          "ko": "위협",
+          "slug": "natural-cure",
+          "ko": "자연회복",
           "hidden": false
         },
         {
-          "slug": "moxie",
-          "ko": "자기과신",
+          "slug": "cloud-nine",
+          "ko": "날씨부정",
           "hidden": true
         }
       ],
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/334.png",
+      "canMega": true
+    },
+    {
+      "id": 350,
+      "slug": "milotic",
+      "name": {
+        "ko": "밀로틱",
+        "en": "milotic"
+      },
+      "genus": "사랑포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 60,
+        "def": 79,
+        "spa": 100,
+        "spd": 125,
+        "spe": 81
+      },
+      "total": 540,
+      "abilities": [
+        {
+          "slug": "marvel-scale",
+          "ko": "이상한비늘",
+          "hidden": false
+        },
+        {
+          "slug": "competitive",
+          "ko": "승기",
+          "hidden": false
+        },
+        {
+          "slug": "cute-charm",
+          "ko": "헤롱헤롱바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
+      "canMega": false
+    },
+    {
+      "id": 351,
+      "slug": "castform",
+      "name": {
+        "ko": "캐스퐁",
+        "en": "castform"
+      },
+      "genus": "날씨포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 70,
+        "def": 70,
+        "spa": 70,
+        "spd": 70,
+        "spe": 70
+      },
+      "total": 420,
+      "abilities": [
+        {
+          "slug": "forecast",
+          "ko": "기분파",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/351.png",
+      "canMega": false
+    },
+    {
+      "id": 354,
+      "slug": "banette",
+      "name": {
+        "ko": "다크펫",
+        "en": "banette"
+      },
+      "genus": "봉제인형포켓몬",
+      "types": [
+        "ghost"
+      ],
+      "stats": {
+        "hp": 64,
+        "atk": 115,
+        "def": 65,
+        "spa": 83,
+        "spd": 63,
+        "spe": 65
+      },
+      "total": 455,
+      "abilities": [
+        {
+          "slug": "insomnia",
+          "ko": "불면",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "cursed-body",
+          "ko": "저주받은바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/354.png",
+      "canMega": true
+    },
+    {
+      "id": 358,
+      "slug": "chimecho",
+      "name": {
+        "ko": "치렁",
+        "en": "chimecho"
+      },
+      "genus": "풍경포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 50,
+        "def": 80,
+        "spa": 95,
+        "spd": 90,
+        "spe": 65
+      },
+      "total": 455,
+      "abilities": [
+        {
+          "slug": "levitate",
+          "ko": "부유",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/358.png",
+      "canMega": true
+    },
+    {
+      "id": 359,
+      "slug": "absol",
+      "name": {
+        "ko": "앱솔",
+        "en": "absol"
+      },
+      "genus": "재난포켓몬",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 130,
+        "def": 60,
+        "spa": 75,
+        "spd": 60,
+        "spe": 75
+      },
+      "total": 465,
+      "abilities": [
+        {
+          "slug": "pressure",
+          "ko": "프레셔",
+          "hidden": false
+        },
+        {
+          "slug": "super-luck",
+          "ko": "대운",
+          "hidden": false
+        },
+        {
+          "slug": "justified",
+          "ko": "정의의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/359.png",
+      "canMega": true
+    },
+    {
+      "id": 362,
+      "slug": "glalie",
+      "name": {
+        "ko": "얼음귀신",
+        "en": "glalie"
+      },
+      "genus": "얼굴포켓몬",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 80,
+        "def": 80,
+        "spa": 80,
+        "spd": 80,
+        "spe": 80
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": false
+        },
+        {
+          "slug": "moody",
+          "ko": "변덕쟁이",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/362.png",
       "canMega": true
     },
     {
@@ -449,6 +2579,114 @@
       "canMega": true
     },
     {
+      "id": 389,
+      "slug": "torterra",
+      "name": {
+        "ko": "토대부기",
+        "en": "torterra"
+      },
+      "genus": "대륙포켓몬",
+      "types": [
+        "grass",
+        "ground"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 109,
+        "def": 105,
+        "spa": 75,
+        "spd": 85,
+        "spe": 56
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "shell-armor",
+          "ko": "조가비갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/389.png",
+      "canMega": false
+    },
+    {
+      "id": 392,
+      "slug": "infernape",
+      "name": {
+        "ko": "초염몽",
+        "en": "infernape"
+      },
+      "genus": "화염포켓몬",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 76,
+        "atk": 104,
+        "def": 71,
+        "spa": 104,
+        "spd": 71,
+        "spe": 108
+      },
+      "total": 534,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/392.png",
+      "canMega": false
+    },
+    {
+      "id": 395,
+      "slug": "empoleon",
+      "name": {
+        "ko": "엠페르트",
+        "en": "empoleon"
+      },
+      "genus": "황제포켓몬",
+      "types": [
+        "water",
+        "steel"
+      ],
+      "stats": {
+        "hp": 84,
+        "atk": 86,
+        "def": 88,
+        "spa": 111,
+        "spd": 101,
+        "spe": 60
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "competitive",
+          "ko": "승기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/395.png",
+      "canMega": false
+    },
+    {
       "id": 398,
       "slug": "staraptor",
       "name": {
@@ -485,6 +2723,234 @@
       "canMega": true
     },
     {
+      "id": 405,
+      "slug": "luxray",
+      "name": {
+        "ko": "렌트라",
+        "en": "luxray"
+      },
+      "genus": "안광포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 120,
+        "def": 79,
+        "spa": 95,
+        "spd": 79,
+        "spe": 70
+      },
+      "total": 523,
+      "abilities": [
+        {
+          "slug": "rivalry",
+          "ko": "투쟁심",
+          "hidden": false
+        },
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "guts",
+          "ko": "근성",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/405.png",
+      "canMega": false
+    },
+    {
+      "id": 407,
+      "slug": "roserade",
+      "name": {
+        "ko": "로즈레이드",
+        "en": "roserade"
+      },
+      "genus": "부케포켓몬",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 70,
+        "def": 65,
+        "spa": 125,
+        "spd": 105,
+        "spe": 90
+      },
+      "total": 515,
+      "abilities": [
+        {
+          "slug": "natural-cure",
+          "ko": "자연회복",
+          "hidden": false
+        },
+        {
+          "slug": "poison-point",
+          "ko": "독가시",
+          "hidden": false
+        },
+        {
+          "slug": "technician",
+          "ko": "테크니션",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/407.png",
+      "canMega": false
+    },
+    {
+      "id": 409,
+      "slug": "rampardos",
+      "name": {
+        "ko": "램펄드",
+        "en": "rampardos"
+      },
+      "genus": "박치기포켓몬",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "hp": 97,
+        "atk": 165,
+        "def": 60,
+        "spa": 65,
+        "spd": 50,
+        "spe": 58
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png",
+      "canMega": false
+    },
+    {
+      "id": 411,
+      "slug": "bastiodon",
+      "name": {
+        "ko": "바리톱스",
+        "en": "bastiodon"
+      },
+      "genus": "실드포켓몬",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 52,
+        "def": 168,
+        "spa": 47,
+        "spd": 138,
+        "spe": 30
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "soundproof",
+          "ko": "방음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/411.png",
+      "canMega": false
+    },
+    {
+      "id": 428,
+      "slug": "lopunny",
+      "name": {
+        "ko": "이어롭",
+        "en": "lopunny"
+      },
+      "genus": "토끼포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 76,
+        "def": 84,
+        "spa": 54,
+        "spd": 96,
+        "spe": 105
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "cute-charm",
+          "ko": "헤롱헤롱바디",
+          "hidden": false
+        },
+        {
+          "slug": "klutz",
+          "ko": "서투름",
+          "hidden": false
+        },
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
+      "canMega": true
+    },
+    {
+      "id": 442,
+      "slug": "spiritomb",
+      "name": {
+        "ko": "화강돌",
+        "en": "spiritomb"
+      },
+      "genus": "봉인포켓몬",
+      "types": [
+        "ghost",
+        "dark"
+      ],
+      "stats": {
+        "hp": 50,
+        "atk": 92,
+        "def": 108,
+        "spa": 92,
+        "spd": 108,
+        "spe": 35
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "pressure",
+          "ko": "프레셔",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/442.png",
+      "canMega": false
+    },
+    {
       "id": 445,
       "slug": "garchomp",
       "name": {
@@ -518,6 +2984,989 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png",
+      "canMega": true
+    },
+    {
+      "id": 448,
+      "slug": "lucario",
+      "name": {
+        "ko": "루카리오",
+        "en": "lucario"
+      },
+      "genus": "파동포켓몬",
+      "types": [
+        "fighting",
+        "steel"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 110,
+        "def": 70,
+        "spa": 115,
+        "spd": 70,
+        "spe": 90
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "steadfast",
+          "ko": "불굴의마음",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "justified",
+          "ko": "정의의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+      "canMega": true
+    },
+    {
+      "id": 450,
+      "slug": "hippowdon",
+      "name": {
+        "ko": "하마돈",
+        "en": "hippowdon"
+      },
+      "genus": "중량포켓몬",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 108,
+        "atk": 112,
+        "def": 118,
+        "spa": 68,
+        "spd": 72,
+        "spe": 47
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "sand-stream",
+          "ko": "모래날림",
+          "hidden": false
+        },
+        {
+          "slug": "sand-force",
+          "ko": "모래의힘",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/450.png",
+      "canMega": false
+    },
+    {
+      "id": 454,
+      "slug": "toxicroak",
+      "name": {
+        "ko": "독개굴",
+        "en": "toxicroak"
+      },
+      "genus": "독설포켓몬",
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 83,
+        "atk": 106,
+        "def": 65,
+        "spa": 86,
+        "spd": 65,
+        "spe": 85
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "anticipation",
+          "ko": "위험예지",
+          "hidden": false
+        },
+        {
+          "slug": "dry-skin",
+          "ko": "건조피부",
+          "hidden": false
+        },
+        {
+          "slug": "poison-touch",
+          "ko": "독수",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/454.png",
+      "canMega": false
+    },
+    {
+      "id": 460,
+      "slug": "abomasnow",
+      "name": {
+        "ko": "눈설왕",
+        "en": "abomasnow"
+      },
+      "genus": "얼음나무포켓몬",
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 92,
+        "def": 75,
+        "spa": 92,
+        "spd": 85,
+        "spe": 60
+      },
+      "total": 494,
+      "abilities": [
+        {
+          "slug": "snow-warning",
+          "ko": "눈퍼뜨리기",
+          "hidden": false
+        },
+        {
+          "slug": "soundproof",
+          "ko": "방음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/460.png",
+      "canMega": true
+    },
+    {
+      "id": 461,
+      "slug": "weavile",
+      "name": {
+        "ko": "포푸니라",
+        "en": "weavile"
+      },
+      "genus": "갈고리손톱포켓몬",
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 120,
+        "def": 65,
+        "spa": 45,
+        "spd": 85,
+        "spe": 125
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "pressure",
+          "ko": "프레셔",
+          "hidden": false
+        },
+        {
+          "slug": "pickpocket",
+          "ko": "나쁜손버릇",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/461.png",
+      "canMega": false
+    },
+    {
+      "id": 464,
+      "slug": "rhyperior",
+      "name": {
+        "ko": "거대코뿌리",
+        "en": "rhyperior"
+      },
+      "genus": "드릴포켓몬",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "stats": {
+        "hp": 115,
+        "atk": 140,
+        "def": 130,
+        "spa": 55,
+        "spd": 55,
+        "spe": 40
+      },
+      "total": 535,
+      "abilities": [
+        {
+          "slug": "lightning-rod",
+          "ko": "피뢰침",
+          "hidden": false
+        },
+        {
+          "slug": "solid-rock",
+          "ko": "하드록",
+          "hidden": false
+        },
+        {
+          "slug": "reckless",
+          "ko": "이판사판",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/464.png",
+      "canMega": false
+    },
+    {
+      "id": 470,
+      "slug": "leafeon",
+      "name": {
+        "ko": "리피아",
+        "en": "leafeon"
+      },
+      "genus": "심록포켓몬",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 110,
+        "def": 130,
+        "spa": 60,
+        "spd": 65,
+        "spe": 95
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "leaf-guard",
+          "ko": "리프가드",
+          "hidden": false
+        },
+        {
+          "slug": "chlorophyll",
+          "ko": "엽록소",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png",
+      "canMega": false
+    },
+    {
+      "id": 471,
+      "slug": "glaceon",
+      "name": {
+        "ko": "글레이시아",
+        "en": "glaceon"
+      },
+      "genus": "신설포켓몬",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 60,
+        "def": 110,
+        "spa": 130,
+        "spd": 95,
+        "spe": 65
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "snow-cloak",
+          "ko": "눈숨기",
+          "hidden": false
+        },
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png",
+      "canMega": false
+    },
+    {
+      "id": 472,
+      "slug": "gliscor",
+      "name": {
+        "ko": "글라이온",
+        "en": "gliscor"
+      },
+      "genus": "송곳니전갈포켓몬",
+      "types": [
+        "ground",
+        "flying"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 95,
+        "def": 125,
+        "spa": 45,
+        "spd": 75,
+        "spe": 95
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "hyper-cutter",
+          "ko": "괴력집게",
+          "hidden": false
+        },
+        {
+          "slug": "sand-veil",
+          "ko": "모래숨기",
+          "hidden": false
+        },
+        {
+          "slug": "poison-heal",
+          "ko": "포이즌힐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/472.png",
+      "canMega": false
+    },
+    {
+      "id": 473,
+      "slug": "mamoswine",
+      "name": {
+        "ko": "맘모꾸리",
+        "en": "mamoswine"
+      },
+      "genus": "2개송곳니포켓몬",
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 130,
+        "def": 80,
+        "spa": 70,
+        "spd": 60,
+        "spe": 80
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "oblivious",
+          "ko": "둔감",
+          "hidden": false
+        },
+        {
+          "slug": "snow-cloak",
+          "ko": "눈숨기",
+          "hidden": false
+        },
+        {
+          "slug": "thick-fat",
+          "ko": "두꺼운지방",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png",
+      "canMega": false
+    },
+    {
+      "id": 475,
+      "slug": "gallade",
+      "name": {
+        "ko": "엘레이드",
+        "en": "gallade"
+      },
+      "genus": "검포켓몬",
+      "types": [
+        "psychic",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 68,
+        "atk": 125,
+        "def": 65,
+        "spa": 65,
+        "spd": 115,
+        "spe": 80
+      },
+      "total": 518,
+      "abilities": [
+        {
+          "slug": "steadfast",
+          "ko": "불굴의마음",
+          "hidden": false
+        },
+        {
+          "slug": "sharpness",
+          "ko": "예리함",
+          "hidden": false
+        },
+        {
+          "slug": "justified",
+          "ko": "정의의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/475.png",
+      "canMega": true
+    },
+    {
+      "id": 478,
+      "slug": "froslass",
+      "name": {
+        "ko": "눈여아",
+        "en": "froslass"
+      },
+      "genus": "설국포켓몬",
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 80,
+        "def": 70,
+        "spa": 80,
+        "spd": 70,
+        "spe": 110
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "snow-cloak",
+          "ko": "눈숨기",
+          "hidden": false
+        },
+        {
+          "slug": "cursed-body",
+          "ko": "저주받은바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
+      "canMega": true
+    },
+    {
+      "id": 479,
+      "slug": "rotom",
+      "name": {
+        "ko": "로토무",
+        "en": "rotom"
+      },
+      "genus": "플라스마포켓몬",
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 77,
+        "spa": 95,
+        "spd": 77,
+        "spe": 91
+      },
+      "total": 440,
+      "abilities": [
+        {
+          "slug": "levitate",
+          "ko": "부유",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
+      "canMega": false
+    },
+    {
+      "id": 497,
+      "slug": "serperior",
+      "name": {
+        "ko": "샤로다",
+        "en": "serperior"
+      },
+      "genus": "로열포켓몬",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 75,
+        "def": 95,
+        "spa": 75,
+        "spd": 95,
+        "spe": 113
+      },
+      "total": 528,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "contrary",
+          "ko": "심술꾸러기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png",
+      "canMega": false
+    },
+    {
+      "id": 500,
+      "slug": "emboar",
+      "name": {
+        "ko": "염무왕",
+        "en": "emboar"
+      },
+      "genus": "큰불돼지포켓몬",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 123,
+        "def": 65,
+        "spa": 100,
+        "spd": 65,
+        "spe": 65
+      },
+      "total": 528,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "reckless",
+          "ko": "이판사판",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/500.png",
+      "canMega": true
+    },
+    {
+      "id": 503,
+      "slug": "samurott",
+      "name": {
+        "ko": "대검귀",
+        "en": "samurott"
+      },
+      "genus": "관록포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 100,
+        "def": 85,
+        "spa": 108,
+        "spd": 70,
+        "spe": 70
+      },
+      "total": 528,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "shell-armor",
+          "ko": "조가비갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/503.png",
+      "canMega": false
+    },
+    {
+      "id": 505,
+      "slug": "watchog",
+      "name": {
+        "ko": "보르그",
+        "en": "watchog"
+      },
+      "genus": "경계포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 85,
+        "def": 69,
+        "spa": 60,
+        "spd": 69,
+        "spe": 77
+      },
+      "total": 420,
+      "abilities": [
+        {
+          "slug": "illuminate",
+          "ko": "발광",
+          "hidden": false
+        },
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "analytic",
+          "ko": "애널라이즈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/505.png",
+      "canMega": false
+    },
+    {
+      "id": 510,
+      "slug": "liepard",
+      "name": {
+        "ko": "레파르다스",
+        "en": "liepard"
+      },
+      "genus": "냉혹포켓몬",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "hp": 64,
+        "atk": 88,
+        "def": 50,
+        "spa": 88,
+        "spd": 50,
+        "spe": 106
+      },
+      "total": 446,
+      "abilities": [
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": false
+        },
+        {
+          "slug": "unburden",
+          "ko": "곡예",
+          "hidden": false
+        },
+        {
+          "slug": "prankster",
+          "ko": "짓궂은마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/510.png",
+      "canMega": false
+    },
+    {
+      "id": 512,
+      "slug": "simisage",
+      "name": {
+        "ko": "야나키",
+        "en": "simisage"
+      },
+      "genus": "가시원숭이포켓몬",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 98,
+        "def": 63,
+        "spa": 98,
+        "spd": 63,
+        "spe": 101
+      },
+      "total": 498,
+      "abilities": [
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": false
+        },
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/512.png",
+      "canMega": false
+    },
+    {
+      "id": 514,
+      "slug": "simisear",
+      "name": {
+        "ko": "바오키",
+        "en": "simisear"
+      },
+      "genus": "불티포켓몬",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 98,
+        "def": 63,
+        "spa": 98,
+        "spd": 63,
+        "spe": 101
+      },
+      "total": 498,
+      "abilities": [
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": false
+        },
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png",
+      "canMega": false
+    },
+    {
+      "id": 516,
+      "slug": "simipour",
+      "name": {
+        "ko": "앗차키",
+        "en": "simipour"
+      },
+      "genus": "방수포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 98,
+        "def": 63,
+        "spa": 98,
+        "spd": 63,
+        "spe": 101
+      },
+      "total": 498,
+      "abilities": [
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": false
+        },
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png",
+      "canMega": false
+    },
+    {
+      "id": 518,
+      "slug": "musharna",
+      "name": {
+        "ko": "몽얌나",
+        "en": "musharna"
+      },
+      "genus": "꿈결포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 116,
+        "atk": 55,
+        "def": 85,
+        "spa": 107,
+        "spd": 95,
+        "spe": 29
+      },
+      "total": 487,
+      "abilities": [
+        {
+          "slug": "forewarn",
+          "ko": "예지몽",
+          "hidden": false
+        },
+        {
+          "slug": "synchronize",
+          "ko": "싱크로",
+          "hidden": false
+        },
+        {
+          "slug": "telepathy",
+          "ko": "텔레파시",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/518.png",
+      "canMega": false
+    },
+    {
+      "id": 530,
+      "slug": "excadrill",
+      "name": {
+        "ko": "몰드류",
+        "en": "excadrill"
+      },
+      "genus": "땅밑포켓몬",
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 135,
+        "def": 60,
+        "spa": 50,
+        "spd": 65,
+        "spe": 88
+      },
+      "total": 508,
+      "abilities": [
+        {
+          "slug": "sand-rush",
+          "ko": "모래헤치기",
+          "hidden": false
+        },
+        {
+          "slug": "sand-force",
+          "ko": "모래의힘",
+          "hidden": false
+        },
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+      "canMega": true
+    },
+    {
+      "id": 531,
+      "slug": "audino",
+      "name": {
+        "ko": "다부니",
+        "en": "audino"
+      },
+      "genus": "히어링포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 103,
+        "atk": 60,
+        "def": 86,
+        "spa": 60,
+        "spd": 86,
+        "spe": 50
+      },
+      "total": 445,
+      "abilities": [
+        {
+          "slug": "healer",
+          "ko": "치유의마음",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": false
+        },
+        {
+          "slug": "klutz",
+          "ko": "서투름",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/531.png",
+      "canMega": true
+    },
+    {
+      "id": 534,
+      "slug": "conkeldurr",
+      "name": {
+        "ko": "노보청",
+        "en": "conkeldurr"
+      },
+      "genus": "근골포켓몬",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 105,
+        "atk": 140,
+        "def": 95,
+        "spa": 55,
+        "spd": 65,
+        "spe": 45
+      },
+      "total": 505,
+      "abilities": [
+        {
+          "slug": "guts",
+          "ko": "근성",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": false
+        },
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/534.png",
+      "canMega": false
+    },
+    {
+      "id": 545,
+      "slug": "scolipede",
+      "name": {
+        "ko": "펜드라",
+        "en": "scolipede"
+      },
+      "genus": "메가지네포켓몬",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 100,
+        "def": 89,
+        "spa": 55,
+        "spd": 69,
+        "spe": 112
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "poison-point",
+          "ko": "독가시",
+          "hidden": false
+        },
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "speed-boost",
+          "ko": "가속",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/545.png",
       "canMega": true
     },
     {
@@ -562,6 +4011,1344 @@
       "canMega": false
     },
     {
+      "id": 553,
+      "slug": "krookodile",
+      "name": {
+        "ko": "악비아르",
+        "en": "krookodile"
+      },
+      "genus": "위협포켓몬",
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 117,
+        "def": 80,
+        "spa": 65,
+        "spd": 70,
+        "spe": 92
+      },
+      "total": 519,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png",
+      "canMega": false
+    },
+    {
+      "id": 560,
+      "slug": "scrafty",
+      "name": {
+        "ko": "곤율거니",
+        "en": "scrafty"
+      },
+      "genus": "악당포켓몬",
+      "types": [
+        "dark",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 90,
+        "def": 115,
+        "spa": 45,
+        "spd": 115,
+        "spe": 58
+      },
+      "total": 488,
+      "abilities": [
+        {
+          "slug": "shed-skin",
+          "ko": "탈피",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": false
+        },
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/560.png",
+      "canMega": true
+    },
+    {
+      "id": 563,
+      "slug": "cofagrigus",
+      "name": {
+        "ko": "데스니칸",
+        "en": "cofagrigus"
+      },
+      "genus": "관포켓몬",
+      "types": [
+        "ghost"
+      ],
+      "stats": {
+        "hp": 58,
+        "atk": 50,
+        "def": 145,
+        "spa": 95,
+        "spd": 105,
+        "spe": 30
+      },
+      "total": 483,
+      "abilities": [
+        {
+          "slug": "mummy",
+          "ko": "미라",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/563.png",
+      "canMega": false
+    },
+    {
+      "id": 569,
+      "slug": "garbodor",
+      "name": {
+        "ko": "더스트나",
+        "en": "garbodor"
+      },
+      "genus": "쓰레기장포켓몬",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 95,
+        "def": 82,
+        "spa": 60,
+        "spd": 82,
+        "spe": 75
+      },
+      "total": 474,
+      "abilities": [
+        {
+          "slug": "stench",
+          "ko": "악취",
+          "hidden": false
+        },
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": false
+        },
+        {
+          "slug": "aftermath",
+          "ko": "유폭",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/569.png",
+      "canMega": false
+    },
+    {
+      "id": 571,
+      "slug": "zoroark",
+      "name": {
+        "ko": "조로아크",
+        "en": "zoroark"
+      },
+      "genus": "요괴여우포켓몬",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 105,
+        "def": 60,
+        "spa": 120,
+        "spd": 60,
+        "spe": 105
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "illusion",
+          "ko": "일루전",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png",
+      "canMega": false
+    },
+    {
+      "id": 579,
+      "slug": "reuniclus",
+      "name": {
+        "ko": "란쿨루스",
+        "en": "reuniclus"
+      },
+      "genus": "증폭포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 65,
+        "def": 75,
+        "spa": 125,
+        "spd": 85,
+        "spe": 30
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "overcoat",
+          "ko": "방진",
+          "hidden": false
+        },
+        {
+          "slug": "magic-guard",
+          "ko": "매직가드",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/579.png",
+      "canMega": false
+    },
+    {
+      "id": 584,
+      "slug": "vanilluxe",
+      "name": {
+        "ko": "배바닐라",
+        "en": "vanilluxe"
+      },
+      "genus": "블리자드포켓몬",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "hp": 71,
+        "atk": 95,
+        "def": 85,
+        "spa": 110,
+        "spd": 95,
+        "spe": 79
+      },
+      "total": 535,
+      "abilities": [
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": false
+        },
+        {
+          "slug": "snow-warning",
+          "ko": "눈퍼뜨리기",
+          "hidden": false
+        },
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/584.png",
+      "canMega": false
+    },
+    {
+      "id": 587,
+      "slug": "emolga",
+      "name": {
+        "ko": "에몽가",
+        "en": "emolga"
+      },
+      "genus": "하늘다람쥐포켓몬",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": 75,
+        "def": 60,
+        "spa": 75,
+        "spd": 60,
+        "spe": 103
+      },
+      "total": 428,
+      "abilities": [
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "motor-drive",
+          "ko": "전기엔진",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/587.png",
+      "canMega": false
+    },
+    {
+      "id": 604,
+      "slug": "eelektross",
+      "name": {
+        "ko": "저리더프",
+        "en": "eelektross"
+      },
+      "genus": "전기물고기포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 115,
+        "def": 80,
+        "spa": 105,
+        "spd": 80,
+        "spe": 50
+      },
+      "total": 515,
+      "abilities": [
+        {
+          "slug": "levitate",
+          "ko": "부유",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/604.png",
+      "canMega": true
+    },
+    {
+      "id": 609,
+      "slug": "chandelure",
+      "name": {
+        "ko": "샹델라",
+        "en": "chandelure"
+      },
+      "genus": "권유포켓몬",
+      "types": [
+        "ghost",
+        "fire"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 55,
+        "def": 90,
+        "spa": 145,
+        "spd": 90,
+        "spe": 80
+      },
+      "total": 520,
+      "abilities": [
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "flame-body",
+          "ko": "불꽃몸",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png",
+      "canMega": true
+    },
+    {
+      "id": 614,
+      "slug": "beartic",
+      "name": {
+        "ko": "툰베어",
+        "en": "beartic"
+      },
+      "genus": "동결포켓몬",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 130,
+        "def": 80,
+        "spa": 70,
+        "spd": 80,
+        "spe": 50
+      },
+      "total": 505,
+      "abilities": [
+        {
+          "slug": "snow-cloak",
+          "ko": "눈숨기",
+          "hidden": false
+        },
+        {
+          "slug": "slush-rush",
+          "ko": "눈치우기",
+          "hidden": false
+        },
+        {
+          "slug": "swift-swim",
+          "ko": "쓱쓱",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/614.png",
+      "canMega": false
+    },
+    {
+      "id": 618,
+      "slug": "stunfisk",
+      "name": {
+        "ko": "메더",
+        "en": "stunfisk"
+      },
+      "genus": "트랩포켓몬",
+      "types": [
+        "ground",
+        "electric"
+      ],
+      "stats": {
+        "hp": 109,
+        "atk": 66,
+        "def": 84,
+        "spa": 81,
+        "spd": 99,
+        "spe": 32
+      },
+      "total": 471,
+      "abilities": [
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": false
+        },
+        {
+          "slug": "sand-veil",
+          "ko": "모래숨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png",
+      "canMega": false
+    },
+    {
+      "id": 623,
+      "slug": "golurk",
+      "name": {
+        "ko": "골루그",
+        "en": "golurk"
+      },
+      "genus": "골렘포켓몬",
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 89,
+        "atk": 124,
+        "def": 80,
+        "spa": 55,
+        "spd": 80,
+        "spe": 55
+      },
+      "total": 483,
+      "abilities": [
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": false
+        },
+        {
+          "slug": "klutz",
+          "ko": "서투름",
+          "hidden": false
+        },
+        {
+          "slug": "no-guard",
+          "ko": "노가드",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/623.png",
+      "canMega": true
+    },
+    {
+      "id": 635,
+      "slug": "hydreigon",
+      "name": {
+        "ko": "삼삼드래",
+        "en": "hydreigon"
+      },
+      "genus": "난폭포켓몬",
+      "types": [
+        "dark",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 92,
+        "atk": 105,
+        "def": 90,
+        "spa": 125,
+        "spd": 90,
+        "spe": 98
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "levitate",
+          "ko": "부유",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png",
+      "canMega": false
+    },
+    {
+      "id": 637,
+      "slug": "volcarona",
+      "name": {
+        "ko": "불카모스",
+        "en": "volcarona"
+      },
+      "genus": "태양포켓몬",
+      "types": [
+        "bug",
+        "fire"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 60,
+        "def": 65,
+        "spa": 135,
+        "spd": 105,
+        "spe": 100
+      },
+      "total": 550,
+      "abilities": [
+        {
+          "slug": "flame-body",
+          "ko": "불꽃몸",
+          "hidden": false
+        },
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png",
+      "canMega": false
+    },
+    {
+      "id": 652,
+      "slug": "chesnaught",
+      "name": {
+        "ko": "브리가론",
+        "en": "chesnaught"
+      },
+      "genus": "가시갑옷포켓몬",
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 88,
+        "atk": 107,
+        "def": 122,
+        "spa": 74,
+        "spd": 75,
+        "spe": 64
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "bulletproof",
+          "ko": "방탄",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/652.png",
+      "canMega": true
+    },
+    {
+      "id": 655,
+      "slug": "delphox",
+      "name": {
+        "ko": "마폭시",
+        "en": "delphox"
+      },
+      "genus": "여우포켓몬",
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 69,
+        "def": 72,
+        "spa": 114,
+        "spd": 100,
+        "spe": 104
+      },
+      "total": 534,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "magician",
+          "ko": "매지션",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png",
+      "canMega": true
+    },
+    {
+      "id": 658,
+      "slug": "greninja",
+      "name": {
+        "ko": "개굴닌자",
+        "en": "greninja"
+      },
+      "genus": "시노비포켓몬",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "stats": {
+        "hp": 72,
+        "atk": 95,
+        "def": 67,
+        "spa": 103,
+        "spd": 71,
+        "spe": 122
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "protean",
+          "ko": "변환자재",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+      "canMega": true
+    },
+    {
+      "id": 660,
+      "slug": "diggersby",
+      "name": {
+        "ko": "파르토",
+        "en": "diggersby"
+      },
+      "genus": "땅구멍파기포켓몬",
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 56,
+        "def": 77,
+        "spa": 50,
+        "spd": 77,
+        "spe": 78
+      },
+      "total": 423,
+      "abilities": [
+        {
+          "slug": "pickup",
+          "ko": "픽업",
+          "hidden": false
+        },
+        {
+          "slug": "cheek-pouch",
+          "ko": "볼주머니",
+          "hidden": false
+        },
+        {
+          "slug": "huge-power",
+          "ko": "천하장사",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+      "canMega": false
+    },
+    {
+      "id": 663,
+      "slug": "talonflame",
+      "name": {
+        "ko": "파이어로",
+        "en": "talonflame"
+      },
+      "genus": "열화포켓몬",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 81,
+        "def": 71,
+        "spa": 74,
+        "spd": 69,
+        "spe": 126
+      },
+      "total": 499,
+      "abilities": [
+        {
+          "slug": "flame-body",
+          "ko": "불꽃몸",
+          "hidden": false
+        },
+        {
+          "slug": "gale-wings",
+          "ko": "질풍날개",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png",
+      "canMega": false
+    },
+    {
+      "id": 666,
+      "slug": "vivillon",
+      "name": {
+        "ko": "비비용",
+        "en": "vivillon"
+      },
+      "genus": "인분포켓몬",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 52,
+        "def": 50,
+        "spa": 90,
+        "spd": 50,
+        "spe": 89
+      },
+      "total": 411,
+      "abilities": [
+        {
+          "slug": "shield-dust",
+          "ko": "인분",
+          "hidden": false
+        },
+        {
+          "slug": "compound-eyes",
+          "ko": "복안",
+          "hidden": false
+        },
+        {
+          "slug": "friend-guard",
+          "ko": "프렌드가드",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png",
+      "canMega": false
+    },
+    {
+      "id": 668,
+      "slug": "pyroar-male",
+      "name": {
+        "ko": "화염레오",
+        "en": "pyroar-male"
+      },
+      "genus": "임금포켓몬",
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "stats": {
+        "hp": 86,
+        "atk": 68,
+        "def": 72,
+        "spa": 109,
+        "spd": 66,
+        "spe": 106
+      },
+      "total": 507,
+      "abilities": [
+        {
+          "slug": "rivalry",
+          "ko": "투쟁심",
+          "hidden": false
+        },
+        {
+          "slug": "unnerve",
+          "ko": "긴장감",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png",
+      "canMega": true
+    },
+    {
+      "id": 671,
+      "slug": "florges",
+      "name": {
+        "ko": "플라제스",
+        "en": "florges"
+      },
+      "genus": "가든포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 65,
+        "def": 68,
+        "spa": 112,
+        "spd": 154,
+        "spe": 75
+      },
+      "total": 552,
+      "abilities": [
+        {
+          "slug": "flower-veil",
+          "ko": "플라워베일",
+          "hidden": false
+        },
+        {
+          "slug": "symbiosis",
+          "ko": "공생",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+      "canMega": false
+    },
+    {
+      "id": 675,
+      "slug": "pangoro",
+      "name": {
+        "ko": "부란다",
+        "en": "pangoro"
+      },
+      "genus": "무서운얼굴포켓몬",
+      "types": [
+        "fighting",
+        "dark"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 124,
+        "def": 78,
+        "spa": 69,
+        "spd": 71,
+        "spe": 58
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": false
+        },
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": false
+        },
+        {
+          "slug": "scrappy",
+          "ko": "배짱",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png",
+      "canMega": false
+    },
+    {
+      "id": 676,
+      "slug": "furfrou",
+      "name": {
+        "ko": "트리미앙",
+        "en": "furfrou"
+      },
+      "genus": "푸들포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 80,
+        "def": 60,
+        "spa": 65,
+        "spd": 90,
+        "spe": 102
+      },
+      "total": 472,
+      "abilities": [
+        {
+          "slug": "fur-coat",
+          "ko": "퍼코트",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png",
+      "canMega": false
+    },
+    {
+      "id": 678,
+      "slug": "meowstic-male",
+      "name": {
+        "ko": "냐오닉스",
+        "en": "meowstic-male"
+      },
+      "genus": "억제포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 74,
+        "atk": 48,
+        "def": 76,
+        "spa": 83,
+        "spd": 81,
+        "spe": 104
+      },
+      "total": 466,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": false
+        },
+        {
+          "slug": "prankster",
+          "ko": "짓궂은마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png",
+      "canMega": true
+    },
+    {
+      "id": 681,
+      "slug": "aegislash-shield",
+      "name": {
+        "ko": "킬가르도",
+        "en": "aegislash-shield"
+      },
+      "genus": "왕검포켓몬",
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 50,
+        "def": 140,
+        "spa": 50,
+        "spd": 140,
+        "spe": 60
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "stance-change",
+          "ko": "배틀스위치",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
+      "canMega": false
+    },
+    {
+      "id": 683,
+      "slug": "aromatisse",
+      "name": {
+        "ko": "프레프티르",
+        "en": "aromatisse"
+      },
+      "genus": "방향포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 101,
+        "atk": 72,
+        "def": 72,
+        "spa": 99,
+        "spd": 89,
+        "spe": 29
+      },
+      "total": 462,
+      "abilities": [
+        {
+          "slug": "healer",
+          "ko": "치유의마음",
+          "hidden": false
+        },
+        {
+          "slug": "aroma-veil",
+          "ko": "아로마베일",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png",
+      "canMega": false
+    },
+    {
+      "id": 685,
+      "slug": "slurpuff",
+      "name": {
+        "ko": "나루림",
+        "en": "slurpuff"
+      },
+      "genus": "휩포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 82,
+        "atk": 80,
+        "def": 86,
+        "spa": 85,
+        "spd": 75,
+        "spe": 72
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "sweet-veil",
+          "ko": "스위트베일",
+          "hidden": false
+        },
+        {
+          "slug": "unburden",
+          "ko": "곡예",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/685.png",
+      "canMega": false
+    },
+    {
+      "id": 687,
+      "slug": "malamar",
+      "name": {
+        "ko": "칼라마네로",
+        "en": "malamar"
+      },
+      "genus": "역전포켓몬",
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 86,
+        "atk": 92,
+        "def": 88,
+        "spa": 68,
+        "spd": 75,
+        "spe": 73
+      },
+      "total": 482,
+      "abilities": [
+        {
+          "slug": "contrary",
+          "ko": "심술꾸러기",
+          "hidden": false
+        },
+        {
+          "slug": "suction-cups",
+          "ko": "흡반",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png",
+      "canMega": true
+    },
+    {
+      "id": 689,
+      "slug": "barbaracle",
+      "name": {
+        "ko": "거북손데스",
+        "en": "barbaracle"
+      },
+      "genus": "집합포켓몬",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "stats": {
+        "hp": 72,
+        "atk": 105,
+        "def": 115,
+        "spa": 54,
+        "spd": 86,
+        "spe": 68
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "tough-claws",
+          "ko": "단단한발톱",
+          "hidden": false
+        },
+        {
+          "slug": "sniper",
+          "ko": "스나이퍼",
+          "hidden": false
+        },
+        {
+          "slug": "pickpocket",
+          "ko": "나쁜손버릇",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png",
+      "canMega": true
+    },
+    {
+      "id": 691,
+      "slug": "dragalge",
+      "name": {
+        "ko": "드래캄",
+        "en": "dragalge"
+      },
+      "genus": "풀모방포켓몬",
+      "types": [
+        "poison",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 75,
+        "def": 90,
+        "spa": 97,
+        "spd": 123,
+        "spe": 44
+      },
+      "total": 494,
+      "abilities": [
+        {
+          "slug": "poison-point",
+          "ko": "독가시",
+          "hidden": false
+        },
+        {
+          "slug": "poison-touch",
+          "ko": "독수",
+          "hidden": false
+        },
+        {
+          "slug": "adaptability",
+          "ko": "적응력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png",
+      "canMega": true
+    },
+    {
+      "id": 693,
+      "slug": "clawitzer",
+      "name": {
+        "ko": "블로스터",
+        "en": "clawitzer"
+      },
+      "genus": "런처포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 71,
+        "atk": 73,
+        "def": 88,
+        "spa": 120,
+        "spd": 89,
+        "spe": 59
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "mega-launcher",
+          "ko": "메가런처",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/693.png",
+      "canMega": false
+    },
+    {
+      "id": 695,
+      "slug": "heliolisk",
+      "name": {
+        "ko": "일레도리자드",
+        "en": "heliolisk"
+      },
+      "genus": "발전포켓몬",
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "stats": {
+        "hp": 62,
+        "atk": 55,
+        "def": 52,
+        "spa": 109,
+        "spd": 94,
+        "spe": 109
+      },
+      "total": 481,
+      "abilities": [
+        {
+          "slug": "dry-skin",
+          "ko": "건조피부",
+          "hidden": false
+        },
+        {
+          "slug": "sand-veil",
+          "ko": "모래숨기",
+          "hidden": false
+        },
+        {
+          "slug": "solar-power",
+          "ko": "선파워",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png",
+      "canMega": false
+    },
+    {
+      "id": 697,
+      "slug": "tyrantrum",
+      "name": {
+        "ko": "견고라스",
+        "en": "tyrantrum"
+      },
+      "genus": "폭군포켓몬",
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 82,
+        "atk": 121,
+        "def": 119,
+        "spa": 69,
+        "spd": 59,
+        "spe": 71
+      },
+      "total": 521,
+      "abilities": [
+        {
+          "slug": "strong-jaw",
+          "ko": "옹골찬턱",
+          "hidden": false
+        },
+        {
+          "slug": "rock-head",
+          "ko": "돌머리",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png",
+      "canMega": false
+    },
+    {
+      "id": 699,
+      "slug": "aurorus",
+      "name": {
+        "ko": "아마루르가",
+        "en": "aurorus"
+      },
+      "genus": "툰드라포켓몬",
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "stats": {
+        "hp": 123,
+        "atk": 77,
+        "def": 72,
+        "spa": 99,
+        "spd": 92,
+        "spe": 58
+      },
+      "total": 521,
+      "abilities": [
+        {
+          "slug": "refrigerate",
+          "ko": "프리즈스킨",
+          "hidden": false
+        },
+        {
+          "slug": "snow-warning",
+          "ko": "눈퍼뜨리기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png",
+      "canMega": false
+    },
+    {
       "id": 700,
       "slug": "sylveon",
       "name": {
@@ -594,6 +5381,363 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+      "canMega": false
+    },
+    {
+      "id": 701,
+      "slug": "hawlucha",
+      "name": {
+        "ko": "루차불",
+        "en": "hawlucha"
+      },
+      "genus": "레슬링포켓몬",
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 92,
+        "def": 75,
+        "spa": 74,
+        "spd": 63,
+        "spe": 118
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": false
+        },
+        {
+          "slug": "unburden",
+          "ko": "곡예",
+          "hidden": false
+        },
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png",
+      "canMega": true
+    },
+    {
+      "id": 702,
+      "slug": "dedenne",
+      "name": {
+        "ko": "데덴네",
+        "en": "dedenne"
+      },
+      "genus": "안테나포켓몬",
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 67,
+        "atk": 58,
+        "def": 57,
+        "spa": 81,
+        "spd": 67,
+        "spe": 101
+      },
+      "total": 431,
+      "abilities": [
+        {
+          "slug": "cheek-pouch",
+          "ko": "볼주머니",
+          "hidden": false
+        },
+        {
+          "slug": "pickup",
+          "ko": "픽업",
+          "hidden": false
+        },
+        {
+          "slug": "plus",
+          "ko": "플러스",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/702.png",
+      "canMega": false
+    },
+    {
+      "id": 706,
+      "slug": "goodra",
+      "name": {
+        "ko": "미끄래곤",
+        "en": "goodra"
+      },
+      "genus": "드래곤포켓몬",
+      "types": [
+        "dragon"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 100,
+        "def": 70,
+        "spa": 110,
+        "spd": 150,
+        "spe": 80
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "sap-sipper",
+          "ko": "초식",
+          "hidden": false
+        },
+        {
+          "slug": "hydration",
+          "ko": "촉촉바디",
+          "hidden": false
+        },
+        {
+          "slug": "gooey",
+          "ko": "미끈미끈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png",
+      "canMega": false
+    },
+    {
+      "id": 707,
+      "slug": "klefki",
+      "name": {
+        "ko": "클레피",
+        "en": "klefki"
+      },
+      "genus": "열쇠꾸러미포켓몬",
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 57,
+        "atk": 80,
+        "def": 91,
+        "spa": 80,
+        "spd": 87,
+        "spe": 75
+      },
+      "total": 470,
+      "abilities": [
+        {
+          "slug": "prankster",
+          "ko": "짓궂은마음",
+          "hidden": false
+        },
+        {
+          "slug": "magician",
+          "ko": "매지션",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
+      "canMega": false
+    },
+    {
+      "id": 709,
+      "slug": "trevenant",
+      "name": {
+        "ko": "대로트",
+        "en": "trevenant"
+      },
+      "genus": "고목포켓몬",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 110,
+        "def": 76,
+        "spa": 65,
+        "spd": 82,
+        "spe": 56
+      },
+      "total": 474,
+      "abilities": [
+        {
+          "slug": "natural-cure",
+          "ko": "자연회복",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "harvest",
+          "ko": "수확",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png",
+      "canMega": false
+    },
+    {
+      "id": 711,
+      "slug": "gourgeist-average",
+      "name": {
+        "ko": "펌킨인",
+        "en": "gourgeist-average"
+      },
+      "genus": "호박포켓몬",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 90,
+        "def": 122,
+        "spa": 58,
+        "spd": 75,
+        "spe": 84
+      },
+      "total": 494,
+      "abilities": [
+        {
+          "slug": "pickup",
+          "ko": "픽업",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "insomnia",
+          "ko": "불면",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png",
+      "canMega": false
+    },
+    {
+      "id": 713,
+      "slug": "avalugg",
+      "name": {
+        "ko": "크레베이스",
+        "en": "avalugg"
+      },
+      "genus": "빙산포켓몬",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 117,
+        "def": 184,
+        "spa": 44,
+        "spd": 46,
+        "spe": 28
+      },
+      "total": 514,
+      "abilities": [
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": false
+        },
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/713.png",
+      "canMega": false
+    },
+    {
+      "id": 715,
+      "slug": "noivern",
+      "name": {
+        "ko": "음번",
+        "en": "noivern"
+      },
+      "genus": "음파포켓몬",
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 70,
+        "def": 80,
+        "spa": 97,
+        "spd": 80,
+        "spe": 123
+      },
+      "total": 535,
+      "abilities": [
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": false
+        },
+        {
+          "slug": "telepathy",
+          "ko": "텔레파시",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png",
+      "canMega": false
+    },
+    {
+      "id": 724,
+      "slug": "decidueye",
+      "name": {
+        "ko": "모크나이퍼",
+        "en": "decidueye"
+      },
+      "genus": "화살깃포켓몬",
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 107,
+        "def": 75,
+        "spa": 100,
+        "spd": 100,
+        "spe": 70
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "long-reach",
+          "ko": "원격",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png",
       "canMega": false
     },
     {
@@ -630,6 +5774,785 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png",
+      "canMega": false
+    },
+    {
+      "id": 730,
+      "slug": "primarina",
+      "name": {
+        "ko": "누리레느",
+        "en": "primarina"
+      },
+      "genus": "솔리스트포켓몬",
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 74,
+        "def": 74,
+        "spa": 126,
+        "spd": 116,
+        "spe": 60
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "liquid-voice",
+          "ko": "촉촉보이스",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
+      "canMega": false
+    },
+    {
+      "id": 733,
+      "slug": "toucannon",
+      "name": {
+        "ko": "왕큰부리",
+        "en": "toucannon"
+      },
+      "genus": "대포포켓몬",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 120,
+        "def": 75,
+        "spa": 75,
+        "spd": 75,
+        "spe": 60
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "skill-link",
+          "ko": "스킬링크",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png",
+      "canMega": false
+    },
+    {
+      "id": 740,
+      "slug": "crabominable",
+      "name": {
+        "ko": "모단단게",
+        "en": "crabominable"
+      },
+      "genus": "털게포켓몬",
+      "types": [
+        "fighting",
+        "ice"
+      ],
+      "stats": {
+        "hp": 97,
+        "atk": 132,
+        "def": 77,
+        "spa": 62,
+        "spd": 67,
+        "spe": 43
+      },
+      "total": 478,
+      "abilities": [
+        {
+          "slug": "hyper-cutter",
+          "ko": "괴력집게",
+          "hidden": false
+        },
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png",
+      "canMega": true
+    },
+    {
+      "id": 745,
+      "slug": "lycanroc-midday",
+      "name": {
+        "ko": "루가루암",
+        "en": "lycanroc-midday"
+      },
+      "genus": "늑대포켓몬",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 115,
+        "def": 65,
+        "spa": 55,
+        "spd": 65,
+        "spe": 112
+      },
+      "total": 487,
+      "abilities": [
+        {
+          "slug": "keen-eye",
+          "ko": "날카로운눈",
+          "hidden": false
+        },
+        {
+          "slug": "sand-rush",
+          "ko": "모래헤치기",
+          "hidden": false
+        },
+        {
+          "slug": "steadfast",
+          "ko": "불굴의마음",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png",
+      "canMega": false
+    },
+    {
+      "id": 748,
+      "slug": "toxapex",
+      "name": {
+        "ko": "더시마사리",
+        "en": "toxapex"
+      },
+      "genus": "깨비사리포켓몬",
+      "types": [
+        "poison",
+        "water"
+      ],
+      "stats": {
+        "hp": 50,
+        "atk": 63,
+        "def": 152,
+        "spa": 53,
+        "spd": 142,
+        "spe": 35
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "merciless",
+          "ko": "무도한행동",
+          "hidden": false
+        },
+        {
+          "slug": "limber",
+          "ko": "유연",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png",
+      "canMega": false
+    },
+    {
+      "id": 750,
+      "slug": "mudsdale",
+      "name": {
+        "ko": "만마드",
+        "en": "mudsdale"
+      },
+      "genus": "만마포켓몬",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 100,
+        "atk": 125,
+        "def": 100,
+        "spa": 55,
+        "spd": 85,
+        "spe": 35
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "stamina",
+          "ko": "지구력",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/750.png",
+      "canMega": false
+    },
+    {
+      "id": 752,
+      "slug": "araquanid",
+      "name": {
+        "ko": "깨비물거미",
+        "en": "araquanid"
+      },
+      "genus": "수포포켓몬",
+      "types": [
+        "water",
+        "bug"
+      ],
+      "stats": {
+        "hp": 68,
+        "atk": 70,
+        "def": 92,
+        "spa": 50,
+        "spd": 132,
+        "spe": 42
+      },
+      "total": 454,
+      "abilities": [
+        {
+          "slug": "water-bubble",
+          "ko": "수포",
+          "hidden": false
+        },
+        {
+          "slug": "water-absorb",
+          "ko": "저수",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/752.png",
+      "canMega": false
+    },
+    {
+      "id": 758,
+      "slug": "salazzle",
+      "name": {
+        "ko": "염뉴트",
+        "en": "salazzle"
+      },
+      "genus": "독도마뱀포켓몬",
+      "types": [
+        "poison",
+        "fire"
+      ],
+      "stats": {
+        "hp": 68,
+        "atk": 64,
+        "def": 60,
+        "spa": 111,
+        "spd": 60,
+        "spe": 117
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "corrosion",
+          "ko": "부식",
+          "hidden": false
+        },
+        {
+          "slug": "oblivious",
+          "ko": "둔감",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+      "canMega": false
+    },
+    {
+      "id": 763,
+      "slug": "tsareena",
+      "name": {
+        "ko": "달코퀸",
+        "en": "tsareena"
+      },
+      "genus": "후르츠포켓몬",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 72,
+        "atk": 120,
+        "def": 98,
+        "spa": 50,
+        "spd": 98,
+        "spe": 72
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "leaf-guard",
+          "ko": "리프가드",
+          "hidden": false
+        },
+        {
+          "slug": "queenly-majesty",
+          "ko": "여왕의위엄",
+          "hidden": false
+        },
+        {
+          "slug": "sweet-veil",
+          "ko": "스위트베일",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
+      "canMega": false
+    },
+    {
+      "id": 765,
+      "slug": "oranguru",
+      "name": {
+        "ko": "하랑우탄",
+        "en": "oranguru"
+      },
+      "genus": "현자포켓몬",
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 60,
+        "def": 80,
+        "spa": 90,
+        "spd": 110,
+        "spe": 60
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "telepathy",
+          "ko": "텔레파시",
+          "hidden": false
+        },
+        {
+          "slug": "symbiosis",
+          "ko": "공생",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/765.png",
+      "canMega": false
+    },
+    {
+      "id": 766,
+      "slug": "passimian",
+      "name": {
+        "ko": "내던숭이",
+        "en": "passimian"
+      },
+      "genus": "연계포켓몬",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 100,
+        "atk": 120,
+        "def": 90,
+        "spa": 40,
+        "spd": 60,
+        "spe": 80
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "receiver",
+          "ko": "리시버",
+          "hidden": false
+        },
+        {
+          "slug": "defiant",
+          "ko": "오기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/766.png",
+      "canMega": false
+    },
+    {
+      "id": 778,
+      "slug": "mimikyu-disguised",
+      "name": {
+        "ko": "따라큐",
+        "en": "mimikyu-disguised"
+      },
+      "genus": "탈포켓몬",
+      "types": [
+        "ghost",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": 90,
+        "def": 80,
+        "spa": 50,
+        "spd": 105,
+        "spe": 96
+      },
+      "total": 476,
+      "abilities": [
+        {
+          "slug": "disguise",
+          "ko": "탈",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png",
+      "canMega": false
+    },
+    {
+      "id": 780,
+      "slug": "drampa",
+      "name": {
+        "ko": "할비롱",
+        "en": "drampa"
+      },
+      "genus": "느긋누긋포켓몬",
+      "types": [
+        "normal",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 78,
+        "atk": 60,
+        "def": 85,
+        "spa": 135,
+        "spd": 91,
+        "spe": 36
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "berserk",
+          "ko": "발끈",
+          "hidden": false
+        },
+        {
+          "slug": "sap-sipper",
+          "ko": "초식",
+          "hidden": false
+        },
+        {
+          "slug": "cloud-nine",
+          "ko": "날씨부정",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/780.png",
+      "canMega": true
+    },
+    {
+      "id": 784,
+      "slug": "kommo-o",
+      "name": {
+        "ko": "짜랑고우거",
+        "en": "kommo-o"
+      },
+      "genus": "비늘포켓몬",
+      "types": [
+        "dragon",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 110,
+        "def": 125,
+        "spa": 100,
+        "spd": 105,
+        "spe": 85
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "bulletproof",
+          "ko": "방탄",
+          "hidden": false
+        },
+        {
+          "slug": "soundproof",
+          "ko": "방음",
+          "hidden": false
+        },
+        {
+          "slug": "overcoat",
+          "ko": "방진",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png",
+      "canMega": false
+    },
+    {
+      "id": 823,
+      "slug": "corviknight",
+      "name": {
+        "ko": "아머까오",
+        "en": "corviknight"
+      },
+      "genus": "까마귀포켓몬",
+      "types": [
+        "flying",
+        "steel"
+      ],
+      "stats": {
+        "hp": 98,
+        "atk": 87,
+        "def": 105,
+        "spa": 53,
+        "spd": 85,
+        "spe": 67
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "pressure",
+          "ko": "프레셔",
+          "hidden": false
+        },
+        {
+          "slug": "unnerve",
+          "ko": "긴장감",
+          "hidden": false
+        },
+        {
+          "slug": "mirror-armor",
+          "ko": "미러아머",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png",
+      "canMega": false
+    },
+    {
+      "id": 841,
+      "slug": "flapple",
+      "name": {
+        "ko": "애프룡",
+        "en": "flapple"
+      },
+      "genus": "사과날개포켓몬",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 110,
+        "def": 80,
+        "spa": 95,
+        "spd": 60,
+        "spe": 70
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "ripen",
+          "ko": "숙성",
+          "hidden": false
+        },
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": false
+        },
+        {
+          "slug": "hustle",
+          "ko": "의욕",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/841.png",
+      "canMega": false
+    },
+    {
+      "id": 842,
+      "slug": "appletun",
+      "name": {
+        "ko": "단지래플",
+        "en": "appletun"
+      },
+      "genus": "사과즙포켓몬",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 85,
+        "def": 80,
+        "spa": 100,
+        "spd": 80,
+        "spe": 30
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "ripen",
+          "ko": "숙성",
+          "hidden": false
+        },
+        {
+          "slug": "gluttony",
+          "ko": "먹보",
+          "hidden": false
+        },
+        {
+          "slug": "thick-fat",
+          "ko": "두꺼운지방",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/842.png",
+      "canMega": false
+    },
+    {
+      "id": 844,
+      "slug": "sandaconda",
+      "name": {
+        "ko": "사다이사",
+        "en": "sandaconda"
+      },
+      "genus": "모래뱀포켓몬",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 72,
+        "atk": 107,
+        "def": 125,
+        "spa": 65,
+        "spd": 70,
+        "spe": 71
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "sand-spit",
+          "ko": "모래뿜기",
+          "hidden": false
+        },
+        {
+          "slug": "shed-skin",
+          "ko": "탈피",
+          "hidden": false
+        },
+        {
+          "slug": "sand-veil",
+          "ko": "모래숨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/844.png",
+      "canMega": false
+    },
+    {
+      "id": 855,
+      "slug": "polteageist",
+      "name": {
+        "ko": "포트데스",
+        "en": "polteageist"
+      },
+      "genus": "홍차포켓몬",
+      "types": [
+        "ghost"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 65,
+        "def": 65,
+        "spa": 134,
+        "spd": 114,
+        "spe": 70
+      },
+      "total": 508,
+      "abilities": [
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": false
+        },
+        {
+          "slug": "cursed-body",
+          "ko": "저주받은바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png",
+      "canMega": false
+    },
+    {
+      "id": 858,
+      "slug": "hatterene",
+      "name": {
+        "ko": "브리무음",
+        "en": "hatterene"
+      },
+      "genus": "정적포켓몬",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 57,
+        "atk": 90,
+        "def": 95,
+        "spa": 136,
+        "spd": 103,
+        "spe": 29
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "healer",
+          "ko": "치유의마음",
+          "hidden": false
+        },
+        {
+          "slug": "anticipation",
+          "ko": "위험예지",
+          "hidden": false
+        },
+        {
+          "slug": "magic-bounce",
+          "ko": "매직미러",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/858.png",
       "canMega": false
     },
     {
@@ -674,6 +6597,343 @@
       "canMega": false
     },
     {
+      "id": 866,
+      "slug": "mr-rime",
+      "name": {
+        "ko": "마임꽁꽁",
+        "en": "mr-rime"
+      },
+      "genus": "코미디언포켓몬",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 85,
+        "def": 75,
+        "spa": 110,
+        "spd": 100,
+        "spe": 70
+      },
+      "total": 520,
+      "abilities": [
+        {
+          "slug": "tangled-feet",
+          "ko": "갈지자걸음",
+          "hidden": false
+        },
+        {
+          "slug": "screen-cleaner",
+          "ko": "배리어프리",
+          "hidden": false
+        },
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/866.png",
+      "canMega": false
+    },
+    {
+      "id": 867,
+      "slug": "runerigus",
+      "name": {
+        "ko": "데스판",
+        "en": "runerigus"
+      },
+      "genus": "원념포켓몬",
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 58,
+        "atk": 95,
+        "def": 145,
+        "spa": 50,
+        "spd": 105,
+        "spe": 30
+      },
+      "total": 483,
+      "abilities": [
+        {
+          "slug": "wandering-spirit",
+          "ko": "떠도는영혼",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png",
+      "canMega": false
+    },
+    {
+      "id": 869,
+      "slug": "alcremie",
+      "name": {
+        "ko": "마휘핑",
+        "en": "alcremie"
+      },
+      "genus": "크림포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 60,
+        "def": 75,
+        "spa": 110,
+        "spd": 121,
+        "spe": 64
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "sweet-veil",
+          "ko": "스위트베일",
+          "hidden": false
+        },
+        {
+          "slug": "aroma-veil",
+          "ko": "아로마베일",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/869.png",
+      "canMega": false
+    },
+    {
+      "id": 870,
+      "slug": "falinks",
+      "name": {
+        "ko": "대여르",
+        "en": "falinks"
+      },
+      "genus": "진형포켓몬",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 100,
+        "def": 100,
+        "spa": 70,
+        "spd": 60,
+        "spe": 75
+      },
+      "total": 470,
+      "abilities": [
+        {
+          "slug": "battle-armor",
+          "ko": "전투무장",
+          "hidden": false
+        },
+        {
+          "slug": "defiant",
+          "ko": "오기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png",
+      "canMega": true
+    },
+    {
+      "id": 877,
+      "slug": "morpeko-full-belly",
+      "name": {
+        "ko": "모르페코",
+        "en": "morpeko-full-belly"
+      },
+      "genus": "양면포켓몬",
+      "types": [
+        "electric",
+        "dark"
+      ],
+      "stats": {
+        "hp": 58,
+        "atk": 95,
+        "def": 58,
+        "spa": 70,
+        "spd": 58,
+        "spe": 97
+      },
+      "total": 436,
+      "abilities": [
+        {
+          "slug": "hunger-switch",
+          "ko": "꼬르륵스위치",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png",
+      "canMega": false
+    },
+    {
+      "id": 887,
+      "slug": "dragapult",
+      "name": {
+        "ko": "드래펄트",
+        "en": "dragapult"
+      },
+      "genus": "스텔스포켓몬",
+      "types": [
+        "dragon",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 88,
+        "atk": 120,
+        "def": 75,
+        "spa": 100,
+        "spd": 75,
+        "spe": 142
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "clear-body",
+          "ko": "클리어바디",
+          "hidden": false
+        },
+        {
+          "slug": "infiltrator",
+          "ko": "틈새포착",
+          "hidden": false
+        },
+        {
+          "slug": "cursed-body",
+          "ko": "저주받은바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png",
+      "canMega": false
+    },
+    {
+      "id": 899,
+      "slug": "wyrdeer",
+      "name": {
+        "ko": "신비록",
+        "en": "wyrdeer"
+      },
+      "genus": "큰뿔포켓몬",
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 103,
+        "atk": 105,
+        "def": 72,
+        "spa": 105,
+        "spd": 75,
+        "spe": 65
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "sap-sipper",
+          "ko": "초식",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png",
+      "canMega": false
+    },
+    {
+      "id": 900,
+      "slug": "kleavor",
+      "name": {
+        "ko": "사마자르",
+        "en": "kleavor"
+      },
+      "genus": "큰도끼포켓몬",
+      "types": [
+        "bug",
+        "rock"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 135,
+        "def": 95,
+        "spa": 45,
+        "spd": 70,
+        "spe": 85
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "swarm",
+          "ko": "벌레의알림",
+          "hidden": false
+        },
+        {
+          "slug": "sheer-force",
+          "ko": "우격다짐",
+          "hidden": false
+        },
+        {
+          "slug": "sharpness",
+          "ko": "예리함",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/900.png",
+      "canMega": false
+    },
+    {
+      "id": 902,
+      "slug": "basculegion-male",
+      "name": {
+        "ko": "대쓰여너",
+        "en": "basculegion-male"
+      },
+      "genus": "큰물고기포켓몬",
+      "types": [
+        "water",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 120,
+        "atk": 112,
+        "def": 65,
+        "spa": 80,
+        "spd": 75,
+        "spe": 78
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "swift-swim",
+          "ko": "쓱쓱",
+          "hidden": false
+        },
+        {
+          "slug": "adaptability",
+          "ko": "적응력",
+          "hidden": false
+        },
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png",
+      "canMega": false
+    },
+    {
       "id": 903,
       "slug": "sneasler",
       "name": {
@@ -712,6 +6972,687 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png",
+      "canMega": false
+    },
+    {
+      "id": 904,
+      "slug": "overqwil",
+      "name": {
+        "ko": "장침바루",
+        "en": "overqwil"
+      },
+      "genus": "침붕포켓몬몬",
+      "types": [
+        "dark",
+        "poison"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 115,
+        "def": 95,
+        "spa": 65,
+        "spd": 65,
+        "spe": 85
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "poison-point",
+          "ko": "독가시",
+          "hidden": false
+        },
+        {
+          "slug": "swift-swim",
+          "ko": "쓱쓱",
+          "hidden": false
+        },
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/904.png",
+      "canMega": false
+    },
+    {
+      "id": 908,
+      "slug": "meowscarada",
+      "name": {
+        "ko": "마스카나",
+        "en": "meowscarada"
+      },
+      "genus": "매지션포켓몬",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "stats": {
+        "hp": 76,
+        "atk": 110,
+        "def": 70,
+        "spa": 81,
+        "spd": 70,
+        "spe": 123
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "protean",
+          "ko": "변환자재",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png",
+      "canMega": false
+    },
+    {
+      "id": 911,
+      "slug": "skeledirge",
+      "name": {
+        "ko": "라우드본",
+        "en": "skeledirge"
+      },
+      "genus": "싱어포켓몬",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 104,
+        "atk": 75,
+        "def": 100,
+        "spa": 110,
+        "spd": 75,
+        "spe": 66
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "unaware",
+          "ko": "천진",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png",
+      "canMega": false
+    },
+    {
+      "id": 914,
+      "slug": "quaquaval",
+      "name": {
+        "ko": "웨이니발",
+        "en": "quaquaval"
+      },
+      "genus": "댄서포켓몬",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 120,
+        "def": 80,
+        "spa": 85,
+        "spd": 75,
+        "spe": 85
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "moxie",
+          "ko": "자기과신",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png",
+      "canMega": false
+    },
+    {
+      "id": 923,
+      "slug": "pawmot",
+      "name": {
+        "ko": "빠르모트",
+        "en": "pawmot"
+      },
+      "genus": "손길포켓몬",
+      "types": [
+        "electric",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 115,
+        "def": 70,
+        "spa": 70,
+        "spd": 60,
+        "spe": 105
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "volt-absorb",
+          "ko": "축전",
+          "hidden": false
+        },
+        {
+          "slug": "natural-cure",
+          "ko": "자연회복",
+          "hidden": false
+        },
+        {
+          "slug": "iron-fist",
+          "ko": "철주먹",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png",
+      "canMega": false
+    },
+    {
+      "id": 925,
+      "slug": "maushold-family-of-four",
+      "name": {
+        "ko": "파밀리쥐",
+        "en": "maushold-family-of-four"
+      },
+      "genus": "패밀리포켓몬",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 74,
+        "atk": 75,
+        "def": 70,
+        "spa": 65,
+        "spd": 75,
+        "spe": 111
+      },
+      "total": 470,
+      "abilities": [
+        {
+          "slug": "friend-guard",
+          "ko": "프렌드가드",
+          "hidden": false
+        },
+        {
+          "slug": "cheek-pouch",
+          "ko": "볼주머니",
+          "hidden": false
+        },
+        {
+          "slug": "technician",
+          "ko": "테크니션",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png",
+      "canMega": false
+    },
+    {
+      "id": 934,
+      "slug": "garganacl",
+      "name": {
+        "ko": "콜로솔트",
+        "en": "garganacl"
+      },
+      "genus": "암염포켓몬",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "hp": 100,
+        "atk": 100,
+        "def": 130,
+        "spa": 45,
+        "spd": 90,
+        "spe": 35
+      },
+      "total": 500,
+      "abilities": [
+        {
+          "slug": "purifying-salt",
+          "ko": "정화의소금",
+          "hidden": false
+        },
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": false
+        },
+        {
+          "slug": "clear-body",
+          "ko": "클리어바디",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png",
+      "canMega": false
+    },
+    {
+      "id": 936,
+      "slug": "armarouge",
+      "name": {
+        "ko": "카디나르마",
+        "en": "armarouge"
+      },
+      "genus": "불의전사포켓몬",
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 60,
+        "def": 100,
+        "spa": 125,
+        "spd": 80,
+        "spe": 75
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png",
+      "canMega": false
+    },
+    {
+      "id": 937,
+      "slug": "ceruledge",
+      "name": {
+        "ko": "파라블레이즈",
+        "en": "ceruledge"
+      },
+      "genus": "불의검사포켓몬",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 125,
+        "def": 80,
+        "spa": 60,
+        "spd": 100,
+        "spe": 85
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "weak-armor",
+          "ko": "깨어진갑옷",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png",
+      "canMega": false
+    },
+    {
+      "id": 939,
+      "slug": "bellibolt",
+      "name": {
+        "ko": "찌리배리",
+        "en": "bellibolt"
+      },
+      "genus": "전기개구리포켓몬",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 109,
+        "atk": 64,
+        "def": 91,
+        "spa": 103,
+        "spd": 83,
+        "spe": 45
+      },
+      "total": 495,
+      "abilities": [
+        {
+          "slug": "electromorphosis",
+          "ko": "전기로바꾸기",
+          "hidden": false
+        },
+        {
+          "slug": "static",
+          "ko": "정전기",
+          "hidden": false
+        },
+        {
+          "slug": "damp",
+          "ko": "습기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png",
+      "canMega": false
+    },
+    {
+      "id": 952,
+      "slug": "scovillain",
+      "name": {
+        "ko": "스코빌런",
+        "en": "scovillain"
+      },
+      "genus": "하바네로포켓몬",
+      "types": [
+        "grass",
+        "fire"
+      ],
+      "stats": {
+        "hp": 65,
+        "atk": 108,
+        "def": 65,
+        "spa": 108,
+        "spd": 65,
+        "spe": 75
+      },
+      "total": 486,
+      "abilities": [
+        {
+          "slug": "chlorophyll",
+          "ko": "엽록소",
+          "hidden": false
+        },
+        {
+          "slug": "insomnia",
+          "ko": "불면",
+          "hidden": false
+        },
+        {
+          "slug": "moody",
+          "ko": "변덕쟁이",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
+      "canMega": true
+    },
+    {
+      "id": 956,
+      "slug": "espathra",
+      "name": {
+        "ko": "클레스퍼트라",
+        "en": "espathra"
+      },
+      "genus": "타조포켓몬",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 60,
+        "def": 60,
+        "spa": 101,
+        "spd": 60,
+        "spe": 105
+      },
+      "total": 481,
+      "abilities": [
+        {
+          "slug": "opportunist",
+          "ko": "편승",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": false
+        },
+        {
+          "slug": "speed-boost",
+          "ko": "가속",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png",
+      "canMega": false
+    },
+    {
+      "id": 959,
+      "slug": "tinkaton",
+      "name": {
+        "ko": "두드리짱",
+        "en": "tinkaton"
+      },
+      "genus": "해머포켓몬",
+      "types": [
+        "fairy",
+        "steel"
+      ],
+      "stats": {
+        "hp": 85,
+        "atk": 75,
+        "def": 77,
+        "spa": 70,
+        "spd": 105,
+        "spe": 94
+      },
+      "total": 506,
+      "abilities": [
+        {
+          "slug": "mold-breaker",
+          "ko": "틀깨기",
+          "hidden": false
+        },
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "pickpocket",
+          "ko": "나쁜손버릇",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png",
+      "canMega": false
+    },
+    {
+      "id": 964,
+      "slug": "palafin-zero",
+      "name": {
+        "ko": "돌핀맨",
+        "en": "palafin-zero"
+      },
+      "genus": "돌고래포켓몬",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 100,
+        "atk": 70,
+        "def": 72,
+        "spa": 53,
+        "spd": 62,
+        "spe": 100
+      },
+      "total": 457,
+      "abilities": [
+        {
+          "slug": "zero-to-hero",
+          "ko": "마이티체인지",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
+      "canMega": false
+    },
+    {
+      "id": 968,
+      "slug": "orthworm",
+      "name": {
+        "ko": "꿈트렁",
+        "en": "orthworm"
+      },
+      "genus": "지렁이포켓몬",
+      "types": [
+        "steel"
+      ],
+      "stats": {
+        "hp": 70,
+        "atk": 85,
+        "def": 145,
+        "spa": 60,
+        "spd": 55,
+        "spe": 65
+      },
+      "total": 480,
+      "abilities": [
+        {
+          "slug": "earth-eater",
+          "ko": "흙먹기",
+          "hidden": false
+        },
+        {
+          "slug": "sand-veil",
+          "ko": "모래숨기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/968.png",
+      "canMega": false
+    },
+    {
+      "id": 970,
+      "slug": "glimmora",
+      "name": {
+        "ko": "킬라플로르",
+        "en": "glimmora"
+      },
+      "genus": "광석포켓몬",
+      "types": [
+        "rock",
+        "poison"
+      ],
+      "stats": {
+        "hp": 83,
+        "atk": 55,
+        "def": 90,
+        "spa": 130,
+        "spd": 81,
+        "spe": 86
+      },
+      "total": 525,
+      "abilities": [
+        {
+          "slug": "toxic-debris",
+          "ko": "독치장",
+          "hidden": false
+        },
+        {
+          "slug": "corrosion",
+          "ko": "부식",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png",
+      "canMega": true
+    },
+    {
+      "id": 972,
+      "slug": "houndstone",
+      "name": {
+        "ko": "묘두기",
+        "en": "houndstone"
+      },
+      "genus": "유령개포켓몬",
+      "types": [
+        "ghost"
+      ],
+      "stats": {
+        "hp": 72,
+        "atk": 101,
+        "def": 100,
+        "spa": 50,
+        "spd": 97,
+        "spe": 68
+      },
+      "total": 488,
+      "abilities": [
+        {
+          "slug": "sand-rush",
+          "ko": "모래헤치기",
+          "hidden": false
+        },
+        {
+          "slug": "fluffy",
+          "ko": "복슬복슬",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/972.png",
+      "canMega": false
+    },
+    {
+      "id": 979,
+      "slug": "annihilape",
+      "name": {
+        "ko": "저승갓숭",
+        "en": "annihilape"
+      },
+      "genus": "분노숭이포켓몬",
+      "types": [
+        "fighting",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 110,
+        "atk": 115,
+        "def": 80,
+        "spa": 50,
+        "spd": 90,
+        "spe": 90
+      },
+      "total": 535,
+      "abilities": [
+        {
+          "slug": "vital-spirit",
+          "ko": "의기양양",
+          "hidden": false
+        },
+        {
+          "slug": "inner-focus",
+          "ko": "정신력",
+          "hidden": false
+        },
+        {
+          "slug": "defiant",
+          "ko": "오기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png",
       "canMega": false
     },
     {
@@ -902,6 +7843,646 @@
         }
       ],
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png",
+      "canMega": false
+    },
+    {
+      "id": 1019,
+      "slug": "hydrapple",
+      "name": {
+        "ko": "과미드라",
+        "en": "hydrapple"
+      },
+      "genus": "사과이무기포켓몬",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 106,
+        "atk": 80,
+        "def": 110,
+        "spa": 120,
+        "spd": 80,
+        "spe": 44
+      },
+      "total": 540,
+      "abilities": [
+        {
+          "slug": "supersweet-syrup",
+          "ko": "감미로운꿀",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": false
+        },
+        {
+          "slug": "sticky-hold",
+          "ko": "점착",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+      "canMega": false
+    },
+    {
+      "id": 10061,
+      "slug": "floette-eternal",
+      "name": {
+        "ko": "플라엣테",
+        "en": "floette-eternal"
+      },
+      "genus": "한송이포켓몬",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 74,
+        "atk": 65,
+        "def": 67,
+        "spa": 125,
+        "spd": 128,
+        "spe": 92
+      },
+      "total": 551,
+      "abilities": [
+        {
+          "slug": "flower-veil",
+          "ko": "플라워베일",
+          "hidden": false
+        },
+        {
+          "slug": "symbiosis",
+          "ko": "공생",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+      "canMega": false
+    },
+    {
+      "id": 10100,
+      "slug": "raichu-alola",
+      "name": {
+        "ko": "라이츄",
+        "en": "raichu-alola"
+      },
+      "genus": "쥐포켓몬",
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "atk": 85,
+        "def": 50,
+        "spa": 95,
+        "spd": 85,
+        "spe": 110
+      },
+      "total": 485,
+      "abilities": [
+        {
+          "slug": "surge-surfer",
+          "ko": "서핑테일",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10100.png",
+      "canMega": false
+    },
+    {
+      "id": 10104,
+      "slug": "ninetales-alola",
+      "name": {
+        "ko": "나인테일",
+        "en": "ninetales-alola"
+      },
+      "genus": "여우포켓몬",
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 73,
+        "atk": 67,
+        "def": 75,
+        "spa": 81,
+        "spd": 100,
+        "spe": 109
+      },
+      "total": 505,
+      "abilities": [
+        {
+          "slug": "snow-cloak",
+          "ko": "눈숨기",
+          "hidden": false
+        },
+        {
+          "slug": "snow-warning",
+          "ko": "눈퍼뜨리기",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10104.png",
+      "canMega": false
+    },
+    {
+      "id": 10165,
+      "slug": "slowbro-galar",
+      "name": {
+        "ko": "야도란",
+        "en": "slowbro-galar"
+      },
+      "genus": "기생포켓몬",
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 100,
+        "def": 95,
+        "spa": 100,
+        "spd": 70,
+        "spe": 30
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "quick-draw",
+          "ko": "퀵드로",
+          "hidden": false
+        },
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10165.png",
+      "canMega": false
+    },
+    {
+      "id": 10172,
+      "slug": "slowking-galar",
+      "name": {
+        "ko": "야도킹",
+        "en": "slowking-galar"
+      },
+      "genus": "임금포켓몬",
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 65,
+        "def": 80,
+        "spa": 110,
+        "spd": 110,
+        "spe": 30
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "curious-medicine",
+          "ko": "기묘한약",
+          "hidden": false
+        },
+        {
+          "slug": "own-tempo",
+          "ko": "마이페이스",
+          "hidden": false
+        },
+        {
+          "slug": "regenerator",
+          "ko": "재생력",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10172.png",
+      "canMega": false
+    },
+    {
+      "id": 10180,
+      "slug": "stunfisk-galar",
+      "name": {
+        "ko": "메더",
+        "en": "stunfisk-galar"
+      },
+      "genus": "트랩포켓몬",
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "stats": {
+        "hp": 109,
+        "atk": 81,
+        "def": 99,
+        "spa": 66,
+        "spd": 84,
+        "spe": 32
+      },
+      "total": 471,
+      "abilities": [
+        {
+          "slug": "mimicry",
+          "ko": "의태",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10180.png",
+      "canMega": false
+    },
+    {
+      "id": 10230,
+      "slug": "arcanine-hisui",
+      "name": {
+        "ko": "윈디",
+        "en": "arcanine-hisui"
+      },
+      "genus": "전설포켓몬",
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 115,
+        "def": 80,
+        "spa": 95,
+        "spd": 80,
+        "spe": 90
+      },
+      "total": 555,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "flash-fire",
+          "ko": "타오르는불꽃",
+          "hidden": false
+        },
+        {
+          "slug": "rock-head",
+          "ko": "돌머리",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10230.png",
+      "canMega": false
+    },
+    {
+      "id": 10233,
+      "slug": "typhlosion-hisui",
+      "name": {
+        "ko": "블레이범",
+        "en": "typhlosion-hisui"
+      },
+      "genus": "화산포켓몬",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 73,
+        "atk": 84,
+        "def": 78,
+        "spa": 119,
+        "spd": 85,
+        "spe": 95
+      },
+      "total": 534,
+      "abilities": [
+        {
+          "slug": "blaze",
+          "ko": "맹화",
+          "hidden": false
+        },
+        {
+          "slug": "frisk",
+          "ko": "통찰",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10233.png",
+      "canMega": false
+    },
+    {
+      "id": 10236,
+      "slug": "samurott-hisui",
+      "name": {
+        "ko": "대검귀",
+        "en": "samurott-hisui"
+      },
+      "genus": "관록포켓몬",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 108,
+        "def": 80,
+        "spa": 100,
+        "spd": 65,
+        "spe": 85
+      },
+      "total": 528,
+      "abilities": [
+        {
+          "slug": "torrent",
+          "ko": "급류",
+          "hidden": false
+        },
+        {
+          "slug": "sharpness",
+          "ko": "예리함",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10236.png",
+      "canMega": false
+    },
+    {
+      "id": 10239,
+      "slug": "zoroark-hisui",
+      "name": {
+        "ko": "조로아크",
+        "en": "zoroark-hisui"
+      },
+      "genus": "요괴여우포켓몬",
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "stats": {
+        "hp": 55,
+        "atk": 100,
+        "def": 60,
+        "spa": 125,
+        "spd": 60,
+        "spe": 110
+      },
+      "total": 510,
+      "abilities": [
+        {
+          "slug": "illusion",
+          "ko": "일루전",
+          "hidden": false
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10239.png",
+      "canMega": false
+    },
+    {
+      "id": 10242,
+      "slug": "goodra-hisui",
+      "name": {
+        "ko": "미끄래곤",
+        "en": "goodra-hisui"
+      },
+      "genus": "드래곤포켓몬",
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "stats": {
+        "hp": 80,
+        "atk": 100,
+        "def": 100,
+        "spa": 110,
+        "spd": 150,
+        "spe": 60
+      },
+      "total": 600,
+      "abilities": [
+        {
+          "slug": "sap-sipper",
+          "ko": "초식",
+          "hidden": false
+        },
+        {
+          "slug": "shell-armor",
+          "ko": "조가비갑옷",
+          "hidden": false
+        },
+        {
+          "slug": "gooey",
+          "ko": "미끈미끈",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
+      "canMega": false
+    },
+    {
+      "id": 10243,
+      "slug": "avalugg-hisui",
+      "name": {
+        "ko": "크레베이스",
+        "en": "avalugg-hisui"
+      },
+      "genus": "빙산포켓몬",
+      "types": [
+        "ice",
+        "rock"
+      ],
+      "stats": {
+        "hp": 95,
+        "atk": 127,
+        "def": 184,
+        "spa": 34,
+        "spd": 36,
+        "spe": 38
+      },
+      "total": 514,
+      "abilities": [
+        {
+          "slug": "strong-jaw",
+          "ko": "옹골찬턱",
+          "hidden": false
+        },
+        {
+          "slug": "ice-body",
+          "ko": "아이스바디",
+          "hidden": false
+        },
+        {
+          "slug": "sturdy",
+          "ko": "옹골참",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
+      "canMega": false
+    },
+    {
+      "id": 10244,
+      "slug": "decidueye-hisui",
+      "name": {
+        "ko": "모크나이퍼",
+        "en": "decidueye-hisui"
+      },
+      "genus": "화살깃포켓몬",
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 88,
+        "atk": 112,
+        "def": 80,
+        "spa": 95,
+        "spd": 95,
+        "spe": 60
+      },
+      "total": 530,
+      "abilities": [
+        {
+          "slug": "overgrow",
+          "ko": "심록",
+          "hidden": false
+        },
+        {
+          "slug": "scrappy",
+          "ko": "배짱",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10244.png",
+      "canMega": false
+    },
+    {
+      "id": 10250,
+      "slug": "tauros-paldea-combat-breed",
+      "name": {
+        "ko": "켄타로스",
+        "en": "tauros-paldea-combat-breed"
+      },
+      "genus": "성난소포켓몬",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 110,
+        "def": 105,
+        "spa": 30,
+        "spd": 70,
+        "spe": 100
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": false
+        },
+        {
+          "slug": "cud-chew",
+          "ko": "되새김질",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
+      "canMega": false
+    },
+    {
+      "id": 10251,
+      "slug": "tauros-paldea-blaze-breed",
+      "name": {
+        "ko": "켄타로스",
+        "en": "tauros-paldea-blaze-breed"
+      },
+      "genus": "성난소포켓몬",
+      "types": [
+        "fighting",
+        "fire"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 110,
+        "def": 105,
+        "spa": 30,
+        "spd": 70,
+        "spe": 100
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": false
+        },
+        {
+          "slug": "cud-chew",
+          "ko": "되새김질",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10251.png",
+      "canMega": false
+    },
+    {
+      "id": 10252,
+      "slug": "tauros-paldea-aqua-breed",
+      "name": {
+        "ko": "켄타로스",
+        "en": "tauros-paldea-aqua-breed"
+      },
+      "genus": "성난소포켓몬",
+      "types": [
+        "fighting",
+        "water"
+      ],
+      "stats": {
+        "hp": 75,
+        "atk": 110,
+        "def": 105,
+        "spa": 30,
+        "spd": 70,
+        "spe": 100
+      },
+      "total": 490,
+      "abilities": [
+        {
+          "slug": "intimidate",
+          "ko": "위협",
+          "hidden": false
+        },
+        {
+          "slug": "anger-point",
+          "ko": "분노의경혈",
+          "hidden": false
+        },
+        {
+          "slug": "cud-chew",
+          "ko": "되새김질",
+          "hidden": true
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10252.png",
       "canMega": false
     }
   ]

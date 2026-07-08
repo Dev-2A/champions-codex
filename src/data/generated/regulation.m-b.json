@@ -18,12 +18,6 @@
     "zMoves": false
   },
   "notes": "M-A와 동일 풀 + 신규 포켓몬 22종 및 신규 메가진화 추가. 이번 시즌 별도 금지 포켓몬 없음.",
-  "newMegas": [
-    "sceptile",
-    "blaziken",
-    "swampert",
-    "mawile",
-    "staraptor"
-  ],
-  "count": 24
+  "newMegas": [],
+  "count": 224
 }

@@ -93,10 +93,11 @@ async function abilityKo(slug) {
 async function buildPokedex(reg) {
   const out = [];
   let i = 0;
-  for (const entry of reg.legal) {
+  const megaSet = new Set(reg.megaCapable ?? []);
+  for (const slug of reg.legal) {
     i++;
-    process.stdout.write(`  [${i}/${reg.legal.length}] ${entry.slug} ... `);
-    const p = await getJson(`${API}/pokemon/${entry.slug}`);
+    process.stdout.write(`  [${i}/${reg.legal.length}] ${slug} ... `);
+    const p = await getJson(`${API}/pokemon/${slug}`);
     const species = await getJson(p.species.url);
 
     const stats = {};
@@ -131,7 +132,7 @@ async function buildPokedex(reg) {
       sprite:
         p.sprites.other?.["official-artwork"]?.front_default ??
         p.sprites.front_default,
-      canMega: !!entry.canMega,
+      canMega: megaSet.has(slug),
     });
     console.log(`✓ ${ko(species.names) ?? p.name}`);
   }
