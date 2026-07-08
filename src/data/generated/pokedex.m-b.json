@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-07-08T07:49:02.465Z",
+  "generatedAt": "2026-07-08T08:12:03.380Z",
   "regulation": "m-b",
   "count": 224,
   "pokemon": [
     {
       "id": 3,
+      "dexNum": 3,
       "slug": "venusaur",
       "name": {
         "ko": "이상해꽃",
@@ -41,6 +42,7 @@
     },
     {
       "id": 6,
+      "dexNum": 6,
       "slug": "charizard",
       "name": {
         "ko": "리자몽",
@@ -77,6 +79,7 @@
     },
     {
       "id": 9,
+      "dexNum": 9,
       "slug": "blastoise",
       "name": {
         "ko": "거북왕",
@@ -112,6 +115,7 @@
     },
     {
       "id": 15,
+      "dexNum": 15,
       "slug": "beedrill",
       "name": {
         "ko": "독침붕",
@@ -148,6 +152,7 @@
     },
     {
       "id": 18,
+      "dexNum": 18,
       "slug": "pidgeot",
       "name": {
         "ko": "피죤투",
@@ -189,6 +194,7 @@
     },
     {
       "id": 24,
+      "dexNum": 24,
       "slug": "arbok",
       "name": {
         "ko": "아보크",
@@ -229,6 +235,7 @@
     },
     {
       "id": 25,
+      "dexNum": 25,
       "slug": "pikachu",
       "name": {
         "ko": "피카츄",
@@ -264,6 +271,7 @@
     },
     {
       "id": 26,
+      "dexNum": 26,
       "slug": "raichu",
       "name": {
         "ko": "라이츄",
@@ -299,6 +307,7 @@
     },
     {
       "id": 36,
+      "dexNum": 36,
       "slug": "clefable",
       "name": {
         "ko": "픽시",
@@ -339,6 +348,7 @@
     },
     {
       "id": 38,
+      "dexNum": 38,
       "slug": "ninetales",
       "name": {
         "ko": "나인테일",
@@ -374,6 +384,7 @@
     },
     {
       "id": 45,
+      "dexNum": 45,
       "slug": "vileplume",
       "name": {
         "ko": "라플레시아",
@@ -410,6 +421,7 @@
     },
     {
       "id": 59,
+      "dexNum": 59,
       "slug": "arcanine",
       "name": {
         "ko": "윈디",
@@ -450,6 +462,7 @@
     },
     {
       "id": 65,
+      "dexNum": 65,
       "slug": "alakazam",
       "name": {
         "ko": "후딘",
@@ -490,6 +503,7 @@
     },
     {
       "id": 68,
+      "dexNum": 68,
       "slug": "machamp",
       "name": {
         "ko": "괴력몬",
@@ -530,6 +544,7 @@
     },
     {
       "id": 71,
+      "dexNum": 71,
       "slug": "victreebel",
       "name": {
         "ko": "우츠보트",
@@ -566,6 +581,7 @@
     },
     {
       "id": 80,
+      "dexNum": 80,
       "slug": "slowbro",
       "name": {
         "ko": "야도란",
@@ -607,6 +623,7 @@
     },
     {
       "id": 94,
+      "dexNum": 94,
       "slug": "gengar",
       "name": {
         "ko": "팬텀",
@@ -638,6 +655,7 @@
     },
     {
       "id": 115,
+      "dexNum": 115,
       "slug": "kangaskhan",
       "name": {
         "ko": "캥카",
@@ -678,6 +696,7 @@
     },
     {
       "id": 121,
+      "dexNum": 121,
       "slug": "starmie",
       "name": {
         "ko": "아쿠스타",
@@ -719,6 +738,7 @@
     },
     {
       "id": 127,
+      "dexNum": 127,
       "slug": "pinsir",
       "name": {
         "ko": "쁘사이저",
@@ -759,6 +779,7 @@
     },
     {
       "id": 128,
+      "dexNum": 128,
       "slug": "tauros",
       "name": {
         "ko": "켄타로스",
@@ -799,6 +820,7 @@
     },
     {
       "id": 130,
+      "dexNum": 130,
       "slug": "gyarados",
       "name": {
         "ko": "갸라도스",
@@ -835,6 +857,7 @@
     },
     {
       "id": 132,
+      "dexNum": 132,
       "slug": "ditto",
       "name": {
         "ko": "메타몽",
@@ -870,6 +893,7 @@
     },
     {
       "id": 134,
+      "dexNum": 134,
       "slug": "vaporeon",
       "name": {
         "ko": "샤미드",
@@ -905,6 +929,7 @@
     },
     {
       "id": 135,
+      "dexNum": 135,
       "slug": "jolteon",
       "name": {
         "ko": "쥬피썬더",
@@ -940,6 +965,7 @@
     },
     {
       "id": 136,
+      "dexNum": 136,
       "slug": "flareon",
       "name": {
         "ko": "부스터",
@@ -975,6 +1001,7 @@
     },
     {
       "id": 142,
+      "dexNum": 142,
       "slug": "aerodactyl",
       "name": {
         "ko": "프테라",
@@ -1016,6 +1043,7 @@
     },
     {
       "id": 143,
+      "dexNum": 143,
       "slug": "snorlax",
       "name": {
         "ko": "잠만보",
@@ -1056,6 +1084,7 @@
     },
     {
       "id": 149,
+      "dexNum": 149,
       "slug": "dragonite",
       "name": {
         "ko": "망나뇽",
@@ -1092,6 +1121,7 @@
     },
     {
       "id": 154,
+      "dexNum": 154,
       "slug": "meganium",
       "name": {
         "ko": "메가니움",
@@ -1127,6 +1157,7 @@
     },
     {
       "id": 157,
+      "dexNum": 157,
       "slug": "typhlosion",
       "name": {
         "ko": "블레이범",
@@ -1162,6 +1193,7 @@
     },
     {
       "id": 160,
+      "dexNum": 160,
       "slug": "feraligatr",
       "name": {
         "ko": "장크로다일",
@@ -1197,6 +1229,7 @@
     },
     {
       "id": 168,
+      "dexNum": 168,
       "slug": "ariados",
       "name": {
         "ko": "아리아도스",
@@ -1238,6 +1271,7 @@
     },
     {
       "id": 181,
+      "dexNum": 181,
       "slug": "ampharos",
       "name": {
         "ko": "전룡",
@@ -1273,6 +1307,7 @@
     },
     {
       "id": 184,
+      "dexNum": 184,
       "slug": "azumarill",
       "name": {
         "ko": "마릴리",
@@ -1314,6 +1349,7 @@
     },
     {
       "id": 186,
+      "dexNum": 186,
       "slug": "politoed",
       "name": {
         "ko": "왕구리",
@@ -1354,6 +1390,7 @@
     },
     {
       "id": 196,
+      "dexNum": 196,
       "slug": "espeon",
       "name": {
         "ko": "에브이",
@@ -1389,6 +1426,7 @@
     },
     {
       "id": 197,
+      "dexNum": 197,
       "slug": "umbreon",
       "name": {
         "ko": "블래키",
@@ -1424,6 +1462,7 @@
     },
     {
       "id": 199,
+      "dexNum": 199,
       "slug": "slowking",
       "name": {
         "ko": "야도킹",
@@ -1465,6 +1504,7 @@
     },
     {
       "id": 205,
+      "dexNum": 205,
       "slug": "forretress",
       "name": {
         "ko": "쏘콘",
@@ -1501,6 +1541,7 @@
     },
     {
       "id": 208,
+      "dexNum": 208,
       "slug": "steelix",
       "name": {
         "ko": "강철톤",
@@ -1542,6 +1583,7 @@
     },
     {
       "id": 211,
+      "dexNum": 211,
       "slug": "qwilfish",
       "name": {
         "ko": "침바루",
@@ -1583,6 +1625,7 @@
     },
     {
       "id": 212,
+      "dexNum": 212,
       "slug": "scizor",
       "name": {
         "ko": "핫삼",
@@ -1624,6 +1667,7 @@
     },
     {
       "id": 214,
+      "dexNum": 214,
       "slug": "heracross",
       "name": {
         "ko": "헤라크로스",
@@ -1665,6 +1709,7 @@
     },
     {
       "id": 227,
+      "dexNum": 227,
       "slug": "skarmory",
       "name": {
         "ko": "무장조",
@@ -1706,6 +1751,7 @@
     },
     {
       "id": 229,
+      "dexNum": 229,
       "slug": "houndoom",
       "name": {
         "ko": "헬가",
@@ -1747,6 +1793,7 @@
     },
     {
       "id": 248,
+      "dexNum": 248,
       "slug": "tyranitar",
       "name": {
         "ko": "마기라스",
@@ -1783,6 +1830,7 @@
     },
     {
       "id": 254,
+      "dexNum": 254,
       "slug": "sceptile",
       "name": {
         "ko": "나무킹",
@@ -1818,6 +1866,7 @@
     },
     {
       "id": 257,
+      "dexNum": 257,
       "slug": "blaziken",
       "name": {
         "ko": "번치코",
@@ -1854,6 +1903,7 @@
     },
     {
       "id": 260,
+      "dexNum": 260,
       "slug": "swampert",
       "name": {
         "ko": "대짱이",
@@ -1890,6 +1940,7 @@
     },
     {
       "id": 279,
+      "dexNum": 279,
       "slug": "pelipper",
       "name": {
         "ko": "패리퍼",
@@ -1931,6 +1982,7 @@
     },
     {
       "id": 282,
+      "dexNum": 282,
       "slug": "gardevoir",
       "name": {
         "ko": "가디안",
@@ -1972,6 +2024,7 @@
     },
     {
       "id": 302,
+      "dexNum": 302,
       "slug": "sableye",
       "name": {
         "ko": "깜까미",
@@ -2013,6 +2066,7 @@
     },
     {
       "id": 303,
+      "dexNum": 303,
       "slug": "mawile",
       "name": {
         "ko": "입치트",
@@ -2054,6 +2108,7 @@
     },
     {
       "id": 306,
+      "dexNum": 306,
       "slug": "aggron",
       "name": {
         "ko": "보스로라",
@@ -2095,6 +2150,7 @@
     },
     {
       "id": 308,
+      "dexNum": 308,
       "slug": "medicham",
       "name": {
         "ko": "요가램",
@@ -2131,6 +2187,7 @@
     },
     {
       "id": 310,
+      "dexNum": 310,
       "slug": "manectric",
       "name": {
         "ko": "썬더볼트",
@@ -2171,6 +2228,7 @@
     },
     {
       "id": 319,
+      "dexNum": 319,
       "slug": "sharpedo",
       "name": {
         "ko": "샤크니아",
@@ -2207,6 +2265,7 @@
     },
     {
       "id": 323,
+      "dexNum": 323,
       "slug": "camerupt",
       "name": {
         "ko": "폭타",
@@ -2248,6 +2307,7 @@
     },
     {
       "id": 324,
+      "dexNum": 324,
       "slug": "torkoal",
       "name": {
         "ko": "코터스",
@@ -2288,6 +2348,7 @@
     },
     {
       "id": 334,
+      "dexNum": 334,
       "slug": "altaria",
       "name": {
         "ko": "파비코리",
@@ -2324,6 +2385,7 @@
     },
     {
       "id": 350,
+      "dexNum": 350,
       "slug": "milotic",
       "name": {
         "ko": "밀로틱",
@@ -2364,6 +2426,7 @@
     },
     {
       "id": 351,
+      "dexNum": 351,
       "slug": "castform",
       "name": {
         "ko": "캐스퐁",
@@ -2394,6 +2457,7 @@
     },
     {
       "id": 354,
+      "dexNum": 354,
       "slug": "banette",
       "name": {
         "ko": "다크펫",
@@ -2434,6 +2498,7 @@
     },
     {
       "id": 358,
+      "dexNum": 358,
       "slug": "chimecho",
       "name": {
         "ko": "치렁",
@@ -2464,6 +2529,7 @@
     },
     {
       "id": 359,
+      "dexNum": 359,
       "slug": "absol",
       "name": {
         "ko": "앱솔",
@@ -2504,6 +2570,7 @@
     },
     {
       "id": 362,
+      "dexNum": 362,
       "slug": "glalie",
       "name": {
         "ko": "얼음귀신",
@@ -2544,6 +2611,7 @@
     },
     {
       "id": 376,
+      "dexNum": 376,
       "slug": "metagross",
       "name": {
         "ko": "메타그로스",
@@ -2580,6 +2648,7 @@
     },
     {
       "id": 389,
+      "dexNum": 389,
       "slug": "torterra",
       "name": {
         "ko": "토대부기",
@@ -2616,6 +2685,7 @@
     },
     {
       "id": 392,
+      "dexNum": 392,
       "slug": "infernape",
       "name": {
         "ko": "초염몽",
@@ -2652,6 +2722,7 @@
     },
     {
       "id": 395,
+      "dexNum": 395,
       "slug": "empoleon",
       "name": {
         "ko": "엠페르트",
@@ -2688,6 +2759,7 @@
     },
     {
       "id": 398,
+      "dexNum": 398,
       "slug": "staraptor",
       "name": {
         "ko": "찌르호크",
@@ -2724,6 +2796,7 @@
     },
     {
       "id": 405,
+      "dexNum": 405,
       "slug": "luxray",
       "name": {
         "ko": "렌트라",
@@ -2764,6 +2837,7 @@
     },
     {
       "id": 407,
+      "dexNum": 407,
       "slug": "roserade",
       "name": {
         "ko": "로즈레이드",
@@ -2805,6 +2879,7 @@
     },
     {
       "id": 409,
+      "dexNum": 409,
       "slug": "rampardos",
       "name": {
         "ko": "램펄드",
@@ -2840,6 +2915,7 @@
     },
     {
       "id": 411,
+      "dexNum": 411,
       "slug": "bastiodon",
       "name": {
         "ko": "바리톱스",
@@ -2876,6 +2952,7 @@
     },
     {
       "id": 428,
+      "dexNum": 428,
       "slug": "lopunny",
       "name": {
         "ko": "이어롭",
@@ -2916,6 +2993,7 @@
     },
     {
       "id": 442,
+      "dexNum": 442,
       "slug": "spiritomb",
       "name": {
         "ko": "화강돌",
@@ -2952,6 +3030,7 @@
     },
     {
       "id": 445,
+      "dexNum": 445,
       "slug": "garchomp",
       "name": {
         "ko": "한카리아스",
@@ -2988,6 +3067,7 @@
     },
     {
       "id": 448,
+      "dexNum": 448,
       "slug": "lucario",
       "name": {
         "ko": "루카리오",
@@ -3029,6 +3109,7 @@
     },
     {
       "id": 450,
+      "dexNum": 450,
       "slug": "hippowdon",
       "name": {
         "ko": "하마돈",
@@ -3064,6 +3145,7 @@
     },
     {
       "id": 454,
+      "dexNum": 454,
       "slug": "toxicroak",
       "name": {
         "ko": "독개굴",
@@ -3105,6 +3187,7 @@
     },
     {
       "id": 460,
+      "dexNum": 460,
       "slug": "abomasnow",
       "name": {
         "ko": "눈설왕",
@@ -3141,6 +3224,7 @@
     },
     {
       "id": 461,
+      "dexNum": 461,
       "slug": "weavile",
       "name": {
         "ko": "포푸니라",
@@ -3177,6 +3261,7 @@
     },
     {
       "id": 464,
+      "dexNum": 464,
       "slug": "rhyperior",
       "name": {
         "ko": "거대코뿌리",
@@ -3218,6 +3303,7 @@
     },
     {
       "id": 470,
+      "dexNum": 470,
       "slug": "leafeon",
       "name": {
         "ko": "리피아",
@@ -3253,6 +3339,7 @@
     },
     {
       "id": 471,
+      "dexNum": 471,
       "slug": "glaceon",
       "name": {
         "ko": "글레이시아",
@@ -3288,6 +3375,7 @@
     },
     {
       "id": 472,
+      "dexNum": 472,
       "slug": "gliscor",
       "name": {
         "ko": "글라이온",
@@ -3329,6 +3417,7 @@
     },
     {
       "id": 473,
+      "dexNum": 473,
       "slug": "mamoswine",
       "name": {
         "ko": "맘모꾸리",
@@ -3370,6 +3459,7 @@
     },
     {
       "id": 475,
+      "dexNum": 475,
       "slug": "gallade",
       "name": {
         "ko": "엘레이드",
@@ -3411,6 +3501,7 @@
     },
     {
       "id": 478,
+      "dexNum": 478,
       "slug": "froslass",
       "name": {
         "ko": "눈여아",
@@ -3447,6 +3538,7 @@
     },
     {
       "id": 479,
+      "dexNum": 479,
       "slug": "rotom",
       "name": {
         "ko": "로토무",
@@ -3478,6 +3570,7 @@
     },
     {
       "id": 497,
+      "dexNum": 497,
       "slug": "serperior",
       "name": {
         "ko": "샤로다",
@@ -3513,6 +3606,7 @@
     },
     {
       "id": 500,
+      "dexNum": 500,
       "slug": "emboar",
       "name": {
         "ko": "염무왕",
@@ -3549,6 +3643,7 @@
     },
     {
       "id": 503,
+      "dexNum": 503,
       "slug": "samurott",
       "name": {
         "ko": "대검귀",
@@ -3584,6 +3679,7 @@
     },
     {
       "id": 505,
+      "dexNum": 505,
       "slug": "watchog",
       "name": {
         "ko": "보르그",
@@ -3624,6 +3720,7 @@
     },
     {
       "id": 510,
+      "dexNum": 510,
       "slug": "liepard",
       "name": {
         "ko": "레파르다스",
@@ -3664,6 +3761,7 @@
     },
     {
       "id": 512,
+      "dexNum": 512,
       "slug": "simisage",
       "name": {
         "ko": "야나키",
@@ -3699,6 +3797,7 @@
     },
     {
       "id": 514,
+      "dexNum": 514,
       "slug": "simisear",
       "name": {
         "ko": "바오키",
@@ -3734,6 +3833,7 @@
     },
     {
       "id": 516,
+      "dexNum": 516,
       "slug": "simipour",
       "name": {
         "ko": "앗차키",
@@ -3769,6 +3869,7 @@
     },
     {
       "id": 518,
+      "dexNum": 518,
       "slug": "musharna",
       "name": {
         "ko": "몽얌나",
@@ -3809,6 +3910,7 @@
     },
     {
       "id": 530,
+      "dexNum": 530,
       "slug": "excadrill",
       "name": {
         "ko": "몰드류",
@@ -3850,6 +3952,7 @@
     },
     {
       "id": 531,
+      "dexNum": 531,
       "slug": "audino",
       "name": {
         "ko": "다부니",
@@ -3890,6 +3993,7 @@
     },
     {
       "id": 534,
+      "dexNum": 534,
       "slug": "conkeldurr",
       "name": {
         "ko": "노보청",
@@ -3930,6 +4034,7 @@
     },
     {
       "id": 545,
+      "dexNum": 545,
       "slug": "scolipede",
       "name": {
         "ko": "펜드라",
@@ -3971,6 +4076,7 @@
     },
     {
       "id": 547,
+      "dexNum": 547,
       "slug": "whimsicott",
       "name": {
         "ko": "엘풍",
@@ -4012,6 +4118,7 @@
     },
     {
       "id": 553,
+      "dexNum": 553,
       "slug": "krookodile",
       "name": {
         "ko": "악비아르",
@@ -4053,6 +4160,7 @@
     },
     {
       "id": 560,
+      "dexNum": 560,
       "slug": "scrafty",
       "name": {
         "ko": "곤율거니",
@@ -4094,6 +4202,7 @@
     },
     {
       "id": 563,
+      "dexNum": 563,
       "slug": "cofagrigus",
       "name": {
         "ko": "데스니칸",
@@ -4124,6 +4233,7 @@
     },
     {
       "id": 569,
+      "dexNum": 569,
       "slug": "garbodor",
       "name": {
         "ko": "더스트나",
@@ -4164,6 +4274,7 @@
     },
     {
       "id": 571,
+      "dexNum": 571,
       "slug": "zoroark",
       "name": {
         "ko": "조로아크",
@@ -4194,6 +4305,7 @@
     },
     {
       "id": 579,
+      "dexNum": 579,
       "slug": "reuniclus",
       "name": {
         "ko": "란쿨루스",
@@ -4234,6 +4346,7 @@
     },
     {
       "id": 584,
+      "dexNum": 584,
       "slug": "vanilluxe",
       "name": {
         "ko": "배바닐라",
@@ -4274,6 +4387,7 @@
     },
     {
       "id": 587,
+      "dexNum": 587,
       "slug": "emolga",
       "name": {
         "ko": "에몽가",
@@ -4310,6 +4424,7 @@
     },
     {
       "id": 604,
+      "dexNum": 604,
       "slug": "eelektross",
       "name": {
         "ko": "저리더프",
@@ -4340,6 +4455,7 @@
     },
     {
       "id": 609,
+      "dexNum": 609,
       "slug": "chandelure",
       "name": {
         "ko": "샹델라",
@@ -4381,6 +4497,7 @@
     },
     {
       "id": 614,
+      "dexNum": 614,
       "slug": "beartic",
       "name": {
         "ko": "툰베어",
@@ -4421,6 +4538,7 @@
     },
     {
       "id": 618,
+      "dexNum": 618,
       "slug": "stunfisk",
       "name": {
         "ko": "메더",
@@ -4462,6 +4580,7 @@
     },
     {
       "id": 623,
+      "dexNum": 623,
       "slug": "golurk",
       "name": {
         "ko": "골루그",
@@ -4503,6 +4622,7 @@
     },
     {
       "id": 635,
+      "dexNum": 635,
       "slug": "hydreigon",
       "name": {
         "ko": "삼삼드래",
@@ -4534,6 +4654,7 @@
     },
     {
       "id": 637,
+      "dexNum": 637,
       "slug": "volcarona",
       "name": {
         "ko": "불카모스",
@@ -4570,6 +4691,7 @@
     },
     {
       "id": 652,
+      "dexNum": 652,
       "slug": "chesnaught",
       "name": {
         "ko": "브리가론",
@@ -4606,6 +4728,7 @@
     },
     {
       "id": 655,
+      "dexNum": 655,
       "slug": "delphox",
       "name": {
         "ko": "마폭시",
@@ -4642,6 +4765,7 @@
     },
     {
       "id": 658,
+      "dexNum": 658,
       "slug": "greninja",
       "name": {
         "ko": "개굴닌자",
@@ -4678,6 +4802,7 @@
     },
     {
       "id": 660,
+      "dexNum": 660,
       "slug": "diggersby",
       "name": {
         "ko": "파르토",
@@ -4719,6 +4844,7 @@
     },
     {
       "id": 663,
+      "dexNum": 663,
       "slug": "talonflame",
       "name": {
         "ko": "파이어로",
@@ -4755,6 +4881,7 @@
     },
     {
       "id": 666,
+      "dexNum": 666,
       "slug": "vivillon",
       "name": {
         "ko": "비비용",
@@ -4796,6 +4923,7 @@
     },
     {
       "id": 668,
+      "dexNum": 668,
       "slug": "pyroar-male",
       "name": {
         "ko": "화염레오",
@@ -4837,6 +4965,7 @@
     },
     {
       "id": 671,
+      "dexNum": 671,
       "slug": "florges",
       "name": {
         "ko": "플라제스",
@@ -4872,6 +5001,7 @@
     },
     {
       "id": 675,
+      "dexNum": 675,
       "slug": "pangoro",
       "name": {
         "ko": "부란다",
@@ -4913,6 +5043,7 @@
     },
     {
       "id": 676,
+      "dexNum": 676,
       "slug": "furfrou",
       "name": {
         "ko": "트리미앙",
@@ -4943,6 +5074,7 @@
     },
     {
       "id": 678,
+      "dexNum": 678,
       "slug": "meowstic-male",
       "name": {
         "ko": "냐오닉스",
@@ -4983,6 +5115,7 @@
     },
     {
       "id": 681,
+      "dexNum": 681,
       "slug": "aegislash-shield",
       "name": {
         "ko": "킬가르도",
@@ -5014,6 +5147,7 @@
     },
     {
       "id": 683,
+      "dexNum": 683,
       "slug": "aromatisse",
       "name": {
         "ko": "프레프티르",
@@ -5049,6 +5183,7 @@
     },
     {
       "id": 685,
+      "dexNum": 685,
       "slug": "slurpuff",
       "name": {
         "ko": "나루림",
@@ -5084,6 +5219,7 @@
     },
     {
       "id": 687,
+      "dexNum": 687,
       "slug": "malamar",
       "name": {
         "ko": "칼라마네로",
@@ -5125,6 +5261,7 @@
     },
     {
       "id": 689,
+      "dexNum": 689,
       "slug": "barbaracle",
       "name": {
         "ko": "거북손데스",
@@ -5166,6 +5303,7 @@
     },
     {
       "id": 691,
+      "dexNum": 691,
       "slug": "dragalge",
       "name": {
         "ko": "드래캄",
@@ -5207,6 +5345,7 @@
     },
     {
       "id": 693,
+      "dexNum": 693,
       "slug": "clawitzer",
       "name": {
         "ko": "블로스터",
@@ -5237,6 +5376,7 @@
     },
     {
       "id": 695,
+      "dexNum": 695,
       "slug": "heliolisk",
       "name": {
         "ko": "일레도리자드",
@@ -5278,6 +5418,7 @@
     },
     {
       "id": 697,
+      "dexNum": 697,
       "slug": "tyrantrum",
       "name": {
         "ko": "견고라스",
@@ -5314,6 +5455,7 @@
     },
     {
       "id": 699,
+      "dexNum": 699,
       "slug": "aurorus",
       "name": {
         "ko": "아마루르가",
@@ -5350,6 +5492,7 @@
     },
     {
       "id": 700,
+      "dexNum": 700,
       "slug": "sylveon",
       "name": {
         "ko": "님피아",
@@ -5385,6 +5528,7 @@
     },
     {
       "id": 701,
+      "dexNum": 701,
       "slug": "hawlucha",
       "name": {
         "ko": "루차불",
@@ -5426,6 +5570,7 @@
     },
     {
       "id": 702,
+      "dexNum": 702,
       "slug": "dedenne",
       "name": {
         "ko": "데덴네",
@@ -5467,6 +5612,7 @@
     },
     {
       "id": 706,
+      "dexNum": 706,
       "slug": "goodra",
       "name": {
         "ko": "미끄래곤",
@@ -5507,6 +5653,7 @@
     },
     {
       "id": 707,
+      "dexNum": 707,
       "slug": "klefki",
       "name": {
         "ko": "클레피",
@@ -5543,6 +5690,7 @@
     },
     {
       "id": 709,
+      "dexNum": 709,
       "slug": "trevenant",
       "name": {
         "ko": "대로트",
@@ -5584,6 +5732,7 @@
     },
     {
       "id": 711,
+      "dexNum": 711,
       "slug": "gourgeist-average",
       "name": {
         "ko": "펌킨인",
@@ -5625,6 +5774,7 @@
     },
     {
       "id": 713,
+      "dexNum": 713,
       "slug": "avalugg",
       "name": {
         "ko": "크레베이스",
@@ -5665,6 +5815,7 @@
     },
     {
       "id": 715,
+      "dexNum": 715,
       "slug": "noivern",
       "name": {
         "ko": "음번",
@@ -5706,6 +5857,7 @@
     },
     {
       "id": 724,
+      "dexNum": 724,
       "slug": "decidueye",
       "name": {
         "ko": "모크나이퍼",
@@ -5742,6 +5894,7 @@
     },
     {
       "id": 727,
+      "dexNum": 727,
       "slug": "incineroar",
       "name": {
         "ko": "어흥염",
@@ -5778,6 +5931,7 @@
     },
     {
       "id": 730,
+      "dexNum": 730,
       "slug": "primarina",
       "name": {
         "ko": "누리레느",
@@ -5814,6 +5968,7 @@
     },
     {
       "id": 733,
+      "dexNum": 733,
       "slug": "toucannon",
       "name": {
         "ko": "왕큰부리",
@@ -5855,6 +6010,7 @@
     },
     {
       "id": 740,
+      "dexNum": 740,
       "slug": "crabominable",
       "name": {
         "ko": "모단단게",
@@ -5896,6 +6052,7 @@
     },
     {
       "id": 745,
+      "dexNum": 745,
       "slug": "lycanroc-midday",
       "name": {
         "ko": "루가루암",
@@ -5936,6 +6093,7 @@
     },
     {
       "id": 748,
+      "dexNum": 748,
       "slug": "toxapex",
       "name": {
         "ko": "더시마사리",
@@ -5977,6 +6135,7 @@
     },
     {
       "id": 750,
+      "dexNum": 750,
       "slug": "mudsdale",
       "name": {
         "ko": "만마드",
@@ -6017,6 +6176,7 @@
     },
     {
       "id": 752,
+      "dexNum": 752,
       "slug": "araquanid",
       "name": {
         "ko": "깨비물거미",
@@ -6053,6 +6213,7 @@
     },
     {
       "id": 758,
+      "dexNum": 758,
       "slug": "salazzle",
       "name": {
         "ko": "염뉴트",
@@ -6089,6 +6250,7 @@
     },
     {
       "id": 763,
+      "dexNum": 763,
       "slug": "tsareena",
       "name": {
         "ko": "달코퀸",
@@ -6129,6 +6291,7 @@
     },
     {
       "id": 765,
+      "dexNum": 765,
       "slug": "oranguru",
       "name": {
         "ko": "하랑우탄",
@@ -6170,6 +6333,7 @@
     },
     {
       "id": 766,
+      "dexNum": 766,
       "slug": "passimian",
       "name": {
         "ko": "내던숭이",
@@ -6205,6 +6369,7 @@
     },
     {
       "id": 778,
+      "dexNum": 778,
       "slug": "mimikyu-disguised",
       "name": {
         "ko": "따라큐",
@@ -6236,6 +6401,7 @@
     },
     {
       "id": 780,
+      "dexNum": 780,
       "slug": "drampa",
       "name": {
         "ko": "할비롱",
@@ -6277,6 +6443,7 @@
     },
     {
       "id": 784,
+      "dexNum": 784,
       "slug": "kommo-o",
       "name": {
         "ko": "짜랑고우거",
@@ -6318,6 +6485,7 @@
     },
     {
       "id": 823,
+      "dexNum": 823,
       "slug": "corviknight",
       "name": {
         "ko": "아머까오",
@@ -6359,6 +6527,7 @@
     },
     {
       "id": 841,
+      "dexNum": 841,
       "slug": "flapple",
       "name": {
         "ko": "애프룡",
@@ -6400,6 +6569,7 @@
     },
     {
       "id": 842,
+      "dexNum": 842,
       "slug": "appletun",
       "name": {
         "ko": "단지래플",
@@ -6441,6 +6611,7 @@
     },
     {
       "id": 844,
+      "dexNum": 844,
       "slug": "sandaconda",
       "name": {
         "ko": "사다이사",
@@ -6481,6 +6652,7 @@
     },
     {
       "id": 855,
+      "dexNum": 855,
       "slug": "polteageist",
       "name": {
         "ko": "포트데스",
@@ -6516,6 +6688,7 @@
     },
     {
       "id": 858,
+      "dexNum": 858,
       "slug": "hatterene",
       "name": {
         "ko": "브리무음",
@@ -6557,6 +6730,7 @@
     },
     {
       "id": 861,
+      "dexNum": 861,
       "slug": "grimmsnarl",
       "name": {
         "ko": "오롱털",
@@ -6598,6 +6772,7 @@
     },
     {
       "id": 866,
+      "dexNum": 866,
       "slug": "mr-rime",
       "name": {
         "ko": "마임꽁꽁",
@@ -6639,6 +6814,7 @@
     },
     {
       "id": 867,
+      "dexNum": 867,
       "slug": "runerigus",
       "name": {
         "ko": "데스판",
@@ -6670,6 +6846,7 @@
     },
     {
       "id": 869,
+      "dexNum": 869,
       "slug": "alcremie",
       "name": {
         "ko": "마휘핑",
@@ -6705,6 +6882,7 @@
     },
     {
       "id": 870,
+      "dexNum": 870,
       "slug": "falinks",
       "name": {
         "ko": "대여르",
@@ -6740,6 +6918,7 @@
     },
     {
       "id": 877,
+      "dexNum": 877,
       "slug": "morpeko-full-belly",
       "name": {
         "ko": "모르페코",
@@ -6771,6 +6950,7 @@
     },
     {
       "id": 887,
+      "dexNum": 887,
       "slug": "dragapult",
       "name": {
         "ko": "드래펄트",
@@ -6812,6 +6992,7 @@
     },
     {
       "id": 899,
+      "dexNum": 899,
       "slug": "wyrdeer",
       "name": {
         "ko": "신비록",
@@ -6853,6 +7034,7 @@
     },
     {
       "id": 900,
+      "dexNum": 900,
       "slug": "kleavor",
       "name": {
         "ko": "사마자르",
@@ -6894,6 +7076,7 @@
     },
     {
       "id": 902,
+      "dexNum": 902,
       "slug": "basculegion-male",
       "name": {
         "ko": "대쓰여너",
@@ -6935,6 +7118,7 @@
     },
     {
       "id": 903,
+      "dexNum": 903,
       "slug": "sneasler",
       "name": {
         "ko": "포푸니크",
@@ -6976,6 +7160,7 @@
     },
     {
       "id": 904,
+      "dexNum": 904,
       "slug": "overqwil",
       "name": {
         "ko": "장침바루",
@@ -7017,6 +7202,7 @@
     },
     {
       "id": 908,
+      "dexNum": 908,
       "slug": "meowscarada",
       "name": {
         "ko": "마스카나",
@@ -7053,6 +7239,7 @@
     },
     {
       "id": 911,
+      "dexNum": 911,
       "slug": "skeledirge",
       "name": {
         "ko": "라우드본",
@@ -7089,6 +7276,7 @@
     },
     {
       "id": 914,
+      "dexNum": 914,
       "slug": "quaquaval",
       "name": {
         "ko": "웨이니발",
@@ -7125,6 +7313,7 @@
     },
     {
       "id": 923,
+      "dexNum": 923,
       "slug": "pawmot",
       "name": {
         "ko": "빠르모트",
@@ -7166,6 +7355,7 @@
     },
     {
       "id": 925,
+      "dexNum": 925,
       "slug": "maushold-family-of-four",
       "name": {
         "ko": "파밀리쥐",
@@ -7206,6 +7396,7 @@
     },
     {
       "id": 934,
+      "dexNum": 934,
       "slug": "garganacl",
       "name": {
         "ko": "콜로솔트",
@@ -7246,6 +7437,7 @@
     },
     {
       "id": 936,
+      "dexNum": 936,
       "slug": "armarouge",
       "name": {
         "ko": "카디나르마",
@@ -7282,6 +7474,7 @@
     },
     {
       "id": 937,
+      "dexNum": 937,
       "slug": "ceruledge",
       "name": {
         "ko": "파라블레이즈",
@@ -7318,6 +7511,7 @@
     },
     {
       "id": 939,
+      "dexNum": 939,
       "slug": "bellibolt",
       "name": {
         "ko": "찌리배리",
@@ -7358,6 +7552,7 @@
     },
     {
       "id": 952,
+      "dexNum": 952,
       "slug": "scovillain",
       "name": {
         "ko": "스코빌런",
@@ -7399,6 +7594,7 @@
     },
     {
       "id": 956,
+      "dexNum": 956,
       "slug": "espathra",
       "name": {
         "ko": "클레스퍼트라",
@@ -7439,6 +7635,7 @@
     },
     {
       "id": 959,
+      "dexNum": 959,
       "slug": "tinkaton",
       "name": {
         "ko": "두드리짱",
@@ -7480,6 +7677,7 @@
     },
     {
       "id": 964,
+      "dexNum": 964,
       "slug": "palafin-zero",
       "name": {
         "ko": "돌핀맨",
@@ -7510,6 +7708,7 @@
     },
     {
       "id": 968,
+      "dexNum": 968,
       "slug": "orthworm",
       "name": {
         "ko": "꿈트렁",
@@ -7545,6 +7744,7 @@
     },
     {
       "id": 970,
+      "dexNum": 970,
       "slug": "glimmora",
       "name": {
         "ko": "킬라플로르",
@@ -7581,6 +7781,7 @@
     },
     {
       "id": 972,
+      "dexNum": 972,
       "slug": "houndstone",
       "name": {
         "ko": "묘두기",
@@ -7616,6 +7817,7 @@
     },
     {
       "id": 979,
+      "dexNum": 979,
       "slug": "annihilape",
       "name": {
         "ko": "저승갓숭",
@@ -7657,6 +7859,7 @@
     },
     {
       "id": 981,
+      "dexNum": 981,
       "slug": "farigiraf",
       "name": {
         "ko": "키키링",
@@ -7698,6 +7901,7 @@
     },
     {
       "id": 983,
+      "dexNum": 983,
       "slug": "kingambit",
       "name": {
         "ko": "대도각참",
@@ -7739,6 +7943,7 @@
     },
     {
       "id": 1000,
+      "dexNum": 1000,
       "slug": "gholdengo",
       "name": {
         "ko": "타부자고",
@@ -7770,6 +7975,7 @@
     },
     {
       "id": 1013,
+      "dexNum": 1013,
       "slug": "sinistcha",
       "name": {
         "ko": "그우린차",
@@ -7806,6 +8012,7 @@
     },
     {
       "id": 1018,
+      "dexNum": 1018,
       "slug": "archaludon",
       "name": {
         "ko": "브리두라스",
@@ -7847,6 +8054,7 @@
     },
     {
       "id": 1019,
+      "dexNum": 1019,
       "slug": "hydrapple",
       "name": {
         "ko": "과미드라",
@@ -7888,6 +8096,7 @@
     },
     {
       "id": 10061,
+      "dexNum": 670,
       "slug": "floette-eternal",
       "name": {
         "ko": "플라엣테",
@@ -7923,6 +8132,7 @@
     },
     {
       "id": 10100,
+      "dexNum": 26,
       "slug": "raichu-alola",
       "name": {
         "ko": "라이츄",
@@ -7954,6 +8164,7 @@
     },
     {
       "id": 10104,
+      "dexNum": 38,
       "slug": "ninetales-alola",
       "name": {
         "ko": "나인테일",
@@ -7990,6 +8201,7 @@
     },
     {
       "id": 10165,
+      "dexNum": 80,
       "slug": "slowbro-galar",
       "name": {
         "ko": "야도란",
@@ -8031,6 +8243,7 @@
     },
     {
       "id": 10172,
+      "dexNum": 199,
       "slug": "slowking-galar",
       "name": {
         "ko": "야도킹",
@@ -8072,6 +8285,7 @@
     },
     {
       "id": 10180,
+      "dexNum": 618,
       "slug": "stunfisk-galar",
       "name": {
         "ko": "메더",
@@ -8103,6 +8317,7 @@
     },
     {
       "id": 10230,
+      "dexNum": 59,
       "slug": "arcanine-hisui",
       "name": {
         "ko": "윈디",
@@ -8144,6 +8359,7 @@
     },
     {
       "id": 10233,
+      "dexNum": 157,
       "slug": "typhlosion-hisui",
       "name": {
         "ko": "블레이범",
@@ -8180,6 +8396,7 @@
     },
     {
       "id": 10236,
+      "dexNum": 503,
       "slug": "samurott-hisui",
       "name": {
         "ko": "대검귀",
@@ -8216,6 +8433,7 @@
     },
     {
       "id": 10239,
+      "dexNum": 571,
       "slug": "zoroark-hisui",
       "name": {
         "ko": "조로아크",
@@ -8247,6 +8465,7 @@
     },
     {
       "id": 10242,
+      "dexNum": 706,
       "slug": "goodra-hisui",
       "name": {
         "ko": "미끄래곤",
@@ -8288,6 +8507,7 @@
     },
     {
       "id": 10243,
+      "dexNum": 713,
       "slug": "avalugg-hisui",
       "name": {
         "ko": "크레베이스",
@@ -8329,6 +8549,7 @@
     },
     {
       "id": 10244,
+      "dexNum": 724,
       "slug": "decidueye-hisui",
       "name": {
         "ko": "모크나이퍼",
@@ -8365,6 +8586,7 @@
     },
     {
       "id": 10250,
+      "dexNum": 128,
       "slug": "tauros-paldea-combat-breed",
       "name": {
         "ko": "켄타로스",
@@ -8405,6 +8627,7 @@
     },
     {
       "id": 10251,
+      "dexNum": 128,
       "slug": "tauros-paldea-blaze-breed",
       "name": {
         "ko": "켄타로스",
@@ -8446,6 +8669,7 @@
     },
     {
       "id": 10252,
+      "dexNum": 128,
       "slug": "tauros-paldea-aqua-breed",
       "name": {
         "ko": "켄타로스",

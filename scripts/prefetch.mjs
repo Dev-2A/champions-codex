@@ -121,6 +121,7 @@ async function buildPokedex(reg) {
 
     out.push({
       id: p.id,
+      dexNum: species.id,
       slug: p.name,
       name: { ko: ko(species.names), en: p.name },
       genus:
