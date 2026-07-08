@@ -8,7 +8,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 
-// 앱 전역 내비게이션 소스 (홈 카드 + 헤더 내비가 공유)
+// primary: 모바일 하단 탭바 노출 / !primary: 상단 "더보기" 메뉴
 export const navItems = [
   {
     to: "/",
@@ -16,6 +16,7 @@ export const navItems = [
     short: "홈",
     icon: Home,
     end: true,
+    primary: true,
     desc: "허브 시작점",
   },
   {
@@ -24,6 +25,7 @@ export const navItems = [
     short: "가이드",
     icon: GraduationCap,
     end: false,
+    primary: true,
     desc: "챔피언스가 뭔지 30분 온보딩",
   },
   {
@@ -32,6 +34,7 @@ export const navItems = [
     short: "타입",
     icon: Grid3x3,
     end: false,
+    primary: true,
     desc: "18×18 상성 매트릭스 + 이중타입 계산",
   },
   {
@@ -40,6 +43,7 @@ export const navItems = [
     short: "도감",
     icon: BookOpen,
     end: false,
+    primary: true,
     desc: "현재 레귤레이션 사용 가능 포켓몬",
   },
   {
@@ -48,6 +52,7 @@ export const navItems = [
     short: "팀",
     icon: Users,
     end: false,
+    primary: true,
     desc: "6마리 편성 + 타입 커버리지 분석",
   },
   {
@@ -56,6 +61,7 @@ export const navItems = [
     short: "시즌",
     icon: CalendarClock,
     end: false,
+    primary: false,
     desc: "현재 레귤레이션 · 종료 카운트다운",
   },
   {
@@ -64,6 +70,7 @@ export const navItems = [
     short: "FAQ",
     icon: HelpCircle,
     end: false,
+    primary: false,
     desc: "뉴비가 자주 묻는 질문",
   },
 ];
