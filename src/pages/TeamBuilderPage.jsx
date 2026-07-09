@@ -1,17 +1,24 @@
-import { useState } from "react";
-import { Users, Trash2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Users, Trash2, Bookmark } from "lucide-react";
 import { getPokemonBySlug } from "../data";
 import { useTeamStore } from "../store/useTeamStore";
+import { usePresetStore } from "../store/usePresetStore";
 import TeamSlot from "../components/team/TeamSlot";
 import PokemonPicker from "../components/team/PokemonPicker";
 import CoverageAnalysis from "../components/team/CoverageAnalysis";
+import PresetManager from "../components/team/PresetManager";
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
   const add = useTeamStore((s) => s.add);
   const remove = useTeamStore((s) => s.remove);
   const clear = useTeamStore((s) => s.clear);
+  const loadPresets = usePresetStore((s) => s.load);
   const [picking, setPicking] = useState(false);
+
+  useEffect(() => {
+    loadPresets();
+  }, [loadPresets]);
 
   const team = slugs.map(getPokemonBySlug).filter(Boolean);
   const blockedDex = new Set(team.map((p) => p.dexNum));
@@ -86,6 +93,14 @@ export default function TeamBuilderPage() {
           <CoverageAnalysis team={team} />
         </section>
       )}
+
+      <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+        <div className="mb-3 flex items-center gap-2">
+          <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
+          <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
+        </div>
+        <PresetManager currentSlugs={slugs} />
+      </section>
     </div>
   );
 }
