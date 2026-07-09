@@ -39,4 +39,4 @@ npm run build           # 프로덕션 빌드
 비영리 팬 프로젝트입니다. 포켓몬 및 관련 명칭은 Nintendo / Creatures / GAME FREAK의 상표입니다.
 
 ---
-made with cola and heart 🥤
+made with cola and <img src="public/pokeball.svg" width="14" height="14" alt="Poké Ball" align="center">
