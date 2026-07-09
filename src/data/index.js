@@ -3,8 +3,10 @@ import typechartData from "./generated/typechart.json";
 import typeTraitsData from "./champions/typeTraits.json";
 import glossaryData from "./champions/glossary.json";
 import seasonsData from "./champions/seasons.json";
-import itemsData from "./generated/items.json";
 import faqData from "./champions/faq.json";
+import itemsData from "./generated/items.json";
+import movesData from "./generated/moves.json";
+import notableMovesData from "./champions/notable-moves.json";
 
 // 프리페치 생성물을 eager 로드 후 활성 레귤레이션만 선택
 const pokedexModules = import.meta.glob("./generated/pokedex.*.json", {
@@ -33,7 +35,7 @@ export const regulation = pick(regulationModules, "regulation");
 export const typechart = typechartData;
 export const pokemonList = pokedexFile.pokemon;
 
-// ── 인덱스 ──
+// ── 포켓몬 인덱스 ──
 const bySlug = new Map(pokemonList.map((p) => [p.slug, p]));
 const byId = new Map(pokemonList.map((p) => [p.id, p]));
 export const getPokemonBySlug = (slug) => bySlug.get(slug) ?? null;
@@ -48,15 +50,24 @@ export const typeKo = (t) => typeMeta[t]?.ko ?? t;
 export const typeTraits = typeTraitsData;
 export const getTypeTraits = (t) => typeTraitsData[t] ?? null;
 
-// ── 용어집 (큐레이션) ──
+// ── 용어집 · 시즌 · FAQ (큐레이션) ──
 export const glossary = glossaryData;
-
-// ── 시즌 (큐레이션) ──
 export const seasons = seasonsData.seasons;
+export const faqs = faqData.faqs;
 
 // ── 도구 (프리페치) ──
 export const items = itemsData.items;
 export const itemCategories = itemsData.categories;
 
-// ── FAQ (큐레이션) ──
-export const faqs = faqData.faqs;
+// ── 기술 (프리페치) ──
+export const moves = movesData.moves;
+const moveBySlug = new Map(moves.map((m) => [m.slug, m]));
+export const getMove = (slug) => moveBySlug.get(slug) ?? null;
+
+/** 슬러그 배열 → 기술 객체 배열 (없는 건 제외) */
+export const resolveMoves = (slugs = []) =>
+  slugs.map((s) => moveBySlug.get(s)).filter(Boolean);
+
+// ── 주목 기술 역할 태그 (큐레이션) ──
+export const notableMoves = notableMovesData;
+export const getNotableRole = (slug) => notableMovesData[slug] ?? null;
