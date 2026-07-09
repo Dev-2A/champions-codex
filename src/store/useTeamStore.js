@@ -21,8 +21,26 @@ function save(slugs) {
   }
 }
 
+// 슬러그 배열을 유효/중복/종족클로즈/최대6 기준으로 정제
+function sanitize(slugs) {
+  const seen = new Set();
+  const dexSeen = new Set();
+  const next = [];
+  for (const s of slugs) {
+    if (next.length >= MAX) break;
+    if (seen.has(s)) continue;
+    const p = getPokemonBySlug(s);
+    if (!p) continue;
+    if (dexSeen.has(p.dexNum)) continue;
+    seen.add(s);
+    dexSeen.add(p.dexNum);
+    next.push(s);
+  }
+  return next;
+}
+
 export const useTeamStore = create((set, get) => ({
-  slugs: load(), // 팀 슬러그 배열 (최대 6)
+  slugs: load(),
 
   add: (slug) => {
     const { slugs } = get();
@@ -30,7 +48,6 @@ export const useTeamStore = create((set, get) => ({
     if (slugs.includes(slug)) return { ok: false, reason: "dup" };
     const p = getPokemonBySlug(slug);
     if (!p) return { ok: false, reason: "invalid" };
-    // 종족 클로즈: 같은 도감번호 불가 (M-B 룰)
     if (slugs.some((s) => getPokemonBySlug(s)?.dexNum === p.dexNum)) {
       return { ok: false, reason: "species" };
     }
@@ -42,6 +59,12 @@ export const useTeamStore = create((set, get) => ({
 
   remove: (slug) => {
     const next = get().slugs.filter((s) => s !== slug);
+    save(next);
+    set({ slugs: next });
+  },
+
+  setTeam: (slugs) => {
+    const next = sanitize(slugs);
     save(next);
     set({ slugs: next });
   },
