@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const linkPill = ({ isActive }) =>
   [
-    "flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium transition-colors",
+    "flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-1.5 text-[13px] font-medium transition-colors",
     isActive
       ? "bg-brand-500 text-white shadow-sm"
       : "text-ink-600 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-800",
@@ -20,7 +20,7 @@ export default function TopBar() {
     <header className="sticky top-0 z-30 border-b border-ink-200/70 bg-ink-50/80 backdrop-blur dark:border-ink-800/70 dark:bg-ink-950/80">
       <div className="mx-auto flex w-full max-w-3xl items-center gap-2 px-4 py-3">
         {/* 로고 */}
-        <Link to="/" className="mr-auto flex items-center gap-2">
+        <Link to="/" className="mr-auto flex shrink-0 items-center gap-2">
           <span className="text-xl" aria-hidden>
             🏆
           </span>
@@ -28,14 +28,14 @@ export default function TopBar() {
             <span className="block text-base font-bold tracking-tight">
               Champions Codex
             </span>
-            <span className="block text-[11px] text-ink-500 dark:text-ink-400">
+            <span className="hidden text-[11px] text-ink-500 lg:block dark:text-ink-400">
               포켓몬 챔피언스 뉴비 허브
             </span>
           </span>
         </Link>
 
         {/* 데스크톱: 전체 내비 */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-0.5 md:flex">
           {navItems.map(({ to, short, icon: Icon, end }) => (
             <NavLink key={to} to={to} end={end} className={linkPill}>
               <Icon size={15} strokeWidth={2.2} />
@@ -44,7 +44,7 @@ export default function TopBar() {
           ))}
         </nav>
 
-        {/* 모바일: 더보기(시즌·FAQ) */}
+        {/* 모바일: 더보기(시즌·FAQ·도구 등) */}
         <div className="relative md:hidden">
           <button
             type="button"
@@ -58,7 +58,6 @@ export default function TopBar() {
 
           {open && (
             <>
-              {/* 바깥 클릭 닫기 */}
               <button
                 type="button"
                 aria-hidden
