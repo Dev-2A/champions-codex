@@ -9,6 +9,7 @@ import TeamBuilderPage from "./pages/TeamBuilderPage";
 import SeasonPage from "./pages/SeasonPage";
 import FaqPage from "./pages/FaqPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ItemDexPage from "./pages/ItemDexPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/types" element={<TypeChartPage />} />
         <Route path="/pokedex" element={<PokedexPage />} />
         <Route path="/pokedex/:slug" element={<PokemonDetailPage />} />
+        <Route path="/items" element={<ItemDexPage />} />
         <Route path="/team" element={<TeamBuilderPage />} />
         <Route path="/season" element={<SeasonPage />} />
         <Route path="/faq" element={<FaqPage />} />

@@ -3,6 +3,7 @@ import {
   GraduationCap,
   Grid3x3,
   BookOpen,
+  Package,
   Users,
   CalendarClock,
   HelpCircle,
@@ -45,6 +46,15 @@ export const navItems = [
     end: false,
     primary: true,
     desc: "현재 레귤레이션 사용 가능 포켓몬",
+  },
+  {
+    to: "/items",
+    label: "도구 도감",
+    short: "도구",
+    icon: Package,
+    end: false,
+    primary: false,
+    desc: "경쟁전 지닌 도구 모음",
   },
   {
     to: "/team",
