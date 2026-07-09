@@ -1,0 +1,246 @@
+{
+  "categories": [
+    {
+      "id": "choice",
+      "label": "구애 도구"
+    },
+    {
+      "id": "offense",
+      "label": "공격 강화"
+    },
+    {
+      "id": "defense",
+      "label": "방어·내구"
+    },
+    {
+      "id": "utility",
+      "label": "유틸·견제"
+    },
+    {
+      "id": "berry",
+      "label": "열매"
+    },
+    {
+      "id": "field",
+      "label": "날씨·필드"
+    }
+  ],
+  "items": [
+    {
+      "slug": "choice-band",
+      "cat": "choice"
+    },
+    {
+      "slug": "choice-specs",
+      "cat": "choice"
+    },
+    {
+      "slug": "choice-scarf",
+      "cat": "choice"
+    },
+    {
+      "slug": "life-orb",
+      "cat": "offense"
+    },
+    {
+      "slug": "expert-belt",
+      "cat": "offense"
+    },
+    {
+      "slug": "muscle-band",
+      "cat": "offense"
+    },
+    {
+      "slug": "wise-glasses",
+      "cat": "offense"
+    },
+    {
+      "slug": "wide-lens",
+      "cat": "offense"
+    },
+    {
+      "slug": "scope-lens",
+      "cat": "offense"
+    },
+    {
+      "slug": "metronome",
+      "cat": "offense"
+    },
+    {
+      "slug": "throat-spray",
+      "cat": "offense"
+    },
+    {
+      "slug": "leftovers",
+      "cat": "defense"
+    },
+    {
+      "slug": "assault-vest",
+      "cat": "defense"
+    },
+    {
+      "slug": "rocky-helmet",
+      "cat": "defense"
+    },
+    {
+      "slug": "eviolite",
+      "cat": "defense"
+    },
+    {
+      "slug": "focus-sash",
+      "cat": "defense"
+    },
+    {
+      "slug": "safety-goggles",
+      "cat": "defense"
+    },
+    {
+      "slug": "covert-cloak",
+      "cat": "defense",
+      "ko": "은폐의망토",
+      "desc": "지니게 하면 상대 기술의 추가 효과(풀죽음 등)를 받지 않는다."
+    },
+    {
+      "slug": "clear-amulet",
+      "cat": "defense",
+      "ko": "클리어참",
+      "desc": "지니고 있으면 상대가 자신의 능력을 떨어뜨릴 수 없다."
+    },
+    {
+      "slug": "protective-pads",
+      "cat": "defense"
+    },
+    {
+      "slug": "mental-herb",
+      "cat": "utility"
+    },
+    {
+      "slug": "white-herb",
+      "cat": "utility"
+    },
+    {
+      "slug": "weakness-policy",
+      "cat": "utility"
+    },
+    {
+      "slug": "red-card",
+      "cat": "utility"
+    },
+    {
+      "slug": "eject-button",
+      "cat": "utility"
+    },
+    {
+      "slug": "eject-pack",
+      "cat": "utility"
+    },
+    {
+      "slug": "air-balloon",
+      "cat": "utility"
+    },
+    {
+      "slug": "quick-claw",
+      "cat": "utility"
+    },
+    {
+      "slug": "bright-powder",
+      "cat": "utility"
+    },
+    {
+      "slug": "loaded-dice",
+      "cat": "utility",
+      "ko": "구슬주사위",
+      "desc": "지니게 하면 연속 기술이 최소 4번 이상 맞는다."
+    },
+    {
+      "slug": "room-service",
+      "cat": "utility"
+    },
+    {
+      "slug": "adrenaline-orb",
+      "cat": "utility"
+    },
+    {
+      "slug": "mirror-herb",
+      "cat": "utility",
+      "ko": "미러허브",
+      "desc": "상대가 능력을 올리면 같은 만큼 자신도 올린다(1회)."
+    },
+    {
+      "slug": "sitrus-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "lum-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "figy-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "salac-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "liechi-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "yache-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "occa-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "passho-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "shuca-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "chople-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "kebia-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "haban-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "roseli-berry",
+      "cat": "berry"
+    },
+    {
+      "slug": "light-clay",
+      "cat": "field"
+    },
+    {
+      "slug": "heat-rock",
+      "cat": "field"
+    },
+    {
+      "slug": "damp-rock",
+      "cat": "field"
+    },
+    {
+      "slug": "smooth-rock",
+      "cat": "field"
+    },
+    {
+      "slug": "icy-rock",
+      "cat": "field"
+    },
+    {
+      "slug": "terrain-extender",
+      "cat": "field"
+    }
+  ]
+}
