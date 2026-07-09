@@ -130,6 +130,7 @@ async function buildPokedex(reg) {
       stats,
       total,
       abilities,
+      moves: [...new Set(p.moves.map((m) => m.move.name))].sort(),
       sprite:
         p.sprites.other?.["official-artwork"]?.front_default ??
         p.sprites.front_default,

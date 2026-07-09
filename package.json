@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prefetch": "node scripts/prefetch.mjs",
-    "prefetch:items": "node scripts/prefetch-items.mjs"
+    "prefetch:items": "node scripts/prefetch-items.mjs",
+    "prefetch:moves": "node scripts/prefetch-moves.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
