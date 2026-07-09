@@ -2,6 +2,7 @@ import { ACTIVE_REGULATION } from "../config";
 import typechartData from "./generated/typechart.json";
 import typeTraitsData from "./champions/typeTraits.json";
 import glossaryData from "./champions/glossary.json";
+import seasonsData from "./champions/seasons.json";
 
 // 프리페치 생성물을 eager 로드 후 활성 레귤레이션만 선택
 const pokedexModules = import.meta.glob("./generated/pokedex.*.json", {
@@ -47,3 +48,6 @@ export const getTypeTraits = (t) => typeTraitsData[t] ?? null;
 
 // ── 용어집 (큐레이션) ──
 export const glossary = glossaryData;
+
+// ── 시즌 (큐레이션) ──
+export const seasons = seasonsData.seasons;
