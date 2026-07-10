@@ -15,6 +15,8 @@ export default function TeamBuilderPage() {
   const add = useTeamStore((s) => s.add);
   const remove = useTeamStore((s) => s.remove);
   const setItem = useTeamStore((s) => s.setItem);
+  const moves = useTeamStore((s) => s.moves);
+  const toggleMove = useTeamStore((s) => s.toggleMove);
   const clear = useTeamStore((s) => s.clear);
   const loadPresets = usePresetStore((s) => s.load);
 
@@ -96,8 +98,10 @@ export default function TeamBuilderPage() {
         <MemberEditor
           pokemon={editingPokemon}
           item={getItem(items[editingSlug])}
+          moves={moves[editingSlug] ?? []}
           usedItems={usedItems}
           onSetItem={(itemSlug) => setItem(editingSlug, itemSlug)}
+          onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
           onClose={() => setEditingSlug(null)}
         />
       ) : picking ? (

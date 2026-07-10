@@ -1,21 +1,29 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { X, Package, ExternalLink } from "lucide-react";
+import { X, Package, ExternalLink, Plus } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
+import MoveBadge from "../moves/MoveBadge";
 import ItemPicker from "./ItemPicker";
+import MovePicker from "./MovePicker";
+import { resolveMoves } from "../../data";
 
 export default function MemberEditor({
   pokemon,
   item,
+  moves,
   usedItems,
   onSetItem,
+  onToggleMove,
   onClose,
 }) {
-  const [picking, setPicking] = useState(false);
+  const [pickingItem, setPickingItem] = useState(false);
+  const [pickingMove, setPickingMove] = useState(false);
+  const selectedMoves = resolveMoves(moves);
 
   return (
-    <div className="rounded-2xl border border-brand-200 bg-white p-4 dark:border-brand-900 dark:bg-ink-900">
-      <div className="mb-3 flex items-center gap-3">
+    <div className="space-y-4 rounded-2xl border border-brand-200 bg-white p-4 dark:border-brand-900 dark:bg-ink-900">
+      {/* 헤더 */}
+      <div className="flex items-center gap-3">
         <img
           src={pokemon.sprite}
           alt={pokemon.name.ko}
@@ -47,19 +55,20 @@ export default function MemberEditor({
         </button>
       </div>
 
+      {/* 도구 */}
       <div>
         <p className="mb-1.5 text-xs font-semibold text-ink-500 dark:text-ink-400">
           지닌 도구
         </p>
-        {picking ? (
+        {pickingItem ? (
           <ItemPicker
             usedItems={usedItems}
             current={item?.slug}
             onPick={(slug) => {
               onSetItem(slug);
-              setPicking(false);
+              setPickingItem(false);
             }}
-            onClose={() => setPicking(false)}
+            onClose={() => setPickingItem(false)}
           />
         ) : item ? (
           <div className="flex items-center gap-2 rounded-xl border border-ink-200 p-2 dark:border-ink-800">
@@ -78,7 +87,7 @@ export default function MemberEditor({
               {item.name.ko}
             </span>
             <button
-              onClick={() => setPicking(true)}
+              onClick={() => setPickingItem(true)}
               className="rounded-lg px-2 py-1 text-xs font-medium text-ink-500 hover:bg-ink-100 dark:text-ink-400 dark:hover:bg-ink-800"
             >
               변경
@@ -92,11 +101,60 @@ export default function MemberEditor({
           </div>
         ) : (
           <button
-            onClick={() => setPicking(true)}
+            onClick={() => setPickingItem(true)}
             className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-ink-300 py-2.5 text-sm font-medium text-ink-500 transition-colors hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-400"
           >
             <Package size={15} /> 도구 선택
           </button>
+        )}
+      </div>
+
+      {/* 기술 */}
+      <div>
+        <div className="mb-1.5 flex items-center justify-between">
+          <p className="text-xs font-semibold text-ink-500 dark:text-ink-400">
+            기술{" "}
+            <span className="text-ink-400">({selectedMoves.length}/4)</span>
+          </p>
+          <button
+            onClick={() => setPickingMove((v) => !v)}
+            className="text-xs font-semibold text-brand-500 hover:underline"
+          >
+            {pickingMove ? "닫기" : "편집"}
+          </button>
+        </div>
+
+        {/* 선택된 기술 */}
+        {selectedMoves.length > 0 && (
+          <div className="mb-2 flex flex-wrap gap-1">
+            {selectedMoves.map((m) => (
+              <button
+                key={m.slug}
+                onClick={() => onToggleMove(m.slug)}
+                title="제거"
+                className="group inline-flex"
+              >
+                <MoveBadge move={m} className="group-hover:opacity-70" />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {pickingMove ? (
+          <MovePicker
+            moveSlugs={pokemon.moves ?? []}
+            selected={moves}
+            onToggle={onToggleMove}
+          />
+        ) : (
+          selectedMoves.length === 0 && (
+            <button
+              onClick={() => setPickingMove(true)}
+              className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-ink-300 py-2.5 text-sm font-medium text-ink-500 transition-colors hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-400"
+            >
+              <Plus size={15} /> 기술 선택
+            </button>
+          )
         )}
       </div>
     </div>
