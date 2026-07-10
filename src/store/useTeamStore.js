@@ -7,21 +7,24 @@ const MAX = 6;
 function load() {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return { slugs: parsed, items: {} }; // 구버전 호환
+      return { slugs: parsed.slugs ?? [], items: parsed.items ?? {} };
+    }
   } catch {
     /* noop */
   }
-  return [];
+  return { slugs: [], items: {} };
 }
-function save(slugs) {
+function save(slugs, items) {
   try {
-    localStorage.setItem(KEY, JSON.stringify(slugs));
+    localStorage.setItem(KEY, JSON.stringify({ slugs, items }));
   } catch {
     /* noop */
   }
 }
 
-// 슬러그 배열을 유효/중복/종족클로즈/최대6 기준으로 정제
 function sanitize(slugs) {
   const seen = new Set();
   const dexSeen = new Set();
@@ -39,11 +42,14 @@ function sanitize(slugs) {
   return next;
 }
 
+const initial = load();
+
 export const useTeamStore = create((set, get) => ({
-  slugs: load(),
+  slugs: initial.slugs,
+  items: initial.items, // { [slug]: itemSlug }
 
   add: (slug) => {
-    const { slugs } = get();
+    const { slugs, items } = get();
     if (slugs.length >= MAX) return { ok: false, reason: "full" };
     if (slugs.includes(slug)) return { ok: false, reason: "dup" };
     const p = getPokemonBySlug(slug);
@@ -52,25 +58,45 @@ export const useTeamStore = create((set, get) => ({
       return { ok: false, reason: "species" };
     }
     const next = [...slugs, slug];
-    save(next);
+    save(next, items);
     set({ slugs: next });
     return { ok: true };
   },
 
   remove: (slug) => {
+    const items = { ...get().items };
+    delete items[slug];
     const next = get().slugs.filter((s) => s !== slug);
-    save(next);
-    set({ slugs: next });
+    save(next, items);
+    set({ slugs: next, items });
+  },
+
+  setItem: (slug, itemSlug) => {
+    const { slugs, items } = get();
+    if (!slugs.includes(slug)) return { ok: false, reason: "not-in-team" };
+    // 도구 클로즈: 다른 멤버가 같은 도구를 들고 있으면 불가
+    if (
+      itemSlug &&
+      Object.entries(items).some(([s, it]) => s !== slug && it === itemSlug)
+    ) {
+      return { ok: false, reason: "dup-item" };
+    }
+    const next = { ...items };
+    if (itemSlug) next[slug] = itemSlug;
+    else delete next[slug];
+    save(slugs, next);
+    set({ items: next });
+    return { ok: true };
   },
 
   setTeam: (slugs) => {
-    const next = sanitize(slugs);
-    save(next);
-    set({ slugs: next });
+    const clean = sanitize(slugs);
+    save(clean, {}); // 프리셋 도구·기술 로드는 Step 8에서
+    set({ slugs: clean, items: {} });
   },
 
   clear: () => {
-    save([]);
-    set({ slugs: [] });
+    save([], {});
+    set({ slugs: [], items: {} });
   },
 }));

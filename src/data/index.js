@@ -58,6 +58,8 @@ export const faqs = faqData.faqs;
 // ── 도구 (프리페치) ──
 export const items = itemsData.items;
 export const itemCategories = itemsData.categories;
+const itemBySlug = new Map(items.map((it) => [it.slug, it]));
+export const getItem = (slug) => itemBySlug.get(slug) ?? null;
 
 // ── 기술 (프리페치) ──
 export const moves = movesData.moves;
