@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { getPokemonBySlug, pokemonList } from "../data";
@@ -6,6 +7,8 @@ import StatBars from "../components/pokedex/StatBars";
 import DefensiveProfile from "../components/typechart/DefensiveProfile";
 import TypeTraitsPanel from "../components/typechart/TypeTraitsPanel";
 import TeamToggleButton from "../components/team/TeamToggleButton";
+import SegmentedToggle from "../components/common/SegmentedToggle";
+import LearnableMoves from "../components/pokedex/LearnableMoves";
 
 function Section({ title, children }) {
   return (
@@ -24,6 +27,7 @@ export default function PokemonDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const pokemon = getPokemonBySlug(slug);
+  const [tab, setTab] = useState("info");
 
   if (!pokemon) {
     return (
@@ -41,8 +45,18 @@ export default function PokemonDetailPage() {
     );
   }
 
-  const { id, name, genus, types, stats, total, abilities, sprite, canMega } =
-    pokemon;
+  const {
+    id,
+    name,
+    genus,
+    types,
+    stats,
+    total,
+    abilities,
+    sprite,
+    canMega,
+    moves,
+  } = pokemon;
   const idx = pokemonList.findIndex((p) => p.slug === slug);
   const prev = idx > 0 ? pokemonList[idx - 1] : null;
   const next = idx < pokemonList.length - 1 ? pokemonList[idx + 1] : null;
@@ -113,52 +127,63 @@ export default function PokemonDetailPage() {
         </div>
       </section>
 
-      {/* 팀 편성 */}
       <TeamToggleButton slug={slug} />
 
-      {/* 종족값 */}
-      <Section title="종족값">
-        <div className="rounded-2xl border border-ink-200 bg-white p-4 dark:border-ink-800 dark:bg-ink-900">
-          <StatBars stats={stats} total={total} />
-        </div>
-      </Section>
+      {/* 탭 */}
+      <SegmentedToggle
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: "info", label: "정보" },
+          { value: "moves", label: `기술 ${moves?.length ?? 0}` },
+        ]}
+      />
 
-      {/* 특성 */}
-      <Section title="특성">
-        <div className="flex flex-wrap gap-2">
-          {abilities.map((a) => (
-            <span
-              key={a.slug}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-ink-200 bg-white px-3 py-1.5 text-sm dark:border-ink-800 dark:bg-ink-900"
-            >
-              <span className="font-semibold text-ink-700 dark:text-ink-200">
-                {a.ko ?? a.slug}
-              </span>
-              {a.hidden && (
-                <span className="rounded bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-500 dark:bg-ink-800 dark:text-ink-400">
-                  숨겨진 특성
+      {tab === "info" ? (
+        <div className="space-y-5">
+          <Section title="종족값">
+            <div className="rounded-2xl border border-ink-200 bg-white p-4 dark:border-ink-800 dark:bg-ink-900">
+              <StatBars stats={stats} total={total} />
+            </div>
+          </Section>
+
+          <Section title="특성">
+            <div className="flex flex-wrap gap-2">
+              {abilities.map((a) => (
+                <span
+                  key={a.slug}
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-ink-200 bg-white px-3 py-1.5 text-sm dark:border-ink-800 dark:bg-ink-900"
+                >
+                  <span className="font-semibold text-ink-700 dark:text-ink-200">
+                    {a.ko ?? a.slug}
+                  </span>
+                  {a.hidden && (
+                    <span className="rounded bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-500 dark:bg-ink-800 dark:text-ink-400">
+                      숨겨진 특성
+                    </span>
+                  )}
                 </span>
-              )}
-            </span>
-          ))}
+              ))}
+            </div>
+          </Section>
+
+          <Section title="받는 대미지 (방어 상성)">
+            <DefensiveProfile types={types} />
+          </Section>
+
+          <Section title="타입 부가 특성">
+            <TypeTraitsPanel types={types} />
+          </Section>
+
+          {canMega && (
+            <p className="rounded-xl border border-ink-200 bg-ink-50 p-3 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900/50 dark:text-ink-400">
+              💡 오멘 링(Omni Ring)으로 배틀 중 1회 메가진화할 수 있어요. 메가
+              폼의 세부 스탯·특성 상세는 추후 업데이트 예정이에요.
+            </p>
+          )}
         </div>
-      </Section>
-
-      {/* 방어 상성 */}
-      <Section title="받는 대미지 (방어 상성)">
-        <DefensiveProfile types={types} />
-      </Section>
-
-      {/* 타입 부가 특성 */}
-      <Section title="타입 부가 특성">
-        <TypeTraitsPanel types={types} />
-      </Section>
-
-      {canMega && (
-        <p className="rounded-xl border border-ink-200 bg-ink-50 p-3 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900/50 dark:text-ink-400">
-          💡 오멘 링(Omni Ring)으로 배틀 중 1회 메가진화할 수 있어요. 메가 폼의
-          세부 스탯·특성 상세는 추후 업데이트 예정이에요.
-        </p>
+      ) : (
+        <LearnableMoves moveSlugs={moves ?? []} />
       )}
     </div>
   );
