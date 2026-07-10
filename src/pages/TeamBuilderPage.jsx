@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
 import { Users, Trash2, Bookmark } from "lucide-react";
-import { getPokemonBySlug } from "../data";
+import { getPokemonBySlug, getItem } from "../data";
 import { useTeamStore } from "../store/useTeamStore";
 import { usePresetStore } from "../store/usePresetStore";
 import TeamSlot from "../components/team/TeamSlot";
 import PokemonPicker from "../components/team/PokemonPicker";
+import MemberEditor from "../components/team/MemberEditor";
 import CoverageAnalysis from "../components/team/CoverageAnalysis";
 import PresetManager from "../components/team/PresetManager";
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
+  const items = useTeamStore((s) => s.items);
   const add = useTeamStore((s) => s.add);
   const remove = useTeamStore((s) => s.remove);
+  const setItem = useTeamStore((s) => s.setItem);
   const clear = useTeamStore((s) => s.clear);
   const loadPresets = usePresetStore((s) => s.load);
+
   const [picking, setPicking] = useState(false);
+  const [editingSlug, setEditingSlug] = useState(null);
 
   useEffect(() => {
     loadPresets();
@@ -23,10 +28,24 @@ export default function TeamBuilderPage() {
   const team = slugs.map(getPokemonBySlug).filter(Boolean);
   const blockedDex = new Set(team.map((p) => p.dexNum));
   const slots = [...team, ...Array(6 - team.length).fill(null)];
+  const usedItems = new Set(Object.values(items).filter(Boolean));
+  const editingPokemon = editingSlug ? getPokemonBySlug(editingSlug) : null;
 
+  const openEdit = (slug) => {
+    setPicking(false);
+    setEditingSlug(slug);
+  };
+  const openPicker = () => {
+    setEditingSlug(null);
+    setPicking(true);
+  };
   const handlePick = (slug) => {
     add(slug);
     if (slugs.length + 1 >= 6) setPicking(false);
+  };
+  const handleRemove = (slug) => {
+    if (editingSlug === slug) setEditingSlug(null);
+    remove(slug);
   };
 
   return (
@@ -38,13 +57,16 @@ export default function TeamBuilderPage() {
             <h1 className="text-xl font-bold tracking-tight">팀 빌더</h1>
           </div>
           <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
-            6마리를 편성하면 타입 커버리지를 자동 분석해요. 챔피언스 랭크는 더블
-            배틀(2v2)이에요.
+            슬롯을 눌러 도구를 장착하세요. 같은 종족·같은 도구는 중복할 수
+            없어요.
           </p>
         </div>
         {team.length > 0 && (
           <button
-            onClick={clear}
+            onClick={() => {
+              clear();
+              setEditingSlug(null);
+            }}
             className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs text-ink-400 transition-colors hover:text-red-500"
           >
             <Trash2 size={13} /> 비우기
@@ -57,8 +79,10 @@ export default function TeamBuilderPage() {
           <TeamSlot
             key={p?.slug ?? `empty-${i}`}
             pokemon={p}
-            onRemove={remove}
-            onAdd={() => setPicking(true)}
+            item={p ? getItem(items[p.slug]) : null}
+            onRemove={handleRemove}
+            onAdd={openPicker}
+            onEdit={openEdit}
           />
         ))}
       </div>
@@ -67,7 +91,16 @@ export default function TeamBuilderPage() {
         {team.length}/6 편성됨
       </p>
 
-      {picking ? (
+      {/* 편집 패널 / 피커 / 추가 버튼 (하나만) */}
+      {editingPokemon ? (
+        <MemberEditor
+          pokemon={editingPokemon}
+          item={getItem(items[editingSlug])}
+          usedItems={usedItems}
+          onSetItem={(itemSlug) => setItem(editingSlug, itemSlug)}
+          onClose={() => setEditingSlug(null)}
+        />
+      ) : picking ? (
         <PokemonPicker
           blockedDex={blockedDex}
           teamSlugs={slugs}
@@ -77,7 +110,7 @@ export default function TeamBuilderPage() {
       ) : (
         team.length < 6 && (
           <button
-            onClick={() => setPicking(true)}
+            onClick={openPicker}
             className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
           >
             포켓몬 추가
