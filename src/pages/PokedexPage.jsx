@@ -4,18 +4,20 @@ import { pokemonList } from "../data";
 import { usePokedexStore } from "../store/usePokedexStore";
 import PokedexFilters from "../components/pokedex/PokedexFilters";
 import PokemonCard from "../components/pokedex/PokemonCard";
+import { matchKo } from "../lib/search";
 
 export default function PokedexPage() {
   const { query, types, megaOnly, sort } = usePokedexStore();
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const raw = query.trim();
+    const q = raw.toLowerCase();
     const list = pokemonList.filter((p) => {
       if (megaOnly && !p.canMega) return false;
       if (types.length && !types.some((t) => p.types.includes(t))) return false;
-      if (q) {
+      if (raw) {
         const hit =
-          p.name.ko?.toLowerCase().includes(q) ||
+          matchKo(p.name.ko, raw) || // 초성 포함 한국어 매칭
           p.slug.includes(q) ||
           String(p.id).includes(q);
         if (!hit) return false;
@@ -26,6 +28,7 @@ export default function PokedexPage() {
       dex: (a, b) => a.id - b.id,
       name: (a, b) => (a.name.ko || "").localeCompare(b.name.ko || "", "ko"),
       total: (a, b) => b.total - a.total,
+      speed: (a, b) => b.stats.spe - a.stats.spe,
     };
     return [...list].sort(sorters[sort]);
   }, [query, types, megaOnly, sort]);
@@ -51,7 +54,7 @@ export default function PokedexPage() {
       ) : (
         <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4">
           {filtered.map((p) => (
-            <PokemonCard key={p.slug} pokemon={p} />
+            <PokemonCard key={p.slug} pokemon={p} sort={sort} />
           ))}
         </div>
       )}

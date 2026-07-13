@@ -9,6 +9,7 @@ import {
 import { typeStyle } from "../../lib/typeColors";
 import { assetUrl } from "../../lib/assets";
 import TypeBadge from "../common/TypeBadge";
+import { matchKo } from "../../lib/search";
 
 /**
  * coverFilter: 커버리지 분석에서 넘어온 보강 필터 (선택)
@@ -33,7 +34,7 @@ export default function PokemonPicker({
       if (
         query &&
         !(
-          p.name.ko?.toLowerCase().includes(query) ||
+          matchKo(p.name.ko, query) ||
           p.slug.includes(query) ||
           String(p.id).includes(query)
         )

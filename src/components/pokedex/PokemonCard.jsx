@@ -3,8 +3,15 @@ import { Sparkles } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import { assetUrl } from "../../lib/assets";
 
-export default function PokemonCard({ pokemon }) {
-  const { slug, id, name, types, canMega, sprite } = pokemon;
+export default function PokemonCard({ pokemon, sort }) {
+  const { slug, id, name, types, canMega, sprite, total, stats } = pokemon;
+  const metric =
+    sort === "total"
+      ? { label: "종족값", value: total }
+      : sort === "speed"
+        ? { label: "S", value: stats.spe }
+        : null;
+
   return (
     <Link
       to={`/pokedex/${slug}`}
@@ -29,6 +36,11 @@ export default function PokemonCard({ pokemon }) {
       <p className="mt-1 text-sm font-bold text-ink-800 dark:text-ink-100">
         {name.ko}
       </p>
+      {metric && (
+        <span className="mt-0.5 rounded-full bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-500 dark:bg-ink-800 dark:text-ink-400">
+          {metric.label} {metric.value}
+        </span>
+      )}
       <div className="mt-1.5 flex flex-wrap justify-center gap-1">
         {types.map((t) => (
           <TypeBadge key={t} type={t} size="sm" />

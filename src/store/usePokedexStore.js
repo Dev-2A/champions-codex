@@ -4,7 +4,7 @@ export const usePokedexStore = create((set) => ({
   query: "",
   types: [], // OR 필터
   megaOnly: false,
-  sort: "dex", // 'dex' | 'name' | 'total'
+  sort: "dex", // 'dex' | 'name' | 'total' | 'speed'
   setQuery: (query) => set({ query }),
   toggleType: (t) =>
     set((s) => ({

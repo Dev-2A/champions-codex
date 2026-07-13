@@ -7,6 +7,7 @@ const SORTS = [
   { value: "dex", label: "도감번호" },
   { value: "name", label: "이름순" },
   { value: "total", label: "종족값" },
+  { value: "speed", label: "스피드" },
 ];
 
 export default function PokedexFilters({ total, shown }) {
@@ -33,7 +34,7 @@ export default function PokedexFilters({ total, shown }) {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="한국어 이름·번호로 검색"
+          placeholder="한국어 이름·번호·초성(ㄹㅈㅁ)으로 검색"
           className="w-full rounded-xl border border-ink-200 bg-white py-2.5 pl-9 pr-9 text-sm outline-none transition-colors focus:border-brand-400 dark:border-ink-700 dark:bg-ink-900 dark:focus:border-brand-500"
         />
         {query && (
