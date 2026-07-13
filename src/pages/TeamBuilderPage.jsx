@@ -8,6 +8,8 @@ import PokemonPicker from "../components/team/PokemonPicker";
 import MemberEditor from "../components/team/MemberEditor";
 import CoverageAnalysis from "../components/team/CoverageAnalysis";
 import PresetManager from "../components/team/PresetManager";
+import SegmentedToggle from "../components/common/SegmentedToggle";
+import OffenseAnalysis from "../components/team/OffenseAnalysis";
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
@@ -22,6 +24,7 @@ export default function TeamBuilderPage() {
 
   const [picking, setPicking] = useState(false);
   const [editingSlug, setEditingSlug] = useState(null);
+  const [coverageView, setCoverageView] = useState("defense");
 
   useEffect(() => {
     loadPresets();
@@ -124,10 +127,22 @@ export default function TeamBuilderPage() {
 
       {team.length > 0 && (
         <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-          <h2 className="mb-3 text-lg font-bold tracking-tight">
-            타입 커버리지 분석
-          </h2>
-          <CoverageAnalysis team={team} />
+          <div className="mb-3 flex items-center justify-between gap-2">
+            <h2 className="text-lg font-bold tracking-tight">커버리지 분석</h2>
+            <SegmentedToggle
+              value={coverageView}
+              onChange={setCoverageView}
+              options={[
+                { value: "defense", label: "방어" },
+                { value: "offense", label: "공격" },
+              ]}
+            />
+          </div>
+          {coverageView === "defense" ? (
+            <CoverageAnalysis team={team} />
+          ) : (
+            <OffenseAnalysis team={team} movesMap={moves} />
+          )}
         </section>
       )}
 
