@@ -136,7 +136,7 @@ export default function TeamBuilderPage() {
           <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
           <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
         </div>
-        <PresetManager currentSlugs={slugs} />
+        <PresetManager current={{ slugs, items, moves }} />
       </section>
     </div>
   );

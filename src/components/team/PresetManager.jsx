@@ -1,12 +1,22 @@
 import { useState } from "react";
-import { Save, FolderOpen, Copy, Trash2, Pencil, Check, X } from "lucide-react";
+import {
+  Save,
+  FolderOpen,
+  Copy,
+  Trash2,
+  Pencil,
+  Check,
+  X,
+  Package,
+  Swords,
+} from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { ko } from "date-fns/locale";
 import { getPokemonBySlug } from "../../data";
 import { usePresetStore } from "../../store/usePresetStore";
 import { useTeamStore } from "../../store/useTeamStore";
 
-export default function PresetManager({ currentSlugs }) {
+export default function PresetManager({ current }) {
   const presets = usePresetStore((s) => s.presets);
   const loaded = usePresetStore((s) => s.loaded);
   const save = usePresetStore((s) => s.save);
@@ -19,21 +29,21 @@ export default function PresetManager({ currentSlugs }) {
   const [editingId, setEditingId] = useState(null);
   const [editName, setEditName] = useState("");
 
-  const canSave = currentSlugs.length > 0;
+  const canSave = current.slugs.length > 0;
 
   const handleSave = async () => {
     if (!canSave) return;
-    await save(name, currentSlugs);
+    await save(name, current);
     setName("");
   };
 
   const handleLoad = (preset) => {
     if (
-      currentSlugs.length > 0 &&
+      current.slugs.length > 0 &&
       !confirm(`현재 팀을 "${preset.name}"(으)로 교체할까요?`)
     )
       return;
-    setTeam(preset.slugs);
+    setTeam({ slugs: preset.slugs, items: preset.items, moves: preset.moves });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -41,6 +51,10 @@ export default function PresetManager({ currentSlugs }) {
     await update(id, { name: editName.trim() || "이름 없는 팀" });
     setEditingId(null);
   };
+
+  const countItems = (p) => Object.keys(p.items ?? {}).length;
+  const countMoves = (p) =>
+    Object.values(p.moves ?? {}).reduce((n, arr) => n + arr.length, 0);
 
   return (
     <div className="space-y-4">
@@ -74,6 +88,8 @@ export default function PresetManager({ currentSlugs }) {
         <ul className="space-y-2">
           {presets.map((preset) => {
             const mons = preset.slugs.map(getPokemonBySlug).filter(Boolean);
+            const nItems = countItems(preset);
+            const nMoves = countMoves(preset);
             return (
               <li
                 key={preset.id}
@@ -110,12 +126,25 @@ export default function PresetManager({ currentSlugs }) {
                     <p className="truncate text-sm font-bold text-ink-800 dark:text-ink-100">
                       {preset.name}
                     </p>
-                    <p className="text-[11px] text-ink-400 dark:text-ink-500">
-                      {mons.length}마리 ·{" "}
-                      {formatDistanceToNow(new Date(preset.updatedAt), {
-                        addSuffix: true,
-                        locale: ko,
-                      })}
+                    <p className="flex flex-wrap items-center gap-x-2 text-[11px] text-ink-400 dark:text-ink-500">
+                      <span>{mons.length}마리</span>
+                      {nItems > 0 && (
+                        <span className="inline-flex items-center gap-0.5">
+                          <Package size={10} /> {nItems}
+                        </span>
+                      )}
+                      {nMoves > 0 && (
+                        <span className="inline-flex items-center gap-0.5">
+                          <Swords size={10} /> {nMoves}
+                        </span>
+                      )}
+                      <span>
+                        ·{" "}
+                        {formatDistanceToNow(new Date(preset.updatedAt), {
+                          addSuffix: true,
+                          locale: ko,
+                        })}
+                      </span>
                     </p>
                   </div>
                 )}
