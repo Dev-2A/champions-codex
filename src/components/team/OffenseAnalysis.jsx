@@ -1,8 +1,10 @@
-import { Swords, Crosshair, Info } from "lucide-react";
+import { Crosshair, Info } from "lucide-react";
 import { TYPES, typeKo } from "../../data";
 import { analyzeOffense } from "../../lib/teamOffense";
 import { getMultiplier, formatMultiplier } from "../../lib/typeEffectiveness";
 import { typeStyle } from "../../lib/typeColors";
+import { useMoveDb } from "../../hooks/useMoveDb";
+import { assetUrl } from "../../lib/assets";
 import TypeBadge from "../common/TypeBadge";
 
 function cellClass(m) {
@@ -11,8 +13,14 @@ function cellClass(m) {
   return "text-ink-300 dark:text-ink-700"; // 0.5(저항)·1(등배)
 }
 
-export default function OffenseAnalysis({ team, movesMap }) {
-  const { members, byType, holes, anyApprox } = analyzeOffense(team, movesMap);
+// onFindAttacker(type): 이 타입을 찌를 포켓몬 찾기 (팀 빌더의 픽커 연결, 선택)
+export default function OffenseAnalysis({ team, movesMap, onFindAttacker }) {
+  const moveDb = useMoveDb();
+  const { members, byType, holes, anyApprox } = analyzeOffense(
+    team,
+    movesMap,
+    moveDb?.resolveMoves,
+  );
 
   return (
     <div className="space-y-4">
@@ -34,11 +42,27 @@ export default function OffenseAnalysis({ team, movesMap }) {
             <p className="mb-2 text-xs text-ink-500 dark:text-ink-400">
               이 타입의 포켓몬을 약점으로 찌를 기술이 팀에 없어요. 상대하기
               까다로울 수 있어요.
+              {onFindAttacker && " 타입을 누르면 찌를 포켓몬을 찾아드려요."}
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {holes.map((t) => (
-                <TypeBadge key={t.type} type={t.type} size="md" />
-              ))}
+              {holes.map((t) =>
+                onFindAttacker ? (
+                  <button
+                    key={t.type}
+                    type="button"
+                    onClick={() => onFindAttacker(t.type)}
+                    className="inline-flex items-center gap-1 rounded-full bg-white p-0.5 pr-2 shadow-sm ring-1 ring-ink-200 transition hover:ring-brand-400 dark:bg-ink-800 dark:ring-ink-700"
+                    title={`${typeKo(t.type)}을(를) 찌를 포켓몬 찾기`}
+                  >
+                    <TypeBadge type={t.type} size="md" />
+                    <span className="text-[11px] font-semibold text-brand-500">
+                      보강 +
+                    </span>
+                  </button>
+                ) : (
+                  <TypeBadge key={t.type} type={t.type} size="md" />
+                ),
+              )}
             </div>
           </>
         )}
@@ -80,7 +104,7 @@ export default function OffenseAnalysis({ team, movesMap }) {
                   <th className="sticky left-0 z-10 w-11 bg-ink-50 p-0.5 dark:bg-ink-950">
                     <span className="relative block">
                       <img
-                        src={pokemon.sprite}
+                        src={assetUrl(pokemon.sprite)}
                         alt={pokemon.name.ko}
                         title={pokemon.name.ko + (approx ? " (STAB 근사)" : "")}
                         className="mx-auto size-9 object-contain"

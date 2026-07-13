@@ -13,8 +13,10 @@ import {
 import { formatDistanceToNow } from "date-fns";
 import { ko } from "date-fns/locale";
 import { getPokemonBySlug } from "../../data";
+import { assetUrl } from "../../lib/assets";
 import { usePresetStore } from "../../store/usePresetStore";
 import { useTeamStore } from "../../store/useTeamStore";
+import { toast } from "../../store/useToastStore";
 
 export default function PresetManager({ current }) {
   const presets = usePresetStore((s) => s.presets);
@@ -33,8 +35,9 @@ export default function PresetManager({ current }) {
 
   const handleSave = async () => {
     if (!canSave) return;
-    await save(name, current);
+    const preset = await save(name, current);
     setName("");
+    toast(`"${preset.name}" 저장됨`, { tone: "success" });
   };
 
   const handleLoad = (preset) => {
@@ -44,6 +47,7 @@ export default function PresetManager({ current }) {
     )
       return;
     setTeam({ slugs: preset.slugs, items: preset.items, moves: preset.moves });
+    toast(`"${preset.name}" 불러옴`, { tone: "success" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -153,7 +157,7 @@ export default function PresetManager({ current }) {
                   {mons.map((p) => (
                     <img
                       key={p.slug}
-                      src={p.sprite}
+                      src={assetUrl(p.sprite)}
                       alt={p.name.ko}
                       title={p.name.ko}
                       className="size-9 object-contain"

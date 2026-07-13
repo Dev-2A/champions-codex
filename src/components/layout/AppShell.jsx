@@ -1,6 +1,7 @@
 import TopBar from "./TopBar";
 import BottomNav from "./BottomNav";
 import PokeballIcon from "../common/PokeballIcon";
+import Toasts from "../common/Toasts";
 
 export default function AppShell({ children }) {
   return (
@@ -19,6 +20,7 @@ export default function AppShell({ children }) {
       </footer>
 
       <BottomNav />
+      <Toasts />
     </div>
   );
 }

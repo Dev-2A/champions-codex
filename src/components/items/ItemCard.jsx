@@ -1,4 +1,5 @@
 import { Package } from "lucide-react";
+import { assetUrl } from "../../lib/assets";
 
 export default function ItemCard({ item }) {
   const { name, desc, sprite } = item;
@@ -7,7 +8,7 @@ export default function ItemCard({ item }) {
       <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-ink-100 dark:bg-ink-800">
         {sprite ? (
           <img
-            src={sprite}
+            src={assetUrl(sprite)}
             alt={name.ko}
             loading="lazy"
             className="size-9 object-contain"

@@ -9,6 +9,8 @@ import TypeTraitsPanel from "../components/typechart/TypeTraitsPanel";
 import TeamToggleButton from "../components/team/TeamToggleButton";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import LearnableMoves from "../components/pokedex/LearnableMoves";
+import { useMoveDb } from "../hooks/useMoveDb";
+import { assetUrl } from "../lib/assets";
 
 function Section({ title, children }) {
   return (
@@ -28,6 +30,7 @@ export default function PokemonDetailPage() {
   const navigate = useNavigate();
   const pokemon = getPokemonBySlug(slug);
   const [tab, setTab] = useState("info");
+  const moveDb = useMoveDb();
 
   if (!pokemon) {
     return (
@@ -45,18 +48,9 @@ export default function PokemonDetailPage() {
     );
   }
 
-  const {
-    id,
-    name,
-    genus,
-    types,
-    stats,
-    total,
-    abilities,
-    sprite,
-    canMega,
-    moves,
-  } = pokemon;
+  const { id, name, genus, types, stats, total, abilities, sprite, canMega } =
+    pokemon;
+  const learnset = moveDb ? moveDb.getLearnset(slug) : null;
   const idx = pokemonList.findIndex((p) => p.slug === slug);
   const prev = idx > 0 ? pokemonList[idx - 1] : null;
   const next = idx < pokemonList.length - 1 ? pokemonList[idx + 1] : null;
@@ -96,7 +90,7 @@ export default function PokemonDetailPage() {
       {/* 헤더 카드 */}
       <section className="flex items-center gap-4 rounded-2xl border border-brand-200 bg-linear-to-br from-brand-50 to-white p-5 dark:border-brand-900 dark:from-ink-900 dark:to-ink-950">
         <img
-          src={sprite}
+          src={assetUrl(sprite)}
           alt={name.ko}
           loading="lazy"
           className="size-28 shrink-0 object-contain"
@@ -135,7 +129,7 @@ export default function PokemonDetailPage() {
         onChange={setTab}
         options={[
           { value: "info", label: "정보" },
-          { value: "moves", label: `기술 ${moves?.length ?? 0}` },
+          { value: "moves", label: `기술 ${learnset ? learnset.length : "…"}` },
         ]}
       />
 
@@ -183,7 +177,7 @@ export default function PokemonDetailPage() {
           )}
         </div>
       ) : (
-        <LearnableMoves moveSlugs={moves ?? []} />
+        <LearnableMoves pokemonSlug={slug} />
       )}
     </div>
   );

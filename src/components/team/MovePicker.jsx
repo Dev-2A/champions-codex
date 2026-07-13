@@ -1,12 +1,17 @@
 import { useMemo, useState } from "react";
 import { Search, Star, Check } from "lucide-react";
-import { resolveMoves, getNotableRole } from "../../data";
+import { getNotableRole } from "../../data";
+import { useMoveDb } from "../../hooks/useMoveDb";
 import SegmentedToggle from "../common/SegmentedToggle";
 import TypeBadge from "../common/TypeBadge";
 import { damageClassMeta } from "../../lib/moveClass";
 
-export default function MovePicker({ moveSlugs, selected, onToggle }) {
-  const all = useMemo(() => resolveMoves(moveSlugs), [moveSlugs]);
+export default function MovePicker({ pokemonSlug, selected, onToggle }) {
+  const moveDb = useMoveDb();
+  const all = useMemo(
+    () => (moveDb ? moveDb.resolveMoves(moveDb.getLearnset(pokemonSlug)) : []),
+    [moveDb, pokemonSlug],
+  );
   const [q, setQ] = useState("");
   const [dc, setDc] = useState("all");
   const [notableOnly, setNotableOnly] = useState(false);
@@ -79,6 +84,11 @@ export default function MovePicker({ moveSlugs, selected, onToggle }) {
       </div>
 
       <div className="max-h-64 space-y-1 overflow-y-auto">
+        {!moveDb && (
+          <p className="p-4 text-center text-xs text-ink-400 dark:text-ink-500">
+            기술 데이터를 불러오는 중…
+          </p>
+        )}
         {list.map((m) => {
           const on = selected.includes(m.slug);
           const disabled = !on && full;

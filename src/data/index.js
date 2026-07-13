@@ -5,7 +5,6 @@ import glossaryData from "./champions/glossary.json";
 import seasonsData from "./champions/seasons.json";
 import faqData from "./champions/faq.json";
 import itemsData from "./generated/items.json";
-import movesData from "./generated/moves.json";
 import notableMovesData from "./champions/notable-moves.json";
 
 // 프리페치 생성물을 eager 로드 후 활성 레귤레이션만 선택
@@ -61,14 +60,8 @@ export const itemCategories = itemsData.categories;
 const itemBySlug = new Map(items.map((it) => [it.slug, it]));
 export const getItem = (slug) => itemBySlug.get(slug) ?? null;
 
-// ── 기술 (프리페치) ──
-export const moves = movesData.moves;
-const moveBySlug = new Map(moves.map((m) => [m.slug, m]));
-export const getMove = (slug) => moveBySlug.get(slug) ?? null;
-
-/** 슬러그 배열 → 기술 객체 배열 (없는 건 제외) */
-export const resolveMoves = (slugs = []) =>
-  slugs.map((s) => moveBySlug.get(s)).filter(Boolean);
+// ── 기술 DB·러닝셋: 용량이 커서 별도 모듈에서 동적 로드 ──
+// (src/data/moveDb.js 의 loadMoveDb / src/hooks/useMoveDb.js 참고)
 
 // ── 주목 기술 역할 태그 (큐레이션) ──
 export const notableMoves = notableMovesData;

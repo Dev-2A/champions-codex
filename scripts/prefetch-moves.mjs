@@ -1,8 +1,8 @@
 /**
  * scripts/prefetch-moves.mjs
- * 생성된 도감을 읽어 224종의 learnable 기술 합집합을 구하고,
+ * 생성된 러닝셋을 읽어 224종의 learnable 기술 합집합을 구하고,
  * PokéAPI에서 각 기술의 한국어명·타입·분류·위력·명중·PP·설명을 수집 → 정적 JSON.
- * 선행: npm run prefetch (도감에 moves가 있어야 함)
+ * 선행: npm run prefetch (learnsets.<id>.json이 있어야 함)
  * 실행: node scripts/prefetch-moves.mjs [regulationId=m-b]
  */
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -21,7 +21,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const ko = (arr) => arr.find((n) => n.language.name === "ko")?.name ?? null;
 
 async function getJson(url) {
-  const key = url.replace(API + "/" + "").replace(/\//g, "__") + ".json";
+  const key = url.replace(API + "/", "").replace(/\//g, "__") + ".json";
   const cachePath = join(CACHE_DIR, key);
   if (existsSync(cachePath))
     return JSON.parse(await readFile(cachePath, "utf8"));
@@ -42,11 +42,11 @@ async function getJson(url) {
 
 async function main() {
   await mkdir(CACHE_DIR, { recursive: true });
-  const dex = JSON.parse(
-    await readFile(join(OUT_DIR, `pokedex.${REG_ID}.json`), "utf8"),
+  const { learnsets } = JSON.parse(
+    await readFile(join(OUT_DIR, `learnsets.${REG_ID}.json`), "utf8"),
   );
 
-  const union = [...new Set(dex.pokemon.flatMap((p) => p.moves ?? []))].sort();
+  const union = [...new Set(Object.values(learnsets).flat())].sort();
   console.log(`▶ learnable 기술 합집합: ${union.length}개\n`);
 
   const out = [];

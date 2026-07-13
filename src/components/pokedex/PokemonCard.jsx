@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
+import { assetUrl } from "../../lib/assets";
 
 export default function PokemonCard({ pokemon }) {
   const { slug, id, name, types, canMega, sprite } = pokemon;
@@ -19,7 +20,7 @@ export default function PokemonCard({ pokemon }) {
           </span>
         )}
         <img
-          src={sprite}
+          src={assetUrl(sprite)}
           alt={name.ko}
           loading="lazy"
           className="mx-auto size-24 object-contain transition-transform group-hover:scale-105"

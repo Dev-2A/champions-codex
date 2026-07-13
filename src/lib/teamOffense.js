@@ -1,9 +1,10 @@
 import { getMultiplier } from "./typeEffectiveness";
-import { resolveMoves, TYPES } from "../data";
+import { TYPES } from "../data";
 
 // 멤버의 공격 타입: 공격기(변화기 제외) 타입들, 없으면 자기 타입(STAB 근사)
-export function memberOffense(pokemon, moveSlugs) {
-  const damaging = resolveMoves(moveSlugs).filter(
+// resolveMoves는 moveDb에서 주입 (미로드 시 생략 → STAB 근사로 동작)
+export function memberOffense(pokemon, moveSlugs, resolveMoves) {
+  const damaging = (resolveMoves ? resolveMoves(moveSlugs) : []).filter(
     (m) => m.damageClass !== "status" && m.power != null,
   );
   const types = damaging.length
@@ -12,8 +13,10 @@ export function memberOffense(pokemon, moveSlugs) {
   return { pokemon, types, approx: damaging.length === 0 };
 }
 
-export function analyzeOffense(team, movesMap) {
-  const members = team.map((p) => memberOffense(p, movesMap[p.slug] ?? []));
+export function analyzeOffense(team, movesMap, resolveMoves) {
+  const members = team.map((p) =>
+    memberOffense(p, movesMap[p.slug] ?? [], resolveMoves),
+  );
   const byType = TYPES.map((def) => {
     let covered = 0;
     for (const m of members) {

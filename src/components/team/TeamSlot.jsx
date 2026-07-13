@@ -1,5 +1,6 @@
 import { X, Plus, Package } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
+import { assetUrl } from "../../lib/assets";
 
 export default function TeamSlot({ pokemon, item, onRemove, onAdd, onEdit }) {
   if (!pokemon) {
@@ -32,7 +33,7 @@ export default function TeamSlot({ pokemon, item, onRemove, onAdd, onEdit }) {
         className="flex w-full flex-col items-center"
       >
         <img
-          src={sprite}
+          src={assetUrl(sprite)}
           alt={name.ko}
           loading="lazy"
           className="size-16 object-contain"
@@ -56,7 +57,11 @@ export default function TeamSlot({ pokemon, item, onRemove, onAdd, onEdit }) {
         {item ? (
           <>
             {item.sprite ? (
-              <img src={item.sprite} alt="" className="size-4 object-contain" />
+              <img
+                src={assetUrl(item.sprite)}
+                alt=""
+                className="size-4 object-contain"
+              />
             ) : (
               <Package size={11} className="text-ink-400" />
             )}

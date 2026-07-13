@@ -6,6 +6,7 @@ import {
   formatMultiplier,
 } from "../../lib/typeEffectiveness";
 import { typeStyle } from "../../lib/typeColors";
+import { assetUrl } from "../../lib/assets";
 import TypeBadge from "../common/TypeBadge";
 
 function cellClass(cls) {
@@ -25,7 +26,8 @@ function cellClass(cls) {
   }
 }
 
-export default function CoverageAnalysis({ team }) {
+// onFindCover(type): 이 타입을 받아낼 포켓몬 찾기 (팀 빌더의 픽커 연결, 선택)
+export default function CoverageAnalysis({ team, onFindCover }) {
   const { profiles, byType, sharedWeak, uncovered } = analyzeCoverage(team);
 
   return (
@@ -82,13 +84,28 @@ export default function CoverageAnalysis({ team }) {
             </h3>
           </div>
           <p className="mb-2 text-xs text-ink-500 dark:text-ink-400">
-            이 타입 공격을 저항·무효화하는 포켓몬이 팀에 하나도 없어요. 받아낼
-            포켓몬을 넣으면 좋아요.
+            이 타입 공격을 저항·무효화하는 포켓몬이 팀에 하나도 없어요.
+            {onFindCover && " 타입을 누르면 받아낼 포켓몬을 찾아드려요."}
           </p>
           <div className="flex flex-wrap gap-1.5">
-            {uncovered.map((t) => (
-              <TypeBadge key={t.type} type={t.type} size="md" />
-            ))}
+            {uncovered.map((t) =>
+              onFindCover ? (
+                <button
+                  key={t.type}
+                  type="button"
+                  onClick={() => onFindCover(t.type)}
+                  className="inline-flex items-center gap-1 rounded-full bg-white p-0.5 pr-2 shadow-sm ring-1 ring-ink-200 transition hover:ring-brand-400 dark:bg-ink-800 dark:ring-ink-700"
+                  title={`${typeKo(t.type)} 공격을 받아낼 포켓몬 찾기`}
+                >
+                  <TypeBadge type={t.type} size="md" />
+                  <span className="text-[11px] font-semibold text-brand-500">
+                    보강 +
+                  </span>
+                </button>
+              ) : (
+                <TypeBadge key={t.type} type={t.type} size="md" />
+              ),
+            )}
           </div>
         </div>
       )}
@@ -120,7 +137,7 @@ export default function CoverageAnalysis({ team }) {
                 <tr key={pokemon.slug}>
                   <th className="sticky left-0 z-10 w-11 bg-ink-50 p-0.5 dark:bg-ink-950">
                     <img
-                      src={pokemon.sprite}
+                      src={assetUrl(pokemon.sprite)}
                       alt={pokemon.name.ko}
                       title={pokemon.name.ko}
                       className="mx-auto size-9 object-contain"

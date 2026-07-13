@@ -13,29 +13,35 @@
 - 🎒 도구 도감 — 경쟁전 핵심 지닌 도구
 - ⚔️ 기술 DB — learnable 기술 677종(타입·분류·위력·명중·PP·설명), 주목 기술 태깅
 - 🧩 팀 빌더 — 6마리 편성 + 도구 장착 + 기술 선택(멤버별 4개)
-  - 방어·공격 타입 커버리지 분석, 프리셋 저장(IndexedDB), 팀 시트 내보내기
+  - 방어·공격 타입 커버리지 분석 → 구멍 타입 클릭 시 보강 포켓몬 추천
+  - 프리셋 저장(IndexedDB), 팀 시트 내보내기, 팀 공유 링크(URL로 팀 전달)
 - 📅 시즌·레귤레이션 정보 + 실시간 카운트다운
 
 ## 🛠 기술 스택
 
-React 19 · Vite 7 · Tailwind CSS v4 · Zustand · React Router(HashRouter) · IndexedDB(idb) · date-fns · lucide-react
+React 19 · Vite 8 · Tailwind CSS v4 · Zustand · React Router(HashRouter) · IndexedDB(idb) · date-fns · lucide-react
 
 ## 📦 데이터 파이프라인
 
-외부 API 프리페치 + 정적 서빙 방식 (배포 후 런타임 API 의존성 0).
+외부 API 프리페치 + 정적 서빙 방식 (배포 후 런타임 API·이미지 의존성 0).
 
-- `scripts/prefetch.mjs` — 레귤레이션 legal 목록 → PokéAPI 포켓몬 base 데이터 + 타입 상성표 + 포켓몬별 기술
+- `scripts/prefetch.mjs` — 레귤레이션 legal 목록 → PokéAPI 포켓몬 base 데이터(`pokedex.*.json`) + 러닝셋(`learnsets.*.json`, 분리 파일) + 타입 상성표
 - `scripts/prefetch-items.mjs` — 도구 데이터
 - `scripts/prefetch-moves.mjs` — learnable 기술 DB(224종 합집합)
+- `scripts/fetch-sprites.mjs` — 스프라이트 로컬화(`public/sprites/`, 포켓몬은 192px WebP로 변환)
 - 챔피언스 특화 정보(legal 목록·타입 특성·용어집·시즌·주목 기술)는 수동 큐레이션
+
+기술 DB·러닝셋(합계 600KB+)은 초기 번들에서 제외되고, 포켓몬 상세·팀 빌더 진입 시
+동적 로드된다(`src/data/moveDb.js`). 페이지는 라우트 단위로 코드 스플리팅.
 
 ```bash
 npm install
-npm run prefetch         # 포켓몬·타입·포켓몬별 기술
-npm run prefetch:items   # 도구
-npm run prefetch:moves   # 기술 DB (prefetch 이후 실행)
-npm run dev              # 개발 서버
-npm run build            # 프로덕션 빌드
+npm run prefetch          # 포켓몬·타입·러닝셋
+npm run prefetch:items    # 도구
+npm run prefetch:moves    # 기술 DB (prefetch 이후 실행)
+npm run prefetch:sprites  # 스프라이트 다운로드 (prefetch·prefetch:items 이후 실행)
+npm run dev               # 개발 서버
+npm run build             # 프로덕션 빌드
 ```
 
 ## 🙌 데이터 출처

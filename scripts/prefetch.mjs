@@ -131,9 +131,8 @@ async function buildPokedex(reg) {
       total,
       abilities,
       moves: [...new Set(p.moves.map((m) => m.move.name))].sort(),
-      sprite:
-        p.sprites.other?.["official-artwork"]?.front_default ??
-        p.sprites.front_default,
+      // 로컬 경로 (원본 다운로드·변환: npm run prefetch:sprites)
+      sprite: `sprites/pokemon/${p.id}.webp`,
       canMega: megaSet.has(slug),
     });
     console.log(`✓ ${ko(species.names) ?? p.name}`);
@@ -176,6 +175,14 @@ async function main() {
 
   const generatedAt = new Date().toISOString();
 
+  // 러닝셋(포켓몬별 배울 수 있는 기술)은 도감 인덱스 용량의 대부분을 차지하므로
+  // 별도 파일로 분리 → 앱에서 필요한 화면만 동적 로드 (src/data/moveDb.js)
+  const learnsets = {};
+  for (const p of pokedex) {
+    learnsets[p.slug] = p.moves;
+    delete p.moves;
+  }
+
   await writeFile(
     join(OUT_DIR, `pokedex.${reg.id}.json`),
     JSON.stringify(
@@ -184,6 +191,19 @@ async function main() {
         regulation: reg.id,
         count: pokedex.length,
         pokemon: pokedex,
+      },
+      null,
+      2,
+    ),
+  );
+  await writeFile(
+    join(OUT_DIR, `learnsets.${reg.id}.json`),
+    JSON.stringify(
+      {
+        generatedAt,
+        regulation: reg.id,
+        count: pokedex.length,
+        learnsets,
       },
       null,
       2,
@@ -216,8 +236,12 @@ async function main() {
 
   console.log(`\n✅ 완료: ${pokedex.length}종 + 타입 ${TYPES.length}개`);
   console.log(`   → src/data/generated/pokedex.${reg.id}.json`);
+  console.log(`   → src/data/generated/learnsets.${reg.id}.json`);
   console.log(`   → src/data/generated/typechart.json`);
   console.log(`   → src/data/generated/regulation.${reg.id}.json`);
+  console.log(
+    `\n💡 스프라이트 로컬화: npm run prefetch:sprites (public/sprites/ 생성)`,
+  );
 }
 
 main().catch((err) => {

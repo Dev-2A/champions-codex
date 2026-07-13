@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Users, Trash2, Bookmark } from "lucide-react";
 import { getPokemonBySlug, getItem } from "../data";
 import { useTeamStore } from "../store/useTeamStore";
 import { usePresetStore } from "../store/usePresetStore";
+import { toast } from "../store/useToastStore";
+import { decodeTeam } from "../lib/teamShare";
 import TeamSlot from "../components/team/TeamSlot";
 import PokemonPicker from "../components/team/PokemonPicker";
 import MemberEditor from "../components/team/MemberEditor";
@@ -11,6 +14,13 @@ import PresetManager from "../components/team/PresetManager";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import OffenseAnalysis from "../components/team/OffenseAnalysis";
 import TeamExport from "../components/team/TeamExport";
+
+const ADD_FAIL_MSG = {
+  full: "팀이 가득 찼어요 (최대 6마리)",
+  dup: "이미 팀에 있는 포켓몬이에요",
+  species: "같은 종족은 한 마리만 넣을 수 있어요 (종족 클로즈)",
+  invalid: "추가할 수 없는 포켓몬이에요",
+};
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
@@ -21,15 +31,40 @@ export default function TeamBuilderPage() {
   const moves = useTeamStore((s) => s.moves);
   const toggleMove = useTeamStore((s) => s.toggleMove);
   const clear = useTeamStore((s) => s.clear);
+  const setTeam = useTeamStore((s) => s.setTeam);
   const loadPresets = usePresetStore((s) => s.load);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [picking, setPicking] = useState(false);
+  const [pickerCover, setPickerCover] = useState(null); // {kind, type} | null
   const [editingSlug, setEditingSlug] = useState(null);
   const [coverageView, setCoverageView] = useState("defense");
+  const panelRef = useRef(null);
 
   useEffect(() => {
     loadPresets();
   }, [loadPresets]);
+
+  // 공유 링크(#/team?share=...) 수신 → 팀 적용
+  useEffect(() => {
+    const code = searchParams.get("share");
+    if (!code) return;
+    setSearchParams({}, { replace: true }); // 적용 후 URL 정리 (중복 적용 방지)
+
+    const shared = decodeTeam(code);
+    if (!shared) {
+      toast("공유 링크가 올바르지 않아요.", { tone: "error" });
+      return;
+    }
+    const cur = useTeamStore.getState().slugs;
+    if (
+      cur.length > 0 &&
+      !confirm(`공유된 팀(${shared.slugs.length}마리)으로 현재 팀을 교체할까요?`)
+    )
+      return;
+    setTeam(shared);
+    toast("공유된 팀을 불러왔어요!", { tone: "success" });
+  }, [searchParams, setSearchParams, setTeam]);
 
   const team = slugs.map(getPokemonBySlug).filter(Boolean);
   const blockedDex = new Set(team.map((p) => p.dexNum));
@@ -41,17 +76,39 @@ export default function TeamBuilderPage() {
     setPicking(false);
     setEditingSlug(slug);
   };
-  const openPicker = () => {
+  const openPicker = (cover = null) => {
     setEditingSlug(null);
+    setPickerCover(cover);
     setPicking(true);
   };
+  // 커버리지 분석(페이지 하단)에서 보강 클릭 시 픽커로 스크롤
+  const openCoverPicker = (kind, type) => {
+    if (team.length >= 6) {
+      toast(ADD_FAIL_MSG.full, { tone: "error" });
+      return;
+    }
+    openPicker({ kind, type });
+    requestAnimationFrame(() => {
+      panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
   const handlePick = (slug) => {
-    add(slug);
+    const r = add(slug);
+    if (!r.ok) {
+      toast(ADD_FAIL_MSG[r.reason] ?? "추가할 수 없어요", { tone: "error" });
+      return;
+    }
     if (slugs.length + 1 >= 6) setPicking(false);
   };
   const handleRemove = (slug) => {
     if (editingSlug === slug) setEditingSlug(null);
     remove(slug);
+  };
+  const handleSetItem = (itemSlug) => {
+    const r = setItem(editingSlug, itemSlug);
+    if (!r.ok) {
+      toast("이미 다른 멤버가 지닌 도구예요 (도구 클로즈)", { tone: "error" });
+    }
   };
 
   return (
@@ -72,6 +129,7 @@ export default function TeamBuilderPage() {
             onClick={() => {
               clear();
               setEditingSlug(null);
+              toast("팀을 비웠어요");
             }}
             className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs text-ink-400 transition-colors hover:text-red-500"
           >
@@ -87,7 +145,7 @@ export default function TeamBuilderPage() {
             pokemon={p}
             item={p ? getItem(items[p.slug]) : null}
             onRemove={handleRemove}
-            onAdd={openPicker}
+            onAdd={() => openPicker()}
             onEdit={openEdit}
           />
         ))}
@@ -98,33 +156,39 @@ export default function TeamBuilderPage() {
       </p>
 
       {/* 편집 패널 / 피커 / 추가 버튼 (하나만) */}
-      {editingPokemon ? (
-        <MemberEditor
-          pokemon={editingPokemon}
-          item={getItem(items[editingSlug])}
-          moves={moves[editingSlug] ?? []}
-          usedItems={usedItems}
-          onSetItem={(itemSlug) => setItem(editingSlug, itemSlug)}
-          onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
-          onClose={() => setEditingSlug(null)}
-        />
-      ) : picking ? (
-        <PokemonPicker
-          blockedDex={blockedDex}
-          teamSlugs={slugs}
-          onPick={handlePick}
-          onClose={() => setPicking(false)}
-        />
-      ) : (
-        team.length < 6 && (
-          <button
-            onClick={openPicker}
-            className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
-          >
-            포켓몬 추가
-          </button>
-        )
-      )}
+      <div ref={panelRef} className="scroll-mt-20">
+        {editingPokemon ? (
+          <MemberEditor
+            pokemon={editingPokemon}
+            item={getItem(items[editingSlug])}
+            moves={moves[editingSlug] ?? []}
+            usedItems={usedItems}
+            onSetItem={handleSetItem}
+            onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
+            onClose={() => setEditingSlug(null)}
+          />
+        ) : picking ? (
+          <PokemonPicker
+            key={
+              pickerCover ? `${pickerCover.kind}-${pickerCover.type}` : "plain"
+            }
+            blockedDex={blockedDex}
+            teamSlugs={slugs}
+            coverFilter={pickerCover}
+            onPick={handlePick}
+            onClose={() => setPicking(false)}
+          />
+        ) : (
+          team.length < 6 && (
+            <button
+              onClick={() => openPicker()}
+              className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
+            >
+              포켓몬 추가
+            </button>
+          )
+        )}
+      </div>
 
       {team.length > 0 && (
         <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
@@ -140,9 +204,16 @@ export default function TeamBuilderPage() {
             />
           </div>
           {coverageView === "defense" ? (
-            <CoverageAnalysis team={team} />
+            <CoverageAnalysis
+              team={team}
+              onFindCover={(type) => openCoverPicker("resist", type)}
+            />
           ) : (
-            <OffenseAnalysis team={team} movesMap={moves} />
+            <OffenseAnalysis
+              team={team}
+              movesMap={moves}
+              onFindAttacker={(type) => openCoverPicker("hit", type)}
+            />
           )}
         </section>
       )}

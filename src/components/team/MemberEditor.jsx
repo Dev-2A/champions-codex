@@ -5,7 +5,8 @@ import TypeBadge from "../common/TypeBadge";
 import MoveBadge from "../moves/MoveBadge";
 import ItemPicker from "./ItemPicker";
 import MovePicker from "./MovePicker";
-import { resolveMoves } from "../../data";
+import { useMoveDb } from "../../hooks/useMoveDb";
+import { assetUrl } from "../../lib/assets";
 
 export default function MemberEditor({
   pokemon,
@@ -18,14 +19,15 @@ export default function MemberEditor({
 }) {
   const [pickingItem, setPickingItem] = useState(false);
   const [pickingMove, setPickingMove] = useState(false);
-  const selectedMoves = resolveMoves(moves);
+  const moveDb = useMoveDb();
+  const selectedMoves = moveDb ? moveDb.resolveMoves(moves) : [];
 
   return (
     <div className="space-y-4 rounded-2xl border border-brand-200 bg-white p-4 dark:border-brand-900 dark:bg-ink-900">
       {/* 헤더 */}
       <div className="flex items-center gap-3">
         <img
-          src={pokemon.sprite}
+          src={assetUrl(pokemon.sprite)}
           alt={pokemon.name.ko}
           className="size-12 shrink-0 object-contain"
         />
@@ -75,7 +77,7 @@ export default function MemberEditor({
             <span className="grid size-8 shrink-0 place-items-center rounded bg-ink-100 dark:bg-ink-800">
               {item.sprite ? (
                 <img
-                  src={item.sprite}
+                  src={assetUrl(item.sprite)}
                   alt={item.name.ko}
                   className="size-6 object-contain"
                 />
@@ -113,8 +115,7 @@ export default function MemberEditor({
       <div>
         <div className="mb-1.5 flex items-center justify-between">
           <p className="text-xs font-semibold text-ink-500 dark:text-ink-400">
-            기술{" "}
-            <span className="text-ink-400">({selectedMoves.length}/4)</span>
+            기술 <span className="text-ink-400">({moves.length}/4)</span>
           </p>
           <button
             onClick={() => setPickingMove((v) => !v)}
@@ -142,12 +143,12 @@ export default function MemberEditor({
 
         {pickingMove ? (
           <MovePicker
-            moveSlugs={pokemon.moves ?? []}
+            pokemonSlug={pokemon.slug}
             selected={moves}
             onToggle={onToggleMove}
           />
         ) : (
-          selectedMoves.length === 0 && (
+          moves.length === 0 && (
             <button
               onClick={() => setPickingMove(true)}
               className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-ink-300 py-2.5 text-sm font-medium text-ink-500 transition-colors hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-400"

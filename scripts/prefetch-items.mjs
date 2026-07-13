@@ -67,7 +67,8 @@ async function main() {
         name: { ko: ko(d.names) ?? item.ko ?? null, en: d.name },
         cat,
         pokeCategory: d.category?.name ?? null,
-        sprite: d.sprites?.default ?? null,
+        // 로컬 경로 (원본 다운로드: npm run prefetch:sprites)
+        sprite: d.sprites?.default ? `sprites/items/${d.name}.png` : null,
         desc: desc ?? item.desc ?? null,
         effect,
       });

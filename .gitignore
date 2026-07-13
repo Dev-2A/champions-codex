@@ -25,3 +25,6 @@ dist-ssr
 
 # PokéAPI 원본 응답 캐시 (생성물 아님)
 .cache/
+
+# Claude Code 로컬 설정
+.claude/

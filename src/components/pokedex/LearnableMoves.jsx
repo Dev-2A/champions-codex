@@ -1,11 +1,16 @@
 import { useMemo, useState } from "react";
 import { Search, X, Star } from "lucide-react";
-import { resolveMoves, getNotableRole } from "../../data";
+import { getNotableRole } from "../../data";
+import { useMoveDb } from "../../hooks/useMoveDb";
 import SegmentedToggle from "../common/SegmentedToggle";
 import MoveRow from "../moves/MoveRow";
 
-export default function LearnableMoves({ moveSlugs }) {
-  const all = useMemo(() => resolveMoves(moveSlugs), [moveSlugs]);
+export default function LearnableMoves({ pokemonSlug }) {
+  const moveDb = useMoveDb();
+  const all = useMemo(
+    () => (moveDb ? moveDb.resolveMoves(moveDb.getLearnset(pokemonSlug)) : []),
+    [moveDb, pokemonSlug],
+  );
   const [q, setQ] = useState("");
   const [dc, setDc] = useState("all");
   const [notableOnly, setNotableOnly] = useState(false);
@@ -31,6 +36,14 @@ export default function LearnableMoves({ moveSlugs }) {
     };
     return [...arr].sort(sorters[sort]);
   }, [all, q, dc, notableOnly, sort]);
+
+  if (!moveDb) {
+    return (
+      <p className="rounded-xl border border-dashed border-ink-300 p-6 text-center text-sm text-ink-400 dark:border-ink-700 dark:text-ink-500">
+        기술 데이터를 불러오는 중…
+      </p>
+    );
+  }
 
   return (
     <div className="space-y-3">

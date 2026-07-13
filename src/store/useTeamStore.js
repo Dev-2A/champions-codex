@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { getPokemonBySlug } from "../data";
+import { loadMoveDb } from "../data/moveDb";
 
 const KEY = "cc-team";
 const MAX = 6;
@@ -116,9 +117,8 @@ export const useTeamStore = create((set, get) => ({
     return { ok: true };
   },
 
-  setTeam: ({ slugs = [], items = {}, moves = {} } = {}) => {
+  setTeam: async ({ slugs = [], items = {}, moves = {} } = {}) => {
     const clean = sanitize(slugs);
-    const inTeam = new Set(clean);
 
     // 도구: 팀에 있는 멤버만 + 도구 클로즈(중복 제거, 먼저 온 멤버 우선)
     const nextItems = {};
@@ -132,18 +132,18 @@ export const useTeamStore = create((set, get) => ({
     }
 
     // 기술: 팀에 있는 멤버만 + 그 포켓몬이 배울 수 있는 기술만 + 최대 4
+    const db = await loadMoveDb();
     const nextMoves = {};
     for (const s of clean) {
-      const learnable = new Set(getPokemonBySlug(s)?.moves ?? []);
-      const picked = (moves[s] ?? [])
+      const learnable = new Set(db.getLearnset(s));
+      const picked = [...new Set(moves[s] ?? [])]
         .filter((m) => learnable.has(m))
-        .slice(0, 4);
+        .slice(0, MAX_MOVES);
       if (picked.length) nextMoves[s] = picked;
     }
 
     save(clean, nextItems, nextMoves);
     set({ slugs: clean, items: nextItems, moves: nextMoves });
-    void inTeam;
   },
 
   clear: () => {

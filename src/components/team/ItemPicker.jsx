@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, X, Package } from "lucide-react";
 import { items as allItems, itemCategories } from "../../data";
+import { assetUrl } from "../../lib/assets";
 
 export default function ItemPicker({ usedItems, current, onPick, onClose }) {
   const [q, setQ] = useState("");
@@ -82,7 +83,7 @@ export default function ItemPicker({ usedItems, current, onPick, onClose }) {
               <span className="grid size-8 shrink-0 place-items-center rounded bg-ink-100 dark:bg-ink-800">
                 {it.sprite ? (
                   <img
-                    src={it.sprite}
+                    src={assetUrl(it.sprite)}
                     alt={it.name.ko}
                     className="size-6 object-contain"
                   />
