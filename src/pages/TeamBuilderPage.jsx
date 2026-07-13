@@ -81,7 +81,7 @@ export default function TeamBuilderPage() {
     setPickerCover(cover);
     setPicking(true);
   };
-  // 커버리지 분석(페이지 하단)에서 보강 클릭 시 픽커로 스크롤
+  // 커버리지 분석에서 보강 클릭 시 픽커로 스크롤 (모바일: 픽커가 화면 밖에 있음)
   const openCoverPicker = (kind, type) => {
     if (team.length >= 6) {
       toast(ADD_FAIL_MSG.full, { tone: "error" });
@@ -112,125 +112,143 @@ export default function TeamBuilderPage() {
   };
 
   return (
-    <div className="space-y-5">
-      <header className="flex items-start justify-between">
-        <div>
-          <div className="flex items-center gap-2">
-            <Users className="text-brand-500" size={22} strokeWidth={2.3} />
-            <h1 className="text-xl font-bold tracking-tight">팀 빌더</h1>
+    // 데스크톱(lg~): 왼쪽 = 편성, 오른쪽 = 분석·시트·저장 (모바일은 세로 그대로)
+    <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
+      {/* ── 왼쪽: 편성 ── */}
+      <div className="space-y-5">
+        <header className="flex items-start justify-between">
+          <div>
+            <div className="flex items-center gap-2">
+              <Users className="text-brand-500" size={22} strokeWidth={2.3} />
+              <h1 className="text-xl font-bold tracking-tight">팀 빌더</h1>
+            </div>
+            <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
+              슬롯을 눌러 도구를 장착하세요. 같은 종족·같은 도구는 중복할 수
+              없어요.
+            </p>
           </div>
-          <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
-            슬롯을 눌러 도구를 장착하세요. 같은 종족·같은 도구는 중복할 수
-            없어요.
-          </p>
-        </div>
-        {team.length > 0 && (
-          <button
-            onClick={() => {
-              clear();
-              setEditingSlug(null);
-              toast("팀을 비웠어요");
-            }}
-            className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs text-ink-400 transition-colors hover:text-red-500"
-          >
-            <Trash2 size={13} /> 비우기
-          </button>
-        )}
-      </header>
-
-      <div className="grid grid-cols-3 gap-2.5">
-        {slots.map((p, i) => (
-          <TeamSlot
-            key={p?.slug ?? `empty-${i}`}
-            pokemon={p}
-            item={p ? getItem(items[p.slug]) : null}
-            onRemove={handleRemove}
-            onAdd={() => openPicker()}
-            onEdit={openEdit}
-          />
-        ))}
-      </div>
-
-      <p className="text-center text-xs text-ink-400 dark:text-ink-500">
-        {team.length}/6 편성됨
-      </p>
-
-      {/* 편집 패널 / 피커 / 추가 버튼 (하나만) */}
-      <div ref={panelRef} className="scroll-mt-20">
-        {editingPokemon ? (
-          <MemberEditor
-            pokemon={editingPokemon}
-            item={getItem(items[editingSlug])}
-            moves={moves[editingSlug] ?? []}
-            usedItems={usedItems}
-            onSetItem={handleSetItem}
-            onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
-            onClose={() => setEditingSlug(null)}
-          />
-        ) : picking ? (
-          <PokemonPicker
-            key={
-              pickerCover ? `${pickerCover.kind}-${pickerCover.type}` : "plain"
-            }
-            blockedDex={blockedDex}
-            teamSlugs={slugs}
-            coverFilter={pickerCover}
-            onPick={handlePick}
-            onClose={() => setPicking(false)}
-          />
-        ) : (
-          team.length < 6 && (
+          {team.length > 0 && (
             <button
-              onClick={() => openPicker()}
-              className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
+              onClick={() => {
+                clear();
+                setEditingSlug(null);
+                toast("팀을 비웠어요");
+              }}
+              className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs text-ink-400 transition-colors hover:text-red-500"
             >
-              포켓몬 추가
+              <Trash2 size={13} /> 비우기
             </button>
-          )
-        )}
-      </div>
+          )}
+        </header>
 
-      {team.length > 0 && (
-        <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-          <div className="mb-3 flex items-center justify-between gap-2">
-            <h2 className="text-lg font-bold tracking-tight">커버리지 분석</h2>
-            <SegmentedToggle
-              value={coverageView}
-              onChange={setCoverageView}
-              options={[
-                { value: "defense", label: "방어" },
-                { value: "offense", label: "공격" },
-              ]}
+        <div className="grid grid-cols-3 gap-2.5">
+          {slots.map((p, i) => (
+            <TeamSlot
+              key={p?.slug ?? `empty-${i}`}
+              pokemon={p}
+              item={p ? getItem(items[p.slug]) : null}
+              active={p != null && p.slug === editingSlug}
+              onRemove={handleRemove}
+              onAdd={() => openPicker()}
+              onEdit={openEdit}
             />
-          </div>
-          {coverageView === "defense" ? (
-            <CoverageAnalysis
-              team={team}
-              onFindCover={(type) => openCoverPicker("resist", type)}
+          ))}
+        </div>
+
+        <p className="text-center text-xs text-ink-400 dark:text-ink-500">
+          {team.length}/6 편성됨
+        </p>
+
+        {/* 편집 패널 / 피커 / 추가 버튼 (하나만) */}
+        <div ref={panelRef} className="scroll-mt-20">
+          {editingPokemon ? (
+            <MemberEditor
+              pokemon={editingPokemon}
+              item={getItem(items[editingSlug])}
+              moves={moves[editingSlug] ?? []}
+              usedItems={usedItems}
+              onSetItem={handleSetItem}
+              onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
+              onClose={() => setEditingSlug(null)}
+            />
+          ) : picking ? (
+            <PokemonPicker
+              key={
+                pickerCover
+                  ? `${pickerCover.kind}-${pickerCover.type}`
+                  : "plain"
+              }
+              blockedDex={blockedDex}
+              teamSlugs={slugs}
+              coverFilter={pickerCover}
+              onPick={handlePick}
+              onClose={() => setPicking(false)}
             />
           ) : (
-            <OffenseAnalysis
-              team={team}
-              movesMap={moves}
-              onFindAttacker={(type) => openCoverPicker("hit", type)}
-            />
+            team.length < 6 && (
+              <button
+                onClick={() => openPicker()}
+                className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
+              >
+                포켓몬 추가
+              </button>
+            )
           )}
-        </section>
-      )}
-
-      {team.length > 0 && (
-        <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-          <TeamExport team={{ slugs, items, moves }} />
-        </section>
-      )}
-
-      <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-        <div className="mb-3 flex items-center gap-2">
-          <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
-          <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
         </div>
-        <PresetManager current={{ slugs, items, moves }} />
-      </section>
+      </div>
+
+      {/* ── 오른쪽: 분석 · 팀 시트 · 저장된 팀 ── */}
+      <div className="mt-5 space-y-5 lg:mt-0">
+        {team.length > 0 && (
+          <section className="border-t border-ink-200 pt-5 dark:border-ink-800 lg:border-t-0 lg:pt-0">
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <h2 className="text-lg font-bold tracking-tight">
+                커버리지 분석
+              </h2>
+              <SegmentedToggle
+                value={coverageView}
+                onChange={setCoverageView}
+                options={[
+                  { value: "defense", label: "방어" },
+                  { value: "offense", label: "공격" },
+                ]}
+              />
+            </div>
+            {coverageView === "defense" ? (
+              <CoverageAnalysis
+                team={team}
+                onFindCover={(type) => openCoverPicker("resist", type)}
+              />
+            ) : (
+              <OffenseAnalysis
+                team={team}
+                movesMap={moves}
+                onFindAttacker={(type) => openCoverPicker("hit", type)}
+              />
+            )}
+          </section>
+        )}
+
+        {team.length > 0 && (
+          <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+            <TeamExport team={{ slugs, items, moves }} />
+          </section>
+        )}
+
+        <section
+          className={
+            team.length > 0
+              ? "border-t border-ink-200 pt-5 dark:border-ink-800"
+              : "border-t border-ink-200 pt-5 dark:border-ink-800 lg:border-t-0 lg:pt-0"
+          }
+        >
+          <div className="mb-3 flex items-center gap-2">
+            <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
+            <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
+          </div>
+          <PresetManager current={{ slugs, items, moves }} />
+        </section>
+      </div>
     </div>
   );
 }

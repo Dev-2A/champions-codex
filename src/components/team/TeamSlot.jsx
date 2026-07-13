@@ -2,7 +2,14 @@ import { X, Plus, Package } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import { assetUrl } from "../../lib/assets";
 
-export default function TeamSlot({ pokemon, item, onRemove, onAdd, onEdit }) {
+export default function TeamSlot({
+  pokemon,
+  item,
+  active = false,
+  onRemove,
+  onAdd,
+  onEdit,
+}) {
   if (!pokemon) {
     return (
       <button
@@ -17,7 +24,14 @@ export default function TeamSlot({ pokemon, item, onRemove, onAdd, onEdit }) {
   }
   const { slug, name, types, sprite } = pokemon;
   return (
-    <div className="relative flex flex-col items-center rounded-2xl border border-ink-200 bg-white p-2 dark:border-ink-800 dark:bg-ink-900">
+    <div
+      className={[
+        "relative flex flex-col items-center rounded-2xl border bg-white p-2 transition-shadow dark:bg-ink-900",
+        active
+          ? "border-brand-400 ring-2 ring-brand-400/40"
+          : "border-ink-200 dark:border-ink-800",
+      ].join(" ")}
+    >
       <button
         type="button"
         onClick={() => onRemove(slug)}
