@@ -3,21 +3,26 @@ import { getAllPresets, putPreset, deletePreset } from "../lib/db";
 
 const genId = () => `t_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
 
+// 구버전(items/moves 없는) 프리셋 마이그레이션
+const migrate = (p) => ({ items: {}, moves: {}, ...p });
+
 export const usePresetStore = create((set, get) => ({
   presets: [],
   loaded: false,
 
   load: async () => {
-    const presets = await getAllPresets();
+    const presets = (await getAllPresets()).map(migrate);
     set({ presets, loaded: true });
   },
 
-  save: async (name, slugs) => {
+  save: async (name, { slugs, items = {}, moves = {} }) => {
     const now = Date.now();
     const preset = {
       id: genId(),
       name: name.trim() || "이름 없는 팀",
       slugs: [...slugs],
+      items: { ...items },
+      moves: { ...moves },
       createdAt: now,
       updatedAt: now,
     };

@@ -116,10 +116,34 @@ export const useTeamStore = create((set, get) => ({
     return { ok: true };
   },
 
-  setTeam: (slugs) => {
+  setTeam: ({ slugs = [], items = {}, moves = {} } = {}) => {
     const clean = sanitize(slugs);
-    save(clean, {}, {}); // 프리셋 도구·기술 로드는 Step 8에서
-    set({ slugs: clean, items: {}, moves: {} });
+    const inTeam = new Set(clean);
+
+    // 도구: 팀에 있는 멤버만 + 도구 클로즈(중복 제거, 먼저 온 멤버 우선)
+    const nextItems = {};
+    const usedItems = new Set();
+    for (const s of clean) {
+      const it = items[s];
+      if (it && !usedItems.has(it)) {
+        nextItems[s] = it;
+        usedItems.add(it);
+      }
+    }
+
+    // 기술: 팀에 있는 멤버만 + 그 포켓몬이 배울 수 있는 기술만 + 최대 4
+    const nextMoves = {};
+    for (const s of clean) {
+      const learnable = new Set(getPokemonBySlug(s)?.moves ?? []);
+      const picked = (moves[s] ?? [])
+        .filter((m) => learnable.has(m))
+        .slice(0, 4);
+      if (picked.length) nextMoves[s] = picked;
+    }
+
+    save(clean, nextItems, nextMoves);
+    set({ slugs: clean, items: nextItems, moves: nextMoves });
+    void inTeam;
   },
 
   clear: () => {
