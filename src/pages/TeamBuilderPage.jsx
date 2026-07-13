@@ -10,6 +10,7 @@ import CoverageAnalysis from "../components/team/CoverageAnalysis";
 import PresetManager from "../components/team/PresetManager";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import OffenseAnalysis from "../components/team/OffenseAnalysis";
+import TeamExport from "../components/team/TeamExport";
 
 export default function TeamBuilderPage() {
   const slugs = useTeamStore((s) => s.slugs);
@@ -143,6 +144,12 @@ export default function TeamBuilderPage() {
           ) : (
             <OffenseAnalysis team={team} movesMap={moves} />
           )}
+        </section>
+      )}
+
+      {team.length > 0 && (
+        <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+          <TeamExport team={{ slugs, items, moves }} />
         </section>
       )}
 
