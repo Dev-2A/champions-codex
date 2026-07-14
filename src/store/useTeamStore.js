@@ -265,4 +265,31 @@ export const useTeamStore = create((set, get) => ({
     save([], {}, {}, null, {});
     set({ slugs: [], items: {}, moves: {}, mega: null, builds: {} });
   },
+
+  /** 추천 세트 적용: 멤버 추가 + 기술/도구/능력치/메가 일괄 설정 */
+  applySample: async (sample) => {
+    const r = get().add(sample.slug);
+    if (!r.ok) return r;
+    const { slugs, items, moves, mega, builds } = get();
+    await get().setTeam({
+      slugs,
+      items: sample.item
+        ? { ...items, [sample.slug]: sample.item }
+        : items,
+      moves: { ...moves, [sample.slug]: sample.moves ?? [] },
+      // 팀에 이미 메가가 있으면 유지 (배틀당 1마리)
+      mega:
+        mega ?? (sample.mega ? { slug: sample.slug, form: sample.mega } : null),
+      builds: sample.build
+        ? { ...builds, [sample.slug]: sample.build }
+        : builds,
+    });
+    const after = get();
+    return {
+      ok: true,
+      // 도구 클로즈로 도구가 빠졌거나, 이미 메가가 있어 메가 지정이 생략된 경우 안내용
+      itemDropped: !!sample.item && !after.items[sample.slug],
+      megaSkipped: !!sample.mega && after.mega?.slug !== sample.slug,
+    };
+  },
 }));

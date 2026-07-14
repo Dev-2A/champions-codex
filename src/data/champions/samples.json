@@ -1,0 +1,145 @@
+{
+  "_note": "뉴비용 표준 세트 큐레이션 — 포케모음 사용률 통계와 커뮤니티 표준형 참고 (레귤레이션 M-B). moves는 러닝셋, item은 도구 도감, mega는 메가 폼과 대조 검증됨.",
+  "samples": [
+    {
+      "slug": "garchomp",
+      "title": "기합의띠 어태커",
+      "role": "물리 어태커",
+      "item": "focus-sash",
+      "mega": null,
+      "moves": ["earthquake", "scale-shot", "swords-dance", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "가장 많이 쓰이는 표준형. 기합의띠로 한 방을 버티고 지진·스케일샷으로 압박해요."
+    },
+    {
+      "slug": "mimikyu-disguised",
+      "title": "생명의구슬 스위퍼",
+      "role": "물리 어태커",
+      "item": "life-orb",
+      "mega": null,
+      "moves": ["play-rough", "shadow-sneak", "swords-dance", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "특성 '탈'로 한 번은 공짜로 버텨요. 칼춤 후 자속 기술로 쓸어담는 표준형."
+    },
+    {
+      "slug": "hippowdon",
+      "title": "먹다남은음식 물리막이",
+      "role": "물리 수비",
+      "item": "leftovers",
+      "mega": null,
+      "moves": ["earthquake", "slack-off", "yawn", "protect"],
+      "build": {
+        "pts": { "hp": 32, "atk": 0, "def": 32, "spa": 0, "spd": 0, "spe": 0 },
+        "up": "def",
+        "down": "spa"
+      },
+      "note": "모래뿌리기로 날씨를 잡으면서 하품으로 상대를 압박하는 단단한 막이."
+    },
+    {
+      "slug": "metagross",
+      "title": "메가 어태커",
+      "role": "물리 어태커",
+      "item": null,
+      "mega": "metagross-mega",
+      "moves": ["meteor-mash", "bullet-punch", "earthquake", "protect"],
+      "build": {
+        "pts": { "hp": 32, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 0 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "메가진화로 단단함과 화력을 동시에. 불릿펀치 선공이 마무리에 좋아요."
+    },
+    {
+      "slug": "charizard",
+      "title": "메가 Y 특수 어태커",
+      "role": "특수 어태커",
+      "item": null,
+      "mega": "charizard-mega-y",
+      "moves": ["heat-wave", "solar-beam", "air-slash", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 0, "def": 0, "spa": 32, "spd": 0, "spe": 32 },
+        "up": "spa",
+        "down": "atk"
+      },
+      "note": "메가 Y의 가뭄으로 쾌청을 깔고 열풍+즉발 솔라빔을 퍼붓는 더블 표준형."
+    },
+    {
+      "slug": "gyarados",
+      "title": "용의춤 스위퍼",
+      "role": "물리 어태커",
+      "item": "sitrus-berry",
+      "mega": null,
+      "moves": ["waterfall", "ice-fang", "dragon-dance", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "특성 위협으로 깔고, 기회를 봐서 용의춤을 쌓는 든든한 에이스."
+    },
+    {
+      "slug": "primarina",
+      "title": "돌격조끼 특수 딜탱",
+      "role": "특수 어태커",
+      "item": "assault-vest",
+      "mega": null,
+      "moves": ["moonblast", "sparkling-aria", "icy-wind", "energy-ball"],
+      "build": {
+        "pts": { "hp": 32, "atk": 0, "def": 0, "spa": 32, "spd": 0, "spe": 0 },
+        "up": "spa",
+        "down": "atk"
+      },
+      "note": "돌격조끼로 특수를 두껍게. 거품아리아는 아군 화상도 치료해줘요."
+    },
+    {
+      "slug": "hydreigon",
+      "title": "구애안경 특수포",
+      "role": "특수 어태커",
+      "item": "choice-specs",
+      "mega": null,
+      "moves": ["draco-meteor", "dark-pulse", "flamethrower", "earth-power"],
+      "build": {
+        "pts": { "hp": 0, "atk": 0, "def": 0, "spa": 32, "spd": 0, "spe": 32 },
+        "up": "spa",
+        "down": "atk"
+      },
+      "note": "구애안경 용성군의 순간 화력이 강점. 기술 폭이 넓어 구멍이 적어요."
+    },
+    {
+      "slug": "meowscarada",
+      "title": "트릭플라워 어태커",
+      "role": "물리 어태커",
+      "item": "focus-sash",
+      "mega": null,
+      "moves": ["flower-trick", "knock-off", "u-turn", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "트릭플라워는 확정 급소! 탁쳐서떨구기로 상대 도구까지 견제해요."
+    },
+    {
+      "slug": "blaziken",
+      "title": "메가 가속 스위퍼",
+      "role": "물리 어태커",
+      "item": null,
+      "mega": "blaziken-mega",
+      "moves": ["flare-blitz", "close-combat", "swords-dance", "protect"],
+      "build": {
+        "pts": { "hp": 0, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 },
+        "up": "atk",
+        "down": "spa"
+      },
+      "note": "가속 특성으로 방어하며 스피드를 올리고, 다음 턴부터 위에서 때려요."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
-import { getPokemonBySlug, pokemonList } from "../data";
+import { getPokemonBySlug, pokemonList, getSamples } from "../data";
 import TypeBadge from "../components/common/TypeBadge";
 import StatBars from "../components/pokedex/StatBars";
 import DefensiveProfile from "../components/typechart/DefensiveProfile";
@@ -10,6 +10,7 @@ import TeamToggleButton from "../components/team/TeamToggleButton";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import LearnableMoves from "../components/pokedex/LearnableMoves";
 import MegaForms from "../components/pokedex/MegaForms";
+import SampleSets from "../components/pokedex/SampleSets";
 import { useMoveDb } from "../hooks/useMoveDb";
 import { assetUrl } from "../lib/assets";
 
@@ -141,6 +142,12 @@ export default function PokemonDetailPage() {
               <StatBars stats={stats} total={total} />
             </div>
           </Section>
+
+          {getSamples(slug).length > 0 && (
+            <Section title="추천 세트">
+              <SampleSets slug={slug} />
+            </Section>
+          )}
 
           <Section title="특성">
             <div className="flex flex-wrap gap-2">

@@ -7,6 +7,7 @@ import seasonsData from "./champions/seasons.json";
 import faqData from "./champions/faq.json";
 import itemsData from "./generated/items.json";
 import notableMovesData from "./champions/notable-moves.json";
+import samplesData from "./champions/samples.json";
 
 // 프리페치 생성물을 eager 로드 후 활성 레귤레이션만 선택
 const pokedexModules = import.meta.glob("./generated/pokedex.*.json", {
@@ -82,3 +83,12 @@ export const getItem = (slug) => itemBySlug.get(slug) ?? null;
 // ── 주목 기술 역할 태그 (큐레이션) ──
 export const notableMoves = notableMovesData;
 export const getNotableRole = (slug) => notableMovesData[slug] ?? null;
+
+// ── 추천 세트 (큐레이션) ──
+const samplesBySlug = new Map();
+for (const s of samplesData.samples) {
+  const list = samplesBySlug.get(s.slug) ?? [];
+  list.push(s);
+  samplesBySlug.set(s.slug, list);
+}
+export const getSamples = (slug) => samplesBySlug.get(slug) ?? [];
