@@ -1,4 +1,4 @@
-import { X, Plus, Package } from "lucide-react";
+import { X, Plus, Package, Sparkles } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import { assetUrl } from "../../lib/assets";
 
@@ -22,7 +22,7 @@ export default function TeamSlot({
       </button>
     );
   }
-  const { slug, name, types, sprite } = pokemon;
+  const { slug, name, types, sprite, canMega } = pokemon;
   return (
     <div
       className={[
@@ -40,6 +40,11 @@ export default function TeamSlot({
       >
         <X size={12} />
       </button>
+      {canMega && (
+        <span className="absolute left-1.5 top-1.5 z-10" title="메가진화 가능">
+          <Sparkles size={13} className="text-brand-500" />
+        </span>
+      )}
 
       <button
         type="button"

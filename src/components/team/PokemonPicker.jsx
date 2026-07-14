@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Search, X, Shield, Crosshair } from "lucide-react";
+import { Search, X, Shield, Crosshair, Sparkles } from "lucide-react";
 import { pokemonList, TYPES, typeKo } from "../../data";
 import {
   getDefensiveProfile,
@@ -169,8 +169,17 @@ export default function PokemonPicker({
                 className="size-10 shrink-0 object-contain"
               />
               <span className="min-w-0">
-                <span className="block truncate text-xs font-bold text-ink-800 dark:text-ink-100">
-                  {p.name.ko}
+                <span className="flex min-w-0 items-center gap-1">
+                  <span className="truncate text-xs font-bold text-ink-800 dark:text-ink-100">
+                    {p.name.ko}
+                  </span>
+                  {p.canMega && (
+                    <Sparkles
+                      size={10}
+                      className="shrink-0 text-brand-500"
+                      title="메가진화 가능"
+                    />
+                  )}
                 </span>
                 <span className="mt-0.5 flex flex-wrap gap-0.5">
                   {p.types.map((t) => (
