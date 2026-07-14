@@ -2,6 +2,7 @@ import { ACTIVE_REGULATION } from "../config";
 import typechartData from "./generated/typechart.json";
 import typeTraitsData from "./champions/typeTraits.json";
 import glossaryData from "./champions/glossary.json";
+import battleMechanicsData from "./champions/battleMechanics.json";
 import seasonsData from "./champions/seasons.json";
 import faqData from "./champions/faq.json";
 import itemsData from "./generated/items.json";
@@ -49,8 +50,9 @@ export const typeKo = (t) => typeMeta[t]?.ko ?? t;
 export const typeTraits = typeTraitsData;
 export const getTypeTraits = (t) => typeTraitsData[t] ?? null;
 
-// ── 용어집 · 시즌 · FAQ (큐레이션) ──
+// ── 용어집 · 배틀 메커니즘 · 시즌 · FAQ (큐레이션) ──
 export const glossary = glossaryData;
+export const battleMechanics = battleMechanicsData;
 export const seasons = seasonsData.seasons;
 export const faqs = faqData.faqs;
 

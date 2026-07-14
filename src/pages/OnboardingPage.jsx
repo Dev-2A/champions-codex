@@ -6,8 +6,10 @@ import {
   Sparkles,
   Rocket,
   BookMarked,
+  Zap,
 } from "lucide-react";
 import Glossary from "../components/onboarding/Glossary";
+import BattleMechanics from "../components/onboarding/BattleMechanics";
 
 const SECTIONS = [
   {
@@ -112,6 +114,19 @@ export default function OnboardingPage() {
           <span className="text-sm font-semibold">팀 짜보기</span>
         </Link>
       </div>
+
+      {/* 배틀 메커니즘 */}
+      <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+        <div className="mb-3 flex items-center gap-2">
+          <Zap className="text-brand-500" size={18} strokeWidth={2.3} />
+          <h2 className="text-lg font-bold tracking-tight">배틀 메커니즘</h2>
+        </div>
+        <p className="mb-3 text-sm text-ink-500 dark:text-ink-400">
+          상태이상·날씨·필드·설치기 — 배틀 중에 "이게 뭐였지?" 싶을 때
+          찾아보세요.
+        </p>
+        <BattleMechanics />
+      </section>
 
       {/* 용어집 */}
       <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
