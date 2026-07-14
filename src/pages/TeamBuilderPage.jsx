@@ -16,6 +16,7 @@ import BottomSheet from "../components/common/BottomSheet";
 import OffenseAnalysis from "../components/team/OffenseAnalysis";
 import DamageCalc from "../components/team/DamageCalc";
 import TeamExport from "../components/team/TeamExport";
+import TeamImport from "../components/team/TeamImport";
 
 const ADD_FAIL_MSG = {
   full: "팀이 가득 찼어요 (최대 6마리)",
@@ -302,6 +303,10 @@ export default function TeamBuilderPage() {
             <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
           </div>
           <PresetManager current={{ slugs, items, moves, mega, builds }} />
+        </section>
+
+        <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+          <TeamImport />
         </section>
       </div>
     </div>
