@@ -9,6 +9,7 @@ import TypeTraitsPanel from "../components/typechart/TypeTraitsPanel";
 import TeamToggleButton from "../components/team/TeamToggleButton";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import LearnableMoves from "../components/pokedex/LearnableMoves";
+import MegaForms from "../components/pokedex/MegaForms";
 import { useMoveDb } from "../hooks/useMoveDb";
 import { assetUrl } from "../lib/assets";
 
@@ -170,11 +171,24 @@ export default function PokemonDetailPage() {
           </Section>
 
           {canMega && (
-            <p className="rounded-xl border border-ink-200 bg-ink-50 p-3 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900/50 dark:text-ink-400">
-              💡 오멘 링(Omni Ring)으로 배틀 중 1회 메가진화할 수 있어요. 메가
-              폼의 세부 스탯·특성 상세는 추후 업데이트 예정이에요.
-            </p>
+            <Section title="메가진화">
+              <MegaForms slug={slug} />
+            </Section>
           )}
+
+          <p className="text-xs text-ink-400 dark:text-ink-500">
+            실전 사용률·채용 통계가 궁금하다면{" "}
+            <a
+              href={`https://pokemoem.com/pokedex/${encodeURIComponent(
+                name.en.charAt(0).toUpperCase() + name.en.slice(1),
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-500 hover:underline"
+            >
+              포케모음에서 보기 ↗
+            </a>
+          </p>
         </div>
       ) : (
         <LearnableMoves pokemonSlug={slug} />

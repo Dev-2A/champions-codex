@@ -1,0 +1,2433 @@
+{
+  "generatedAt": "2026-07-14T04:45:02.260Z",
+  "regulation": "m-b",
+  "count": 72,
+  "pending": [],
+  "megas": {
+    "abomasnow": [
+      {
+        "formSlug": "abomasnow-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 눈설왕",
+          "en": "abomasnow-mega"
+        },
+        "id": 10060,
+        "types": [
+          "grass",
+          "ice"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 132,
+          "def": 105,
+          "spa": 132,
+          "spd": 105,
+          "spe": 30
+        },
+        "total": 594,
+        "abilities": [
+          {
+            "slug": "snow-warning",
+            "ko": "눈퍼뜨리기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10060.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "absol": [
+      {
+        "formSlug": "absol-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 앱솔",
+          "en": "absol-mega"
+        },
+        "id": 10057,
+        "types": [
+          "dark"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 150,
+          "def": 60,
+          "spa": 115,
+          "spd": 60,
+          "spe": 115
+        },
+        "total": 565,
+        "abilities": [
+          {
+            "slug": "magic-bounce",
+            "ko": "매직미러",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10057.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "aerodactyl": [
+      {
+        "formSlug": "aerodactyl-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 프테라",
+          "en": "aerodactyl-mega"
+        },
+        "id": 10042,
+        "types": [
+          "rock",
+          "flying"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 135,
+          "def": 85,
+          "spa": 70,
+          "spd": 95,
+          "spe": 150
+        },
+        "total": 615,
+        "abilities": [
+          {
+            "slug": "tough-claws",
+            "ko": "단단한발톱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10042.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "aggron": [
+      {
+        "formSlug": "aggron-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 보스로라",
+          "en": "aggron-mega"
+        },
+        "id": 10053,
+        "types": [
+          "steel"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 140,
+          "def": 230,
+          "spa": 60,
+          "spd": 80,
+          "spe": 50
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "filter",
+            "ko": "필터",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10053.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "alakazam": [
+      {
+        "formSlug": "alakazam-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 후딘",
+          "en": "alakazam-mega"
+        },
+        "id": 10037,
+        "types": [
+          "psychic"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 50,
+          "def": 65,
+          "spa": 175,
+          "spd": 105,
+          "spe": 150
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "trace",
+            "ko": "트레이스",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10037.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "altaria": [
+      {
+        "formSlug": "altaria-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 파비코리",
+          "en": "altaria-mega"
+        },
+        "id": 10067,
+        "types": [
+          "dragon",
+          "fairy"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 110,
+          "def": 110,
+          "spa": 110,
+          "spd": 105,
+          "spe": 80
+        },
+        "total": 590,
+        "abilities": [
+          {
+            "slug": "pixilate",
+            "ko": "페어리스킨",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10067.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "ampharos": [
+      {
+        "formSlug": "ampharos-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 전룡",
+          "en": "ampharos-mega"
+        },
+        "id": 10045,
+        "types": [
+          "electric",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 95,
+          "def": 105,
+          "spa": 165,
+          "spd": 110,
+          "spe": 45
+        },
+        "total": 610,
+        "abilities": [
+          {
+            "slug": "mold-breaker",
+            "ko": "틀깨기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10045.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "audino": [
+      {
+        "formSlug": "audino-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 다부니",
+          "en": "audino-mega"
+        },
+        "id": 10069,
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "stats": {
+          "hp": 103,
+          "atk": 60,
+          "def": 126,
+          "spa": 80,
+          "spd": 126,
+          "spe": 50
+        },
+        "total": 545,
+        "abilities": [
+          {
+            "slug": "healer",
+            "ko": "치유의마음",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10069.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "banette": [
+      {
+        "formSlug": "banette-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 다크펫",
+          "en": "banette-mega"
+        },
+        "id": 10056,
+        "types": [
+          "ghost"
+        ],
+        "stats": {
+          "hp": 64,
+          "atk": 165,
+          "def": 75,
+          "spa": 93,
+          "spd": 83,
+          "spe": 75
+        },
+        "total": 555,
+        "abilities": [
+          {
+            "slug": "prankster",
+            "ko": "짓궂은마음",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10056.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "barbaracle": [
+      {
+        "formSlug": "barbaracle-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 거북손데스",
+          "en": "barbaracle-mega"
+        },
+        "id": 10298,
+        "types": [
+          "rock",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 72,
+          "atk": 140,
+          "def": 130,
+          "spa": 64,
+          "spd": 106,
+          "spe": 88
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "tough-claws",
+            "ko": "단단한발톱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10298.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "beedrill": [
+      {
+        "formSlug": "beedrill-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 독침붕",
+          "en": "beedrill-mega"
+        },
+        "id": 10090,
+        "types": [
+          "bug",
+          "poison"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 150,
+          "def": 40,
+          "spa": 15,
+          "spd": 80,
+          "spe": 145
+        },
+        "total": 495,
+        "abilities": [
+          {
+            "slug": "adaptability",
+            "ko": "적응력",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10090.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "blastoise": [
+      {
+        "formSlug": "blastoise-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 거북왕",
+          "en": "blastoise-mega"
+        },
+        "id": 10036,
+        "types": [
+          "water"
+        ],
+        "stats": {
+          "hp": 79,
+          "atk": 103,
+          "def": 120,
+          "spa": 135,
+          "spd": 115,
+          "spe": 78
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "mega-launcher",
+            "ko": "메가런처",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10036.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "blaziken": [
+      {
+        "formSlug": "blaziken-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 번치코",
+          "en": "blaziken-mega"
+        },
+        "id": 10050,
+        "types": [
+          "fire",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 160,
+          "def": 80,
+          "spa": 130,
+          "spd": 80,
+          "spe": 100
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "speed-boost",
+            "ko": "가속",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10050.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "camerupt": [
+      {
+        "formSlug": "camerupt-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 폭타",
+          "en": "camerupt-mega"
+        },
+        "id": 10087,
+        "types": [
+          "fire",
+          "ground"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 120,
+          "def": 100,
+          "spa": 145,
+          "spd": 105,
+          "spe": 20
+        },
+        "total": 560,
+        "abilities": [
+          {
+            "slug": "sheer-force",
+            "ko": "우격다짐",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10087.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "chandelure": [
+      {
+        "formSlug": "chandelure-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 샹델라",
+          "en": "chandelure-mega"
+        },
+        "id": 10291,
+        "types": [
+          "ghost",
+          "fire"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 75,
+          "def": 110,
+          "spa": 175,
+          "spd": 110,
+          "spe": 90
+        },
+        "total": 620,
+        "abilities": [
+          {
+            "slug": "infiltrator",
+            "ko": "틈새포착",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10291.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "charizard": [
+      {
+        "formSlug": "charizard-mega-x",
+        "label": "메가 X",
+        "name": {
+          "ko": "메가 리자몽 X",
+          "en": "charizard-mega-x"
+        },
+        "id": 10034,
+        "types": [
+          "fire",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 78,
+          "atk": 130,
+          "def": 111,
+          "spa": 130,
+          "spd": 85,
+          "spe": 100
+        },
+        "total": 634,
+        "abilities": [
+          {
+            "slug": "tough-claws",
+            "ko": "단단한발톱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10034.webp",
+        "source": "pokeapi"
+      },
+      {
+        "formSlug": "charizard-mega-y",
+        "label": "메가 Y",
+        "name": {
+          "ko": "메가 리자몽 Y",
+          "en": "charizard-mega-y"
+        },
+        "id": 10035,
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "stats": {
+          "hp": 78,
+          "atk": 104,
+          "def": 78,
+          "spa": 159,
+          "spd": 115,
+          "spe": 100
+        },
+        "total": 634,
+        "abilities": [
+          {
+            "slug": "drought",
+            "ko": "가뭄",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10035.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "chesnaught": [
+      {
+        "formSlug": "chesnaught-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 브리가론",
+          "en": "chesnaught-mega"
+        },
+        "id": 10292,
+        "types": [
+          "grass",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 88,
+          "atk": 137,
+          "def": 172,
+          "spa": 74,
+          "spd": 115,
+          "spe": 44
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "bulletproof",
+            "ko": "방탄",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10292.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "chimecho": [
+      {
+        "formSlug": "chimecho-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 치렁",
+          "en": "chimecho-mega"
+        },
+        "id": 10306,
+        "types": [
+          "psychic",
+          "steel"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 50,
+          "def": 110,
+          "spa": 135,
+          "spd": 120,
+          "spe": 65
+        },
+        "total": 555,
+        "abilities": [
+          {
+            "slug": "levitate",
+            "ko": "부유",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10306.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "clefable": [
+      {
+        "formSlug": "clefable-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 픽시",
+          "en": "clefable-mega"
+        },
+        "id": 10278,
+        "types": [
+          "fairy",
+          "flying"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 80,
+          "def": 93,
+          "spa": 135,
+          "spd": 110,
+          "spe": 70
+        },
+        "total": 583,
+        "abilities": [
+          {
+            "slug": "magic-bounce",
+            "ko": "매직미러",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10278.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "crabominable": [
+      {
+        "formSlug": "crabominable-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 모단단게",
+          "en": "crabominable-mega"
+        },
+        "id": 10315,
+        "types": [
+          "fighting",
+          "ice"
+        ],
+        "stats": {
+          "hp": 97,
+          "atk": 157,
+          "def": 122,
+          "spa": 62,
+          "spd": 107,
+          "spe": 33
+        },
+        "total": 578,
+        "abilities": [
+          {
+            "slug": "iron-fist",
+            "ko": "철주먹",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10315.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "delphox": [
+      {
+        "formSlug": "delphox-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 마폭시",
+          "en": "delphox-mega"
+        },
+        "id": 10293,
+        "types": [
+          "fire",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 69,
+          "def": 72,
+          "spa": 159,
+          "spd": 125,
+          "spe": 134
+        },
+        "total": 634,
+        "abilities": [
+          {
+            "slug": "levitate",
+            "ko": "부유",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10293.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "dragalge": [
+      {
+        "formSlug": "dragalge-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 드래캄",
+          "en": "dragalge-mega"
+        },
+        "id": 10299,
+        "types": [
+          "poison",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 85,
+          "def": 105,
+          "spa": 132,
+          "spd": 163,
+          "spe": 44
+        },
+        "total": 594,
+        "abilities": [
+          {
+            "slug": "regenerator",
+            "ko": "재생력",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10299.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "dragonite": [
+      {
+        "formSlug": "dragonite-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 망나뇽",
+          "en": "dragonite-mega"
+        },
+        "id": 10281,
+        "types": [
+          "dragon",
+          "flying"
+        ],
+        "stats": {
+          "hp": 91,
+          "atk": 124,
+          "def": 115,
+          "spa": 145,
+          "spd": 125,
+          "spe": 100
+        },
+        "total": 700,
+        "abilities": [
+          {
+            "slug": "multiscale",
+            "ko": "멀티스케일",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10281.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "drampa": [
+      {
+        "formSlug": "drampa-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 할비롱",
+          "en": "drampa-mega"
+        },
+        "id": 10302,
+        "types": [
+          "normal",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 78,
+          "atk": 85,
+          "def": 110,
+          "spa": 160,
+          "spd": 116,
+          "spe": 36
+        },
+        "total": 585,
+        "abilities": [
+          {
+            "slug": "berserk",
+            "ko": "발끈",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10302.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "eelektross": [
+      {
+        "formSlug": "eelektross-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 저리더프",
+          "en": "eelektross-mega"
+        },
+        "id": 10290,
+        "types": [
+          "electric"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 145,
+          "def": 80,
+          "spa": 135,
+          "spd": 90,
+          "spe": 80
+        },
+        "total": 615,
+        "abilities": [
+          {
+            "slug": "eelevate",
+            "ko": null,
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10290.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "emboar": [
+      {
+        "formSlug": "emboar-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 염무왕",
+          "en": "emboar-mega"
+        },
+        "id": 10286,
+        "types": [
+          "fire",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 110,
+          "atk": 148,
+          "def": 75,
+          "spa": 110,
+          "spd": 110,
+          "spe": 75
+        },
+        "total": 628,
+        "abilities": [
+          {
+            "slug": "mold-breaker",
+            "ko": "틀깨기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10286.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "excadrill": [
+      {
+        "formSlug": "excadrill-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 몰드류",
+          "en": "excadrill-mega"
+        },
+        "id": 10287,
+        "types": [
+          "ground",
+          "steel"
+        ],
+        "stats": {
+          "hp": 110,
+          "atk": 165,
+          "def": 100,
+          "spa": 65,
+          "spd": 65,
+          "spe": 103
+        },
+        "total": 608,
+        "abilities": [
+          {
+            "slug": "piercing-drill",
+            "ko": "관통드릴",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10287.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "falinks": [
+      {
+        "formSlug": "falinks-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 대여르",
+          "en": "falinks-mega"
+        },
+        "id": 10303,
+        "types": [
+          "fighting"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 135,
+          "def": 135,
+          "spa": 70,
+          "spd": 65,
+          "spe": 100
+        },
+        "total": 570,
+        "abilities": [
+          {
+            "slug": "defiant",
+            "ko": "오기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10303.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "feraligatr": [
+      {
+        "formSlug": "feraligatr-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 장크로다일",
+          "en": "feraligatr-mega"
+        },
+        "id": 10283,
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 160,
+          "def": 125,
+          "spa": 89,
+          "spd": 93,
+          "spe": 78
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "dragonize",
+            "ko": "드래곤스킨",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10283.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "froslass": [
+      {
+        "formSlug": "froslass-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 눈여아",
+          "en": "froslass-mega"
+        },
+        "id": 10285,
+        "types": [
+          "ice",
+          "ghost"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 80,
+          "def": 70,
+          "spa": 140,
+          "spd": 100,
+          "spe": 120
+        },
+        "total": 580,
+        "abilities": [
+          {
+            "slug": "snow-warning",
+            "ko": "눈퍼뜨리기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10285.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "gallade": [
+      {
+        "formSlug": "gallade-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 엘레이드",
+          "en": "gallade-mega"
+        },
+        "id": 10068,
+        "types": [
+          "psychic",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 68,
+          "atk": 165,
+          "def": 95,
+          "spa": 65,
+          "spd": 115,
+          "spe": 110
+        },
+        "total": 618,
+        "abilities": [
+          {
+            "slug": "inner-focus",
+            "ko": "정신력",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10068.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "garchomp": [
+      {
+        "formSlug": "garchomp-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 한카리아스",
+          "en": "garchomp-mega"
+        },
+        "id": 10058,
+        "types": [
+          "dragon",
+          "ground"
+        ],
+        "stats": {
+          "hp": 108,
+          "atk": 170,
+          "def": 115,
+          "spa": 120,
+          "spd": 95,
+          "spe": 92
+        },
+        "total": 700,
+        "abilities": [
+          {
+            "slug": "sand-force",
+            "ko": "모래의힘",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10058.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "gardevoir": [
+      {
+        "formSlug": "gardevoir-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 가디안",
+          "en": "gardevoir-mega"
+        },
+        "id": 10051,
+        "types": [
+          "psychic",
+          "fairy"
+        ],
+        "stats": {
+          "hp": 68,
+          "atk": 85,
+          "def": 65,
+          "spa": 165,
+          "spd": 135,
+          "spe": 100
+        },
+        "total": 618,
+        "abilities": [
+          {
+            "slug": "pixilate",
+            "ko": "페어리스킨",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10051.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "gengar": [
+      {
+        "formSlug": "gengar-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 팬텀",
+          "en": "gengar-mega"
+        },
+        "id": 10038,
+        "types": [
+          "ghost",
+          "poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 65,
+          "def": 80,
+          "spa": 170,
+          "spd": 95,
+          "spe": 130
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "shadow-tag",
+            "ko": "그림자밟기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10038.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "glalie": [
+      {
+        "formSlug": "glalie-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 얼음귀신",
+          "en": "glalie-mega"
+        },
+        "id": 10074,
+        "types": [
+          "ice"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 120,
+          "def": 80,
+          "spa": 120,
+          "spd": 80,
+          "spe": 100
+        },
+        "total": 580,
+        "abilities": [
+          {
+            "slug": "refrigerate",
+            "ko": "프리즈스킨",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10074.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "glimmora": [
+      {
+        "formSlug": "glimmora-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 킬라플로르",
+          "en": "glimmora-mega"
+        },
+        "id": 10321,
+        "types": [
+          "rock",
+          "poison"
+        ],
+        "stats": {
+          "hp": 83,
+          "atk": 90,
+          "def": 105,
+          "spa": 150,
+          "spd": 96,
+          "spe": 101
+        },
+        "total": 625,
+        "abilities": [
+          {
+            "slug": "adaptability",
+            "ko": "적응력",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10321.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "golurk": [
+      {
+        "formSlug": "golurk-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 골루그",
+          "en": "golurk-mega"
+        },
+        "id": 10313,
+        "types": [
+          "ground",
+          "ghost"
+        ],
+        "stats": {
+          "hp": 89,
+          "atk": 159,
+          "def": 105,
+          "spa": 70,
+          "spd": 105,
+          "spe": 55
+        },
+        "total": 583,
+        "abilities": [
+          {
+            "slug": "unseen-fist",
+            "ko": "보이지않는주먹",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10313.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "greninja": [
+      {
+        "formSlug": "greninja-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 개굴닌자",
+          "en": "greninja-mega"
+        },
+        "id": 10294,
+        "types": [
+          "water",
+          "dark"
+        ],
+        "stats": {
+          "hp": 72,
+          "atk": 125,
+          "def": 77,
+          "spa": 133,
+          "spd": 81,
+          "spe": 142
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "protean",
+            "ko": "변환자재",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10294.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "gyarados": [
+      {
+        "formSlug": "gyarados-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 갸라도스",
+          "en": "gyarados-mega"
+        },
+        "id": 10041,
+        "types": [
+          "water",
+          "dark"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 155,
+          "def": 109,
+          "spa": 70,
+          "spd": 130,
+          "spe": 81
+        },
+        "total": 640,
+        "abilities": [
+          {
+            "slug": "mold-breaker",
+            "ko": "틀깨기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10041.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "hawlucha": [
+      {
+        "formSlug": "hawlucha-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 루차불",
+          "en": "hawlucha-mega"
+        },
+        "id": 10300,
+        "types": [
+          "fighting",
+          "flying"
+        ],
+        "stats": {
+          "hp": 78,
+          "atk": 137,
+          "def": 100,
+          "spa": 74,
+          "spd": 93,
+          "spe": 118
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "no-guard",
+            "ko": "노가드",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10300.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "heracross": [
+      {
+        "formSlug": "heracross-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 헤라크로스",
+          "en": "heracross-mega"
+        },
+        "id": 10047,
+        "types": [
+          "bug",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 185,
+          "def": 115,
+          "spa": 40,
+          "spd": 105,
+          "spe": 75
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "skill-link",
+            "ko": "스킬링크",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10047.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "houndoom": [
+      {
+        "formSlug": "houndoom-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 헬가",
+          "en": "houndoom-mega"
+        },
+        "id": 10048,
+        "types": [
+          "dark",
+          "fire"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 90,
+          "def": 90,
+          "spa": 140,
+          "spd": 90,
+          "spe": 115
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "solar-power",
+            "ko": "선파워",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10048.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "kangaskhan": [
+      {
+        "formSlug": "kangaskhan-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 캥카",
+          "en": "kangaskhan-mega"
+        },
+        "id": 10039,
+        "types": [
+          "normal"
+        ],
+        "stats": {
+          "hp": 105,
+          "atk": 125,
+          "def": 100,
+          "spa": 60,
+          "spd": 100,
+          "spe": 100
+        },
+        "total": 590,
+        "abilities": [
+          {
+            "slug": "parental-bond",
+            "ko": "부자유친",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10039.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "lopunny": [
+      {
+        "formSlug": "lopunny-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 이어롭",
+          "en": "lopunny-mega"
+        },
+        "id": 10088,
+        "types": [
+          "normal",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 136,
+          "def": 94,
+          "spa": 54,
+          "spd": 96,
+          "spe": 135
+        },
+        "total": 580,
+        "abilities": [
+          {
+            "slug": "scrappy",
+            "ko": "배짱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10088.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "lucario": [
+      {
+        "formSlug": "lucario-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 루카리오",
+          "en": "lucario-mega"
+        },
+        "id": 10059,
+        "types": [
+          "fighting",
+          "steel"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 145,
+          "def": 88,
+          "spa": 140,
+          "spd": 70,
+          "spe": 112
+        },
+        "total": 625,
+        "abilities": [
+          {
+            "slug": "adaptability",
+            "ko": "적응력",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10059.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "malamar": [
+      {
+        "formSlug": "malamar-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 칼라마네로",
+          "en": "malamar-mega"
+        },
+        "id": 10297,
+        "types": [
+          "dark",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 86,
+          "atk": 102,
+          "def": 88,
+          "spa": 98,
+          "spd": 120,
+          "spe": 88
+        },
+        "total": 582,
+        "abilities": [
+          {
+            "slug": "contrary",
+            "ko": "심술꾸러기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10297.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "manectric": [
+      {
+        "formSlug": "manectric-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 썬더볼트",
+          "en": "manectric-mega"
+        },
+        "id": 10055,
+        "types": [
+          "electric"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 75,
+          "def": 80,
+          "spa": 135,
+          "spd": 80,
+          "spe": 135
+        },
+        "total": 575,
+        "abilities": [
+          {
+            "slug": "intimidate",
+            "ko": "위협",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10055.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "mawile": [
+      {
+        "formSlug": "mawile-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 입치트",
+          "en": "mawile-mega"
+        },
+        "id": 10052,
+        "types": [
+          "steel",
+          "fairy"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 105,
+          "def": 125,
+          "spa": 55,
+          "spd": 95,
+          "spe": 50
+        },
+        "total": 480,
+        "abilities": [
+          {
+            "slug": "huge-power",
+            "ko": "천하장사",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10052.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "medicham": [
+      {
+        "formSlug": "medicham-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 요가램",
+          "en": "medicham-mega"
+        },
+        "id": 10054,
+        "types": [
+          "fighting",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 100,
+          "def": 85,
+          "spa": 80,
+          "spd": 85,
+          "spe": 100
+        },
+        "total": 510,
+        "abilities": [
+          {
+            "slug": "pure-power",
+            "ko": "순수한힘",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10054.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "meganium": [
+      {
+        "formSlug": "meganium-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 메가니움",
+          "en": "meganium-mega"
+        },
+        "id": 10282,
+        "types": [
+          "grass",
+          "fairy"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 92,
+          "def": 115,
+          "spa": 143,
+          "spd": 115,
+          "spe": 80
+        },
+        "total": 625,
+        "abilities": [
+          {
+            "slug": "mega-sol",
+            "ko": "메가솔라",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10282.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "meowstic-male": [
+      {
+        "formSlug": "meowstic-male-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 냐오닉스",
+          "en": "meowstic-male-mega"
+        },
+        "id": 10314,
+        "types": [
+          "psychic"
+        ],
+        "stats": {
+          "hp": 74,
+          "atk": 48,
+          "def": 76,
+          "spa": 143,
+          "spd": 101,
+          "spe": 124
+        },
+        "total": 566,
+        "abilities": [
+          {
+            "slug": "trace",
+            "ko": "트레이스",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10314.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "metagross": [
+      {
+        "formSlug": "metagross-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 메타그로스",
+          "en": "metagross-mega"
+        },
+        "id": 10076,
+        "types": [
+          "steel",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 145,
+          "def": 150,
+          "spa": 105,
+          "spd": 110,
+          "spe": 110
+        },
+        "total": 700,
+        "abilities": [
+          {
+            "slug": "tough-claws",
+            "ko": "단단한발톱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10076.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "pidgeot": [
+      {
+        "formSlug": "pidgeot-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 피죤투",
+          "en": "pidgeot-mega"
+        },
+        "id": 10073,
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "stats": {
+          "hp": 83,
+          "atk": 80,
+          "def": 80,
+          "spa": 135,
+          "spd": 80,
+          "spe": 121
+        },
+        "total": 579,
+        "abilities": [
+          {
+            "slug": "no-guard",
+            "ko": "노가드",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10073.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "pinsir": [
+      {
+        "formSlug": "pinsir-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 쁘사이저",
+          "en": "pinsir-mega"
+        },
+        "id": 10040,
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 155,
+          "def": 120,
+          "spa": 65,
+          "spd": 90,
+          "spe": 105
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "aerilate",
+            "ko": "스카이스킨",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10040.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "pyroar-male": [
+      {
+        "formSlug": "pyroar-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 화염레오",
+          "en": "pyroar-mega"
+        },
+        "id": 10295,
+        "types": [
+          "fire",
+          "normal"
+        ],
+        "stats": {
+          "hp": 86,
+          "atk": 88,
+          "def": 92,
+          "spa": 129,
+          "spd": 86,
+          "spe": 126
+        },
+        "total": 607,
+        "abilities": [
+          {
+            "slug": "fire-mane",
+            "ko": null,
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10295.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "raichu": [
+      {
+        "formSlug": "raichu-mega-x",
+        "label": "메가 X",
+        "name": {
+          "ko": "메가 라이츄 X",
+          "en": "raichu-mega-x"
+        },
+        "id": 10304,
+        "types": [
+          "electric"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 135,
+          "def": 95,
+          "spa": 90,
+          "spd": 95,
+          "spe": 110
+        },
+        "total": 585,
+        "abilities": [
+          {
+            "slug": "electric-surge",
+            "ko": "일렉트릭메이커",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10304.webp",
+        "source": "pokeapi"
+      },
+      {
+        "formSlug": "raichu-mega-y",
+        "label": "메가 Y",
+        "name": {
+          "ko": "메가 라이츄 Y",
+          "en": "raichu-mega-y"
+        },
+        "id": 10305,
+        "types": [
+          "electric"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 100,
+          "def": 55,
+          "spa": 160,
+          "spd": 80,
+          "spe": 130
+        },
+        "total": 585,
+        "abilities": [
+          {
+            "slug": "no-guard",
+            "ko": "노가드",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10305.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "sableye": [
+      {
+        "formSlug": "sableye-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 깜까미",
+          "en": "sableye-mega"
+        },
+        "id": 10066,
+        "types": [
+          "dark",
+          "ghost"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 85,
+          "def": 125,
+          "spa": 85,
+          "spd": 115,
+          "spe": 20
+        },
+        "total": 480,
+        "abilities": [
+          {
+            "slug": "magic-bounce",
+            "ko": "매직미러",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10066.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "sceptile": [
+      {
+        "formSlug": "sceptile-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 나무킹",
+          "en": "sceptile-mega"
+        },
+        "id": 10065,
+        "types": [
+          "grass",
+          "dragon"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 75,
+          "spa": 145,
+          "spd": 85,
+          "spe": 145
+        },
+        "total": 630,
+        "abilities": [
+          {
+            "slug": "lightning-rod",
+            "ko": "피뢰침",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10065.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "scizor": [
+      {
+        "formSlug": "scizor-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 핫삼",
+          "en": "scizor-mega"
+        },
+        "id": 10046,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 150,
+          "def": 140,
+          "spa": 65,
+          "spd": 100,
+          "spe": 75
+        },
+        "total": 600,
+        "abilities": [
+          {
+            "slug": "technician",
+            "ko": "테크니션",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10046.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "scolipede": [
+      {
+        "formSlug": "scolipede-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 펜드라",
+          "en": "scolipede-mega"
+        },
+        "id": 10288,
+        "types": [
+          "bug",
+          "poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 140,
+          "def": 149,
+          "spa": 75,
+          "spd": 99,
+          "spe": 62
+        },
+        "total": 585,
+        "abilities": [
+          {
+            "slug": "shell-armor",
+            "ko": "조가비갑옷",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10288.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "scovillain": [
+      {
+        "formSlug": "scovillain-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 스코빌런",
+          "en": "scovillain-mega"
+        },
+        "id": 10320,
+        "types": [
+          "grass",
+          "fire"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 138,
+          "def": 85,
+          "spa": 138,
+          "spd": 85,
+          "spe": 75
+        },
+        "total": 586,
+        "abilities": [
+          {
+            "slug": "spicy-spray",
+            "ko": "하바네로분출",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10320.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "scrafty": [
+      {
+        "formSlug": "scrafty-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 곤율거니",
+          "en": "scrafty-mega"
+        },
+        "id": 10289,
+        "types": [
+          "dark",
+          "fighting"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 130,
+          "def": 135,
+          "spa": 55,
+          "spd": 135,
+          "spe": 68
+        },
+        "total": 588,
+        "abilities": [
+          {
+            "slug": "intimidate",
+            "ko": "위협",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10289.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "sharpedo": [
+      {
+        "formSlug": "sharpedo-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 샤크니아",
+          "en": "sharpedo-mega"
+        },
+        "id": 10070,
+        "types": [
+          "water",
+          "dark"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 140,
+          "def": 70,
+          "spa": 110,
+          "spd": 65,
+          "spe": 105
+        },
+        "total": 560,
+        "abilities": [
+          {
+            "slug": "strong-jaw",
+            "ko": "옹골찬턱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10070.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "skarmory": [
+      {
+        "formSlug": "skarmory-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 무장조",
+          "en": "skarmory-mega"
+        },
+        "id": 10284,
+        "types": [
+          "steel",
+          "flying"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 140,
+          "def": 110,
+          "spa": 40,
+          "spd": 100,
+          "spe": 110
+        },
+        "total": 565,
+        "abilities": [
+          {
+            "slug": "stalwart",
+            "ko": "굳건한신념",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10284.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "slowbro": [
+      {
+        "formSlug": "slowbro-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 야도란",
+          "en": "slowbro-mega"
+        },
+        "id": 10071,
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 75,
+          "def": 180,
+          "spa": 130,
+          "spd": 80,
+          "spe": 30
+        },
+        "total": 590,
+        "abilities": [
+          {
+            "slug": "shell-armor",
+            "ko": "조가비갑옷",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10071.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "staraptor": [
+      {
+        "formSlug": "staraptor-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 찌르호크",
+          "en": "staraptor-mega"
+        },
+        "id": 10308,
+        "types": [
+          "fighting",
+          "flying"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 140,
+          "def": 100,
+          "spa": 60,
+          "spd": 90,
+          "spe": 110
+        },
+        "total": 585,
+        "abilities": [
+          {
+            "slug": "contrary",
+            "ko": "심술꾸러기",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10308.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "starmie": [
+      {
+        "formSlug": "starmie-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 아쿠스타",
+          "en": "starmie-mega"
+        },
+        "id": 10280,
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 100,
+          "def": 105,
+          "spa": 130,
+          "spd": 105,
+          "spe": 120
+        },
+        "total": 620,
+        "abilities": [
+          {
+            "slug": "huge-power",
+            "ko": "천하장사",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10280.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "steelix": [
+      {
+        "formSlug": "steelix-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 강철톤",
+          "en": "steelix-mega"
+        },
+        "id": 10072,
+        "types": [
+          "steel",
+          "ground"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 125,
+          "def": 230,
+          "spa": 55,
+          "spd": 95,
+          "spe": 30
+        },
+        "total": 610,
+        "abilities": [
+          {
+            "slug": "sand-force",
+            "ko": "모래의힘",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10072.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "swampert": [
+      {
+        "formSlug": "swampert-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 대짱이",
+          "en": "swampert-mega"
+        },
+        "id": 10064,
+        "types": [
+          "water",
+          "ground"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 110,
+          "spa": 95,
+          "spd": 110,
+          "spe": 70
+        },
+        "total": 635,
+        "abilities": [
+          {
+            "slug": "swift-swim",
+            "ko": "쓱쓱",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10064.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "tyranitar": [
+      {
+        "formSlug": "tyranitar-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 마기라스",
+          "en": "tyranitar-mega"
+        },
+        "id": 10049,
+        "types": [
+          "rock",
+          "dark"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 164,
+          "def": 150,
+          "spa": 95,
+          "spd": 120,
+          "spe": 71
+        },
+        "total": 700,
+        "abilities": [
+          {
+            "slug": "sand-stream",
+            "ko": "모래날림",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10049.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "venusaur": [
+      {
+        "formSlug": "venusaur-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 이상해꽃",
+          "en": "venusaur-mega"
+        },
+        "id": 10033,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 100,
+          "def": 123,
+          "spa": 122,
+          "spd": 120,
+          "spe": 80
+        },
+        "total": 625,
+        "abilities": [
+          {
+            "slug": "thick-fat",
+            "ko": "두꺼운지방",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10033.webp",
+        "source": "pokeapi"
+      }
+    ],
+    "victreebel": [
+      {
+        "formSlug": "victreebel-mega",
+        "label": "메가",
+        "name": {
+          "ko": "메가 우츠보트",
+          "en": "victreebel-mega"
+        },
+        "id": 10279,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 125,
+          "def": 85,
+          "spa": 135,
+          "spd": 95,
+          "spe": 70
+        },
+        "total": 590,
+        "abilities": [
+          {
+            "slug": "innards-out",
+            "ko": "내용물분출",
+            "hidden": false
+          }
+        ],
+        "sprite": "sprites/pokemon/10279.webp",
+        "source": "pokeapi"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { BookOpen } from "lucide-react";
-import { pokemonList } from "../data";
+import { pokemonList, pokedexGeneratedAt } from "../data";
 import { usePokedexStore } from "../store/usePokedexStore";
 import PokedexFilters from "../components/pokedex/PokedexFilters";
 import PokemonCard from "../components/pokedex/PokemonCard";
@@ -42,6 +42,9 @@ export default function PokedexPage() {
         </div>
         <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
           현재 레귤레이션(M-B) 사용 가능 포켓몬 224종. 이름·타입으로 찾아보세요.
+          <span className="ml-1 text-xs text-ink-400 dark:text-ink-500">
+            (데이터 기준 {pokedexGeneratedAt?.slice(0, 10)})
+          </span>
         </p>
       </header>
 

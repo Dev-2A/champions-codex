@@ -76,12 +76,22 @@ async function main() {
   const itemsFile = JSON.parse(
     await readFile(join(GEN_DIR, "items.json"), "utf8"),
   );
+  const megasPath = join(GEN_DIR, `megas.${REG_ID}.json`);
+  const megasFile = existsSync(megasPath)
+    ? JSON.parse(await readFile(megasPath, "utf8"))
+    : { megas: {} };
 
-  // ── 포켓몬 (official artwork → webp) ──
-  const pokemonTasks = dex.pokemon
+  // ── 포켓몬 + 메가 폼 (official artwork → webp) ──
+  const spriteTargets = [
+    ...dex.pokemon,
+    ...Object.values(megasFile.megas)
+      .flat()
+      .filter((f) => f.source === "pokeapi" && f.id),
+  ];
+  const pokemonTasks = spriteTargets
     .filter((p) => !existsSync(join(OUT_POKEMON, `${p.id}.webp`)))
     .map((p) => ({
-      label: p.slug,
+      label: p.slug ?? p.formSlug,
       run: async () => {
         let buf;
         try {
@@ -101,7 +111,7 @@ async function main() {
     }));
 
   console.log(
-    `▶ 포켓몬 스프라이트: ${pokemonTasks.length}개 다운로드 (${dex.pokemon.length - pokemonTasks.length}개 스킵)`,
+    `▶ 포켓몬 스프라이트: ${pokemonTasks.length}개 다운로드 (${spriteTargets.length - pokemonTasks.length}개 스킵)`,
   );
   const pokemonFails = await runPool(pokemonTasks);
 

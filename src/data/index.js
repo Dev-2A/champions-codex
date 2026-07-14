@@ -30,16 +30,30 @@ function pick(modules, kind) {
 
 const pokedexFile = pick(pokedexModules, "pokedex");
 
+// 메가 폼 (프리페치 전이면 빈 맵 — 사이트가 깨지지 않게 옵셔널)
+const megaModules = import.meta.glob("./generated/megas.*.json", {
+  eager: true,
+});
+const megasFile = Object.entries(megaModules).find(([path]) =>
+  path.endsWith(`megas.${ACTIVE_REGULATION}.json`),
+)?.[1]?.default;
+
 // ── 정적 데이터 (불변) ──
 export const regulation = pick(regulationModules, "regulation");
 export const typechart = typechartData;
 export const pokemonList = pokedexFile.pokemon;
+export const pokedexGeneratedAt = pokedexFile.generatedAt;
 
 // ── 포켓몬 인덱스 ──
 const bySlug = new Map(pokemonList.map((p) => [p.slug, p]));
 const byId = new Map(pokemonList.map((p) => [p.id, p]));
 export const getPokemonBySlug = (slug) => bySlug.get(slug) ?? null;
 export const getPokemonById = (id) => byId.get(id) ?? null;
+
+// ── 메가 폼 ──
+export const megaForms = megasFile?.megas ?? {};
+export const getMegaForms = (slug) => megaForms[slug] ?? [];
+export const megaPending = new Set(megasFile?.pending ?? []);
 
 // ── 타입 메타 ──
 export const TYPES = typechart.types;

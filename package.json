@@ -11,7 +11,8 @@
     "prefetch": "node scripts/prefetch.mjs",
     "prefetch:items": "node scripts/prefetch-items.mjs",
     "prefetch:moves": "node scripts/prefetch-moves.mjs",
-    "prefetch:sprites": "node scripts/fetch-sprites.mjs"
+    "prefetch:sprites": "node scripts/fetch-sprites.mjs",
+    "prefetch:megas": "node scripts/prefetch-megas.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
