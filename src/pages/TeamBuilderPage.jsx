@@ -12,6 +12,7 @@ import MemberEditor from "../components/team/MemberEditor";
 import CoverageAnalysis from "../components/team/CoverageAnalysis";
 import PresetManager from "../components/team/PresetManager";
 import SegmentedToggle from "../components/common/SegmentedToggle";
+import BottomSheet from "../components/common/BottomSheet";
 import OffenseAnalysis from "../components/team/OffenseAnalysis";
 import DamageCalc from "../components/team/DamageCalc";
 import TeamExport from "../components/team/TeamExport";
@@ -66,7 +67,9 @@ export default function TeamBuilderPage() {
     const cur = useTeamStore.getState().slugs;
     if (
       cur.length > 0 &&
-      !confirm(`공유된 팀(${shared.slugs.length}마리)으로 현재 팀을 교체할까요?`)
+      !confirm(
+        `공유된 팀(${shared.slugs.length}마리)으로 현재 팀을 교체할까요?`,
+      )
     )
       return;
     setTeam(shared);
@@ -178,58 +181,65 @@ export default function TeamBuilderPage() {
           {team.length}/6 편성됨
         </p>
 
-        {/* 편집 패널 / 피커 / 추가 버튼 (하나만) */}
+        {/* 편집 패널 / 피커: 모바일=바텀 시트, 데스크톱=인라인 패널 */}
         <div ref={panelRef} className="scroll-mt-20">
-          {editingPokemon ? (
-            <MemberEditor
-              pokemon={editingPokemon}
-              item={getItem(items[editingSlug])}
-              moves={moves[editingSlug] ?? []}
-              megaForm={megaFormOf(editingSlug)}
-              megaOwnerName={
-                mega && mega.slug !== editingSlug
-                  ? (getPokemonBySlug(mega.slug)?.name.ko ?? null)
-                  : null
-              }
-              build={builds[editingSlug] ?? null}
-              usedItems={usedItems}
-              onSetItem={handleSetItem}
-              onSetMega={(formSlug) => {
-                const r = setMega(editingSlug, formSlug);
-                if (r.ok && r.removedItem) {
-                  toast("지니던 도구를 빼고 메가스톤을 장착했어요");
+          <BottomSheet
+            open={!!editingPokemon || picking}
+            onClose={() => {
+              setEditingSlug(null);
+              setPicking(false);
+            }}
+          >
+            {editingPokemon ? (
+              <MemberEditor
+                pokemon={editingPokemon}
+                item={getItem(items[editingSlug])}
+                moves={moves[editingSlug] ?? []}
+                megaForm={megaFormOf(editingSlug)}
+                megaOwnerName={
+                  mega && mega.slug !== editingSlug
+                    ? (getPokemonBySlug(mega.slug)?.name.ko ?? null)
+                    : null
                 }
-              }}
-              onClearMega={clearMega}
-              onSetStatPoint={(statKey, value) =>
-                setStatPoint(editingSlug, statKey, value)
-              }
-              onSetNature={(up, down) => setNature(editingSlug, up, down)}
-              onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
-              onClose={() => setEditingSlug(null)}
-            />
-          ) : picking ? (
-            <PokemonPicker
-              key={
-                pickerCover
-                  ? `${pickerCover.kind}-${pickerCover.type}`
-                  : "plain"
-              }
-              blockedDex={blockedDex}
-              teamSlugs={slugs}
-              coverFilter={pickerCover}
-              onPick={handlePick}
-              onClose={() => setPicking(false)}
-            />
-          ) : (
-            team.length < 6 && (
-              <button
-                onClick={() => openPicker()}
-                className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
-              >
-                포켓몬 추가
-              </button>
-            )
+                build={builds[editingSlug] ?? null}
+                usedItems={usedItems}
+                onSetItem={handleSetItem}
+                onSetMega={(formSlug) => {
+                  const r = setMega(editingSlug, formSlug);
+                  if (r.ok && r.removedItem) {
+                    toast("지니던 도구를 빼고 메가스톤을 장착했어요");
+                  }
+                }}
+                onClearMega={clearMega}
+                onSetStatPoint={(statKey, value) =>
+                  setStatPoint(editingSlug, statKey, value)
+                }
+                onSetNature={(up, down) => setNature(editingSlug, up, down)}
+                onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
+                onClose={() => setEditingSlug(null)}
+              />
+            ) : picking ? (
+              <PokemonPicker
+                key={
+                  pickerCover
+                    ? `${pickerCover.kind}-${pickerCover.type}`
+                    : "plain"
+                }
+                blockedDex={blockedDex}
+                teamSlugs={slugs}
+                coverFilter={pickerCover}
+                onPick={handlePick}
+                onClose={() => setPicking(false)}
+              />
+            ) : null}
+          </BottomSheet>
+          {!editingPokemon && !picking && team.length < 6 && (
+            <button
+              onClick={() => openPicker()}
+              className="w-full rounded-xl bg-brand-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
+            >
+              포켓몬 추가
+            </button>
           )}
         </div>
       </div>
