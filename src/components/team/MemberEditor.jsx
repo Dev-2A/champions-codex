@@ -5,9 +5,16 @@ import TypeBadge from "../common/TypeBadge";
 import MoveBadge from "../moves/MoveBadge";
 import ItemPicker from "./ItemPicker";
 import MovePicker from "./MovePicker";
+import StatEditor from "./StatEditor";
 import { getMegaForms } from "../../data";
 import { useMoveDb } from "../../hooks/useMoveDb";
 import { assetUrl } from "../../lib/assets";
+import {
+  STAT_SHORT,
+  STAT_KEYS,
+  usedPoints,
+  isEmptyBuild,
+} from "../../lib/statCalc";
 
 export default function MemberEditor({
   pokemon,
@@ -15,18 +22,23 @@ export default function MemberEditor({
   moves,
   megaForm = null, // 이 멤버가 메가 지정된 경우 폼 객체
   megaOwnerName = null, // 다른 멤버가 메가 담당 중이면 그 이름
+  build = null, // 능력 포인트·성격 { pts, up, down }
   usedItems,
   onSetItem,
   onSetMega,
   onClearMega,
+  onSetStatPoint,
+  onSetNature,
   onToggleMove,
   onClose,
 }) {
   const [pickingItem, setPickingItem] = useState(false);
   const [pickingMove, setPickingMove] = useState(false);
+  const [editingStats, setEditingStats] = useState(false);
   const moveDb = useMoveDb();
   const selectedMoves = moveDb ? moveDb.resolveMoves(moves) : [];
   const forms = getMegaForms(pokemon.slug);
+  const baseStats = megaForm?.stats ?? pokemon.stats;
 
   return (
     <div className="space-y-4 rounded-2xl border border-brand-200 bg-white p-4 dark:border-brand-900 dark:bg-ink-900">
@@ -176,6 +188,54 @@ export default function MemberEditor({
           >
             <Package size={15} /> 도구 선택
           </button>
+        )}
+      </div>
+
+      {/* 능력치 (포인트·성격) */}
+      <div>
+        <div className="mb-1.5 flex items-center justify-between">
+          <p className="text-xs font-semibold text-ink-500 dark:text-ink-400">
+            능력치{" "}
+            <span className="text-ink-400">
+              ({usedPoints(build)}/66 포인트)
+            </span>
+          </p>
+          <button
+            onClick={() => setEditingStats((v) => !v)}
+            className="text-xs font-semibold text-brand-500 hover:underline"
+          >
+            {editingStats ? "닫기" : "편집"}
+          </button>
+        </div>
+        {editingStats ? (
+          <StatEditor
+            baseStats={baseStats}
+            build={build}
+            onSetPoint={onSetStatPoint}
+            onSetNature={onSetNature}
+          />
+        ) : isEmptyBuild(build) ? (
+          <p className="text-[11px] text-ink-400 dark:text-ink-500">
+            아직 포인트를 분배하지 않았어요. (합계 66, 스탯당 최대 32)
+          </p>
+        ) : (
+          <div className="flex flex-wrap gap-1">
+            {STAT_KEYS.filter((k) => build.pts[k] > 0).map((k) => (
+              <span
+                key={k}
+                className="rounded-full bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-600 dark:bg-ink-800 dark:text-ink-300"
+              >
+                {STAT_SHORT[k]}
+                {build.pts[k]}
+              </span>
+            ))}
+            {(build.up || build.down) && (
+              <span className="rounded-full bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-600 dark:bg-ink-800 dark:text-ink-300">
+                {build.up ? `▲${STAT_SHORT[build.up]}` : ""}
+                {build.down ? ` ▼${STAT_SHORT[build.down]}` : ""}
+              </span>
+            )}
+          </div>
         )}
       </div>
 

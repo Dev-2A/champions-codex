@@ -51,6 +51,7 @@ export default function PresetManager({ current }) {
       items: preset.items,
       moves: preset.moves,
       mega: preset.mega ?? null,
+      builds: preset.builds ?? {},
     });
     toast(`"${preset.name}" 불러옴`, { tone: "success" });
     window.scrollTo({ top: 0, behavior: "smooth" });

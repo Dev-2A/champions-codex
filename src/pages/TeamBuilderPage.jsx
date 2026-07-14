@@ -33,6 +33,9 @@ export default function TeamBuilderPage() {
   const mega = useTeamStore((s) => s.mega);
   const setMega = useTeamStore((s) => s.setMega);
   const clearMega = useTeamStore((s) => s.clearMega);
+  const builds = useTeamStore((s) => s.builds);
+  const setStatPoint = useTeamStore((s) => s.setStatPoint);
+  const setNature = useTeamStore((s) => s.setNature);
   const clear = useTeamStore((s) => s.clear);
   const setTeam = useTeamStore((s) => s.setTeam);
   const loadPresets = usePresetStore((s) => s.load);
@@ -187,6 +190,7 @@ export default function TeamBuilderPage() {
                   ? (getPokemonBySlug(mega.slug)?.name.ko ?? null)
                   : null
               }
+              build={builds[editingSlug] ?? null}
               usedItems={usedItems}
               onSetItem={handleSetItem}
               onSetMega={(formSlug) => {
@@ -196,6 +200,10 @@ export default function TeamBuilderPage() {
                 }
               }}
               onClearMega={clearMega}
+              onSetStatPoint={(statKey, value) =>
+                setStatPoint(editingSlug, statKey, value)
+              }
+              onSetNature={(up, down) => setNature(editingSlug, up, down)}
               onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
               onClose={() => setEditingSlug(null)}
             />
@@ -259,7 +267,7 @@ export default function TeamBuilderPage() {
 
         {team.length > 0 && (
           <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-            <TeamExport team={{ slugs, items, moves, mega }} />
+            <TeamExport team={{ slugs, items, moves, mega, builds }} />
           </section>
         )}
 
@@ -274,7 +282,7 @@ export default function TeamBuilderPage() {
             <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
             <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
           </div>
-          <PresetManager current={{ slugs, items, moves, mega }} />
+          <PresetManager current={{ slugs, items, moves, mega, builds }} />
         </section>
       </div>
     </div>

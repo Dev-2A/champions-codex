@@ -1,16 +1,33 @@
 import { getPokemonBySlug } from "../data";
+import { STAT_KEYS, isEmptyBuild } from "./statCalc";
 
 /**
  * 팀 공유 코드: 팀 상태(멤버·도구·기술)를 URL-safe base64로 인코딩.
  * URL 형식: #/team?share=<code>
  */
 
-// t: [ [pokemonSlug, itemSlug|null, [moveSlug...]], ... ], m: [slug, formSlug] — v1
-export function encodeTeam({ slugs = [], items = {}, moves = {}, mega = null }) {
+// t: [ [pokemonSlug, itemSlug|null, [moveSlug...]], ... ]
+// m: [slug, formSlug] — 메가 지정
+// b: { [slug]: [hp,atk,def,spa,spd,spe, up|"", down|""] } — 능력치 빌드
+export function encodeTeam({
+  slugs = [],
+  items = {},
+  moves = {},
+  mega = null,
+  builds = {},
+}) {
+  const b = {};
+  for (const s of slugs) {
+    const bd = builds[s];
+    if (bd && !isEmptyBuild(bd)) {
+      b[s] = [...STAT_KEYS.map((k) => bd.pts?.[k] ?? 0), bd.up ?? "", bd.down ?? ""];
+    }
+  }
   const payload = {
     v: 1,
     t: slugs.map((s) => [s, items[s] ?? null, moves[s] ?? []]),
     ...(mega?.slug ? { m: [mega.slug, mega.form] } : {}),
+    ...(Object.keys(b).length ? { b } : {}),
   };
   const bytes = new TextEncoder().encode(JSON.stringify(payload));
   let bin = "";
@@ -49,7 +66,19 @@ export function decodeTeam(code) {
     ) {
       mega = { slug: payload.m[0], form: payload.m[1] }; // 상세 검증은 setTeam이 수행
     }
-    return { slugs, items, moves, mega };
+
+    const builds = {};
+    if (payload.b && typeof payload.b === "object") {
+      for (const [s, arr] of Object.entries(payload.b)) {
+        if (!Array.isArray(arr) || arr.length < 8) continue;
+        const pts = {};
+        STAT_KEYS.forEach((k, i) => {
+          pts[k] = Number(arr[i]) || 0;
+        });
+        builds[s] = { pts, up: arr[6] || null, down: arr[7] || null }; // 클램프는 setTeam이 수행
+      }
+    }
+    return { slugs, items, moves, mega, builds };
   } catch {
     return null;
   }
