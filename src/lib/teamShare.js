@@ -5,11 +5,12 @@ import { getPokemonBySlug } from "../data";
  * URL 형식: #/team?share=<code>
  */
 
-// [ [pokemonSlug, itemSlug|null, [moveSlug...]], ... ] — v1
-export function encodeTeam({ slugs = [], items = {}, moves = {} }) {
+// t: [ [pokemonSlug, itemSlug|null, [moveSlug...]], ... ], m: [slug, formSlug] — v1
+export function encodeTeam({ slugs = [], items = {}, moves = {}, mega = null }) {
   const payload = {
     v: 1,
     t: slugs.map((s) => [s, items[s] ?? null, moves[s] ?? []]),
+    ...(mega?.slug ? { m: [mega.slug, mega.form] } : {}),
   };
   const bytes = new TextEncoder().encode(JSON.stringify(payload));
   let bin = "";
@@ -39,7 +40,16 @@ export function decodeTeam(code) {
         moves[slug] = mv.filter((m) => typeof m === "string");
     }
     if (slugs.length === 0) return null;
-    return { slugs, items, moves };
+
+    let mega = null;
+    if (
+      Array.isArray(payload.m) &&
+      typeof payload.m[0] === "string" &&
+      typeof payload.m[1] === "string"
+    ) {
+      mega = { slug: payload.m[0], form: payload.m[1] }; // 상세 검증은 setTeam이 수행
+    }
+    return { slugs, items, moves, mega };
   } catch {
     return null;
   }

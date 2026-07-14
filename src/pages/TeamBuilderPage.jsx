@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Users, Trash2, Bookmark } from "lucide-react";
-import { getPokemonBySlug, getItem } from "../data";
+import { getPokemonBySlug, getItem, getMegaForms } from "../data";
 import { useTeamStore } from "../store/useTeamStore";
 import { usePresetStore } from "../store/usePresetStore";
 import { toast } from "../store/useToastStore";
@@ -30,6 +30,9 @@ export default function TeamBuilderPage() {
   const setItem = useTeamStore((s) => s.setItem);
   const moves = useTeamStore((s) => s.moves);
   const toggleMove = useTeamStore((s) => s.toggleMove);
+  const mega = useTeamStore((s) => s.mega);
+  const setMega = useTeamStore((s) => s.setMega);
+  const clearMega = useTeamStore((s) => s.clearMega);
   const clear = useTeamStore((s) => s.clear);
   const setTeam = useTeamStore((s) => s.setTeam);
   const loadPresets = usePresetStore((s) => s.load);
@@ -71,6 +74,17 @@ export default function TeamBuilderPage() {
   const slots = [...team, ...Array(6 - team.length).fill(null)];
   const usedItems = new Set(Object.values(items).filter(Boolean));
   const editingPokemon = editingSlug ? getPokemonBySlug(editingSlug) : null;
+
+  // 메가 지정 멤버의 폼 객체 (미지정이면 null)
+  const megaFormOf = (slug) =>
+    mega?.slug === slug
+      ? (getMegaForms(slug).find((f) => f.formSlug === mega.form) ?? null)
+      : null;
+  // 분석용 팀: 메가 지정 멤버는 메가 폼 타입/스프라이트로 치환
+  const analysisTeam = team.map((p) => {
+    const f = megaFormOf(p.slug);
+    return f ? { ...p, types: f.types, sprite: f.sprite ?? p.sprite } : p;
+  });
 
   const openEdit = (slug) => {
     setPicking(false);
@@ -147,6 +161,7 @@ export default function TeamBuilderPage() {
               key={p?.slug ?? `empty-${i}`}
               pokemon={p}
               item={p ? getItem(items[p.slug]) : null}
+              megaForm={p ? megaFormOf(p.slug) : null}
               active={p != null && p.slug === editingSlug}
               onRemove={handleRemove}
               onAdd={() => openPicker()}
@@ -166,8 +181,21 @@ export default function TeamBuilderPage() {
               pokemon={editingPokemon}
               item={getItem(items[editingSlug])}
               moves={moves[editingSlug] ?? []}
+              megaForm={megaFormOf(editingSlug)}
+              megaOwnerName={
+                mega && mega.slug !== editingSlug
+                  ? (getPokemonBySlug(mega.slug)?.name.ko ?? null)
+                  : null
+              }
               usedItems={usedItems}
               onSetItem={handleSetItem}
+              onSetMega={(formSlug) => {
+                const r = setMega(editingSlug, formSlug);
+                if (r.ok && r.removedItem) {
+                  toast("지니던 도구를 빼고 메가스톤을 장착했어요");
+                }
+              }}
+              onClearMega={clearMega}
               onToggleMove={(moveSlug) => toggleMove(editingSlug, moveSlug)}
               onClose={() => setEditingSlug(null)}
             />
@@ -216,12 +244,12 @@ export default function TeamBuilderPage() {
             </div>
             {coverageView === "defense" ? (
               <CoverageAnalysis
-                team={team}
+                team={analysisTeam}
                 onFindCover={(type) => openCoverPicker("resist", type)}
               />
             ) : (
               <OffenseAnalysis
-                team={team}
+                team={analysisTeam}
                 movesMap={moves}
                 onFindAttacker={(type) => openCoverPicker("hit", type)}
               />
@@ -231,7 +259,7 @@ export default function TeamBuilderPage() {
 
         {team.length > 0 && (
           <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-            <TeamExport team={{ slugs, items, moves }} />
+            <TeamExport team={{ slugs, items, moves, mega }} />
           </section>
         )}
 
@@ -246,7 +274,7 @@ export default function TeamBuilderPage() {
             <Bookmark className="text-brand-500" size={18} strokeWidth={2.3} />
             <h2 className="text-lg font-bold tracking-tight">저장된 팀</h2>
           </div>
-          <PresetManager current={{ slugs, items, moves }} />
+          <PresetManager current={{ slugs, items, moves, mega }} />
         </section>
       </div>
     </div>

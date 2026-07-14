@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { getPokemonBySlug } from "../data";
+import { getPokemonBySlug, getMegaForms } from "../data";
 import { loadMoveDb } from "../data/moveDb";
 
 const KEY = "cc-team";
@@ -11,21 +11,23 @@ function load() {
     const raw = localStorage.getItem(KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) return { slugs: parsed, items: {}, moves: {} }; // 구버전
+      if (Array.isArray(parsed))
+        return { slugs: parsed, items: {}, moves: {}, mega: null }; // 구버전
       return {
         slugs: parsed.slugs ?? [],
         items: parsed.items ?? {},
         moves: parsed.moves ?? {},
+        mega: parsed.mega ?? null, // { slug, form } | null
       };
     }
   } catch {
     /* noop */
   }
-  return { slugs: [], items: {}, moves: {} };
+  return { slugs: [], items: {}, moves: {}, mega: null };
 }
-function save(slugs, items, moves) {
+function save(slugs, items, moves, mega) {
   try {
-    localStorage.setItem(KEY, JSON.stringify({ slugs, items, moves }));
+    localStorage.setItem(KEY, JSON.stringify({ slugs, items, moves, mega }));
   } catch {
     /* noop */
   }
@@ -54,9 +56,10 @@ export const useTeamStore = create((set, get) => ({
   slugs: initial.slugs,
   items: initial.items, // { [slug]: itemSlug }
   moves: initial.moves, // { [slug]: [moveSlug, ...] } 최대 4
+  mega: initial.mega, // { slug, form: formSlug } | null — 팀당 1마리
 
   add: (slug) => {
-    const { slugs, items, moves } = get();
+    const { slugs, items, moves, mega } = get();
     if (slugs.length >= MAX) return { ok: false, reason: "full" };
     if (slugs.includes(slug)) return { ok: false, reason: "dup" };
     const p = getPokemonBySlug(slug);
@@ -65,7 +68,7 @@ export const useTeamStore = create((set, get) => ({
       return { ok: false, reason: "species" };
     }
     const next = [...slugs, slug];
-    save(next, items, moves);
+    save(next, items, moves, mega);
     set({ slugs: next });
     return { ok: true };
   },
@@ -75,14 +78,17 @@ export const useTeamStore = create((set, get) => ({
     const moves = { ...get().moves };
     delete items[slug];
     delete moves[slug];
+    const mega = get().mega?.slug === slug ? null : get().mega;
     const next = get().slugs.filter((s) => s !== slug);
-    save(next, items, moves);
-    set({ slugs: next, items, moves });
+    save(next, items, moves, mega);
+    set({ slugs: next, items, moves, mega });
   },
 
   setItem: (slug, itemSlug) => {
-    const { slugs, items, moves } = get();
+    const { slugs, items, moves, mega } = get();
     if (!slugs.includes(slug)) return { ok: false, reason: "not-in-team" };
+    if (itemSlug && mega?.slug === slug)
+      return { ok: false, reason: "mega-stone" }; // 메가스톤이 도구 슬롯 차지
     if (
       itemSlug &&
       Object.entries(items).some(([s, it]) => s !== slug && it === itemSlug)
@@ -92,14 +98,14 @@ export const useTeamStore = create((set, get) => ({
     const next = { ...items };
     if (itemSlug) next[slug] = itemSlug;
     else delete next[slug];
-    save(slugs, next, moves);
+    save(slugs, next, moves, mega);
     set({ items: next });
     return { ok: true };
   },
 
   // 기술 토글 (learnable 검증은 UI에서, 여기선 최대 4 강제)
   toggleMove: (slug, moveSlug) => {
-    const { slugs, items, moves } = get();
+    const { slugs, items, moves, mega } = get();
     if (!slugs.includes(slug)) return { ok: false, reason: "not-in-team" };
     const cur = moves[slug] ?? [];
     let nextMoves;
@@ -112,18 +118,49 @@ export const useTeamStore = create((set, get) => ({
     const next = { ...moves };
     if (nextMoves.length) next[slug] = nextMoves;
     else delete next[slug];
-    save(slugs, items, next);
+    save(slugs, items, next, mega);
     set({ moves: next });
     return { ok: true };
   },
 
-  setTeam: async ({ slugs = [], items = {}, moves = {} } = {}) => {
+  /** 메가 지정 (팀당 1마리 — 기존 지정은 교체됨). 메가스톤이 도구 슬롯을 차지한다. */
+  setMega: (slug, formSlug) => {
+    const { slugs, items, moves } = get();
+    if (!slugs.includes(slug)) return { ok: false, reason: "not-in-team" };
+    const form = getMegaForms(slug).find((f) => f.formSlug === formSlug);
+    if (!form) return { ok: false, reason: "invalid-form" };
+    const nextItems = { ...items };
+    const removedItem = !!nextItems[slug];
+    delete nextItems[slug];
+    const mega = { slug, form: formSlug };
+    save(slugs, nextItems, moves, mega);
+    set({ items: nextItems, mega });
+    return { ok: true, removedItem };
+  },
+
+  clearMega: () => {
+    const { slugs, items, moves } = get();
+    save(slugs, items, moves, null);
+    set({ mega: null });
+  },
+
+  setTeam: async ({ slugs = [], items = {}, moves = {}, mega = null } = {}) => {
     const clean = sanitize(slugs);
 
-    // 도구: 팀에 있는 멤버만 + 도구 클로즈(중복 제거, 먼저 온 멤버 우선)
+    // 메가: 팀에 있는 멤버 + 유효한 폼만
+    let nextMega = null;
+    if (mega?.slug && clean.includes(mega.slug)) {
+      const form = getMegaForms(mega.slug).find(
+        (f) => f.formSlug === mega.form,
+      );
+      if (form) nextMega = { slug: mega.slug, form: mega.form };
+    }
+
+    // 도구: 팀에 있는 멤버만 + 도구 클로즈 + 메가 멤버는 스톤이 슬롯 차지
     const nextItems = {};
     const usedItems = new Set();
     for (const s of clean) {
+      if (nextMega?.slug === s) continue;
       const it = items[s];
       if (it && !usedItems.has(it)) {
         nextItems[s] = it;
@@ -142,12 +179,12 @@ export const useTeamStore = create((set, get) => ({
       if (picked.length) nextMoves[s] = picked;
     }
 
-    save(clean, nextItems, nextMoves);
-    set({ slugs: clean, items: nextItems, moves: nextMoves });
+    save(clean, nextItems, nextMoves, nextMega);
+    set({ slugs: clean, items: nextItems, moves: nextMoves, mega: nextMega });
   },
 
   clear: () => {
-    save([], {}, {});
-    set({ slugs: [], items: {}, moves: {} });
+    save([], {}, {}, null);
+    set({ slugs: [], items: {}, moves: {}, mega: null });
   },
 }));

@@ -5,6 +5,7 @@ import { assetUrl } from "../../lib/assets";
 export default function TeamSlot({
   pokemon,
   item,
+  megaForm = null, // 이 멤버가 메가 지정된 경우 폼 객체
   active = false,
   onRemove,
   onAdd,
@@ -22,7 +23,8 @@ export default function TeamSlot({
       </button>
     );
   }
-  const { slug, name, types, sprite, canMega } = pokemon;
+  const { slug, name, sprite, canMega } = pokemon;
+  const types = megaForm ? megaForm.types : pokemon.types;
   return (
     <div
       className={[
@@ -40,10 +42,22 @@ export default function TeamSlot({
       >
         <X size={12} />
       </button>
-      {canMega && (
-        <span className="absolute left-1.5 top-1.5 z-10" title="메가진화 가능">
-          <Sparkles size={13} className="text-brand-500" />
+      {megaForm ? (
+        <span
+          className="absolute left-1 top-1 z-10 inline-flex items-center gap-0.5 rounded-full bg-brand-500 px-1.5 py-0.5 text-[9px] font-bold text-white"
+          title={megaForm.name.ko}
+        >
+          <Sparkles size={9} /> 메가
         </span>
+      ) : (
+        canMega && (
+          <span
+            className="absolute left-1.5 top-1.5 z-10"
+            title="메가진화 가능"
+          >
+            <Sparkles size={13} className="text-brand-500" />
+          </span>
+        )
       )}
 
       <button
@@ -52,8 +66,8 @@ export default function TeamSlot({
         className="flex w-full flex-col items-center"
       >
         <img
-          src={assetUrl(sprite)}
-          alt={name.ko}
+          src={assetUrl(megaForm?.sprite ?? sprite)}
+          alt={megaForm?.name.ko ?? name.ko}
           loading="lazy"
           className="size-16 object-contain"
         />
@@ -73,7 +87,14 @@ export default function TeamSlot({
         className="mt-1.5 flex w-full items-center justify-center gap-1 rounded-lg bg-ink-100 px-1.5 py-1 text-[10px] font-medium transition-colors hover:bg-ink-200 dark:bg-ink-800 dark:hover:bg-ink-700"
         title="도구 편집"
       >
-        {item ? (
+        {megaForm ? (
+          <>
+            <Sparkles size={11} className="text-brand-500" />
+            <span className="truncate text-ink-600 dark:text-ink-300">
+              메가스톤
+            </span>
+          </>
+        ) : item ? (
           <>
             {item.sprite ? (
               <img

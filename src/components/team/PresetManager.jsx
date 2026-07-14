@@ -46,7 +46,12 @@ export default function PresetManager({ current }) {
       !confirm(`현재 팀을 "${preset.name}"(으)로 교체할까요?`)
     )
       return;
-    setTeam({ slugs: preset.slugs, items: preset.items, moves: preset.moves });
+    setTeam({
+      slugs: preset.slugs,
+      items: preset.items,
+      moves: preset.moves,
+      mega: preset.mega ?? null,
+    });
     toast(`"${preset.name}" 불러옴`, { tone: "success" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -132,6 +137,11 @@ export default function PresetManager({ current }) {
                     </p>
                     <p className="flex flex-wrap items-center gap-x-2 text-[11px] text-ink-400 dark:text-ink-500">
                       <span>{mons.length}마리</span>
+                      {preset.mega && (
+                        <span className="font-semibold text-brand-500">
+                          ✨ 메가
+                        </span>
+                      )}
                       {nItems > 0 && (
                         <span className="inline-flex items-center gap-0.5">
                           <Package size={10} /> {nItems}

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { X, Package, ExternalLink, Plus } from "lucide-react";
+import { X, Package, ExternalLink, Plus, Sparkles } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import MoveBadge from "../moves/MoveBadge";
 import ItemPicker from "./ItemPicker";
 import MovePicker from "./MovePicker";
+import { getMegaForms } from "../../data";
 import { useMoveDb } from "../../hooks/useMoveDb";
 import { assetUrl } from "../../lib/assets";
 
@@ -12,8 +13,12 @@ export default function MemberEditor({
   pokemon,
   item,
   moves,
+  megaForm = null, // 이 멤버가 메가 지정된 경우 폼 객체
+  megaOwnerName = null, // 다른 멤버가 메가 담당 중이면 그 이름
   usedItems,
   onSetItem,
+  onSetMega,
+  onClearMega,
   onToggleMove,
   onClose,
 }) {
@@ -21,22 +26,28 @@ export default function MemberEditor({
   const [pickingMove, setPickingMove] = useState(false);
   const moveDb = useMoveDb();
   const selectedMoves = moveDb ? moveDb.resolveMoves(moves) : [];
+  const forms = getMegaForms(pokemon.slug);
 
   return (
     <div className="space-y-4 rounded-2xl border border-brand-200 bg-white p-4 dark:border-brand-900 dark:bg-ink-900">
       {/* 헤더 */}
       <div className="flex items-center gap-3">
         <img
-          src={assetUrl(pokemon.sprite)}
+          src={assetUrl(megaForm?.sprite ?? pokemon.sprite)}
           alt={pokemon.name.ko}
           className="size-12 shrink-0 object-contain"
         />
         <div className="min-w-0 flex-1">
           <p className="font-bold text-ink-800 dark:text-ink-100">
             {pokemon.name.ko}
+            {megaForm && (
+              <span className="ml-1.5 text-xs font-semibold text-brand-500">
+                {megaForm.label}
+              </span>
+            )}
           </p>
           <div className="mt-0.5 flex gap-1">
-            {pokemon.types.map((t) => (
+            {(megaForm?.types ?? pokemon.types).map((t) => (
               <TypeBadge key={t} type={t} size="sm" />
             ))}
           </div>
@@ -57,12 +68,69 @@ export default function MemberEditor({
         </button>
       </div>
 
+      {/* 메가진화 */}
+      {pokemon.canMega && forms.length > 0 && (
+        <div>
+          <p className="mb-1.5 text-xs font-semibold text-ink-500 dark:text-ink-400">
+            메가진화
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {forms.map((f) => {
+              const on = megaForm?.formSlug === f.formSlug;
+              return (
+                <button
+                  key={f.formSlug}
+                  type="button"
+                  onClick={() => (on ? onClearMega() : onSetMega(f.formSlug))}
+                  className={[
+                    "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors",
+                    on
+                      ? "bg-brand-500 text-white"
+                      : "bg-ink-100 text-ink-500 hover:bg-ink-200 dark:bg-ink-800 dark:text-ink-400 dark:hover:bg-ink-700",
+                  ].join(" ")}
+                >
+                  <Sparkles size={12} /> {f.label}
+                </button>
+              );
+            })}
+          </div>
+          {megaForm ? (
+            <p className="mt-1.5 text-[11px] text-ink-400 dark:text-ink-500">
+              메가스톤이 도구 슬롯을 차지해요. 커버리지 분석도 메가 폼
+              기준으로 계산돼요.
+            </p>
+          ) : (
+            megaOwnerName && (
+              <p className="mt-1.5 text-[11px] text-ink-400 dark:text-ink-500">
+                현재 메가 담당: {megaOwnerName} — 여기서 지정하면 교체돼요.
+                (배틀당 1마리)
+              </p>
+            )
+          )}
+        </div>
+      )}
+
       {/* 도구 */}
       <div>
         <p className="mb-1.5 text-xs font-semibold text-ink-500 dark:text-ink-400">
           지닌 도구
         </p>
-        {pickingItem ? (
+        {megaForm ? (
+          <div className="flex items-center gap-2 rounded-xl border border-brand-200 bg-brand-50/50 p-2 dark:border-brand-900 dark:bg-ink-800">
+            <span className="grid size-8 shrink-0 place-items-center rounded bg-brand-100 dark:bg-ink-700">
+              <Sparkles size={14} className="text-brand-500" />
+            </span>
+            <span className="flex-1 text-sm font-semibold text-ink-800 dark:text-ink-100">
+              메가스톤 (도구 슬롯 사용 중)
+            </span>
+            <button
+              onClick={onClearMega}
+              className="rounded-lg px-2 py-1 text-xs font-medium text-ink-500 hover:bg-ink-100 dark:text-ink-400 dark:hover:bg-ink-700"
+            >
+              해제
+            </button>
+          </div>
+        ) : pickingItem ? (
           <ItemPicker
             usedItems={usedItems}
             current={item?.slug}

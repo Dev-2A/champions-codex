@@ -3,8 +3,8 @@ import { getAllPresets, putPreset, deletePreset } from "../lib/db";
 
 const genId = () => `t_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
 
-// 구버전(items/moves 없는) 프리셋 마이그레이션
-const migrate = (p) => ({ items: {}, moves: {}, ...p });
+// 구버전(items/moves/mega 없는) 프리셋 마이그레이션
+const migrate = (p) => ({ items: {}, moves: {}, mega: null, ...p });
 
 export const usePresetStore = create((set, get) => ({
   presets: [],
@@ -15,7 +15,7 @@ export const usePresetStore = create((set, get) => ({
     set({ presets, loaded: true });
   },
 
-  save: async (name, { slugs, items = {}, moves = {} }) => {
+  save: async (name, { slugs, items = {}, moves = {}, mega = null }) => {
     const now = Date.now();
     const preset = {
       id: genId(),
@@ -23,6 +23,7 @@ export const usePresetStore = create((set, get) => ({
       slugs: [...slugs],
       items: { ...items },
       moves: { ...moves },
+      mega: mega ? { ...mega } : null,
       createdAt: now,
       updatedAt: now,
     };
