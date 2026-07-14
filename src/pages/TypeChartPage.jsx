@@ -19,16 +19,35 @@ export default function TypeChartPage() {
         </p>
       </header>
 
-      <SegmentedToggle
-        value={view}
-        onChange={setView}
-        options={[
-          { value: "matrix", label: "상성표" },
-          { value: "calc", label: "타입 계산기" },
-        ]}
-      />
+      {/* xl 미만: 토글로 전환 · xl부터: 상성표|계산기 나란히 상시 표시 */}
+      <div className="xl:hidden">
+        <SegmentedToggle
+          value={view}
+          onChange={setView}
+          options={[
+            { value: "matrix", label: "상성표" },
+            { value: "calc", label: "타입 계산기" },
+          ]}
+        />
+      </div>
 
-      {view === "matrix" ? <MatrixView /> : <TypeCalculator />}
+      <div className="xl:grid xl:grid-cols-[auto_minmax(0,1fr)] xl:items-start xl:gap-8">
+        <div className={view === "matrix" ? "" : "hidden xl:block"}>
+          <h2 className="mb-3 hidden text-lg font-bold tracking-tight xl:block">
+            상성표
+          </h2>
+          {/* xl 미만에서는 가운데 정렬 (고정 폭 콘텐츠의 한쪽 쏠림 방지) */}
+          <div className="mx-auto w-fit max-w-full xl:mx-0">
+            <MatrixView />
+          </div>
+        </div>
+        <div className={view === "calc" ? "" : "hidden xl:block"}>
+          <h2 className="mb-3 hidden text-lg font-bold tracking-tight xl:block">
+            타입 계산기
+          </h2>
+          <TypeCalculator />
+        </div>
+      </div>
     </div>
   );
 }
