@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { getPokemonBySlug, pokemonList, getSamples } from "../data";
+import { usePokedexStore } from "../store/usePokedexStore";
+import { filterAndSortPokemon } from "../lib/pokedexFilter";
 import TypeBadge from "../components/common/TypeBadge";
 import StatBars from "../components/pokedex/StatBars";
 import DefensiveProfile from "../components/typechart/DefensiveProfile";
@@ -33,6 +35,7 @@ export default function PokemonDetailPage() {
   const pokemon = getPokemonBySlug(slug);
   const [tab, setTab] = useState("info");
   const moveDb = useMoveDb();
+  const dexFilter = usePokedexStore();
 
   if (!pokemon) {
     return (
@@ -53,9 +56,14 @@ export default function PokemonDetailPage() {
   const { id, name, genus, types, stats, total, abilities, sprite, canMega } =
     pokemon;
   const learnset = moveDb ? moveDb.getLearnset(slug) : null;
-  const idx = pokemonList.findIndex((p) => p.slug === slug);
-  const prev = idx > 0 ? pokemonList[idx - 1] : null;
-  const next = idx < pokemonList.length - 1 ? pokemonList[idx + 1] : null;
+  // 이전/다음: 도감 필터·정렬을 따라감 (현재 포켓몬이 필터 밖이면 전체 목록)
+  const filtered = filterAndSortPokemon(dexFilter);
+  const navList = filtered.some((p) => p.slug === slug)
+    ? filtered
+    : pokemonList;
+  const idx = navList.findIndex((p) => p.slug === slug);
+  const prev = idx > 0 ? navList[idx - 1] : null;
+  const next = idx < navList.length - 1 ? navList[idx + 1] : null;
 
   return (
     <div className="space-y-5">

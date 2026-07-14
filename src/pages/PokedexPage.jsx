@@ -1,37 +1,58 @@
-import { useMemo } from "react";
+import { useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 import { pokemonList, pokedexGeneratedAt } from "../data";
 import { usePokedexStore } from "../store/usePokedexStore";
+import { filterAndSortPokemon } from "../lib/pokedexFilter";
 import PokedexFilters from "../components/pokedex/PokedexFilters";
 import PokemonCard from "../components/pokedex/PokemonCard";
-import { matchKo } from "../lib/search";
+
+// 필터 상태 → URL 파라미터 문자열 (기본값은 생략해서 URL 깨끗하게)
+function toParamString({ query, types, megaOnly, sort }) {
+  const params = new URLSearchParams();
+  if (query.trim()) params.set("q", query.trim());
+  if (types.length) params.set("types", types.join(","));
+  if (megaOnly) params.set("mega", "1");
+  if (sort !== "dex") params.set("sort", sort);
+  return params.toString();
+}
 
 export default function PokedexPage() {
   const { query, types, megaOnly, sort } = usePokedexStore();
+  const hydrate = usePokedexStore((s) => s.hydrate);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const filtered = useMemo(() => {
-    const raw = query.trim();
-    const q = raw.toLowerCase();
-    const list = pokemonList.filter((p) => {
-      if (megaOnly && !p.canMega) return false;
-      if (types.length && !types.some((t) => p.types.includes(t))) return false;
-      if (raw) {
-        const hit =
-          matchKo(p.name.ko, raw) || // 초성 포함 한국어 매칭
-          p.slug.includes(q) ||
-          String(p.id).includes(q);
-        if (!hit) return false;
-      }
-      return true;
-    });
-    const sorters = {
-      dex: (a, b) => a.id - b.id,
-      name: (a, b) => (a.name.ko || "").localeCompare(b.name.ko || "", "ko"),
-      total: (a, b) => b.total - a.total,
-      speed: (a, b) => b.stats.spe - a.stats.spe,
-    };
-    return [...list].sort(sorters[sort]);
-  }, [query, types, megaOnly, sort]);
+  const stateStr = toParamString({ query, types, megaOnly, sort });
+  const urlStr = searchParams.toString();
+  const prevUrl = useRef(urlStr);
+  const prevState = useRef(stateStr);
+
+  // URL ↔ 필터 양방향 동기화 — "방금 바뀐 쪽"이 우선이라 핑퐁이 없다.
+  // · URL이 바뀜(공유 링크 진입·뒤로가기) → 필터 복원
+  // · 필터가 바뀜(사용자 조작) → URL 갱신 (replace라 히스토리 안 쌓임)
+  // · 첫 마운트 → URL에 파라미터 있으면 복원, 없으면 스토어 유지(상세 왕복 대응)
+  useEffect(() => {
+    const urlChanged = urlStr !== prevUrl.current;
+    const stateChanged = stateStr !== prevState.current;
+    prevUrl.current = urlStr;
+    prevState.current = stateStr;
+    if (urlStr === stateStr) return;
+
+    const restoreFromUrl = () =>
+      hydrate({
+        query: searchParams.get("q") ?? "",
+        types: (searchParams.get("types") ?? "").split(",").filter(Boolean),
+        megaOnly: searchParams.get("mega") === "1",
+        sort: searchParams.get("sort") ?? "dex",
+      });
+
+    if (urlChanged && urlStr) restoreFromUrl();
+    else if (stateChanged || !urlStr)
+      setSearchParams(stateStr, { replace: true });
+    else restoreFromUrl(); // 첫 마운트 + URL 파라미터 존재
+  }, [urlStr, stateStr, searchParams, hydrate, setSearchParams]);
+
+  const filtered = filterAndSortPokemon({ query, types, megaOnly, sort });
 
   return (
     <div className="space-y-5">

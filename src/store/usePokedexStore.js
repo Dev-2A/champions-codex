@@ -1,4 +1,6 @@
 import { create } from "zustand";
+import { TYPES } from "../data";
+import { SORT_KEYS } from "../lib/pokedexFilter";
 
 export const usePokedexStore = create((set) => ({
   query: "",
@@ -14,5 +16,13 @@ export const usePokedexStore = create((set) => ({
     })),
   setMegaOnly: (megaOnly) => set({ megaOnly }),
   setSort: (sort) => set({ sort }),
+  /** URL 쿼리 파라미터 → 필터 상태 복원 (잘못된 값은 방어) */
+  hydrate: ({ query, types, megaOnly, sort }) =>
+    set({
+      query: typeof query === "string" ? query : "",
+      types: Array.isArray(types) ? types.filter((t) => TYPES.includes(t)) : [],
+      megaOnly: megaOnly === true,
+      sort: SORT_KEYS.includes(sort) ? sort : "dex",
+    }),
   reset: () => set({ query: "", types: [], megaOnly: false, sort: "dex" }),
 }));
