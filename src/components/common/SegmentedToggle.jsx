@@ -1,6 +1,8 @@
 export default function SegmentedToggle({ options, value, onChange }) {
   return (
-    <div className="inline-flex rounded-lg bg-ink-100 p-0.5 dark:bg-ink-800">
+    // flex w-fit: 블록 레벨(항상 제 줄 차지, space-y 간격 정상 적용) + 내용 폭.
+    // 세로 스택에 직접 놓여도 옆 요소와 붙지 않는다 (inline-flex의 함정 방지)
+    <div className="flex w-fit rounded-lg bg-ink-100 p-0.5 dark:bg-ink-800">
       {options.map((opt) => {
         const active = opt.value === value;
         return (
