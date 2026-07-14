@@ -91,7 +91,7 @@ export default function OnboardingPage() {
         </p>
       </header>
 
-      <div className="space-y-3">
+      <div className="grid gap-3 lg:grid-cols-2">
         {SECTIONS.map((s) => (
           <SectionCard key={s.title} {...s} />
         ))}

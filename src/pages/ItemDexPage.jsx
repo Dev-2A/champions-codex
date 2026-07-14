@@ -106,7 +106,7 @@ export default function ItemDexPage() {
               <h2 className="mb-2 text-sm font-bold text-brand-500">
                 {g.label} <span className="text-ink-400">{g.list.length}</span>
               </h2>
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {g.list.map((it) => (
                   <ItemCard key={it.slug} item={it} />
                 ))}

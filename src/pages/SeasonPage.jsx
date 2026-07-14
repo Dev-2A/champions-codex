@@ -53,74 +53,79 @@ export default function SeasonPage() {
         </p>
       </header>
 
-      {/* 현재 시즌 */}
-      {current && (
-        <section className="rounded-2xl border border-brand-200 bg-linear-to-br from-brand-50 to-white p-5 dark:border-brand-900 dark:from-ink-900 dark:to-ink-950">
+      {/* 현재 시즌 · 현재 레귤레이션 (데스크톱 2컬럼) */}
+      <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
+        {current && (
+          <section className="rounded-2xl border border-brand-200 bg-linear-to-br from-brand-50 to-white p-5 dark:border-brand-900 dark:from-ink-900 dark:to-ink-950">
+            <div className="mb-3 flex items-start justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">
+                  현재 시즌
+                </p>
+                <h2 className="text-lg font-extrabold tracking-tight">
+                  {current.name}
+                </h2>
+                <p className="text-xs text-ink-500 dark:text-ink-400">
+                  {fmt(current.startsAt)} ~ {fmt(current.endsAt)}
+                </p>
+              </div>
+              <Layers
+                className="text-brand-300 dark:text-brand-700"
+                size={26}
+              />
+            </div>
+            <Countdown
+              target={Date.parse(current.endsAt)}
+              label="시즌 종료까지"
+            />
+            <p className="mt-3 text-xs text-ink-500 dark:text-ink-400">
+              시즌이 끝나면 랭크가 초기화돼요(레귤레이션은 유지). 종료 시점에
+              도달한 랭크로 보상을 받아요.
+            </p>
+          </section>
+        )}
+
+        {/* 현재 레귤레이션 */}
+        <section className="rounded-2xl border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
           <div className="mb-3 flex items-start justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">
-                현재 시즌
+              <p className="text-xs font-semibold uppercase tracking-wider text-ink-400">
+                현재 레귤레이션
               </p>
               <h2 className="text-lg font-extrabold tracking-tight">
-                {current.name}
+                {regulation.name}
               </h2>
               <p className="text-xs text-ink-500 dark:text-ink-400">
-                {fmt(current.startsAt)} ~ {fmt(current.endsAt)}
+                {fmt(`${regulation.startDate}T00:00:00Z`)} ~{" "}
+                {fmt(`${regulation.endDate}T00:00:00Z`)}
               </p>
             </div>
-            <Layers className="text-brand-300 dark:text-brand-700" size={26} />
+            <ShieldCheck className="text-brand-400" size={26} />
           </div>
-          <Countdown
-            target={Date.parse(current.endsAt)}
-            label="시즌 종료까지"
-          />
-          <p className="mt-3 text-xs text-ink-500 dark:text-ink-400">
-            시즌이 끝나면 랭크가 초기화돼요(레귤레이션은 유지). 종료 시점에
-            도달한 랭크로 보상을 받아요.
-          </p>
-        </section>
-      )}
 
-      {/* 현재 레귤레이션 */}
-      <section className="rounded-2xl border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
-        <div className="mb-3 flex items-start justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-400">
-              현재 레귤레이션
-            </p>
-            <h2 className="text-lg font-extrabold tracking-tight">
-              {regulation.name}
-            </h2>
-            <p className="text-xs text-ink-500 dark:text-ink-400">
-              {fmt(`${regulation.startDate}T00:00:00Z`)} ~{" "}
-              {fmt(`${regulation.endDate}T00:00:00Z`)}
-            </p>
-          </div>
-          <ShieldCheck className="text-brand-400" size={26} />
-        </div>
+          <Countdown target={regEndMs} label="레귤레이션 종료까지" />
 
-        <Countdown target={regEndMs} label="레귤레이션 종료까지" />
-
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {chips.map((c) => (
-            <span
-              key={c}
-              className="rounded-full bg-ink-100 px-2.5 py-1 text-xs font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300"
-            >
-              {c}
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {chips.map((c) => (
+              <span
+                key={c}
+                className="rounded-full bg-ink-100 px-2.5 py-1 text-xs font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300"
+              >
+                {c}
+              </span>
+            ))}
+            <span className="rounded-full bg-red-100 px-2.5 py-1 text-xs font-medium text-red-600 dark:bg-red-950 dark:text-red-300">
+              테라스탈·다이맥스 미지원
             </span>
-          ))}
-          <span className="rounded-full bg-red-100 px-2.5 py-1 text-xs font-medium text-red-600 dark:bg-red-950 dark:text-red-300">
-            테라스탈·다이맥스 미지원
-          </span>
-        </div>
+          </div>
 
-        {regulation.notes && (
-          <p className="mt-3 text-xs leading-relaxed text-ink-500 dark:text-ink-400">
-            {regulation.notes}
-          </p>
-        )}
-      </section>
+          {regulation.notes && (
+            <p className="mt-3 text-xs leading-relaxed text-ink-500 dark:text-ink-400">
+              {regulation.notes}
+            </p>
+          )}
+        </section>
+      </div>
 
       {/* 시즌 vs 레귤레이션 설명 */}
       <section className="rounded-2xl border border-ink-200 bg-ink-50 p-4 dark:border-ink-800 dark:bg-ink-900/50">

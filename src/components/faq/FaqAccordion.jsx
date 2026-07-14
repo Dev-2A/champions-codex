@@ -30,7 +30,7 @@ function FaqItem({ q, a }) {
 
 export default function FaqAccordion({ faqs }) {
   return (
-    <div className="space-y-2">
+    <div className="grid gap-2 lg:grid-cols-2 lg:items-start">
       {faqs.map((f) => (
         <FaqItem key={f.q} {...f} />
       ))}

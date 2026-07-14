@@ -12,17 +12,13 @@ const linkPill = ({ isActive }) =>
       : "text-ink-600 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-800",
   ].join(" ");
 
-export default function TopBar({ wide = false }) {
+export default function TopBar() {
   const [open, setOpen] = useState(false);
   const secondary = navItems.filter((i) => !i.primary);
 
   return (
     <header className="sticky top-0 z-30 border-b border-ink-200/70 bg-ink-50/80 backdrop-blur dark:border-ink-800/70 dark:bg-ink-950/80">
-      <div
-        className={`mx-auto flex w-full items-center gap-2 px-4 py-3 ${
-          wide ? "max-w-6xl" : "max-w-3xl"
-        }`}
-      >
+      <div className="mx-auto flex w-full max-w-6xl items-center gap-2 px-4 py-3">
         {/* 로고 */}
         <Link to="/" className="mr-auto flex shrink-0 items-center gap-2">
           <span className="text-xl" aria-hidden>

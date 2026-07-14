@@ -17,7 +17,7 @@ export default function HomePage() {
           <br />
           처음이어도 30분이면 랭크로.
         </h2>
-        <p className="mt-3 text-sm text-ink-500 dark:text-ink-300">
+        <p className="mt-3 max-w-2xl text-sm text-ink-500 dark:text-ink-300">
           게임 기초부터 타입 상성, 사용 가능 포켓몬 도감, 팀 빌딩까지 — 뉴비가
           이해하고 팀을 짜는 여정을 한 곳에서.
         </p>
@@ -56,7 +56,7 @@ export default function HomePage() {
         <h3 className="mb-3 text-sm font-semibold text-ink-500 dark:text-ink-400">
           둘러보기
         </h3>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map(({ to, label, desc, icon: Icon }) => (
             <Link
               key={to}
