@@ -1,5 +1,7 @@
 {
-  "_note": "뉴비용 표준 세트 큐레이션 — 포케모음 사용률 통계와 커뮤니티 표준형 참고 (레귤레이션 M-B). moves는 러닝셋, item은 도구 도감, mega는 메가 폼과 대조 검증됨.",
+  "_note": "뉴비용 표준 세트 큐레이션 — 포케모음 사용률 통계와 커뮤니티 표준형 참고. moves/item/mega는 빌드 시 scripts/validate-samples.mjs로 자동 검증됨 (깨지면 빌드 실패).",
+  "regulation": "m-b",
+  "updatedAt": "2026-07-14",
   "samples": [
     {
       "slug": "garchomp",

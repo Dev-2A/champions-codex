@@ -120,7 +120,7 @@ export default function LearnableMoves({ pokemonSlug }) {
           조건에 맞는 기술이 없어요.
         </p>
       ) : (
-        <div className="space-y-2">
+        <div className="grid gap-2 lg:grid-cols-2">
           {list.map((m) => (
             <MoveRow key={m.slug} move={m} />
           ))}

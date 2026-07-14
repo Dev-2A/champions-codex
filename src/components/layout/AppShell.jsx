@@ -5,8 +5,8 @@ import PokeballIcon from "../common/PokeballIcon";
 import Toasts from "../common/Toasts";
 import { usePageTracking } from "../../hooks/usePageTracking";
 
-// 팀 빌더는 데스크톱 2컬럼(편성 | 분석) 레이아웃을 위해 넓은 컨테이너 사용
-const WIDE_PREFIXES = ["/team"];
+// 팀 빌더(편성|분석)·도감(넓은 그리드/상세 2컬럼)은 데스크톱에서 넓은 컨테이너 사용
+const WIDE_PREFIXES = ["/team", "/pokedex"];
 
 export default function AppShell({ children }) {
   const { pathname } = useLocation();

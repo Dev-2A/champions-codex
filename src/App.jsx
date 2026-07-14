@@ -14,6 +14,7 @@ const SeasonPage = lazy(() => import("./pages/SeasonPage"));
 const FaqPage = lazy(() => import("./pages/FaqPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const ItemDexPage = lazy(() => import("./pages/ItemDexPage"));
+const LinksPage = lazy(() => import("./pages/LinksPage"));
 
 function PageFallback() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/team" element={<TeamBuilderPage />} />
           <Route path="/season" element={<SeasonPage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/links" element={<LinksPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

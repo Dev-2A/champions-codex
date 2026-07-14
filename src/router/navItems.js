@@ -7,6 +7,7 @@ import {
   Users,
   CalendarClock,
   HelpCircle,
+  Compass,
 } from "lucide-react";
 
 // primary: 모바일 하단 탭바 노출 / !primary: 상단 "더보기" 메뉴
@@ -82,5 +83,14 @@ export const navItems = [
     end: false,
     primary: false,
     desc: "뉴비가 자주 묻는 질문",
+  },
+  {
+    to: "/links",
+    label: "링크 모음",
+    short: "링크",
+    icon: Compass,
+    end: false,
+    primary: false,
+    desc: "공식 · 통계 · 커뮤니티 검증 링크",
   },
 ];

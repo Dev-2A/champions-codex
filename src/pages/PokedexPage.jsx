@@ -55,7 +55,7 @@ export default function PokedexPage() {
           조건에 맞는 포켓몬이 없어요.
         </p>
       ) : (
-        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {filtered.map((p) => (
             <PokemonCard key={p.slug} pokemon={p} sort={sort} />
           ))}

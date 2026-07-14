@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/validate-samples.mjs && vite build",
+    "check:samples": "node scripts/validate-samples.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "prefetch": "node scripts/prefetch.mjs",

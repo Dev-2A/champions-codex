@@ -55,7 +55,7 @@ export default function BattleMechanics() {
                 {cat.note}
               </p>
             )}
-            <dl className="space-y-2">
+            <dl className="grid gap-2 lg:grid-cols-2">
               {entries.map((e) => (
                 <div
                   key={e.name}

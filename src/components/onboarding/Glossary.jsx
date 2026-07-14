@@ -47,7 +47,7 @@ export default function Glossary() {
             <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">
               {cat.label}
             </h3>
-            <dl className="space-y-2">
+            <dl className="grid gap-2 lg:grid-cols-2">
               {terms.map((t) => (
                 <div
                   key={t.term}

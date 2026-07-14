@@ -1,5 +1,5 @@
 import { Sparkles, Package, UserPlus } from "lucide-react";
-import { getSamples, getItem } from "../../data";
+import { getSamples, getItem, samplesMeta } from "../../data";
 import { useTeamStore } from "../../store/useTeamStore";
 import { toast } from "../../store/useToastStore";
 import { useMoveDb } from "../../hooks/useMoveDb";
@@ -130,8 +130,18 @@ export default function SampleSets({ slug }) {
         );
       })}
       <p className="text-[11px] leading-relaxed text-ink-400 dark:text-ink-500">
-        포케모음 사용률 통계와 커뮤니티 표준형을 참고한 큐레이션이에요. 그대로
-        쓰기보다 팀에 맞게 조정해보세요!
+        포케모음 사용률·커뮤니티 표준형 참고 큐레이션 (
+        {samplesMeta.regulation?.toUpperCase()} 기준 · {samplesMeta.updatedAt}{" "}
+        업데이트). 그대로 쓰기보다 팀에 맞게 조정해보세요! 더 좋은 세트가 있다면{" "}
+        <a
+          href="https://github.com/Dev-2A/champions-codex/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-500 hover:underline"
+        >
+          제보
+        </a>
+        해주세요.
       </p>
     </div>
   );

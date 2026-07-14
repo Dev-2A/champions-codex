@@ -1,0 +1,47 @@
+{
+  "_note": "링크 모음 큐레이션. 새 링크(특히 유튜버·커뮤니티)는 검증 후 추가할 것 — 접속 확인 + 내용 확인. category: official | data | community",
+  "updatedAt": "2026-07-14",
+  "categories": [
+    { "id": "official", "label": "공식" },
+    { "id": "data", "label": "데이터 · 통계" },
+    { "id": "community", "label": "커뮤니티 · 제보" }
+  ],
+  "links": [
+    {
+      "category": "official",
+      "name": "포켓몬코리아",
+      "url": "https://pokemonkorea.co.kr",
+      "desc": "포켓몬 공식 한국 사이트 — 챔피언스 공지·이벤트 소식"
+    },
+    {
+      "category": "data",
+      "name": "포케모음",
+      "url": "https://pokemoem.com",
+      "desc": "랭크배틀 사용률·채용 통계, 데미지 계산기. 실전 메타가 궁금할 때"
+    },
+    {
+      "category": "data",
+      "name": "Bulbapedia — Champions 포켓몬 목록",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_in_Pok%C3%A9mon_Champions",
+      "desc": "레귤레이션별 사용 가능 포켓몬 목록 (영어) — 이 사이트의 legal 목록 출처"
+    },
+    {
+      "category": "data",
+      "name": "Serebii",
+      "url": "https://www.serebii.net",
+      "desc": "포켓몬 데이터 종합 사이트 (영어) — 기술·특성 상세가 필요할 때"
+    },
+    {
+      "category": "data",
+      "name": "PokéAPI",
+      "url": "https://pokeapi.co",
+      "desc": "이 사이트의 포켓몬·기술·도구 기본 데이터 출처 (오픈 API)"
+    },
+    {
+      "category": "community",
+      "name": "Champions Codex 피드백",
+      "url": "https://github.com/Dev-2A/champions-codex/issues",
+      "desc": "이 사이트의 버그 제보·기능 제안·링크 추천은 여기로!"
+    }
+  ]
+}

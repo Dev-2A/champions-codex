@@ -136,66 +136,71 @@ export default function PokemonDetailPage() {
       />
 
       {tab === "info" ? (
-        <div className="space-y-5">
-          <Section title="종족값">
-            <div className="rounded-2xl border border-ink-200 bg-white p-4 dark:border-ink-800 dark:bg-ink-900">
-              <StatBars stats={stats} total={total} />
-            </div>
-          </Section>
-
-          {getSamples(slug).length > 0 && (
-            <Section title="추천 세트">
-              <SampleSets slug={slug} />
+        // 데스크톱(lg~): 왼쪽 = 기본 정보, 오른쪽 = 추천 세트·메가 (모바일은 세로)
+        <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-6">
+          <div className="space-y-5">
+            <Section title="종족값">
+              <div className="rounded-2xl border border-ink-200 bg-white p-4 dark:border-ink-800 dark:bg-ink-900">
+                <StatBars stats={stats} total={total} />
+              </div>
             </Section>
-          )}
 
-          <Section title="특성">
-            <div className="flex flex-wrap gap-2">
-              {abilities.map((a) => (
-                <span
-                  key={a.slug}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-ink-200 bg-white px-3 py-1.5 text-sm dark:border-ink-800 dark:bg-ink-900"
-                >
-                  <span className="font-semibold text-ink-700 dark:text-ink-200">
-                    {a.ko ?? a.slug}
-                  </span>
-                  {a.hidden && (
-                    <span className="rounded bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-500 dark:bg-ink-800 dark:text-ink-400">
-                      숨겨진 특성
+            <Section title="특성">
+              <div className="flex flex-wrap gap-2">
+                {abilities.map((a) => (
+                  <span
+                    key={a.slug}
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-ink-200 bg-white px-3 py-1.5 text-sm dark:border-ink-800 dark:bg-ink-900"
+                  >
+                    <span className="font-semibold text-ink-700 dark:text-ink-200">
+                      {a.ko ?? a.slug}
                     </span>
-                  )}
-                </span>
-              ))}
-            </div>
-          </Section>
-
-          <Section title="받는 대미지 (방어 상성)">
-            <DefensiveProfile types={types} />
-          </Section>
-
-          <Section title="타입 부가 특성">
-            <TypeTraitsPanel types={types} />
-          </Section>
-
-          {canMega && (
-            <Section title="메가진화">
-              <MegaForms slug={slug} />
+                    {a.hidden && (
+                      <span className="rounded bg-ink-100 px-1.5 py-0.5 text-[10px] font-bold text-ink-500 dark:bg-ink-800 dark:text-ink-400">
+                        숨겨진 특성
+                      </span>
+                    )}
+                  </span>
+                ))}
+              </div>
             </Section>
-          )}
 
-          <p className="text-xs text-ink-400 dark:text-ink-500">
-            실전 사용률·채용 통계가 궁금하다면{" "}
-            <a
-              href={`https://pokemoem.com/pokedex/${encodeURIComponent(
-                name.en.charAt(0).toUpperCase() + name.en.slice(1),
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-500 hover:underline"
-            >
-              포케모음에서 보기 ↗
-            </a>
-          </p>
+            <Section title="받는 대미지 (방어 상성)">
+              <DefensiveProfile types={types} />
+            </Section>
+
+            <Section title="타입 부가 특성">
+              <TypeTraitsPanel types={types} />
+            </Section>
+          </div>
+
+          <div className="mt-5 space-y-5 lg:mt-0">
+            {getSamples(slug).length > 0 && (
+              <Section title="추천 세트">
+                <SampleSets slug={slug} />
+              </Section>
+            )}
+
+            {canMega && (
+              <Section title="메가진화">
+                <MegaForms slug={slug} />
+              </Section>
+            )}
+
+            <p className="text-xs text-ink-400 dark:text-ink-500">
+              실전 사용률·채용 통계가 궁금하다면{" "}
+              <a
+                href={`https://pokemoem.com/pokedex/${encodeURIComponent(
+                  name.en.charAt(0).toUpperCase() + name.en.slice(1),
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-500 hover:underline"
+              >
+                포케모음에서 보기 ↗
+              </a>
+            </p>
+          </div>
         </div>
       ) : (
         <LearnableMoves pokemonSlug={slug} />

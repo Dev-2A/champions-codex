@@ -85,6 +85,10 @@ export const notableMoves = notableMovesData;
 export const getNotableRole = (slug) => notableMovesData[slug] ?? null;
 
 // ── 추천 세트 (큐레이션) ──
+export const samplesMeta = {
+  regulation: samplesData.regulation,
+  updatedAt: samplesData.updatedAt,
+};
 const samplesBySlug = new Map();
 for (const s of samplesData.samples) {
   const list = samplesBySlug.get(s.slug) ?? [];
