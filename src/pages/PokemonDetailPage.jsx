@@ -123,17 +123,21 @@ export default function PokemonDetailPage() {
         </div>
       </section>
 
-      <TeamToggleButton slug={slug} />
-
-      {/* 탭 */}
-      <SegmentedToggle
-        value={tab}
-        onChange={setTab}
-        options={[
-          { value: "info", label: "정보" },
-          { value: "moves", label: `기술 ${learnset ? learnset.length : "…"}` },
-        ]}
-      />
+      {/* 팀 추가/제거 · 탭 — 한 줄에 좌우 분리 (좁으면 줄바꿈) */}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <TeamToggleButton slug={slug} />
+        <SegmentedToggle
+          value={tab}
+          onChange={setTab}
+          options={[
+            { value: "info", label: "정보" },
+            {
+              value: "moves",
+              label: `기술 ${learnset ? learnset.length : "…"}`,
+            },
+          ]}
+        />
+      </div>
 
       {tab === "info" ? (
         // 데스크톱(lg~): 왼쪽 = 기본 정보, 오른쪽 = 추천 세트·메가 (모바일은 세로)
