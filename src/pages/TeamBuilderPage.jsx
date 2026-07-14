@@ -13,6 +13,7 @@ import CoverageAnalysis from "../components/team/CoverageAnalysis";
 import PresetManager from "../components/team/PresetManager";
 import SegmentedToggle from "../components/common/SegmentedToggle";
 import OffenseAnalysis from "../components/team/OffenseAnalysis";
+import DamageCalc from "../components/team/DamageCalc";
 import TeamExport from "../components/team/TeamExport";
 
 const ADD_FAIL_MSG = {
@@ -239,7 +240,7 @@ export default function TeamBuilderPage() {
           <section className="border-t border-ink-200 pt-5 dark:border-ink-800 lg:border-t-0 lg:pt-0">
             <div className="mb-3 flex items-center justify-between gap-2">
               <h2 className="text-lg font-bold tracking-tight">
-                커버리지 분석
+                {coverageView === "calc" ? "데미지 계산" : "커버리지 분석"}
               </h2>
               <SegmentedToggle
                 value={coverageView}
@@ -247,6 +248,7 @@ export default function TeamBuilderPage() {
                 options={[
                   { value: "defense", label: "방어" },
                   { value: "offense", label: "공격" },
+                  { value: "calc", label: "계산" },
                 ]}
               />
             </div>
@@ -255,11 +257,18 @@ export default function TeamBuilderPage() {
                 team={analysisTeam}
                 onFindCover={(type) => openCoverPicker("resist", type)}
               />
-            ) : (
+            ) : coverageView === "offense" ? (
               <OffenseAnalysis
                 team={analysisTeam}
                 movesMap={moves}
                 onFindAttacker={(type) => openCoverPicker("hit", type)}
+              />
+            ) : (
+              <DamageCalc
+                team={team}
+                movesMap={moves}
+                builds={builds}
+                mega={mega}
               />
             )}
           </section>
