@@ -37,7 +37,10 @@ export default function TypeMatrix({ mode }) {
 
   return (
     <div className="overflow-x-auto rounded-xl border border-ink-200 dark:border-ink-800">
-      <table className="border-separate border-spacing-0 text-center text-xs">
+      <table
+        aria-label={`18타입 상성표 (${mode === "attack" ? "공격" : "방어"} 관점)`}
+        className="border-separate border-spacing-0 text-center text-xs"
+      >
         <thead>
           <tr>
             <th className="sticky left-0 top-0 z-30 w-17 bg-ink-50 dark:bg-ink-950" />
@@ -70,9 +73,12 @@ export default function TypeMatrix({ mode }) {
               </th>
               {TYPES.map((ct, c) => {
                 const m = getValue(rt, ct);
+                const atkType = mode === "attack" ? rt : ct;
+                const defType = mode === "attack" ? ct : rt;
                 return (
                   <td
                     key={ct}
+                    title={`${typeKo(atkType)} → ${typeKo(defType)}: ×${formatMultiplier(m)}`}
                     onMouseEnter={() => setHover({ r, c })}
                     onMouseLeave={() => setHover(null)}
                     className={[

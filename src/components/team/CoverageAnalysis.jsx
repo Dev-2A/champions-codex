@@ -116,7 +116,10 @@ export default function CoverageAnalysis({ team, onFindCover }) {
           팀 방어 히트맵
         </h3>
         <div className="overflow-x-auto rounded-xl border border-ink-200 dark:border-ink-800">
-          <table className="border-separate border-spacing-0 text-center text-[11px]">
+          <table
+            aria-label="팀 방어 상성 히트맵 (가로: 공격 타입, 세로: 팀원)"
+            className="border-separate border-spacing-0 text-center text-[11px]"
+          >
             <thead>
               <tr>
                 <th className="sticky left-0 z-20 w-11 bg-ink-50 dark:bg-ink-950" />
@@ -148,6 +151,7 @@ export default function CoverageAnalysis({ team, onFindCover }) {
                     return (
                       <td
                         key={atk}
+                        title={`${typeKo(atk)} → ${pokemon.name.ko}: ×${formatMultiplier(m)}`}
                         className={`h-6.5 w-6.5 border-b border-r border-ink-100 dark:border-ink-800/60 ${cellClass(
                           classifyMultiplier(m),
                         )}`}
@@ -166,6 +170,7 @@ export default function CoverageAnalysis({ team, onFindCover }) {
                 {byType.map((t) => (
                   <td
                     key={t.type}
+                    title={`${typeKo(t.type)}에 약한 팀원 ${t.weak}마리`}
                     className={`h-6 w-6.5 font-bold ${
                       t.weak >= 2
                         ? "bg-red-100 text-red-600 dark:bg-red-950/50 dark:text-red-300"

@@ -82,7 +82,10 @@ export default function OffenseAnalysis({ team, movesMap, onFindAttacker }) {
           팀 공격 히트맵
         </h3>
         <div className="overflow-x-auto rounded-xl border border-ink-200 dark:border-ink-800">
-          <table className="border-separate border-spacing-0 text-center text-[11px]">
+          <table
+            aria-label="팀 공격 상성 히트맵 (가로: 방어 타입, 세로: 팀원)"
+            className="border-separate border-spacing-0 text-center text-[11px]"
+          >
             <thead>
               <tr>
                 <th className="sticky left-0 z-20 w-11 bg-ink-50 dark:bg-ink-950" />
@@ -124,6 +127,7 @@ export default function OffenseAnalysis({ team, movesMap, onFindAttacker }) {
                     return (
                       <td
                         key={def}
+                        title={`${pokemon.name.ko} → ${typeKo(def)}: ×${formatMultiplier(best)}`}
                         className={`h-[26px] w-[26px] border-b border-r border-ink-100 dark:border-ink-800/60 ${cellClass(best)}`}
                       >
                         {best >= 2 ? formatMultiplier(best) : ""}
@@ -140,6 +144,7 @@ export default function OffenseAnalysis({ team, movesMap, onFindAttacker }) {
                 {byType.map((t) => (
                   <td
                     key={t.type}
+                    title={`${typeKo(t.type)}을(를) 약점으로 찌르는 팀원 ${t.covered}마리`}
                     className={`h-6 w-[26px] font-bold ${
                       t.covered === 0
                         ? "bg-amber-100 text-amber-600 dark:bg-amber-950/50 dark:text-amber-300"
