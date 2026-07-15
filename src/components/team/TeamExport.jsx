@@ -1,17 +1,35 @@
 import { useMemo, useState } from "react";
-import { Copy, Check, FileText, Link2 } from "lucide-react";
+import { Copy, Check, FileText, Link2, ImageDown } from "lucide-react";
 import { buildTeamSheet } from "../../lib/teamExport";
 import { buildShareUrl } from "../../lib/teamShare";
+import { renderTeamImage } from "../../lib/teamImage";
+import { downloadBlob } from "../../lib/dexImage";
 import { toast } from "../../store/useToastStore";
 import { useMoveDb } from "../../hooks/useMoveDb";
 
 export default function TeamExport({ team }) {
   const [copied, setCopied] = useState(false);
+  const [saving, setSaving] = useState(false);
   const moveDb = useMoveDb();
   const sheet = useMemo(
     () => buildTeamSheet(team, moveDb?.getMove),
     [team, moveDb],
   );
+
+  const saveImage = async () => {
+    if (saving) return;
+    setSaving(true);
+    try {
+      const blob = await renderTeamImage(team);
+      if (!blob) throw new Error("이미지 생성 실패");
+      downloadBlob(blob, `champions-team-${team.slugs.length}.png`);
+      toast("팀 이미지를 저장했어요!", { tone: "success" });
+    } catch {
+      toast("이미지 저장에 실패했어요.", { tone: "error" });
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const copyLink = async () => {
     try {
@@ -44,7 +62,14 @@ export default function TeamExport({ team }) {
           <FileText size={16} className="text-brand-500" strokeWidth={2.3} />팀
           시트
         </div>
-        <div className="flex gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            onClick={saveImage}
+            disabled={saving}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-ink-200 bg-white px-3 py-1.5 text-xs font-semibold text-ink-600 transition-colors hover:border-brand-300 hover:text-brand-600 disabled:opacity-50 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-300 dark:hover:text-brand-300"
+          >
+            <ImageDown size={14} /> {saving ? "생성 중…" : "이미지"}
+          </button>
           <button
             onClick={copyLink}
             className="inline-flex items-center gap-1.5 rounded-lg border border-ink-200 bg-white px-3 py-1.5 text-xs font-semibold text-ink-600 transition-colors hover:border-brand-300 hover:text-brand-600 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-300 dark:hover:text-brand-300"
