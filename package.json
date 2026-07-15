@@ -13,6 +13,7 @@
     "prefetch:items": "node scripts/prefetch-items.mjs",
     "prefetch:moves": "node scripts/prefetch-moves.mjs",
     "prefetch:sprites": "node scripts/fetch-sprites.mjs",
+    "make:og": "node scripts/make-og.mjs",
     "prefetch:megas": "node scripts/prefetch-megas.mjs"
   },
   "dependencies": {
