@@ -28,3 +28,6 @@ dist-ssr
 
 # Claude Code 로컬 설정
 .claude/
+
+# 로컬 전용 QA 대응 노트 (배포·공유 대상 아님)
+QA-notes.md
