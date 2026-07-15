@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { BookOpen, ImageDown } from "lucide-react";
-import { pokemonList, pokedexGeneratedAt } from "../data";
+import { pokemonList, pokedexGeneratedAt, regulationCode } from "../data";
 import { usePokedexStore } from "../store/usePokedexStore";
 import { filterAndSortPokemon } from "../lib/pokedexFilter";
 import { renderDexImage, downloadBlob } from "../lib/dexImage";
@@ -71,7 +71,7 @@ export default function PokedexPage() {
     setSaving(true);
     try {
       const blob = await renderDexImage(filtered, {
-        title: "포켓몬 챔피언스 도감 (M-B)",
+        title: `포켓몬 챔피언스 도감 (${regulationCode})`,
         subtitle: `${filtered.length}종 · ${SORT_LABEL[sort] ?? ""} · ${pokedexGeneratedAt?.slice(0, 10)} 기준`,
       });
       if (!blob) throw new Error("이미지 생성 실패");
@@ -93,8 +93,8 @@ export default function PokedexPage() {
             <h1 className="text-xl font-bold tracking-tight">포켓몬 도감</h1>
           </div>
           <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
-            현재 레귤레이션(M-B) 사용 가능 포켓몬 224종. 이름·타입으로
-            찾아보세요.
+            현재 레귤레이션({regulationCode}) 사용 가능 포켓몬{" "}
+            {pokemonList.length}종. 이름·타입으로 찾아보세요.
             <span className="ml-1 text-xs text-ink-400 dark:text-ink-500">
               (데이터 기준 {pokedexGeneratedAt?.slice(0, 10)})
             </span>

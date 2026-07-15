@@ -1,4 +1,10 @@
-import { getPokemonBySlug, getItem, getMegaForms, typeKo } from "../data";
+import {
+  getPokemonBySlug,
+  getItem,
+  getMegaForms,
+  typeKo,
+  regulationCode,
+} from "../data";
 import { STAT_KEYS, STAT_SHORT, isEmptyBuild } from "./statCalc";
 
 // getMove는 moveDb에서 주입 (미로드 시 기술 줄 생략)
@@ -45,6 +51,6 @@ export function buildTeamSheet(
     lines.push("");
   });
 
-  lines.push("made with cola and 🔴  ·  Regulation M-B");
+  lines.push(`made with cola and 🔴  ·  Regulation ${regulationCode}`);
   return lines.join("\n").trim();
 }

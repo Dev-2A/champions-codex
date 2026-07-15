@@ -1,4 +1,10 @@
-import { getPokemonBySlug, getItem, getMegaForms, typeKo } from "../data";
+import {
+  getPokemonBySlug,
+  getItem,
+  getMegaForms,
+  typeKo,
+  regulationCode,
+} from "../data";
 import { loadMoveDb } from "../data/moveDb";
 import { typeColors } from "./typeColors";
 import { assetUrl } from "./assets";
@@ -82,7 +88,7 @@ export async function renderTeamImage(
   ctx.fillText(`🏆 ${name?.trim() || "내 팀"}`, PAD, 44);
   ctx.fillStyle = "#6f80a3";
   ctx.font = FONT("600", 14);
-  ctx.fillText(`${members.length}마리 · Regulation M-B`, PAD, 66);
+  ctx.fillText(`${members.length}마리 · Regulation ${regulationCode}`, PAD, 66);
 
   // 스프라이트 프리로드 (메가면 메가 스프라이트)
   const megaFormOf = (slug) =>

@@ -44,6 +44,28 @@ npm run dev               # 개발 서버
 npm run build             # 프로덕션 빌드
 ```
 
+## 🔄 레귤레이션 로테이션 절차 (M-B → M-C …)
+
+새 레귤레이션이 나오면 아래 순서로 갱신한다. UI의 레귤레이션 라벨·종
+수·도감 제목·팀 시트 표기는 데이터에서 자동으로 끌어오므로 **코드 수정은
+필요 없다**. (리허설로 config 교체만으로 빌드·정합성 통과 확인됨)
+
+1. **legal 목록 작성** — `src/data/regulations/<id>.json` 생성
+   (예: `m-c.json`. id·name·기간·rules·`legal`·`megaCapable` 채우기)
+2. **프리페치** — `npm run prefetch <id>` → `prefetch:items` → `prefetch:moves <id>`
+   → `prefetch:megas <id>` → `prefetch:sprites <id>`
+3. **활성 전환** — `src/config.js`의 `ACTIVE_REGULATION`을 새 id로 변경
+4. **큐레이션 텍스트 갱신** (코드가 자동 못 바꾸는 문장들):
+   - `src/data/champions/samples.json` — `regulation` 필드 + 세트 재검토
+     (안 맞으면 `npm run build`가 실패해서 방치를 막아줌)
+   - `src/data/champions/faq.json`·`glossary.json` — "현재는 M-B…" 문구
+   - `src/data/champions/seasons.json` — 새 시즌 일정
+5. **검증** — `npm run check:samples` → `npm run build` → 도감/팀빌더 육안 확인
+6. 이전 레귤 생성물(`*.m-b.json`)은 원하면 남겨두거나 삭제
+
+> 시즌·레귤 종료일이 지나면 카운트다운은 자동으로 "종료됨(정보 갱신 필요)"을
+> 표시한다.
+
 ## 🙌 데이터 출처
 
 - 포켓몬·도구·기술 base 데이터: [PokéAPI](https://pokeapi.co)

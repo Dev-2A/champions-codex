@@ -44,6 +44,8 @@ export const regulation = pick(regulationModules, "regulation");
 export const typechart = typechartData;
 export const pokemonList = pokedexFile.pokemon;
 export const pokedexGeneratedAt = pokedexFile.generatedAt;
+// 레귤레이션 짧은 코드 ("m-b" → "M-B") — UI 라벨용. 로테이션 시 config만 바꾸면 자동 반영
+export const regulationCode = (regulation.id ?? ACTIVE_REGULATION).toUpperCase();
 
 // ── 포켓몬 인덱스 ──
 const bySlug = new Map(pokemonList.map((p) => [p.slug, p]));
