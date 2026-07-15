@@ -9,7 +9,7 @@ function getInitialTheme() {
   } catch {
     /* noop */
   }
-  return "dark"; // 기본: 다크
+  return "light"; // 기본: 라이트
 }
 
 function applyTheme(theme) {
