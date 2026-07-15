@@ -1,9 +1,10 @@
 {
-  "_note": "링크 모음 큐레이션. 새 링크(특히 유튜버·커뮤니티)는 검증 후 추가할 것 — 접속 확인 + 내용 확인. category: official | data | community",
-  "updatedAt": "2026-07-14",
+  "_note": "링크 모음 큐레이션. 새 링크(특히 유튜버·커뮤니티)는 검증 후 추가할 것 — 접속 확인 + 내용 확인. category: official | data | youtube | community",
+  "updatedAt": "2026-07-15",
   "categories": [
     { "id": "official", "label": "공식" },
     { "id": "data", "label": "데이터 · 통계" },
+    { "id": "youtube", "label": "유튜버 · 크리에이터" },
     { "id": "community", "label": "커뮤니티 · 제보" }
   ],
   "links": [
@@ -36,6 +37,18 @@
       "name": "PokéAPI",
       "url": "https://pokeapi.co",
       "desc": "이 사이트의 포켓몬·기술·도구 기본 데이터 출처 (오픈 API)"
+    },
+    {
+      "category": "youtube",
+      "name": "박세준 (Sejun Park)",
+      "url": "https://www.youtube.com/@sejun_park",
+      "desc": "포켓몬 월드챔피언의 채널 — 최상위권 대전 실력과 감각을 배울 수 있어요"
+    },
+    {
+      "category": "youtube",
+      "name": "안모리",
+      "url": "https://www.youtube.com/@ahnmori",
+      "desc": "닌텐도·포켓몬 위주 게임 채널 — 포켓몬 콘텐츠 비중이 높아요"
     },
     {
       "category": "community",

@@ -19,7 +19,8 @@ export default function LinksPage() {
         if (links.length === 0) return null;
         return (
           <section key={cat.id}>
-            <h2 className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+            <h2 className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500">
+              {cat.id === "youtube" && <Clapperboard size={13} />}
               {cat.label}
             </h2>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,28 +51,18 @@ export default function LinksPage() {
         );
       })}
 
-      {/* 유튜버·크리에이터: 검증된 추천이 쌓이면 채워질 자리 */}
-      <section>
-        <h2 className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500">
-          <Clapperboard size={13} /> 유튜버 · 크리에이터
-        </h2>
-        <p className="rounded-xl border border-dashed border-ink-300 p-5 text-center text-sm text-ink-400 dark:border-ink-700 dark:text-ink-500">
-          아직 준비 중이에요. 뉴비에게 도움이 된 챔피언스 채널이 있다면{" "}
-          <a
-            href="https://github.com/Dev-2A/champions-codex/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-500 hover:underline"
-          >
-            추천해주세요
-          </a>
-          — 확인 후 추가할게요!
-        </p>
-      </section>
-
       <p className="text-[11px] text-ink-400 dark:text-ink-500">
-        {linksData.updatedAt} 기준 전 링크 접속 확인. 깨진 링크를 발견하면
-        제보해주세요.
+        {linksData.updatedAt} 기준 전 링크 접속 확인. 더 좋은 채널·사이트가
+        있다면{" "}
+        <a
+          href="https://github.com/Dev-2A/champions-codex/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-500 hover:underline"
+        >
+          추천해주세요
+        </a>
+        .
       </p>
     </div>
   );
