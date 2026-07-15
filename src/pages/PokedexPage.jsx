@@ -1,11 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ImageDown } from "lucide-react";
 import { pokemonList, pokedexGeneratedAt } from "../data";
 import { usePokedexStore } from "../store/usePokedexStore";
 import { filterAndSortPokemon } from "../lib/pokedexFilter";
+import { renderDexImage, downloadBlob } from "../lib/dexImage";
+import { toast } from "../store/useToastStore";
 import PokedexFilters from "../components/pokedex/PokedexFilters";
 import PokemonCard from "../components/pokedex/PokemonCard";
+
+const SORT_LABEL = {
+  dex: "도감번호순",
+  name: "이름순",
+  total: "종족값순",
+  speed: "스피드순",
+};
 
 // 필터 상태 → URL 파라미터 문자열 (기본값은 생략해서 URL 깨끗하게)
 function toParamString({ query, types, megaOnly, sort }) {
@@ -52,21 +61,52 @@ export default function PokedexPage() {
     else restoreFromUrl(); // 첫 마운트 + URL 파라미터 존재
   }, [urlStr, stateStr, searchParams, hydrate, setSearchParams]);
 
+  const [saving, setSaving] = useState(false);
   const filtered = filterAndSortPokemon({ query, types, megaOnly, sort });
+
+  const handleSaveImage = async () => {
+    if (saving || filtered.length === 0) return;
+    if (filtered.length > 120 && !confirm(`${filtered.length}종을 이미지로 저장할까요? 잠시 걸릴 수 있어요.`))
+      return;
+    setSaving(true);
+    try {
+      const blob = await renderDexImage(filtered, {
+        title: "포켓몬 챔피언스 도감 (M-B)",
+        subtitle: `${filtered.length}종 · ${SORT_LABEL[sort] ?? ""} · ${pokedexGeneratedAt?.slice(0, 10)} 기준`,
+      });
+      if (!blob) throw new Error("이미지 생성 실패");
+      downloadBlob(blob, `champions-dex-${filtered.length}.png`);
+      toast("도감 이미지를 저장했어요!", { tone: "success" });
+    } catch {
+      toast("이미지 저장에 실패했어요.", { tone: "error" });
+    } finally {
+      setSaving(false);
+    }
+  };
 
   return (
     <div className="space-y-5">
-      <header>
-        <div className="flex items-center gap-2">
-          <BookOpen className="text-brand-500" size={22} strokeWidth={2.3} />
-          <h1 className="text-xl font-bold tracking-tight">포켓몬 도감</h1>
+      <header className="flex items-start justify-between gap-2">
+        <div>
+          <div className="flex items-center gap-2">
+            <BookOpen className="text-brand-500" size={22} strokeWidth={2.3} />
+            <h1 className="text-xl font-bold tracking-tight">포켓몬 도감</h1>
+          </div>
+          <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
+            현재 레귤레이션(M-B) 사용 가능 포켓몬 224종. 이름·타입으로
+            찾아보세요.
+            <span className="ml-1 text-xs text-ink-400 dark:text-ink-500">
+              (데이터 기준 {pokedexGeneratedAt?.slice(0, 10)})
+            </span>
+          </p>
         </div>
-        <p className="mt-1.5 text-sm text-ink-500 dark:text-ink-400">
-          현재 레귤레이션(M-B) 사용 가능 포켓몬 224종. 이름·타입으로 찾아보세요.
-          <span className="ml-1 text-xs text-ink-400 dark:text-ink-500">
-            (데이터 기준 {pokedexGeneratedAt?.slice(0, 10)})
-          </span>
-        </p>
+        <button
+          onClick={handleSaveImage}
+          disabled={saving || filtered.length === 0}
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-xl border border-ink-200 bg-white px-3 py-2 text-xs font-semibold text-ink-600 transition-colors hover:border-brand-300 hover:text-brand-600 disabled:opacity-50 dark:border-ink-700 dark:bg-ink-900 dark:text-ink-300 dark:hover:text-brand-300"
+        >
+          <ImageDown size={15} /> {saving ? "생성 중…" : "이미지 저장"}
+        </button>
       </header>
 
       <PokedexFilters total={pokemonList.length} shown={filtered.length} />
