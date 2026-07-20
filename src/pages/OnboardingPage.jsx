@@ -7,6 +7,7 @@ import {
   Rocket,
   BookMarked,
   Zap,
+  ArrowRight,
 } from "lucide-react";
 import Glossary from "../components/onboarding/Glossary";
 import BattleMechanics from "../components/onboarding/BattleMechanics";
@@ -97,21 +98,27 @@ export default function OnboardingPage() {
         ))}
       </div>
 
-      {/* 다음 액션 */}
+      {/* 다음 액션 — 버튼임이 분명하게 (브랜드색 + 화살표) */}
       <div className="grid grid-cols-2 gap-2.5">
         <Link
           to="/types"
-          className="flex items-center gap-2 rounded-2xl border border-ink-200 bg-white p-3 transition-colors hover:border-brand-300 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-brand-800"
+          className="flex items-center justify-between gap-2 rounded-2xl bg-brand-500 p-3.5 text-white shadow-sm transition-colors hover:bg-brand-600"
         >
-          <Swords size={18} className="text-brand-500" />
-          <span className="text-sm font-semibold">타입 상성 익히기</span>
+          <span className="flex min-w-0 items-center gap-2">
+            <Swords size={18} className="shrink-0" />
+            <span className="truncate text-sm font-bold">타입 상성 익히기</span>
+          </span>
+          <ArrowRight size={16} className="shrink-0" />
         </Link>
         <Link
           to="/team"
-          className="flex items-center gap-2 rounded-2xl border border-ink-200 bg-white p-3 transition-colors hover:border-brand-300 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-brand-800"
+          className="flex items-center justify-between gap-2 rounded-2xl bg-brand-500 p-3.5 text-white shadow-sm transition-colors hover:bg-brand-600"
         >
-          <Users size={18} className="text-brand-500" />
-          <span className="text-sm font-semibold">팀 짜보기</span>
+          <span className="flex min-w-0 items-center gap-2">
+            <Users size={18} className="shrink-0" />
+            <span className="truncate text-sm font-bold">팀 짜보기</span>
+          </span>
+          <ArrowRight size={16} className="shrink-0" />
         </Link>
       </div>
 

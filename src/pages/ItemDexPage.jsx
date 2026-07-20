@@ -103,8 +103,12 @@ export default function ItemDexPage() {
         <div className="space-y-5">
           {groups.map((g) => (
             <section key={g.id}>
-              <h2 className="mb-2 text-sm font-bold text-brand-500">
-                {g.label} <span className="text-ink-400">{g.list.length}</span>
+              <h2 className="mb-2 flex items-center gap-2 text-base font-bold tracking-tight text-ink-800 dark:text-ink-100">
+                <span aria-hidden className="h-4 w-1 rounded-full bg-brand-500" />
+                {g.label}{" "}
+                <span className="text-sm font-semibold text-ink-400">
+                  {g.list.length}
+                </span>
               </h2>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {g.list.map((it) => (

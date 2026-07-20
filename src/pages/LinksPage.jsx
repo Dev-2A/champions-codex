@@ -19,8 +19,11 @@ export default function LinksPage() {
         if (links.length === 0) return null;
         return (
           <section key={cat.id}>
-            <h2 className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500">
-              {cat.id === "youtube" && <Clapperboard size={13} />}
+            <h2 className="mb-2 flex items-center gap-2 text-base font-bold tracking-tight text-ink-800 dark:text-ink-100">
+              <span aria-hidden className="h-4 w-1 rounded-full bg-brand-500" />
+              {cat.id === "youtube" && (
+                <Clapperboard size={15} className="text-brand-500" />
+              )}
               {cat.label}
             </h2>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">

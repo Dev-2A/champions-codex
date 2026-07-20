@@ -1,4 +1,4 @@
-import { X, Plus, Package, Sparkles } from "lucide-react";
+import { X, Plus, Package, Sparkles, Settings2 } from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import { assetUrl } from "../../lib/assets";
 
@@ -85,7 +85,7 @@ export default function TeamSlot({
         type="button"
         onClick={() => onEdit(slug)}
         className="mt-1.5 flex w-full items-center justify-center gap-1 rounded-lg bg-ink-100 px-1.5 py-1 text-[10px] font-medium transition-colors hover:bg-ink-200 dark:bg-ink-800 dark:hover:bg-ink-700"
-        title="도구 편집"
+        title="멤버 설정 (도구·능력치·기술·메가)"
       >
         {megaForm ? (
           <>
@@ -110,7 +110,9 @@ export default function TeamSlot({
             </span>
           </>
         ) : (
-          <span className="text-ink-400 dark:text-ink-500">+ 도구</span>
+          <span className="flex items-center gap-1 text-ink-500 dark:text-ink-400">
+            <Settings2 size={11} /> 설정
+          </span>
         )}
       </button>
     </div>

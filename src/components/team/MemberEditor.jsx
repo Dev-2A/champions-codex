@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { X, Package, ExternalLink, Plus, Sparkles } from "lucide-react";
+import {
+  X,
+  Package,
+  ExternalLink,
+  Plus,
+  Sparkles,
+  BarChart3,
+} from "lucide-react";
 import TypeBadge from "../common/TypeBadge";
 import MoveBadge from "../moves/MoveBadge";
 import ItemPicker from "./ItemPicker";
@@ -215,11 +222,18 @@ export default function MemberEditor({
             onSetNature={onSetNature}
           />
         ) : isEmptyBuild(build) ? (
-          <p className="text-[11px] text-ink-400 dark:text-ink-500">
-            아직 포인트를 분배하지 않았어요. (합계 66, 스탯당 최대 32)
-          </p>
+          <button
+            onClick={() => setEditingStats(true)}
+            className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-ink-300 py-2.5 text-sm font-medium text-ink-500 transition-colors hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-400"
+          >
+            <BarChart3 size={15} /> 능력치 분배 (66 포인트)
+          </button>
         ) : (
-          <div className="flex flex-wrap gap-1">
+          <button
+            onClick={() => setEditingStats(true)}
+            title="능력치 편집"
+            className="flex w-full flex-wrap gap-1 rounded-xl border border-ink-200 p-2 text-left transition-colors hover:border-brand-300 dark:border-ink-800"
+          >
             {STAT_KEYS.filter((k) => build.pts[k] > 0).map((k) => (
               <span
                 key={k}
@@ -235,7 +249,7 @@ export default function MemberEditor({
                 {build.down ? ` ▼${STAT_SHORT[build.down]}` : ""}
               </span>
             )}
-          </div>
+          </button>
         )}
       </div>
 

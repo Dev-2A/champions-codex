@@ -44,7 +44,8 @@ export default function Glossary() {
         if (terms.length === 0) return null;
         return (
           <section key={cat.id}>
-            <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">
+            <h3 className="mb-2 flex items-center gap-2 text-base font-bold tracking-tight text-ink-800 dark:text-ink-100">
+              <span aria-hidden className="h-4 w-1 rounded-full bg-brand-500" />
               {cat.label}
             </h3>
             <dl className="grid gap-2 lg:grid-cols-2">
