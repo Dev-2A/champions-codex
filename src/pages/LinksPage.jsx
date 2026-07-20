@@ -58,7 +58,7 @@ export default function LinksPage() {
         {linksData.updatedAt} 기준 전 링크 접속 확인. 더 좋은 채널·사이트가
         있다면{" "}
         <a
-          href="https://github.com/Dev-2A/champions-codex/issues"
+          href="https://forms.gle/iywwkmMQVjdYqzZ88"
           target="_blank"
           rel="noopener noreferrer"
           className="text-brand-500 hover:underline"

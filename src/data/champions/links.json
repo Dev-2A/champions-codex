@@ -53,8 +53,14 @@
     {
       "category": "community",
       "name": "Champions Codex 피드백",
+      "url": "https://forms.gle/iywwkmMQVjdYqzZ88",
+      "desc": "버그 제보·기능 제안·링크 추천 — 로그인 없이 익명으로 남길 수 있어요!"
+    },
+    {
+      "category": "community",
+      "name": "GitHub 저장소",
       "url": "https://github.com/Dev-2A/champions-codex/issues",
-      "desc": "이 사이트의 버그 제보·기능 제안·링크 추천은 여기로!"
+      "desc": "개발자용 — 소스 코드와 이슈 트래커 (GitHub 계정 필요)"
     }
   ]
 }

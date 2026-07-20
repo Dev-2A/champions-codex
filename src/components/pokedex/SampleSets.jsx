@@ -134,7 +134,7 @@ export default function SampleSets({ slug }) {
         {samplesMeta.regulation?.toUpperCase()} 기준 · {samplesMeta.updatedAt}{" "}
         업데이트). 그대로 쓰기보다 팀에 맞게 조정해보세요! 더 좋은 세트가 있다면{" "}
         <a
-          href="https://github.com/Dev-2A/champions-codex/issues"
+          href="https://forms.gle/iywwkmMQVjdYqzZ88"
           target="_blank"
           rel="noopener noreferrer"
           className="text-brand-500 hover:underline"

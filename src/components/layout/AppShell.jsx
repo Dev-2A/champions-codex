@@ -23,7 +23,7 @@ export default function AppShell({ children }) {
         </p>
         <p className="mt-1">
           <a
-            href="https://github.com/Dev-2A/champions-codex/issues"
+            href="https://forms.gle/iywwkmMQVjdYqzZ88"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-500 hover:underline"
