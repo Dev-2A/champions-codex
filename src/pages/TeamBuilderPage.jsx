@@ -285,12 +285,7 @@ export default function TeamBuilderPage() {
           </section>
         )}
 
-        {team.length > 0 && (
-          <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
-            <TeamExport team={{ slugs, items, moves, mega, builds }} />
-          </section>
-        )}
-
+        {/* 저장된 팀 — 발견성 위해 팀 시트보다 위 */}
         <section
           className={
             team.length > 0
@@ -304,6 +299,12 @@ export default function TeamBuilderPage() {
           </div>
           <PresetManager current={{ slugs, items, moves, mega, builds }} />
         </section>
+
+        {team.length > 0 && (
+          <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
+            <TeamExport team={{ slugs, items, moves, mega, builds }} />
+          </section>
+        )}
 
         <section className="border-t border-ink-200 pt-5 dark:border-ink-800">
           <TeamImport />

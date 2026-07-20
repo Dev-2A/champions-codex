@@ -148,15 +148,26 @@ export default function PokemonDetailPage() {
       </div>
 
       {tab === "info" ? (
-        // 데스크톱(lg~): 왼쪽 = 기본 정보, 오른쪽 = 추천 세트·메가 (모바일은 세로)
+        // 데스크톱(lg~): 왼쪽 = 정보(특성·상성·세트), 오른쪽 = 수치(종족값·메가)
+        // 모바일은 종족값이 먼저 보이도록 수치 컬럼을 DOM 앞에 두고 lg:order로 배치
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-6">
-          <div className="space-y-5">
+          {/* 수치 컬럼 */}
+          <div className="space-y-5 lg:order-2">
             <Section title="종족값">
               <div className="rounded-2xl border border-ink-200 bg-white p-4 dark:border-ink-800 dark:bg-ink-900">
                 <StatBars stats={stats} total={total} />
               </div>
             </Section>
 
+            {canMega && (
+              <Section title="메가진화">
+                <MegaForms slug={slug} />
+              </Section>
+            )}
+          </div>
+
+          {/* 정보 컬럼 */}
+          <div className="mt-5 space-y-5 lg:order-1 lg:mt-0">
             <Section title="특성">
               <div className="flex flex-wrap gap-2">
                 {abilities.map((a) => (
@@ -184,18 +195,10 @@ export default function PokemonDetailPage() {
             <Section title="타입 부가 특성">
               <TypeTraitsPanel types={types} />
             </Section>
-          </div>
 
-          <div className="mt-5 space-y-5 lg:mt-0">
             {getSamples(slug).length > 0 && (
               <Section title="추천 세트">
                 <SampleSets slug={slug} />
-              </Section>
-            )}
-
-            {canMega && (
-              <Section title="메가진화">
-                <MegaForms slug={slug} />
               </Section>
             )}
 

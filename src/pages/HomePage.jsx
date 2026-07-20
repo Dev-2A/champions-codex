@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { GraduationCap, ArrowRight } from "lucide-react";
 import { navItems } from "../router/navItems";
 import { regulation, pokemonList } from "../data";
 
@@ -49,6 +50,38 @@ export default function HomePage() {
             바로 팀 짜기
           </Link>
         </div>
+      </section>
+
+      {/* 챔피언스가 뭐야? — 처음 온 사람을 위한 3줄 요약 (자세한 건 가이드) */}
+      <section className="rounded-2xl border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
+        <div className="mb-2.5 flex items-center gap-2">
+          <div className="grid size-8 place-items-center rounded-lg bg-brand-100 text-brand-600 dark:bg-brand-950 dark:text-brand-300">
+            <GraduationCap size={17} strokeWidth={2.3} />
+          </div>
+          <h3 className="text-base font-bold tracking-tight">
+            포켓몬 챔피언스가 뭐야?
+          </h3>
+        </div>
+        <ul className="space-y-1.5 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+          <li>
+            탐험·스토리 없이 <b>배틀에만 집중</b>한 무료(F2P) 포켓몬 대전
+            게임이에요 (스위치·모바일).
+          </li>
+          <li>
+            레벨·개체값이 자동으로 맞춰져서 <b>노가다 없이</b> 팀 구성과 실력으로
+            승부해요.
+          </li>
+          <li>
+            기본 포맷은 <b>더블 배틀(2v2)</b> — 공식 대회·월드챔피언십도 이
+            게임으로 열려요.
+          </li>
+        </ul>
+        <Link
+          to="/guide"
+          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:underline"
+        >
+          뉴비 가이드에서 자세히 보기 <ArrowRight size={14} />
+        </Link>
       </section>
 
       {/* 섹션 카드 */}

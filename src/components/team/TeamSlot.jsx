@@ -42,24 +42,6 @@ export default function TeamSlot({
       >
         <X size={12} />
       </button>
-      {megaForm ? (
-        <span
-          className="absolute left-1 top-1 z-10 inline-flex items-center gap-0.5 rounded-full bg-brand-500 px-1.5 py-0.5 text-[9px] font-bold text-white"
-          title={megaForm.name.ko}
-        >
-          <Sparkles size={9} /> 메가
-        </span>
-      ) : (
-        canMega && (
-          <span
-            className="absolute left-1.5 top-1.5 z-10"
-            title="메가진화 가능"
-          >
-            <Sparkles size={13} className="text-brand-500" />
-          </span>
-        )
-      )}
-
       <button
         type="button"
         onClick={() => onEdit(slug)}
@@ -78,6 +60,26 @@ export default function TeamSlot({
           {types.map((t) => (
             <TypeBadge key={t} type={t} size="sm" />
           ))}
+        </div>
+        {/* 태그 줄 — 코너 아이콘 대신 눈에 띄는 위치, 항상 공간 확보(카드 높이 통일) */}
+        <div className="mt-1 flex min-h-[18px] flex-wrap items-center justify-center gap-1">
+          {megaForm ? (
+            <span
+              className="inline-flex items-center gap-0.5 rounded-full bg-brand-500 px-1.5 py-0.5 text-[9px] font-bold text-white"
+              title={megaForm.name.ko}
+            >
+              <Sparkles size={9} /> {megaForm.label}
+            </span>
+          ) : (
+            canMega && (
+              <span
+                className="inline-flex items-center gap-0.5 rounded-full border border-brand-300 px-1.5 py-0.5 text-[9px] font-bold text-brand-500 dark:border-brand-800 dark:text-brand-300"
+                title="메가진화 가능"
+              >
+                <Sparkles size={9} /> 메가 가능
+              </span>
+            )
+          )}
         </div>
       </button>
 
